@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- POGIL activity, Day 2: reading shape of f from the graph of f' -->
+<!-- Continues the handout started last class (Day1_Activity_DerivativeDescribeFunctionBehavior) -->
+<worksheet xml:id="activity-derivative-graph-shape">
+  <title>What Does the Graph of the Rate Tell Us?</title>
+
+  <objectives xml:id="obj-derivative-graph-shape">
+    <ul>
+      <li><p>Use the graph of <m>f'(x)</m> to build a sign-analysis number line, and use it to determine the intervals where <m>f(x)</m> is increasing and decreasing.</p></li>
+      <li><p>Use the <em>slope</em> of the graph of <m>f'(x)</m> to determine the sign of <m>f''(x)</m>, including recognizing an interval where <m>f(x)</m> has no concavity at all.</p></li>
+      <li><p>Combine both sign analyses to sketch the correct shape of a graph of <m>f(x)</m>, and identify what information about <m>f(x)</m> is <em>not</em> determined by the graph of <m>f'(x)</m> alone.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      This is our first activity together using this team-based format, though you already started
+      today's work: at the end of last class, your group looked at the graph of <m>f'(x)</m> and
+      worked through the review questions on the handout on your own. Today you'll work in an
+      assigned team to tackle the harder question that graph raises. As with any team task, the
+      goal isn't to race to an answer &#8212; it's for <em>everyone</em> in the group to be able to
+      explain <em>why</em> an answer is correct, not just to have written one down.
+    </p>
+
+    <p>Each group member takes one of the following roles for the activity:</p>
+
+    <tabular>
+      <row header="yes" bottom="minor">
+        <cell>Role</cell>
+        <cell>Responsibility</cell>
+      </row>
+      <row>
+        <cell>Manager</cell>
+        <cell>
+          Keeps the group on task and on pace; makes sure everyone has spoken before the group
+          moves on; asks the instructor for help if the group is stuck after trying on its own.
+        </cell>
+      </row>
+      <row>
+        <cell>Recorder</cell>
+        <cell>
+          Writes the group's agreed-on answers, in the group's own words; notes any question the
+          group could not resolve.
+        </cell>
+      </row>
+      <row>
+        <cell>Spokesperson</cell>
+        <cell>
+          Speaks for the group during whole-class discussion and can explain <em>why</em> the group
+          answered as it did, not just what was written.
+        </cell>
+      </row>
+      <row>
+        <cell>Reflector</cell>
+        <cell>
+          Checks in periodically on whether everyone understands, not just whether the group is
+          moving forward; leads a short end-of-activity check-in on what worked.
+        </cell>
+      </row>
+    </tabular>
+
+    <p>
+      In a group of three, the Manager also takes on the Reflector's check-in duties.
+    </p>
+
+    <p>
+      Last class you discussed, in general terms, what it means for a function to be increasing
+      (or concave up), and how the sign of a derivative tells us this. Today you'll apply those
+      ideas to a specific function &#8212; but this time all you're given is a picture, not a
+      formula. Below is the same graph of <m>f'(x)</m> from last class's handout, the derivative of
+      an unknown function <m>f(x)</m>.
+    </p>
+
+    <figure xml:id="fig-rate-graph-day2">
+      <caption>Graph of <m>y = f'(x)</m>, piecewise linear.</caption>
+      <image source="images/Day1_Activity_RateGraph.png" width="70%"/>
+    </figure>
+  </introduction>
+
+  <exercise xml:id="ex-sign-analysis-f" workspace="0in">
+    <title>Where Is f Increasing or Decreasing?</title>
+    <introduction>
+      <p>
+        Start with what you already know: the sign of <m>f'(x)</m> tells you whether <m>f(x)</m>
+        is increasing or decreasing. Here you have to read that sign straight from the picture.
+      </p>
+    </introduction>
+    <task xml:id="task-fprime-roots" workspace="1in">
+      <statement>
+        <p>
+          Find every value of <m>x</m> where the graph of <m>f'(x)</m> crosses the <m>x</m>-axis (roots).
+          List them in increasing order.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-fprime-sign-chart" workspace="1.5in">
+      <statement>
+        <p>
+          Draw a number line for <m>x</m> running from <m>-12</m> to <m>10</m>, marked with the
+          values you just found. On each interval between them, record whether <m>f'(x)</m> is
+          positive or negative. How do you read this off the graph without computing anything.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-f-monotonicity" workspace="1.25in">
+      <statement>
+        <p>
+          Translate your sign chart into a statement about <m>f(x)</m>: on which intervals is
+          <m>f(x)</m> increasing? On which is it decreasing? At which <m>x</m>-values does
+          <m>f(x)</m> have a local maximum or local minimum, and how do you know from the chart
+          alone?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-fprime-checkpoint" workspace="1in">
+      <statement>
+        <p>
+          Suppose two different functions, <m>f(x)</m> and <m>g(x)</m>, happened to have this
+          exact same derivative graph. Would your sign chart above be the same for both of them?
+          Explain.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-concavity-analysis-f" workspace="0in">
+    <title>Where Is f Concave Up, Concave Down, or Neither?</title>
+    <introduction>
+      <p>
+        You also know that the sign of <m>f''(x)</m> tells you the concavity of <m>f(x)</m>. But
+        you were not given a graph of <m>f''(x)</m> &#8212; only the graph of <m>f'(x)</m>. Discuss
+        with your group: what feature of the graph <em>you already have</em> could tell you the
+        sign of <m>f''(x)</m>, without ever seeing a graph of <m>f''(x)</m> itself?
+      </p>
+    </introduction>
+    <task xml:id="task-fprime-pieces" workspace="1.5in">
+      <statement>
+        <p>
+          The graph of <m>f'(x)</m> is made of several straight-line pieces. For each piece, decide
+          whether the graph is increasing (rising left-to-right), decreasing (falling left-to-right), or constant (flat). Record the
+          intervals where each occurs.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-fdprime-sign-chart" workspace="1.5in">
+      <statement>
+        <p>
+          Use your answer above to build a second number line for <m>x</m> from <m>-12</m> to
+          <m>10</m>, this time recording the sign of <m>f''(x)</m> on each interval.
+          Note any interval where <m>f''(x)</m> is <em>zero</em> the whole way across, rather than
+          just at a single point.
+          What is happening at the end points of the intervals?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-fdprime-flat-interval" workspace="1.25in">
+      <statement>
+        <p>
+          Focus on the interval where <m>f''(x) = 0</m> throughout. What does this tell you about
+          the shape of <m>f(x)</m> on that interval? Is it concave up, concave down, or something
+          else? Describe, in words, what that piece of the graph of <m>f(x)</m> must look like.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-fdprime-general-rule" workspace="1.25in">
+      <statement>
+        <p>
+          Write a general rule, in your own words, that connects a feature of the graph of
+          <m>f'(x)</m> to the sign of <m>f''(x)</m>, a rule you could apply to any graph of
+          a derivative, not just this one.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-sketch-shape-f" workspace="0in">
+    <title>Sketching the Shape of f</title>
+    <introduction>
+      <p>
+        Now put both sign charts together.
+      </p>
+    </introduction>
+    <task xml:id="task-composite-chart" workspace="1.5in">
+      <statement>
+        <p>
+          Combine your two number lines into a single chart marking every <m>x</m>-value where
+          something changes: where <m>f</m> switches between increasing and decreasing, and where
+          <m>f</m> switches concavity (or loses concavity entirely).
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-sketch-f" workspace="2in">
+      <statement>
+        <p>
+          Using the combined chart, sketch a graph of <m>y = f(x)</m> that shows the correct shape
+          on <m>-12 &lt; x &lt; 10</m>: every rise, fall, and change in bend should match your
+          chart. Don't worry about labeling any values on the vertical axis.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-sketch-reflection" workspace="1.25in">
+      <statement>
+        <p>
+          Look at the sketch your group drew. Can you determine the actual <m>y</m>-coordinate of
+          any point on it &#8212; including the local maximum or minimum values? Why or why not?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-sketch-bridge" workspace="2in">
+      <statement>
+        <p>
+          On the same axes (or a second copy of the same axes), sketch a <em>different</em>
+          function that has this exact same graph of <m>f'(x)</m>, but that is not the same
+          function <m>f(x)</m> you sketched above. Compare your two sketches: what has to be
+          identical between them? What is free to be different?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>
