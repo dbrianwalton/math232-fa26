@@ -150,6 +150,8 @@
           <m>10</m>, this time recording the sign of <m>f''(x)</m> on each interval.
           Note any interval where <m>f''(x)</m> is <em>zero</em> the whole way across, rather than
           just at a single point.
+        </p>
+        <p>
           What is happening at the end points of the intervals?
         </p>
       </statement>
