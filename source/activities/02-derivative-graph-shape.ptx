@@ -64,18 +64,19 @@
       In a group of three, the Manager also takes on the Reflector's check-in duties.
     </p>
 
+    <page/>
+    
     <p>
       Last class you discussed, in general terms, what it means for a function to be increasing
       (or concave up), and how the sign of a derivative tells us this. Today you'll apply those
-      ideas to a specific function &#8212; but this time all you're given is a picture, not a
-      formula. Below is the same graph of <m>f'(x)</m> from last class's handout, the derivative of
-      an unknown function <m>f(x)</m>.
+      ideas to a specific function.
+      Below is the same graph of <m>f'(x)</m> from last class's handout,
+      the derivative of an unknown function <m>f(x)</m>.
     </p>
 
-    <figure xml:id="fig-rate-graph-day2">
-      <caption>Graph of <m>y = f'(x)</m>, piecewise linear.</caption>
-      <image source="images/Day1_Activity_RateGraph.png" width="70%"/>
-    </figure>
+    <p>
+      <image source="images/Day1_Activity_RateGraph.png" width="60%"/>
+    </p>
   </introduction>
 
   <exercise xml:id="ex-sign-analysis-f" workspace="0in">

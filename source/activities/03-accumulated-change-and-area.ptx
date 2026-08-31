@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- POGIL-style activity, Day 3 (~30 minutes): connecting rate of change to accumulated -->
+<!-- change, and accumulated change to area. Builds toward definite integral notation -->
+<!-- (as accumulated change, and as signed area) using only arithmetic and geometry -->
+<!-- formulas, not antiderivatives yet. Continues the team-based format from Day 2. -->
+
+<!-- Suggested pacing for a 30-minute period (approximate, not enforced): -->
+<!--   Intro + Exercise 1 ......... ~4 min -->
+<!--   Exercise 2 ................. ~5 min -->
+<!--   Exercise 3 ................. ~5 min -->
+<!--   Notation (two definitions) . ~2 min -->
+<!--   Exercise 4 .................. ~6 min -->
+<!--   Remark (signed area, beyond constant rates) . ~1.5 min -->
+<!--   Exercise 5 .................. ~6.5 min -->
+
+<worksheet xml:id="activity-accumulated-change-and-area">
+  <title>From Rate to Accumulated Change: Distance, Area, and the Definite Integral</title>
+
+  <objectives xml:id="obj-accumulated-change-and-area">
+    <ul>
+      <li><p>Compute a new position from a starting position, a constant rate of change, and elapsed time, and recognize that accumulating change over several time intervals means <em>adding</em> the increments from each one.</p></li>
+      <li><p>Connect that arithmetic directly to geometry: the area between a constant-rate graph and the horizontal axis, computed as the sum of areas of simple regions.</p></li>
+      <li><p>Read and interpret definite integral notation, both as accumulated change and as area.</p></li>
+      <li><p>Explain what <em>signed area</em> means, and why a negative rate of change corresponds to area below the axis.</p></li>
+      <li><p>Use rectangle, triangle, and trapezoid area formulas to evaluate a definite integral of a piecewise linear rate function.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Today's activity connects two ideas that seem unrelated at first: adding up small
+      increments of change to get a total change, and adding up small areas to get a total
+      area. By the end of the activity you'll see these are the same idea in different
+      clothes. And you'll learn the mathematical notation we use for it, the
+      <em>definite integral</em>.
+    </p>
+    <p>
+      Work with your team, using the same roles from last class. As always, the goal
+      is for <em>everyone</em> in the group to be able to explain <em>why</em> an answer is
+      correct, not just to have written one down.
+      <ul>
+        <li>
+          <p>Manager: Keep the team on task</p>
+        </li>
+        <li>
+          <p>Recorder: Write down the answers the group agrees on</p>
+        </li>
+        <li>
+          <p>Spokesperson: Speaks on behalf of the group</p>
+        </li>
+        <li>
+          <p>Reflector: Observes participation and checks understanding of each participant</p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Throughout the activity, picture a small cart moving along a straight,
+      meter-marked track. Its <em>position</em> <m>s</m> is measured in meters from a fixed
+      zero mark (not necessarily where it starts), with the positive direction to the right. 
+      Its <em>velocity</em> <m>v</m> is measured in meters per second (m/s): a positive 
+      velocity means the cart moves right, a negative velocity means it moves left.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-single-rate" workspace="0in">
+    <title>A Single Constant Rate</title>
+    <introduction>
+      <p>
+        Start with a relationship you already know.
+      </p>
+    </introduction>
+    <task xml:id="task-single-rate-compute" workspace="1in">
+      <statement>
+        <p>
+          At time <m>t=0</m> s, the cart is at position <m>s = 5</m> m. It moves at a constant
+          velocity of <m>v = 3</m> m/s. Where is the cart at time <m>t = 4</m> s? Show the
+          arithmetic that gets you there.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-single-rate-shifted-compute" workspace="1in">
+      <statement>
+        <p>
+          Now do the same story, but the clock is shifted to a different starting time.
+          At time <m>t=2</m> s, the cart is at position <m>s = 5</m> m. It moves at a constant
+          velocity of <m>v = 3</m> m/s. Where is the cart at time <m>t = 6</m> s? Show the
+          arithmetic that gets you there.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-single-rate-formula" workspace="1in">
+      <statement>
+        <p>
+          Now suppose you only know that the cart starts at some position <m>s_0</m> at time
+          <m>t_0</m>, and then moves at a constant velocity <m>v</m> for the next
+          <m>\Delta t</m> seconds. Write a formula for the cart's new position <m>s_1</m> at
+          the later time <m>t_1 = t_0 + \Delta t</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-two-rates-arithmetic" workspace="0in">
+    <title>Two Constant Rates, Back to Back</title>
+    <introduction>
+      <p>
+        Real motion rarely stays at one constant rate forever. Suppose the cart's velocity
+        changes during the trip.
+      </p>
+    </introduction>
+    <task xml:id="task-two-rates-leg" workspace="1in">
+      <statement>
+        <p>
+          The cart starts at position <m>5</m> m at <m>t = 0</m>. For the first <m>4</m>
+          seconds (<m>0 \lt t \lt 4</m>) it moves at <m>3</m> m/s, exactly as in Exercise 1. Then, for the next
+          <m>3</m> seconds (<m>4 \lt t \lt 7</m>), it moves at a constant <m>2</m> m/s
+          instead. How far does the cart travel during this second leg alone?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-two-rates-position" workspace=".75in">
+      <statement>
+        <p>
+          What is the cart's position at <m>t = 7</m> s?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-two-rates-expression" workspace="1.25in">
+      <statement>
+        <p>
+          Write a single expression built from the two velocities, the two elapsed
+          times, and the starting position that computes the position at <m>t=7</m>
+          directly, without first finding the position at <m>t=4</m> as an intermediate step.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-two-rates-general" workspace="1.25in">
+      <statement>
+        <p>
+          Generalize: if a cart starts at position <m>s_0</m>, moves at rate <m>v_1</m> for a
+          time span of length <m>\Delta t_1</m>, and then at rate <m>v_2</m> for a further time
+          span <m>\Delta t_2</m>, write a general expression for its final position.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-two-rates-geometry" workspace="0in">
+    <title>The Same Idea, Seen as Area</title>
+    <introduction>
+      <p>
+        Set the previous problem aside for a moment. Below is a graph of a velocity function
+        <m>v(t)</m>, in m/s, over the first <m>7</m> seconds of some motion.
+      </p>
+      <image width="55%">
+        <shortdescription>
+          A step graph of velocity versus time: v(t) = 3 on the interval from t = 0 to t = 4,
+          then v(t) = 2 on the interval from t = 4 to t = 7. Both rectangular regions between
+          the graph and the t-axis are shaded.
+        </shortdescription>
+        <latex-image>
+          \begin{tikzpicture}
+          \begin{axis}[
+            width=8cm, height=6cm,
+            axis lines=middle,
+            axis on top,
+            xlabel={$t$ (seconds)}, ylabel={$v(t)$ (m/s)},
+            xlabel style={anchor=west}, ylabel style={anchor=south},
+            xmin=-0.5, xmax=8.5, ymin=-1, ymax=5,
+            xtick={4,7}, ytick={2,3},
+            extra x ticks={0},
+            clip=false,
+          ]
+            \fill[blue!15] (axis cs:0,0) -- (axis cs:0,3) -- (axis cs:4,3) -- (axis cs:4,0) -- cycle;
+            \fill[blue!30] (axis cs:4,0) -- (axis cs:4,2) -- (axis cs:7,2) -- (axis cs:7,0) -- cycle;
+            \draw[thick,blue] (axis cs:0,3) -- (axis cs:4,3);
+            \draw[thick,blue] (axis cs:4,2) -- (axis cs:7,2);
+            \draw[thick,blue,dashed] (axis cs:4,3) -- (axis cs:4,2);
+          \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </introduction>
+    <task xml:id="task-region1-shape" workspace=".75in">
+      <statement>
+        <p>
+          What geometric shape is formed between the graph of <m>v(t)</m> and the <m>t</m>-axis
+          on the interval <m>0 \le t \le 4</m>? Find its area, including units.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-region2-shape" workspace=".75in">
+      <statement>
+        <p>
+          What shape is formed on the interval <m>4 \le t \le 7</m>? Find its area.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-regions-total" workspace=".5in">
+      <statement>
+        <p>
+          Find the combined (total) area of both regions.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-compare-to-exercise2" workspace="1.5in">
+      <statement>
+        <p>
+          Compare the areas you just found to your work in Exercise 2, specifically the
+          expression you wrote (not counting the starting position <m>5</m>). What do you
+          notice? State, in your own words, a general connection between the area under a
+          velocity graph and the distance a cart travels.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <definition xml:id="def-integral-accumulated-change">
+    <title>Notation: Accumulated Change</title>
+    <statement>
+      <p>
+        What you just discovered works for any rate of change, not only velocity. If a
+        quantity has value <m>s(t_1)</m> at time <m>t_1</m> and changes at rate <m>r(t)</m>,
+        then its value at a later time <m>t_2</m> is the starting value plus the accumulated
+        change over the interval. Mathematicians write that accumulated change using the
+        <em>definite integral</em> symbol:
+        <md>
+          s(t_2) \, = \, s(t_1) \, + \, \int_{t_1}^{t_2} r(t)\, dt
+        </md>
+        Read <m>\int_{t_1}^{t_2} r(t)\,dt</m> as "the accumulated change in the quantity from
+        <m>t_1</m> to <m>t_2</m>." When <m>r(t)</m> is a positive constant <m>v</m> on an
+        interval of length <m>\Delta t</m>, this is just <m>v \cdot \Delta t</m> &#8212;
+        exactly the rectangle areas you computed above.
+      </p>
+    </statement>
+  </definition>
+
+  <definition xml:id="def-integral-area">
+    <title>Notation: Area Under a Graph</title>
+    <statement>
+      <p>
+        The very same symbol describes area. For a function <m>f(x)</m>, the area of the
+        region between the graph of <m>y = f(x)</m> and the <m>x</m>-axis, from <m>x=a</m> to
+        <m>x=b</m>, is written
+        <md>
+          \int_a^b f(x)\, dx
+        </md>
+        This is not a coincidence: it's the same idea from Exercise 3, written in general
+        notation.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise xml:id="ex-signed-area" workspace="0in">
+    <title>What If the Rate Is Negative?</title>
+    <introduction>
+      <p>
+        Now push on the idea. Suppose the cart's velocity is negative for part of the trip.
+      </p>
+    </introduction>
+    <task xml:id="task-signed-compute" workspace="1.25in">
+      <statement>
+        <p>
+          A cart starts at position <m>5</m> m and moves at <m>3</m> m/s for the first
+          <m>4</m> seconds, exactly as before. For the next <m>3</m> seconds it moves at a
+          constant <m>-2</m> m/s. What does a negative velocity mean physically for the cart?
+          What is its position at <m>t = 7</m> s? Show your arithmetic.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-signed-graph" workspace="0in">
+      <statement>
+        <p>
+          The graph below shows this velocity function.
+        </p>
+        <image width="55%">
+          <shortdescription>
+            A step graph of velocity versus time: v(t) = 3 on the interval from t = 0 to
+            t = 4, shaded above the t-axis, then v(t) = -2 on the interval from t = 4 to
+            t = 7, shaded below the t-axis in a different color.
+          </shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \begin{axis}[
+              width=8cm, height=6cm,
+              axis lines=middle,
+              axis on top,
+              xlabel={$t$ (seconds)}, ylabel={$v(t)$ (m/s)},
+              xlabel style={anchor=west}, ylabel style={anchor=north west},
+              xmin=-0.5, xmax=8.5, ymin=-3, ymax=5,
+              xtick={4,7}, ytick={-2,3},
+              extra x ticks={0},
+              clip=false,
+            ]
+              \fill[blue!15] (axis cs:0,0) -- (axis cs:0,3) -- (axis cs:4,3) -- (axis cs:4,0) -- cycle;
+              \fill[red!20] (axis cs:4,0) -- (axis cs:4,-2) -- (axis cs:7,-2) -- (axis cs:7,0) -- cycle;
+              \draw[thick,blue] (axis cs:0,3) -- (axis cs:4,3);
+              \draw[thick,blue] (axis cs:4,-2) -- (axis cs:7,-2);
+              \draw[thick,blue,dashed] (axis cs:4,3) -- (axis cs:4,-2);
+            \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+    <task xml:id="task-signed-region-area" workspace=".75in">
+      <statement>
+        <p>
+          On the interval <m>4 \le t \le 7</m>, the region between the graph and the axis lies
+          below the <m>t</m>-axis. If you compute its area the ordinary way &#8212; treating
+          base and height as positive lengths &#8212; what number do you get?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-signed-reconcile" workspace="1.5in">
+      <statement>
+        <p>
+          Add that number to the area of the first rectangle (from <m>t=0</m> to <m>t=4</m>).
+          Does the sum match the actual change in position you found above? If not, what
+          adjustment makes it match?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-signed-rule" workspace="1in">
+      <statement>
+        <p>
+          State a rule: how should a region below the <m>t</m>-axis be counted when you use
+          area to evaluate a definite integral?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-signed-area-and-beyond">
+    <title>Signed Area, and Rates That Aren't Constant</title>
+    <p>
+      What you just worked out is called <em>signed area</em>: regions above the <m>t</m>-axis
+      count as positive area, and regions below it count as negative area. This is exactly why
+      the definite integral, and not just "area," is the right tool for accumulated change
+      &#8212; it automatically keeps track of when a quantity is increasing versus decreasing.
+    </p>
+    <p>
+      Everything above used constant rates, so every region was a rectangle. But the notation
+      <m>\int_{t_1}^{t_2} r(t)\,dt</m>, and its meaning as signed area, works exactly the same
+      way even when <m>r(t)</m> is not constant &#8212; even when its graph curves. Later in the
+      course you'll learn algebraic techniques (the Fundamental Theorem of Calculus and
+      antiderivative formulas) for evaluating such integrals exactly. For now, you have
+      everything you need to evaluate a definite integral whenever the region between the
+      graph and the axis is built from shapes you can already measure: rectangles, triangles,
+      and trapezoids.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-piecewise-total" workspace="0in">
+    <title>Putting It All Together</title>
+    <introduction>
+      <p>
+        The graph below shows the rate of change <m>r(t)</m> of some quantity over an
+        <m>11</m>-second interval. It is piecewise <em>linear</em>: each piece is a straight
+        line segment, so every region between the graph and the axis is a rectangle, a
+        triangle, or a trapezoid. (Recall the trapezoid area formula
+        <m>\frac{1}{2}(b_1+b_2)h</m>, using the two parallel sides <m>b_1</m>, <m>b_2</m> and
+        the width <m>h</m> between them.)
+      </p>
+      <image width="65%">
+        <shortdescription>
+          A piecewise linear graph of r(t) versus t from t = 0 to t = 11. It is constant at 3
+          from t = 0 to t = 2 (a rectangle region), rises linearly from 3 to 5 from t = 2 to
+          t = 6 (a trapezoid region), falls linearly from 5 to 0 from t = 6 to t = 9 (a
+          triangle region), then jumps to a constant -2 from t = 9 to t = 11 (a rectangle
+          region below the axis). Regions above the axis are shaded blue; the region below is
+          shaded red.
+        </shortdescription>
+        <latex-image>
+          \begin{tikzpicture}
+          \begin{axis}[
+            width=10cm, height=7cm,
+            axis lines=middle,
+            axis on top,
+            xlabel={$t$ (seconds)}, ylabel={$r(t)$},
+            xlabel style={anchor=west}, ylabel style={anchor=south},
+            xmin=-0.5, xmax=13.5, ymin=-3.5, ymax=6.5,
+            xtick={2,6,9,11}, ytick={-2,3,5},
+            extra x ticks={0},
+            clip=false,
+          ]
+            \fill[blue!15] (axis cs:0,0) -- (axis cs:0,3) -- (axis cs:2,3) -- (axis cs:2,0) -- cycle;
+            \fill[blue!25] (axis cs:2,0) -- (axis cs:2,3) -- (axis cs:6,5) -- (axis cs:6,0) -- cycle;
+            \fill[blue!35] (axis cs:6,0) -- (axis cs:6,5) -- (axis cs:9,0) -- cycle;
+            \fill[red!20] (axis cs:9,0) -- (axis cs:9,-2) -- (axis cs:11,-2) -- (axis cs:11,0) -- cycle;
+            \draw[thick,blue] (axis cs:0,3) -- (axis cs:2,3) -- (axis cs:6,5) -- (axis cs:9,0);
+            \draw[thick,blue] (axis cs:9,-2) -- (axis cs:11,-2);
+            \draw[thick,blue,dashed] (axis cs:9,0) -- (axis cs:9,-2);
+          \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </introduction>
+    <task xml:id="task-piecewise-region1" workspace=".6in">
+      <statement>
+        <p>
+          Interval <m>0 \le t \le 2</m>: name the shape, and find its signed area.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-piecewise-region2" workspace=".6in">
+      <statement>
+        <p>
+          Interval <m>2 \le t \le 6</m>: name the shape, and find its signed area.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-piecewise-region3" workspace=".6in">
+      <statement>
+        <p>
+          Interval <m>6 \le t \le 9</m>: name the shape, and find its signed area.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-piecewise-region4" workspace=".6in">
+      <statement>
+        <p>
+          Interval <m>9 \le t \le 11</m>: name the shape, and find its signed area. Be careful
+          with the sign.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-piecewise-sum" workspace=".75in">
+      <statement>
+        <p>
+          Add up your four signed areas to find <m>\displaystyle\int_0^{11} r(t)\, dt</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-piecewise-application" workspace="1in">
+      <statement>
+        <p>
+          Suppose <m>r(t)</m> is the rate of change of some quantity whose value at <m>t=0</m>
+          is <m>s(0) = 10</m>. Using the idea from this activity &#8212; not any formula you
+          haven't learned yet &#8212; find <m>s(11)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>
