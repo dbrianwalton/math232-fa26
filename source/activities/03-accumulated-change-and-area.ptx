@@ -230,8 +230,8 @@
         </md>
         Read <m>\int_{t_1}^{t_2} r(t)\,dt</m> as "the accumulated change in the quantity from
         <m>t_1</m> to <m>t_2</m>." When <m>r(t)</m> is a positive constant <m>v</m> on an
-        interval of length <m>\Delta t</m>, this is just <m>v \cdot \Delta t</m> &#8212;
-        exactly the rectangle areas you computed above.
+        interval of length <m>\Delta t</m>, this is just <m>v \cdot \Delta t</m>,
+        the same as the rectangle areas you computed above.
       </p>
     </statement>
   </definition>
@@ -256,7 +256,7 @@
     <title>What If the Rate Is Negative?</title>
     <introduction>
       <p>
-        Now push on the idea. Suppose the cart's velocity is negative for part of the trip.
+        (Stretching Our Understanding) Suppose the cart's velocity is negative for part of the trip.
       </p>
     </introduction>
     <task xml:id="task-signed-compute" workspace="1.25in">
@@ -308,8 +308,8 @@
       <statement>
         <p>
           On the interval <m>4 \le t \le 7</m>, the region between the graph and the axis lies
-          below the <m>t</m>-axis. If you compute its area the ordinary way &#8212; treating
-          base and height as positive lengths &#8212; what number do you get?
+          below the <m>t</m>-axis. If you compute its area the ordinary way (treating
+          base and height as positive lengths) what number do you get?
         </p>
       </statement>
     </task>
@@ -337,15 +337,15 @@
     <p>
       What you just worked out is called <em>signed area</em>: regions above the <m>t</m>-axis
       count as positive area, and regions below it count as negative area. This is exactly why
-      the definite integral, and not just "area," is the right tool for accumulated change
-      &#8212; it automatically keeps track of when a quantity is increasing versus decreasing.
+      the definite integral, and not just "area," is the right tool for accumulated change.
+      It automatically keeps track of when a quantity is increasing versus decreasing.
     </p>
     <p>
       Everything above used constant rates, so every region was a rectangle. But the notation
       <m>\int_{t_1}^{t_2} r(t)\,dt</m>, and its meaning as signed area, works exactly the same
-      way even when <m>r(t)</m> is not constant &#8212; even when its graph curves. Later in the
+      way even when <m>r(t)</m> is not constant. Later in the
       course you'll learn algebraic techniques (the Fundamental Theorem of Calculus and
-      antiderivative formulas) for evaluating such integrals exactly. For now, you have
+      antiderivative formulas) for evaluating such integrals exactly. However, you have
       everything you need to evaluate a definite integral whenever the region between the
       graph and the axis is built from shapes you can already measure: rectangles, triangles,
       and trapezoids.
@@ -437,8 +437,7 @@
       <statement>
         <p>
           Suppose <m>r(t)</m> is the rate of change of some quantity whose value at <m>t=0</m>
-          is <m>s(0) = 10</m>. Using the idea from this activity &#8212; not any formula you
-          haven't learned yet &#8212; find <m>s(11)</m>.
+          is <m>s(0) = 10</m>. Using the idea from this activity find <m>s(11)</m>.
         </p>
       </statement>
     </task>
