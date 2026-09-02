@@ -44,32 +44,51 @@
 
   <objectives xml:id="obj-properties-of-the-integral">
     <ul>
-      <li><p>Use two pipes filling the same tank, together with the fact that the trapezoid area formula is linear in its heights, to <em>derive</em> &#8212; not just observe in one example &#8212; the sum rule <m>\int_a^b [f(x)+g(x)]\,dx = \int_a^b f(x)\,dx + \int_a^b g(x)\,dx</m> and the constant multiple rule <m>\int_a^b k\,f(x)\,dx = k\int_a^b f(x)\,dx</m>.</p></li>
-      <li><p>Restate the splitting property <m>\int_a^b + \int_b^c = \int_a^c</m> for <m>a \lt b \lt c</m> in the tank/pipe setting, recognizing it as the same "whole equals sum of parts" idea already used in the previous activity.</p></li>
-      <li><p>Determine that <m>\int_a^a f(x)\,dx = 0</m> directly from what it means for an interval to have zero width.</p></li>
-      <li><p>Use a "reverse video" thought experiment, and separately an algebraic argument built from splitting and the zero-width fact, to arrive at the reverse-order property <m>\int_b^a f(x)\,dx = -\int_a^b f(x)\,dx</m>.</p></li>
-      <li><p>Distinguish properties that are proved directly from area/arithmetic already available (splitting for ordered points, the sum rule, the constant multiple rule) from a property that is instead adopted, by consistency, so that those rules keep working in general (reverse order).</p></li>
+      <li>
+        <p>Use an analogy of two pipes filling the same tank and a geometric argument about the trapezoid area formula to <em>derive</em> the sum rule for integrals
+        <md>\int_a^b [f(x)+g(x)]\,dx = \int_a^b f(x)\,dx + \int_a^b g(x)\,dx</md>
+        and the constant multiple rule
+        <md>\int_a^b k\,f(x)\,dx = k\int_a^b f(x)\,dx</md>.
+        </p>
+      </li>
+      <li>
+        <p>Restate the splitting property <md>\int_a^b f(x)\,dx+ \int_b^c f(x)\,dx = \int_a^c f(x)\,dx</md> for <m>a \lt b \lt c</m> in the tank/pipe setting, recognizing it as the same "whole equals sum of parts" idea already used in the previous activity.</p>
+      </li>
+      <li>
+        <p>Determine that <m>\int_a^a f(x)\,dx = 0</m> directly from what it means for an interval to have zero width.</p>
+      </li>
+      <li>
+        <p>
+          Use a "reverse video" thought experiment as well as an algebraic argument involving splitting and the zero-width fact to arrive at the reverse-order property of definite integrals
+          <md>\int_b^a f(x)\,dx = -\int_a^b f(x)\,dx</md>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Distinguish properties that are proved directly from area/arithmetic already available (splitting for ordered points, the sum rule, the constant multiple rule) from a property that is adopted to maintain consistency, so that those rules work in general (reverse order).
+        </p>
+      </li>
     </ul>
   </objectives>
 
   <introduction>
     <p>
-      Last class you found that a cart's position could be tracked by adding up small changes:
-      <m>s(t_2) = s(t_1) + \int_{t_1}^{t_2} r(t)\, dt</m>. Today we use that same formula, in a
-      different physical story, to explore <em>properties</em> of the definite integral itself
-      &#8212; algebra rules that hold no matter what the accumulating quantity represents.
+      In the previous activity, you found that a cart's position could be tracked by adding up small changes:
+      <m>s(t_2) = s(t_1) + \int_{t_1}^{t_2} r(t)\, dt</m>. In this activity, we use that same formula in a 
+      different context to explore <em>properties</em> of the definite integral.
+      These properties give us algebra rules that hold no matter what the accumulating quantity represents.
     </p>
     <p>
-      Picture a tank of water, filled or drained by one or more pipes. If a pipe delivers water
+      Picture a tank of water that is being filled or drained by one or more pipes. If a pipe delivers water
       at a rate <m>r(t)</m> gallons per minute, possibly changing over time, then the volume
       added to the tank between times <m>t_1</m> and <m>t_2</m> is exactly
-      <m>\int_{t_1}^{t_2} r(t)\, dt</m> &#8212; same formula, same arithmetic, new setting. A
-      negative rate just means the pipe is draining the tank instead of filling it. (We'll track
-      <em>net</em> volume added, so it's fine for this number to come out negative &#8212; think
-      of it as a ledger of water in versus water out, not the literal contents of the tank.)
+      <m>\int_{t_1}^{t_2} r(t)\, dt</m>. A negative rate means the pipe is draining the tank instead of 
+      filling it. Recall that the definite integral represents the <em>total change</em> in a quantity,
+      so a negative number as the definite integral would mean there is a net drop.
     </p>
     <p>
-      Same team roles as last time. As always, the goal is for <em>everyone</em> in the group to
+      We will continue the same team roles as last time: Director, Recorder, Spokesperson, and Reflector.
+      As always, the goal is for <em>everyone</em> in the group to
       be able to explain <em>why</em>, not just to have an answer written down.
     </p>
   </introduction>
@@ -115,15 +134,14 @@
       <statement>
         <p>
           Find <m>\int_0^3 r(t)\,dt</m>, <m>\int_3^8 r(t)\,dt</m>, and <m>\int_0^8 r(t)\,dt</m>.
-          Confirm that the first two add up to the third.
+          Interpret what each definite integral is meant to physically represent.
         </p>
       </statement>
     </task>
     <task xml:id="task-tank-splitting-generalize" workspace="1in">
       <statement>
         <p>
-          This is exactly the reasoning you used last class to add up several legs of a trip.
-          State the general rule: for any three times <m>a \lt b \lt c</m>, what equation
+          State a general rule: for any three times <m>a \lt b \lt c</m>, what equation
           relates <m>\int_a^b r(t)\,dt</m>, <m>\int_b^c r(t)\,dt</m>, and <m>\int_a^c
           r(t)\,dt</m>? Explain, in one sentence, why it has to be true.
         </p>
@@ -135,9 +153,14 @@
     <title>Two Pipes, One Tank: The Sum Rule</title>
     <introduction>
       <p>
-        Now suppose two pipes feed the <em>same</em> tank at the same time, over the same
+        Now suppose two pipes feed/drain the <em>same</em> tank at the same time, over the same
         <m>5</m>-minute interval <m>0 \le t \le 5</m>. Each pipe's rate changes at a steady
-        (constant) pace, so the graph of each is a single straight line segment. Their rates at
+        (constant) pace, so the graph of each is a single straight line segment.
+      </p>
+      <p>
+        Our focus will be on the geometric interpretation of definite integrals, so we will 
+        describe the two rate functions graphically instead of by formula by identifying the
+        endpoints and then having you draw a graph and interpret the area. The rates at
         the two endpoints are:
       </p>
       <tabular>
@@ -174,7 +197,8 @@
       <statement>
         <p>
           If both pipes run into the tank together, the combined rate at each instant is
-          <m>f(t) + g(t)</m>. Find the combined rate at <m>t=0</m> and at <m>t=5</m>, then use
+          <m>f(t) + g(t)</m>. Think of creating a new graph of this combined rate.
+          Find the combined rate at <m>t=0</m> and at <m>t=5</m>, then use
           the trapezoid formula on the combined rate to find the total volume delivered by both
           pipes together.
         </p>
@@ -193,8 +217,8 @@
       <statement>
         <p>
           The trapezoid formula is <m>\frac{1}{2}(h_1+h_2)\cdot\text{width}</m>, an expression
-          that is <em>linear</em> in the heights <m>h_1</m> and <m>h_2</m>. Using this formula
-          directly &#8212; not just today's particular numbers &#8212; explain why the sum rule
+          that is <em>linear</em> in the heights <m>h_1</m> and <m>h_2</m>. Use this formula
+          directly instead of using particular numerical values to explain why the sum rule
           you just found has to hold for <em>any</em> two piecewise-linear rate functions over
           the same interval, not only for Pipe A and Pipe B.
         </p>
@@ -207,9 +231,9 @@
     <introduction>
       <p>
         Suppose Pipe A (from the previous exercise) is fitted with a valve that lets exactly
-        <m>3</m> times as much water through at every instant, without changing its shape &#8212;
-        so its rate is still a straight line over <m>0 \le t \le 5</m>, just tripled at every
-        point in time.
+        <m>3</m> times as much water through at every instant, without changing its shape.
+        Its rate is still a straight line over <m>0 \le t \le 5</m>, but with the height tripled
+        at every point in time.
       </p>
     </introduction>
     <task xml:id="task-valve-rate" workspace="1in">
@@ -235,7 +259,7 @@
           Suppose instead the valve let through exactly half the flow (<m>k = 0.5</m>), or ran
           the pipe in reverse at the same rate it originally filled (<m>k=-1</m>, draining
           instead of filling). Does your explanation from the previous exercise show why the
-          rule holds for these values of <m>k</m> too, not only whole-number "copies" of a pipe?
+          rule holds for these values of <m>k</m> too?
           Explain briefly.
         </p>
       </statement>
@@ -243,12 +267,13 @@
   </exercise>
 
   <exercise xml:id="ex-zero-width" workspace="0in">
-    <title>No Time, No Water</title>
+    <title>No Time, No Water (Zero Width Property)</title>
     <task xml:id="task-zero-width" workspace="1in">
       <statement>
         <p>
-          A pipe runs from time <m>a</m> to time <m>a</m> &#8212; that is, no time elapses at
-          all. How much volume enters the tank? What is <m>\int_a^a f(x)\,dx</m>, for
+          A pipe runs from time <m>a</m> to time <m>a</m>
+          No time elapses at all.
+          How much volume enters the tank? What is <m>\int_a^a f(x)\,dx</m>, for
           <em>any</em> rate function <m>f</m>? Why must this be true no matter what <m>f</m> is?
         </p>
       </statement>
@@ -256,12 +281,13 @@
   </exercise>
 
   <exercise xml:id="ex-reverse-video" workspace="0in">
-    <title>Running the Video Backward</title>
+    <title>Running the Video Backward (Endpoint Reversal)</title>
     <introduction>
       <p>
         A camera records a tank being filled by a pipe running at some rate <m>r(t)</m>
-        (not necessarily constant) from time <m>t=0</m> to time <m>t=5</m>, with <m>r(t) \ge 0</m>
-        throughout, so the water level rises the whole time. Now imagine playing that recording
+        (not necessarily constant) from time <m>t=0</m> to time <m>t=5</m>.
+        For simplicity right now, we will think of <m>r(t) \ge 0</m> throughout,
+        so the water level increases the whole time. Now imagine playing that recording
         <em>backward</em>.
       </p>
     </introduction>
@@ -270,7 +296,7 @@
         <p>
           Describe what you would see happen to the water level as the reversed footage plays.
           An observer who has only ever seen the reversed footage, measuring time on a reversed
-          clock (their "<m>t=0</m>" is the original <m>t=5</m>, and their "<m>t=5</m>" is the
+          clock (their "starting time" is the original <m>t=5</m>, and their "ending time" is the
           original <m>t=0</m>), would report some rate of change for the tank. How does the rate
           this observer reports compare to the original <m>r(t)</m>?
         </p>
@@ -281,30 +307,23 @@
         <p>
           Using your answer, what should <m>\int_5^0 r(t)\,dt</m> equal, in terms of
           <m>\int_0^5 r(t)\,dt</m>? More generally, what should <m>\int_b^a r(t)\,dt</m> equal,
-          in terms of <m>\int_a^b r(t)\,dt</m>? State this as the reverse-order property.
+          in terms of <m>\int_a^b r(t)\,dt</m>? State this as the <term>reverse-order property</term>.
         </p>
       </statement>
     </task>
     <task xml:id="task-reverse-algebra" workspace="1.5in">
       <statement>
         <p>
-          Now derive the same fact a different way, using only two rules from earlier in this
-          activity: the splitting property &#8212; which we now <em>adopt</em> as always true,
-          for any three numbers <m>a</m>, <m>b</m>, <m>c</m>, not only when <m>a \lt b \lt c</m>
-          &#8212; and the zero-width property from the previous exercise. Apply the splitting
-          property to the three numbers <m>a</m>, <m>b</m>, <m>a</m>, in that order, to write an
+          We now derive the same fact a different way, this time using only the <term>splitting property</term>
+          and the <term>zero-width property</term> we identified earlier in this activity.
+          The idea is that although we <em>discovered</em> the properties in the context of ordered endpoints,
+          when <m>a \lt b \lt c</m>, we <em>require</em> the property to work in general for consistency
+          for any three numbers <m>a</m>, <m>b</m>, <m>c</m>, regardless of their numerical order.
+        </p>
+        <p>
+          Apply the splitting property to the three numbers <m>a</m>, <m>b</m>, <m>a</m> (in place of <m>c</m>), in that order, to write an
           equation involving <m>\int_a^b</m>, <m>\int_b^a</m>, and <m>\int_a^a</m>. Then solve
           for <m>\int_b^a r(t)\,dt</m>.
-        </p>
-      </statement>
-    </task>
-    <task xml:id="task-reverse-compare" workspace="1.25in">
-      <statement>
-        <p>
-          Do the video reasoning and the algebra reasoning agree? One of these two arguments is
-          really a picture you can point to; the other is not. Which is which, and why do you
-          think it's reasonable to adopt a rule that has no picture behind it, as long as it's
-          forced by rules you already believe?
         </p>
       </statement>
     </task>
@@ -314,61 +333,19 @@
     <title>Two Kinds of "Always True"</title>
     <p>
       Look back at everything in this activity. The splitting property for <m>a \lt b \lt c</m>,
-      the sum rule, and the constant multiple rule are all things you <em>proved</em> &#8212;
-      you could point to an arithmetic reason (the linearity of the area formulas) that makes
-      each one true, for any numbers involved, not just today's examples. The zero-width fact is
-      even more immediate: it's just what "width" means.
+      the sum rule, and the constant multiple rule are all things you <em>proved</em>.
+      In each case, you could point to an arithmetic reason (the linearity of the area formulas)
+      that makes each one true. The zero-width fact is even more immediate: it's just what "width" means.
     </p>
     <p>
       The reverse-order property is different in kind. There is no region you can shade for
-      "the area from <m>b</m> to <m>a</m> when <m>b</m> is bigger than <m>a</m>" &#8212; no
-      picture forces the rule on you the way a shaded rectangle forces the rectangle's area
-      formula on you. Instead, we <em>adopt</em> it, because it's the only choice that lets the
-      splitting rule keep working for any three numbers, not only when they happen to be in
-      increasing order. This move &#8212; extending a rule by insisting it stay consistent,
-      rather than by reading it off a new picture &#8212; is one you'll see again later in the
-      course.
+      "the area from <m>b</m> to <m>a</m> when <m>b</m> is bigger than <m>a</m>".
+      We can not directly visualize with a picture what it means to shade a region <em>in reverse</em>.
+      Instead, we <em>adopt</em> an interpretation, because it's the only choice that lets the
+      splitting rule keep working for any three numbers and not only when they are in
+      increasing order. This is a mathematical mode of reasoning that we will encounter
+      multiple times.
     </p>
   </remark>
-
-  <exercise xml:id="ex-general-splitting" workspace="0in">
-    <title>Beyond the Obvious Order (Stretching Our Understanding)</title>
-    <introduction>
-      <p>
-        This exercise goes beyond what's planned for today's 25 minutes. If your group finishes
-        everything above with time to spare, or as a follow-up on your own, use the properties
-        you've now collected &#8212; splitting (for any order), zero-width, reverse order, the
-        sum rule, and the constant multiple rule &#8212; together.
-      </p>
-    </introduction>
-    <task xml:id="task-general-splitting-algebra" workspace="1.5in">
-      <statement>
-        <p>
-          Suppose <m>a \lt c \lt b</m>, so <m>c</m> is not between <m>a</m> and <m>b</m> in the
-          usual "middle" sense used in Exercise 1 (it's off to one side instead). Using the
-          splitting property (now assumed to always hold, for any order of the three points) and
-          the reverse-order property, show that <m>\int_a^b f(x)\,dx = \int_a^c f(x)\,dx +
-          \int_c^b f(x)\,dx</m> is still true.
-        </p>
-      </statement>
-    </task>
-    <task xml:id="task-general-splitting-check" workspace="1.5in">
-      <statement>
-        <p>
-          Pick a specific piecewise-linear rate function and specific numbers <m>a</m>, <m>b</m>,
-          <m>c</m> in the order from the previous task. Check the identity numerically (by hand,
-          or using Desmos's numerical definite integral) to confirm your algebra.
-        </p>
-      </statement>
-    </task>
-    <task xml:id="task-general-linearity-combo" workspace="1in">
-      <statement>
-        <p>
-          Using the sum rule and the constant multiple rule together, show that
-          <m>\int_a^b [3f(x) - 2g(x)]\,dx = 3\int_a^b f(x)\,dx - 2\int_a^b g(x)\,dx</m>.
-        </p>
-      </statement>
-    </task>
-  </exercise>
 
 </worksheet>
