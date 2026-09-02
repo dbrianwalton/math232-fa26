@@ -50,6 +50,7 @@
       <!-- Remove the example and replace with your own activities -->
       <xi:include href="./activities/02-derivative-graph-shape.ptx"/>
       <xi:include href="./activities/03-accumulated-change-and-area.ptx"/>
+      <xi:include href="./activities/04-properties-of-the-integral.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>
