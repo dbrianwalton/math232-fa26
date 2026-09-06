@@ -21,6 +21,7 @@
   <!-- for those in the next element. -->
   <latex-image-preamble>
     \usepackage{tikz, pgfplots}
+    \usepgfplotslibrary{fillbetween}
     \usetikzlibrary{positioning,matrix,arrows}
     \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
     \usetikzlibrary{decorations.markings}
