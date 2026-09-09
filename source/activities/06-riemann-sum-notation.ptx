@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- POGIL-style activity, Day 6 (~25-30 minutes). Follows directly from Activity 5, which -->
+<!-- built the left and right Riemann sums for f(x)=x^2 on [1,3] with a fixed n=4 -->
+<!-- (staircase pictures, hand-added areas, then a Desmos slider). This activity is the -->
+<!-- formalization that Activity 5 deliberately deferred: writing Delta x and the partition -->
+<!-- points x_k as formulas in n and k, using function composition to get f(x_k), and -->
+<!-- introducing summation notation as shorthand for the addition students already did by -->
+<!-- hand. Deliberately focuses on the RIGHT Riemann sum only (left sum formalization is -->
+<!-- not needed for the course's purposes and would just double every step). -->
+
+<!-- Deliberately AVOIDS: evaluating any summation, deriving a closed-form formula in n, -->
+<!-- and taking any limit. The entire activity stops at correctly WRITING the expression -->
+<!-- sum_{k=1}^n f(x_k) Delta x for a given f, a, b, and general n. That's the whole -->
+<!-- learning outcome: setup, not computation. Resist the urge to let a task ask "and now -->
+<!-- evaluate it" — that's for a later activity. -->
+
+<!-- Function progression (each new example adds exactly one new difficulty): -->
+<!--   Recap (Exercises 1-2): f(x)=x^2 on [1,3] — the SAME example as Activity 5, so -->
+<!--     students can check their general-n formulas against numbers they already trust -->
+<!--     (n=4 reproduces 1.5, 2, 2.5, 3 and the right-sum total 10.75). -->
+<!--   Exercise 3: f(x)=x^3 on [1,4] — new function, but still a bare power; a is -->
+<!--     nonzero, so x_k = a + k*Delta x is still doing real work (not collapsing to k*Delta x). -->
+<!--   Exercise 4: f(x)=x^2-2x+3 on [0,4] — first non-power polynomial, so f(x_k) requires -->
+<!--     substituting into a genuine expression, not just raising to a power. a=0 here so -->
+<!--     x_k itself stays simple (4k/n) and the new difficulty is isolated to composition. -->
+<!--   Exercise 5: f(x)=12/(2x+1) on [0,3] — a simple rational function A/(Bx+C); the new -->
+<!--     difficulty is substituting x_k into a denominator without losing parentheses. -->
+<!--     a=0 again, for the same reason as Exercise 4. -->
+
+<!-- Suggested pacing for a ~25-30 minute block (approximate, not enforced): -->
+<!--   Intro ................................................................ ~2   min -->
+<!--   Exercise 1: Delta x and x_k as formulas in n ......................... ~6   min -->
+<!--   Exercise 2 (with definition box): summation notation ................. ~7   min -->
+<!--   Exercise 3: practice, power function .................................. ~4   min -->
+<!--   Exercise 4: practice, quadratic polynomial ............................ ~5   min -->
+<!--   Exercise 5: practice, rational function ................................ ~5  min -->
+<!--   TOTAL ..................................................................... ~29 min -->
+<!-- -->
+<!-- Where to cut if you're running short (in order of preference): -->
+<!--   1. Exercise 5 (rational function) is the newest and hardest skill and is safest to -->
+<!--      assign as a follow-up / homework problem once students have the four-step recipe -->
+<!--      (rem-four-step-recipe) in hand — it needs processing time more than group -->
+<!--      discussion. -->
+<!--   2. task-check-xk in Exercise 1 (verifying x_k against the known n=4 values) can be -->
+<!--      talked through as a class instead of written individually. -->
+<!--   3. task-expand-numeric-sum in Exercise 2 (the abstract Sigma warm-up unrelated to -->
+<!--      Riemann sums) can be skipped for a class that picks up notation quickly — go -->
+<!--      straight to task-expand-riemann-n4, which teaches the same reading skill in -->
+<!--      context. -->
+<!--   4. Do NOT cut Exercise 4 (the quadratic polynomial) — composing f(x_k) for a -->
+<!--      non-power expression is the main new algebra skill of the whole activity. -->
+<!--   5. Do NOT cut task-assemble-general-sum at the end of Exercise 2 — it's the first -->
+<!--      time students write the full general-n right Riemann sum, and everything in -->
+<!--      Exercises 3-5 repeats that exact move. -->
+
+<worksheet xml:id="activity-riemann-sum-notation">
+  <title>Setting Up Riemann Sums with Summation Notation</title>
+
+  <objectives xml:id="obj-riemann-sum-notation">
+    <ul>
+      <li><p>Write <m>\Delta x = \frac{b-a}{n}</m> for a partition of <m>[a,b]</m> into <m>n</m> equal subintervals, as a formula in <m>n</m> rather than a number tied to one specific choice of <m>n</m>.</p></li>
+      <li><p>Write the <m>k</m>th right endpoint of the partition as <m>x_k = a + k\Delta x</m>, and check a general formula against known specific values from a previous example.</p></li>
+      <li><p>Use function composition to substitute <m>x_k</m> into simple algebraic functions.</p></li>
+      <li><p>Read and write summation notation <m>\displaystyle\sum_{k=1}^n a_k</m> as shorthand for "add up the terms <m>a_1</m> through <m>a_n</m>," including expanding a short sum into its individual terms.</p></li>
+      <li><p>Assemble <m>\Delta x</m>, <m>x_k</m>, and <m>f(x_k)</m> into the full right Riemann sum <md>\displaystyle\sum_{k=1}^n f(x_k)\,\Delta x</md> for a specific function and interval, for any number of subintervals <m>n</m>, without evaluating it.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Last class, we approximated  <m>\displaystyle \int_1^3 x^2 \, dx</m> using left and right Riemann sums for <m>f(x)=x^2</m> on <m>[1,3]</m>
+      by hand, using a specific choice of <m>n=4</m> rectangles: you found the five
+      partition points <m>1, 1.5, 2, 2.5, 3</m>, read off five function values from a
+      table, and added up four rectangle areas. That works, but it required a fresh
+      picture and a fresh table every time <m>n</m> changed. Today you'll write down the
+      <em>pattern</em> behind those numbers instead using formulas that work for
+      <em>any</em> number of subintervals <m>n</m>, and a compact notation for "add these up"
+      that doesn't require writing out every single term.
+    </p>
+    <p>
+      To keep things manageable, we'll set up only the <em>right</em> Riemann sum today
+      (always using the right endpoint of each subinterval). The goal in every task below
+      is to correctly <em>write</em> an expression.
+      At this stage, we will not evaluate it, simplify it, or
+      find its value as a formula in <m>n</m>.
+    </p>
+    <p>
+      Team Roles: Manager, Recorder, Spokesperson, and
+      Reflector.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-general-n-setup" workspace="0in">
+    <title>From <m>n=4</m> to Any <m>n</m></title>
+    <introduction>
+      <p>
+        Recall the example from last class approximating <m>\displaystyle \int_1^3 x^2 \, dx</m>, the integral of <m>f(x) = x^2</m> on <m>[1,3]</m>. With
+        <m>n=4</m> subintervals, the width of each piece was <m>\Delta x = 0.5</m>, and the
+        four right endpoints were <m>x_1=1.5</m>, <m>x_2=2</m>, <m>x_3=2.5</m>, <m>x_4=3</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-general-delta-x" workspace=".75in">
+      <statement>
+        <p>
+          In general, partitioning an interval <m>[a,b]</m> into <m>n</m> equal-width
+          subintervals gives each one a width of <m>\displaystyle \Delta x = \frac{b-a}{n}</m>.
+          Using <m>a=1</m> and <m>b=3</m> from our example, but leaving <m>n</m> as a symbol,
+          write <m>\Delta x</m> as an expression in <m>n</m>. Check that your expression
+          gives <m>0.5</m> when <m>n=4</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-general-xk" workspace="1in">
+      <statement>
+        <p>
+          Each partition point is reached by taking <m>k</m> steps of size <m>\Delta x</m>
+          away from the left endpoint <m>a</m>. That is, the <m>k</m>th right endpoint is
+          <m>x_k = a + k\,\Delta x</m>, where <m>k</m> counts how many steps have been
+          taken (so <m>x_1</m> is one step from <m>a</m>, <m>x_2</m> is two steps, and so
+          on). Using <m>a=1</m> and your expression for <m>\Delta x</m> from the previous
+          task, write <m>x_k</m> as an expression in <m>k</m> and <m>n</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-check-xk" workspace="1in">
+      <statement>
+        <p>
+          Check your formula: substitute <m>n=4</m> into your expression for <m>x_k</m>,
+          then evaluate it at <m>k=1</m>, <m>k=2</m>, <m>k=3</m>, and <m>k=4</m>. Do you
+          recover <m>1.5</m>, <m>2</m>, <m>2.5</m>, and <m>3</m>?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <definition xml:id="def-summation-notation">
+    <title>Summation Notation</title>
+    <statement>
+      <p>
+        The symbol <m>\Sigma</m> (capital Greek sigma) is a compact way to write "add up a
+        list of terms that follow a pattern." The notation
+        <md>\sum_{k=1}^{n} a_k</md>
+        means: start at <m>k=1</m> (the number written below <m>\Sigma</m>), evaluate the
+        expression <m>a_k</m>, then repeat for <m>k=2</m>, <m>k=3</m>, and so on, up
+        through <m>k=n</m> (the number written above <m>\Sigma</m>), adding every result
+        together. Written out in full, it means the same thing as
+        <md>a_1 + a_2 + a_3 + \cdots + a_n\text{.}</md>
+        Nothing here says how to find the <em>value</em> of that total &#8212; it's just
+        notation for which terms to add.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise xml:id="ex-reading-sigma" workspace="0in">
+    <title>Reading and Using Summation Notation</title>
+    <task xml:id="task-expand-numeric-sum" workspace="1in">
+      <statement>
+        <p>
+          Write out <m>\displaystyle\sum_{k=1}^{5} (2k-1)</m> as five separate terms (substituting
+          <m>k=1,2,3,4,5</m> one at a time), then add them up.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-expand-riemann-n4" workspace="1.5in">
+      <statement>
+        <p>
+          Now use summation notation for something you've already computed. For
+          <m>f(x)=x^2</m> on <m>[1,3]</m> with <m>n=4</m>, recall <m>\Delta x = 0.5</m> and
+          <m>f(x_1)=2.25</m>, <m>f(x_2)=4</m>, <m>f(x_3)=6.25</m>, <m>f(x_4)=9</m>. Write
+          out <m>\displaystyle\sum_{k=1}^{4} f(x_k)\,\Delta x</m> as four separate terms (each a
+          number, not a symbol), then add them up. Does your total match the right
+          Riemann sum you found by hand last class?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-assemble-general-sum" workspace="1.25in">
+      <statement>
+        <p>
+          Finally, replace the specific value <m>n=4</m> with a general <m>n</m>. Using
+          your expressions for <m>\Delta x</m> and <m>x_k</m> from Exercise 1, write
+          <m>f(x_k)</m> for <m>f(x)=x^2</m>, then assemble the full right Riemann sum
+          <m>\displaystyle\sum_{k=1}^{n} f(x_k)\,\Delta x</m> for
+          <m>\displaystyle\int_1^3 x^2\,dx</m>, entirely in terms of <m>k</m> and <m>n</m>. Do not
+          simplify or evaluate &#8212; just set it up.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-four-step-recipe">
+    <title>The General Recipe</title>
+    <p>
+      Whatever the function, interval, or <m>n</m>, setting up the right Riemann sum for
+      <m>\displaystyle\int_a^b f(x)\,dx</m> always follows the same four steps:
+      <ol>
+        <li><p>Find the width of each subinterval: <m>\displaystyle \Delta x = \frac{b-a}{n}</m>.</p></li>
+        <li><p>Write the <m>k</m>th right endpoint: <m>x_k = a + k\,\Delta x</m>.</p></li>
+        <li><p>Substitute <m>x_k</m> into <m>f</m> to get <m>f(x_k)</m>.</p></li>
+        <li><p>Assemble the sum: <m>\displaystyle\sum_{k=1}^{n} f(x_k)\,\Delta x</m>.</p></li>
+      </ol>
+      The next three exercises are all the same four steps, applied to new functions.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-practice-cubic" workspace="0in">
+    <title>Practice: A Power Function</title>
+    <introduction>
+      <p>
+        Set up the right Riemann sum for <m>\displaystyle\int_1^4 x^3\,dx</m>, using <m>f(x)=x^3</m>
+        on <m>[1,4]</m> with <m>n</m> subintervals.
+      </p>
+    </introduction>
+    <task xml:id="task-cubic-deltax" workspace=".75in">
+      <statement>
+        <p>Find <m>\Delta x</m> as an expression in <m>n</m>.</p>
+      </statement>
+    </task>
+    <task xml:id="task-cubic-xk" workspace=".75in">
+      <statement>
+        <p>Write <m>x_k</m> as an expression in <m>k</m> and <m>n</m>.</p>
+      </statement>
+    </task>
+    <task xml:id="task-cubic-fxk" workspace="1in">
+      <statement>
+        <p>
+          Substitute your expression for <m>x_k</m> into <m>f(x)=x^3</m> to write
+          <m>f(x_k)</m>. (You don't need to expand the cube &#8212; leaving it as something
+          cubed is fine.)
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-cubic-sum" workspace="1in">
+      <statement>
+        <p>
+          Assemble the full right Riemann sum <m>\displaystyle\sum_{k=1}^{n} f(x_k)\,\Delta x</m>
+          for this integral.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-practice-quadratic" workspace="0in">
+    <title>Practice: A Quadratic Polynomial</title>
+    <introduction>
+      <p>
+        Set up the right Riemann sum for <m>\displaystyle\int_0^4 (x^2-2x+3)\,dx</m>, using
+        <m>f(x)=x^2-2x+3</m> on <m>[0,4]</m> with <m>n</m> subintervals. This time
+        <m>f</m> isn't a single power of <m>x</m>, so substituting <m>x_k</m> means
+        replacing <em>every</em> <m>x</m> in the formula for <m>f</m> &#8212; not just the
+        one inside a power.
+      </p>
+    </introduction>
+    <task xml:id="task-quad-deltax" workspace=".75in">
+      <statement>
+        <p>Find <m>\Delta x</m> as an expression in <m>n</m>.</p>
+      </statement>
+    </task>
+    <task xml:id="task-quad-xk" workspace=".75in">
+      <statement>
+        <p>Write <m>x_k</m> as an expression in <m>k</m> and <m>n</m>.</p>
+      </statement>
+    </task>
+    <task xml:id="task-quad-fxk" workspace="1.25in">
+      <statement>
+        <p>
+          Substitute your expression for <m>x_k</m> in for <em>every</em> <m>x</m> in
+          <m>f(x)=x^2-2x+3</m> to write <m>f(x_k)</m>. (Again, you don't need to simplify
+          &#8212; correctly substituting is the point of this task.)
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-quad-sum" workspace="1in">
+      <statement>
+        <p>
+          Assemble the full right Riemann sum <m>\displaystyle\sum_{k=1}^{n} f(x_k)\,\Delta x</m>
+          for this integral.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-practice-rational" workspace="0in">
+    <title>Practice: A Rational Function</title>
+    <introduction>
+      <p>
+        Set up the right Riemann sum for <m>\displaystyle\int_0^3 \frac{12}{2x+1}\,dx</m>, using
+        <m>\displaystyle f(x)=\frac{12}{2x+1}</m> on <m>[0,3]</m> with <m>n</m> subintervals. Here
+        <m>x_k</m> is being substituted into a denominator, so parentheses matter: you're
+        replacing <m>x</m> in <m>2x+1</m>, not just tacking <m>x_k</m> onto the end of the
+        fraction.
+      </p>
+    </introduction>
+    <task xml:id="task-rational-deltax" workspace=".75in">
+      <statement>
+        <p>Find <m>\Delta x</m> as an expression in <m>n</m>.</p>
+      </statement>
+    </task>
+    <task xml:id="task-rational-xk" workspace=".75in">
+      <statement>
+        <p>Write <m>x_k</m> as an expression in <m>k</m> and <m>n</m>.</p>
+      </statement>
+    </task>
+    <task xml:id="task-rational-fxk" workspace="1.25in">
+      <statement>
+        <p>
+          Substitute your expression for <m>x_k</m> in place of <m>x</m> in
+          <m>\displaystyle f(x)=\frac{12}{2x+1}</m>, keeping it inside parentheses, to write
+          <m>f(x_k)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-rational-sum" workspace="1in">
+      <statement>
+        <p>
+          Assemble the full right Riemann sum <m>\displaystyle\sum_{k=1}^{n} f(x_k)\,\Delta x</m>
+          for this integral.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>
