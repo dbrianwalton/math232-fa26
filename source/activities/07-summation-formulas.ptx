@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- POGIL-style activity, Day 7 (~45-50 minutes). Follows directly from Activity 6, which -->
+<!-- stopped at correctly WRITING the general-n right Riemann sum sum_{k=1}^n f(x_k) Delta x -->
+<!-- without evaluating it. This activity closes that gap: it introduces summation formulas -->
+<!-- and the sum/constant-multiple rules as GIVEN facts (no induction proof), then uses them -->
+<!-- to actually evaluate a Riemann sum, first for a fixed n=20 and then for general n. -->
+
+<!-- Deliberately AVOIDS: proving the four summation formulas, and taking any limit as -->
+<!-- n -> infinity. The activity stops at a single closed-form formula in n for the right -->
+<!-- Riemann sum. The limit is left for a future class (see the closing remark). -->
+
+<!-- Motivation for Exercise 1: instructors report students often misread a formula like -->
+<!-- sum_{k=1}^n k = n(n+1)/2 as replacing each TERM k by n(n+1)/2, rather than replacing the -->
+<!-- entire summation. Exercise 1 forces a side-by-side comparison (list-and-add vs. -->
+<!-- substitute-into-formula) at a small, checkable n=6 before any rule is used for real work. -->
+
+<!-- Answer key, for instructor reference (not shown to students): -->
+<!--   task-direct-sum-n6 / task-formula-n6: both give 21. -->
+<!--   task-direct-3k-2 / task-formula-3k-2: both give 35. -->
+<!--   task-no-terms-k2-4k: sum_{k=1}^{20}(k^2-4k) = 2870 - 840 = 2030. -->
+<!--   task-n20-evaluate: the n=20 right Riemann sum for int_1^3 x^2 dx equals 2 + 4.2 + 2.87 -->
+<!--     = 9.07 (compare to the exact value 26/3 ~ 8.667: a right sum for an increasing -->
+<!--     function should overestimate, which it does). -->
+<!--   task-general-evaluate: the general-n right Riemann sum simplifies to -->
+<!--     26/3 + 8/n + 4/(3n^2). Substituting n=20 gives 26/3 + 2/5 + 1/300 = 2721/300 = 9.07, -->
+<!--     matching task-n20-evaluate exactly (task-general-check). As n grows, this formula -->
+<!--     approaches 26/3, the exact value of the integral: useful to have in your back -->
+<!--     pocket for the limit discussion in a future class, but do not spoil it here. -->
+
+<!-- Suggested pacing for a ~45-50 minute block (approximate, not enforced): -->
+<!--   Intro ................................................................. ~1  min -->
+<!--   Exercise 1: does the formula replace the sum? ......................... ~7  min -->
+<!--   Two definition boxes: formulas and rules (read/discuss as a class) .... ~5  min -->
+<!--   Exercise 2: combining the rules ........................................ ~10 min -->
+<!--   Exercise 3: evaluating the n=20 Riemann sum ............................ ~10 min -->
+<!--   Exercise 4: generalizing to any n ....................................... ~14 min -->
+<!--   TOTAL ...................................................................... ~47 min -->
+
+<!-- Where to cut if you're running short (in order of preference): -->
+<!--   1. task-general-check (verifying the general formula against n=20) is a nice -->
+<!--      confidence check but not new content, so it's safe to skip or assign as follow-up. -->
+<!--   2. task-no-terms-k2-4k at the end of Exercise 2 can be assigned as homework if -->
+<!--      Exercise 2's first three tasks already made the point. -->
+<!--   3. If Exercise 4 (general n) doesn't fit, stop after Exercise 3 and open the next -->
+<!--      class by redoing the n=20 computation symbolically as a warm-up, since the algebra is -->
+<!--      the same, just relabeled, so little momentum is lost. -->
+<!--   4. Do NOT cut Exercise 1: it is the whole point of introducing the rules carefully -->
+<!--      rather than just handing them out. -->
+
+<worksheet xml:id="activity-summation-formulas">
+  <title>Evaluating Riemann Sums with Summation Formulas</title>
+
+  <objectives xml:id="obj-summation-formulas">
+    <ul>
+      <li><p>Discover, using a small checkable example, that a summation formula replaces the <em>entire sum</em> with a single expression, not each individual term.</p></li>
+      <li><p>Use the four basic summation formulas for <m>\displaystyle\sum_{k=1}^n a</m>, <m>\displaystyle\sum_{k=1}^n k</m>, <m>\displaystyle\sum_{k=1}^n k^2</m>, and <m>\displaystyle\sum_{k=1}^n k^3</m>, along with the sum rule and constant multiple rule to evaluate a summation without listing its individual terms.</p></li>
+      <li><p>Expand and simplify the summand of a right Riemann sum, then use the summation formulas to evaluate the sum as a single number for a specific <m>n</m>.</p></li>
+      <li><p>Repeat that process with <m>n</m> left as a symbol, treating <m>n</m> as a fixed (but unspecified) number rather than as the index of summation, to obtain a closed-form formula for the Riemann sum in terms of <m>n</m>.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Last class you learned to <em>write</em> a right Riemann sum using summation notation,
+      such as <m>\displaystyle\sum_{k=1}^{n} f(x_k)\,\Delta x</m>, without evaluating it. Today
+      you'll actually evaluate sums like this, first by hand-checking what a summation formula
+      really claims, then by using a small toolkit of formulas to turn a Riemann sum into a
+      single number, and finally into a single formula in <m>n</m>.
+    </p>
+    <p>
+      Team Roles: Manager, Recorder, Spokesperson, and Reflector.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-formula-replaces-sum" workspace="0in">
+    <title>Does the Formula Really Replace the Sum?</title>
+    <introduction>
+      <p>
+        We start with a formula <m>\displaystyle\sum_{k=1}^{n} k =
+        \frac{n(n+1)}{2}</m> and you are asked to trust it for the rest of the activity. Before relying
+        on it, check for yourselves what it actually claims.
+      </p>
+    </introduction>
+    <task xml:id="task-direct-sum-n6" workspace=".75in">
+      <statement>
+        <p>
+          Compute <m>1+2+3+4+5+6</m> directly, by adding the six numbers one at a time.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-formula-n6" workspace=".75in">
+      <statement>
+        <p>
+          Now substitute <m>n=6</m> into the formula <m>\displaystyle\frac{n(n+1)}{2}</m> and
+          evaluate it. Compare this to your answer above.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-formula-meaning" workspace="1.5in">
+      <statement>
+        <p>
+          A student claims that the formula <m>\displaystyle\sum_{k=1}^{n} k =
+          \frac{n(n+1)}{2}</m> means "replace every individual term <m>k</m> in the sum by
+          <m>\frac{n(n+1)}{2}</m>." Using your work above, explain why that is not what the
+          formula says. What does <m>\frac{n(n+1)}{2}</m> actually replace?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <definition xml:id="def-summation-formulas">
+    <title>Four Summation Formulas</title>
+    <statement>
+      <p>
+        The following four formulas are given as facts. (Each can each be proved, but proving them is not a course goal.) In each, <m>a</m> is a number
+        that does not depend on <m>k</m>, and <m>n</m> is the number of terms being added.
+      </p>
+      <ul>
+        <li><p><m>\displaystyle\sum_{k=1}^{n} a = n\cdot a</m></p></li>
+        <li><p><m>\displaystyle\sum_{k=1}^{n} k = \frac{n(n+1)}{2}</m></p></li>
+        <li><p><m>\displaystyle\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}</m></p></li>
+        <li><p><m>\displaystyle\sum_{k=1}^{n} k^3 = \frac{n^2(n+1)^2}{4}</m></p></li>
+      </ul>
+    </statement>
+  </definition>
+
+  <definition xml:id="def-sum-rules">
+    <title>Sum Rule and Constant Multiple Rule</title>
+    <statement>
+      <p>
+        Summations also split over addition and let a constant factor be pulled out, the same
+        way you already expect from other kinds of sums:
+      </p>
+      <ul>
+        <li><p><m>\displaystyle\sum_{k=1}^{n} (a_k + b_k) = \Big(\sum_{k=1}^{n} a_k\Big) +
+          \Big(\sum_{k=1}^{n} b_k\Big)</m></p></li>
+        <li><p><m>\displaystyle\sum_{k=1}^{n} (c\cdot a_k) = c\cdot\Big(\sum_{k=1}^{n}
+          a_k\Big)</m></p></li>
+      </ul>
+      <p>
+        Together with the four formulas above, these two rules let you evaluate any summation
+        whose <m>k</m>th term is a polynomial in <m>k</m>, exactly the kind of summation a
+        Riemann sum for a polynomial produces.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise xml:id="ex-combining-rules" workspace="0in">
+    <title>Combining the Rules</title>
+    <introduction>
+      <p>
+        Use the summation formulas and the two rules together on a sum that mixes a multiple
+        of <m>k</m> with a constant.
+      </p>
+    </introduction>
+    <task xml:id="task-direct-3k-2" workspace="1in">
+      <statement>
+        <p>
+          Write out <m>\displaystyle\sum_{k=1}^{5}(3k-2)</m> as five separate terms
+          (substituting <m>k=1,2,3,4,5</m> one at a time), then add them up.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-formula-3k-2" workspace="1.5in">
+      <statement>
+        <p>
+          Now evaluate the same sum using the rules instead of listing terms. First use the
+          sum rule and constant multiple rule to rewrite <m>\displaystyle\sum_{k=1}^{5}(3k-2)</m>
+          as <m>\displaystyle 3\Big(\sum_{k=1}^{5} k\Big) - \Big(\sum_{k=1}^{5} 2\Big)</m>, then
+          use the summation formulas to evaluate each piece.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-compare-methods" workspace=".75in">
+      <statement>
+        <p>
+          Do your two answers agree? Which method would you rather use if the sum had <m>500</m>
+          terms instead of <m>5</m>?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-no-terms-k2-4k" workspace="1.5in">
+      <statement>
+        <p>
+          Without writing out any individual terms, find <m>\displaystyle\sum_{k=1}^{20}(k^2-4k)</m>
+          using only the summation formulas and rules.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-riemann-n20" workspace="0in">
+    <title>Evaluating a Riemann Sum: <m>n=20</m></title>
+    <introduction>
+      <p>
+        Put the summation formulas to work on an actual Riemann sum. Consider
+        <m>\displaystyle\int_1^3 x^2\,dx</m>, and partition <m>[1,3]</m> into <m>n=20</m> equal
+        subintervals. Then <m>\displaystyle\Delta x = \frac{1}{10}</m> and the <m>k</m>th right
+        endpoint is <m>\displaystyle x_k = 1+\frac{k}{10}</m>, so the right Riemann sum is
+        <md>\displaystyle\sum_{k=1}^{20}\Big(1+\frac{k}{10}\Big)^2\cdot\frac{1}{10}\text{.}</md>
+        Right now this is just notation for "add up twenty numbers." Turn it into a single
+        number without computing all twenty terms by hand.
+      </p>
+    </introduction>
+    <task xml:id="task-n20-expand" workspace="1.5in">
+      <statement>
+        <p>
+          Expand the square <m>\displaystyle\Big(1+\frac{k}{10}\Big)^2</m>, then distribute the
+          factor of <m>\displaystyle\frac{1}{10}</m>, so that the summand is written as three
+          separate terms in powers of <m>k</m>: a constant term, a term with <m>k</m>, and a
+          term with <m>k^2</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-n20-split" workspace="1.5in">
+      <statement>
+        <p>
+          Use the sum rule and constant multiple rule to split
+          <m>\displaystyle\sum_{k=1}^{20}\Big(1+\frac{k}{10}\Big)^2\cdot\frac{1}{10}</m> into
+          three separate summations, one for each term from the previous task.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-n20-evaluate" workspace="1.5in">
+      <statement>
+        <p>
+          Use the four summation formulas, with <m>n=20</m>, to evaluate each of your three
+          summations, then add the results to get a single number for the right Riemann sum.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-riemann-general-n" workspace="0in">
+    <title>Generalizing to Any <m>n</m></title>
+    <introduction>
+      <p>
+        Repeat the same process, but leave <m>n</m> as a symbol instead of fixing it at
+        <m>20</m>. Partition <m>[1,3]</m> into <m>n</m> equal subintervals. Then
+        <m>\displaystyle\Delta x = \frac{2}{n}</m> and <m>\displaystyle x_k = 1+\frac{2k}{n}</m>,
+        so the right Riemann sum is
+        <md>\displaystyle\sum_{k=1}^{n}\Big(1+\frac{2k}{n}\Big)^2\cdot\frac{2}{n}\text{.}</md>
+        Be careful: <m>k</m> is still the index that changes from term to term, but <m>n</m> now
+        plays the same role as the <m>a</m> or <m>c</m> in the summation formulas and rules: a
+        fixed number that doesn't change as <m>k</m> runs from <m>1</m> to <m>n</m>. It just
+        happens to be a number we haven't chosen a specific value for.
+      </p>
+    </introduction>
+    <task xml:id="task-general-expand" workspace="1.5in">
+      <statement>
+        <p>
+          Expand the square <m>\displaystyle\Big(1+\frac{2k}{n}\Big)^2</m>, then distribute the
+          factor of <m>\displaystyle\frac{2}{n}</m>, so the summand is again written as a
+          constant term, a term with <m>k</m>, and a term with <m>k^2</m> (each of these terms
+          will now involve <m>n</m> as well).
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-general-split" workspace="1.5in">
+      <statement>
+        <p>
+          Use the sum rule and constant multiple rule to split the summation into three
+          separate pieces, one for each term from the previous task, exactly as you did for
+          <m>n=20</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-general-evaluate" workspace="2in">
+      <statement>
+        <p>
+          Use the four summation formulas to evaluate each piece in terms of <m>n</m>, then
+          combine and simplify to write the right Riemann sum for
+          <m>\displaystyle\int_1^3 x^2\,dx</m> as a single formula in <m>n</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-general-check" workspace="1in">
+      <statement>
+        <p>
+          Substitute <m>n=20</m> into your formula from the previous task. Does it match the
+          number you found in the previous exercise?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-looking-ahead">
+    <title>Looking Ahead</title>
+    <p>
+      You now have a single formula that gives the right Riemann sum for
+      <m>\displaystyle\int_1^3 x^2\,dx</m> for any number of subintervals <m>n</m>, without
+      adding up individual terms. In a future class, we'll ask what happens to that formula as
+      <m>n</m> grows larger and larger without bound.
+    </p>
+  </remark>
+
+</worksheet>
