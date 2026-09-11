@@ -379,6 +379,87 @@ var ptx_lunr_docs = [
   "body": " Practice: A Rational Function   Set up the right Riemann sum for , using on with subintervals. Here is being substituted into a denominator, so parentheses matter: you're replacing in , not just tacking onto the end of the fraction.     Find as an expression in .      Write as an expression in and .      Substitute your expression for in place of in , keeping it inside parentheses, to write .      Assemble the full right Riemann sum for this integral.    "
 },
 {
+  "id": "activity-summation-formulas",
+  "level": "1",
+  "url": "activity-summation-formulas.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Evaluating Riemann Sums with Summation Formulas",
+  "body": " Evaluating Riemann Sums with Summation Formulas    Discover, using a small checkable example, that a summation formula replaces the entire sum with a single expression, not each individual term.  Use the four basic summation formulas for , , , and , along with the sum rule and constant multiple rule to evaluate a summation without listing its individual terms.  Expand and simplify the summand of a right Riemann sum, then use the summation formulas to evaluate the sum as a single number for a specific .  Repeat that process with left as a symbol, treating as a fixed (but unspecified) number rather than as the index of summation, to obtain a closed-form formula for the Riemann sum in terms of .     Last class you learned to write a right Riemann sum using summation notation, such as , without evaluating it. Today you'll actually evaluate sums like this, first by hand-checking what a summation formula really claims, then by using a small toolkit of formulas to turn a Riemann sum into a single number, and finally into a single formula in .  Team Roles: Manager, Recorder, Spokesperson, and Reflector.    Does the Formula Really Replace the Sum?   We start with a formula and you are asked to trust it for the rest of the activity. Before relying on it, check for yourselves what it actually claims.     Compute directly, by adding the six numbers one at a time.      Now substitute into the formula and evaluate it. Compare this to your answer above.      A student claims that the formula means \"replace every individual term in the sum by .\" Using your work above, explain why that is not what the formula says. What does actually replace?      Four Summation Formulas   The following four formulas are given as facts. (Each can each be proved, but proving them is not a course goal.) In each, is a number that does not depend on , and is the number of terms being added.           Sum Rule and Constant Multiple Rule   Summations also split over addition and let a constant factor be pulled out, the same way you already expect from other kinds of sums:      Together with the four formulas above, these two rules let you evaluate any summation whose th term is a polynomial in , exactly the kind of summation a Riemann sum for a polynomial produces.     Combining the Rules   Use the summation formulas and the two rules together on a sum that mixes a multiple of with a constant.     Write out as five separate terms (substituting one at a time), then add them up.      Now evaluate the same sum using the rules instead of listing terms. First use the sum rule and constant multiple rule to rewrite as , then use the summation formulas to evaluate each piece.      Do your two answers agree? Which method would you rather use if the sum had terms instead of ?      Without writing out any individual terms, find using only the summation formulas and rules.      Evaluating a Riemann Sum:   Put the summation formulas to work on an actual Riemann sum. Consider , and partition into equal subintervals. Then and the th right endpoint is , so the right Riemann sum is Right now this is just notation for \"add up twenty numbers.\" Turn it into a single number without computing all twenty terms by hand.     Expand the square , then distribute the factor of , so that the summand is written as three separate terms in powers of : a constant term, a term with , and a term with .      Use the sum rule and constant multiple rule to split into three separate summations, one for each term from the previous task.      Use the four summation formulas, with , to evaluate each of your three summations, then add the results to get a single number for the right Riemann sum.      Generalizing to Any   Repeat the same process, but leave as a symbol instead of fixing it at . Partition into equal subintervals. Then and , so the right Riemann sum is Be careful: is still the index that changes from term to term, but now plays the same role as the or in the summation formulas and rules: a fixed number that doesn't change as runs from to . It just happens to be a number we haven't chosen a specific value for.     Expand the square , then distribute the factor of , so the summand is again written as a constant term, a term with , and a term with (each of these terms will now involve as well).      Use the sum rule and constant multiple rule to split the summation into three separate pieces, one for each term from the previous task, exactly as you did for .      Use the four summation formulas to evaluate each piece in terms of , then combine and simplify to write the right Riemann sum for as a single formula in .      Substitute into your formula from the previous task. Does it match the number you found in the previous exercise?      Looking Ahead  You now have a single formula that gives the right Riemann sum for for any number of subintervals , without adding up individual terms. In a future class, we'll ask what happens to that formula as grows larger and larger without bound.   "
+},
+{
+  "id": "obj-summation-formulas",
+  "level": "2",
+  "url": "activity-summation-formulas.html#obj-summation-formulas",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Discover, using a small checkable example, that a summation formula replaces the entire sum with a single expression, not each individual term.  Use the four basic summation formulas for , , , and , along with the sum rule and constant multiple rule to evaluate a summation without listing its individual terms.  Expand and simplify the summand of a right Riemann sum, then use the summation formulas to evaluate the sum as a single number for a specific .  Repeat that process with left as a symbol, treating as a fixed (but unspecified) number rather than as the index of summation, to obtain a closed-form formula for the Riemann sum in terms of .   "
+},
+{
+  "id": "ex-formula-replaces-sum",
+  "level": "2",
+  "url": "activity-summation-formulas.html#ex-formula-replaces-sum",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Does the Formula Really Replace the Sum?",
+  "body": " Does the Formula Really Replace the Sum?   We start with a formula and you are asked to trust it for the rest of the activity. Before relying on it, check for yourselves what it actually claims.     Compute directly, by adding the six numbers one at a time.      Now substitute into the formula and evaluate it. Compare this to your answer above.      A student claims that the formula means \"replace every individual term in the sum by .\" Using your work above, explain why that is not what the formula says. What does actually replace?    "
+},
+{
+  "id": "def-summation-formulas",
+  "level": "2",
+  "url": "activity-summation-formulas.html#def-summation-formulas",
+  "type": "Definition",
+  "number": "8",
+  "title": "Four Summation Formulas.",
+  "body": " Four Summation Formulas   The following four formulas are given as facts. (Each can each be proved, but proving them is not a course goal.) In each, is a number that does not depend on , and is the number of terms being added.         "
+},
+{
+  "id": "def-sum-rules",
+  "level": "2",
+  "url": "activity-summation-formulas.html#def-sum-rules",
+  "type": "Definition",
+  "number": "9",
+  "title": "Sum Rule and Constant Multiple Rule.",
+  "body": " Sum Rule and Constant Multiple Rule   Summations also split over addition and let a constant factor be pulled out, the same way you already expect from other kinds of sums:      Together with the four formulas above, these two rules let you evaluate any summation whose th term is a polynomial in , exactly the kind of summation a Riemann sum for a polynomial produces.   "
+},
+{
+  "id": "ex-combining-rules",
+  "level": "2",
+  "url": "activity-summation-formulas.html#ex-combining-rules",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Combining the Rules.",
+  "body": " Combining the Rules   Use the summation formulas and the two rules together on a sum that mixes a multiple of with a constant.     Write out as five separate terms (substituting one at a time), then add them up.      Now evaluate the same sum using the rules instead of listing terms. First use the sum rule and constant multiple rule to rewrite as , then use the summation formulas to evaluate each piece.      Do your two answers agree? Which method would you rather use if the sum had terms instead of ?      Without writing out any individual terms, find using only the summation formulas and rules.    "
+},
+{
+  "id": "ex-riemann-n20",
+  "level": "2",
+  "url": "activity-summation-formulas.html#ex-riemann-n20",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Evaluating a Riemann Sum: <span class=\"process-math\">\\(n=20\\)<\/span>.",
+  "body": " Evaluating a Riemann Sum:   Put the summation formulas to work on an actual Riemann sum. Consider , and partition into equal subintervals. Then and the th right endpoint is , so the right Riemann sum is Right now this is just notation for \"add up twenty numbers.\" Turn it into a single number without computing all twenty terms by hand.     Expand the square , then distribute the factor of , so that the summand is written as three separate terms in powers of : a constant term, a term with , and a term with .      Use the sum rule and constant multiple rule to split into three separate summations, one for each term from the previous task.      Use the four summation formulas, with , to evaluate each of your three summations, then add the results to get a single number for the right Riemann sum.    "
+},
+{
+  "id": "ex-riemann-general-n",
+  "level": "2",
+  "url": "activity-summation-formulas.html#ex-riemann-general-n",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Generalizing to Any <span class=\"process-math\">\\(n\\)<\/span>.",
+  "body": " Generalizing to Any   Repeat the same process, but leave as a symbol instead of fixing it at . Partition into equal subintervals. Then and , so the right Riemann sum is Be careful: is still the index that changes from term to term, but now plays the same role as the or in the summation formulas and rules: a fixed number that doesn't change as runs from to . It just happens to be a number we haven't chosen a specific value for.     Expand the square , then distribute the factor of , so the summand is again written as a constant term, a term with , and a term with (each of these terms will now involve as well).      Use the sum rule and constant multiple rule to split the summation into three separate pieces, one for each term from the previous task, exactly as you did for .      Use the four summation formulas to evaluate each piece in terms of , then combine and simplify to write the right Riemann sum for as a single formula in .      Substitute into your formula from the previous task. Does it match the number you found in the previous exercise?    "
+},
+{
+  "id": "rem-looking-ahead",
+  "level": "2",
+  "url": "activity-summation-formulas.html#rem-looking-ahead",
+  "type": "Remark",
+  "number": "10",
+  "title": "Looking Ahead.",
+  "body": " Looking Ahead  You now have a single formula that gives the right Riemann sum for for any number of subintervals , without adding up individual terms. In a future class, we'll ask what happens to that formula as grows larger and larger without bound.  "
+},
+{
   "id": "handouts",
   "level": "1",
   "url": "handouts.html",
