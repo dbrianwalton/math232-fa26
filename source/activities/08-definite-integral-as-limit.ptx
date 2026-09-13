@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- POGIL-style activity, Day 8 (~45-50 minutes). Follows directly from the previous activity, -->
+<!-- which set up the right Riemann sum for int_1^3 x^2 dx, evaluated it for n=20, and left the -->
+<!-- general-n case (and the resulting closed-form formula 26/3 + 8/n + 4/(3n^2)) as unfinished -->
+<!-- business. Finishing that symbolic-n computation happens live in class as a bridge into this -->
+<!-- activity, but is NOT part of this worksheet: this worksheet starts from the completed -->
+<!-- closed-form result, stated as a given fact in the introduction. -->
+
+<!-- Deliberately AVOIDS: re-deriving the closed-form formula, discussing left- or general -->
+<!-- Riemann sums, proving that the limit exists in general, and anything beyond the intuitive -->
+<!-- "each fraction with fixed numerator and growing denominator goes to 0" argument for -->
+<!-- evaluating the limit itself. -->
+
+<!-- IMPORTANT SETUP NOTE: before class, edit the linked Desmos graph -->
+<!-- (https://www.desmos.com/calculator/eopislce5y) to raise the maximum allowed value of the n -->
+<!-- slider (currently capped at 10), so students can push n into the hundreds or thousands and -->
+<!-- actually see the sum converge, rather than stalling at a small n. -->
+
+<!-- Answer key, for instructor reference (not shown to students): -->
+<!--   task-desmos-check-n: at n=20 the Desmos sum should read 9.07, matching the previous -->
+<!--     activity's hand computation. -->
+<!--   task-desmos-guess-limit / task-limit-evaluate: the limit is 26/3 (about 8.667), which is -->
+<!--     the exact value of int_1^3 x^2 dx. -->
+<!--   task-practice-evaluate: the right Riemann sum for int_0^3 (2x^2-5x) dx simplifies to -->
+<!--     -9/2 + 9/(2n) + 9/n^2. -->
+<!--   task-practice-limit: the limit is -9/2, matching the exact value of int_0^3 (2x^2-5x) dx. -->
+<!--   task-accum-x / task-accum-x2 / task-accum-x3: int_0^b x dx = b^2/2, int_0^b x^2 dx = -->
+<!--     b^3/3, int_0^b x^3 dx = b^4/4. -->
+<!--   task-accum-pattern: the pattern is b^(k+1)/(k+1), so the conjecture for int_0^b x^4 dx -->
+<!--     should be b^5/5. -->
+
+<!-- Suggested pacing for a ~45-50 minute block (approximate, not enforced): -->
+<!--   Intro .................................................................. ~1  min -->
+<!--   Exercise 1: checking the formula, watching it converge (Desmos) ........ ~8  min -->
+<!--   Definition: the definite integral (read/discuss as a class) ............ ~3  min -->
+<!--   Exercise 2: taking the limit ............................................ ~7  min -->
+<!--   Exercise 3: practice with a new integral, full cycle .................... ~15 min -->
+<!--   Definition: accumulation function, then Exercise 4 (three functions) ... ~14 min -->
+<!--   TOTAL ...................................................................... ~48 min -->
+
+<!-- Where to cut if you're running short (in order of preference): -->
+<!--   1. task-accum-pattern (the x^4 conjecture) is a nice forward-looking wrap-up but not -->
+<!--      essential; assign it as a short reflection or homework prompt if time is tight. -->
+<!--   2. Do only two of the three accumulation functions in class (e.g. skip x^3) and assign -->
+<!--      the third as follow-up, since the pattern is already visible after two. -->
+<!--   3. In Exercise 1, have students try a single large value of n rather than exploring the -->
+<!--      trend across several increasing values. -->
+<!--   4. Do NOT cut the definition itself or Exercise 2 (taking the limit): that is the core -->
+<!--      new content of the day. -->
+
+<worksheet xml:id="activity-definite-integral-as-limit">
+  <title>The Definite Integral as a Limit of Riemann Sums</title>
+
+  <objectives xml:id="obj-definite-integral-as-limit">
+    <ul>
+      <li><p>Use a numerical tool to confirm a closed-form Riemann sum formula against a directly computed sum, and observe how its value changes as the number of subintervals grows without bound.</p></li>
+      <li><p>State the definition of the definite integral as the limit, as <m>n\to\infty</m>, of a right Riemann sum.</p></li>
+      <li><p>Evaluate the limit of a closed-form Riemann sum formula by examining the behavior of each of its terms as <m>n\to\infty</m>.</p></li>
+      <li><p>Independently carry out the full process, setup, evaluation, and limit, to compute a new definite integral.</p></li>
+      <li><p>Compute the accumulation function <m>\int_0^b f(x)\,dx</m> for <m>f(x)=x</m>, <m>f(x)=x^2</m>, and <m>f(x)=x^3</m>, and recognize an emerging pattern in the results.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      In the previous activity, you partitioned <m>[1,3]</m> into <m>n</m> equal subintervals
+      and used the summation formulas to evaluate the right Riemann sum for
+      <m>\displaystyle\int_1^3 x^2\,dx</m> as a single closed-form expression in <m>n</m>:
+      <md>\displaystyle\sum_{k=1}^{n}\Big(1+\frac{2k}{n}\Big)^2\cdot\frac{2}{n} \;=\;
+      \frac{26}{3}+\frac{8}{n}+\frac{4}{3n^2}\text{.}</md>
+      This activity starts from that formula.
+    </p>
+    <p>
+      Team Roles: Manager, Recorder, Spokesperson, and Reflector.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-desmos-convergence" workspace="0in">
+    <title>Checking the Formula, and Watching It Converge</title>
+    <introduction>
+      <p>
+        Open the Riemann sum calculator linked below. It graphs <m>f(x)=x^2</m> and lets you
+        set <m>a</m>, <m>b</m>, and <m>n</m> with sliders; it reports <m>\Delta x</m> and the
+        value of the right Riemann sum <m>\displaystyle\sum_{k=1}^n f(a+k\Delta x)\Delta x</m>
+        directly.
+      </p>
+      <p>
+        <url href="https://www.desmos.com/calculator/eopislce5y">Riemann Sum Calculator (Desmos)</url>
+      </p>
+    </introduction>
+    <task xml:id="task-desmos-check-n" workspace="1in">
+      <statement>
+        <p>
+          Set <m>a=1</m>, <m>b=3</m>, and <m>n=20</m>. Confirm that the sum Desmos reports
+          matches what your formula from the previous activity gives when <m>n=20</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-desmos-increase-n" workspace="1.25in">
+      <statement>
+        <p>
+          Now increase <m>n</m>, trying several larger values. Record what happens to the value
+          of the sum as <m>n</m> grows.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-desmos-guess-limit" workspace=".75in">
+      <statement>
+        <p>
+          Based on what you observed, what single number does the sum appear to be approaching?
+          How does it compare to <m>\frac{26}{3}</m>?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <definition xml:id="def-definite-integral">
+    <title>The Definite Integral</title>
+    <statement>
+      <p>
+        For a function <m>f</m> defined on an interval <m>[a,b]</m>, partition <m>[a,b]</m> into
+        <m>n</m> equal subintervals of width <m>\displaystyle\Delta x = \frac{b-a}{n}</m>, and let
+        <m>x_k = a+k\Delta x</m> denote the right endpoint of the <m>k</m>th subinterval. The
+        <em>definite integral</em> of <m>f</m> from <m>a</m> to <m>b</m> is defined as
+        <md>\displaystyle\int_a^b f(x)\,dx \;:=\; \lim_{n\to\infty}\sum_{k=1}^n
+        f(x_k)\,\Delta x\text{,}</md>
+        provided this limit exists.
+      </p>
+      <p>
+        Officially, the value <m>f(x_k)</m> must be able to be replaced by <m>f(x^*)</m> using <em>any</em> <m>x^*</m> between <m>x_{k-1}</m> and <m>x_k</m>.
+        A Riemann sum is only ever an approximation, and the limit is the exact value.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise xml:id="ex-evaluate-limit" workspace="0in">
+    <title>Taking the Limit</title>
+    <introduction>
+      <p>
+        Apply the definition to the formula you already have for <m>\displaystyle\int_1^3
+        x^2\,dx</m>:
+        <md>\displaystyle\lim_{n\to\infty}\Big(\frac{26}{3}+\frac{8}{n}+\frac{4}{3n^2}\Big)
+        \text{.}</md>
+      </p>
+    </introduction>
+    <task xml:id="task-limit-each-term" workspace="1in">
+      <statement>
+        <p>
+          Consider the two terms <m>\frac{8}{n}</m> and <m>\frac{4}{3n^2}</m> separately. What
+          happens to each one as <m>n\to\infty</m>? Explain in terms of a fraction with a fixed
+          numerator whose denominator grows without bound.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-limit-evaluate" workspace="1in">
+      <statement>
+        <p>
+          Use the previous task to evaluate <m>\displaystyle\lim_{n\to\infty}\Big(\frac{26}{3}+
+          \frac{8}{n}+\frac{4}{3n^2}\Big)</m>, and use the definition to state the value of
+          <m>\displaystyle\int_1^3 x^2\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-limit-compare-desmos" workspace=".75in">
+      <statement>
+        <p>
+          How does this value compare to the number the Desmos sum appeared to be approaching in
+          the previous exercise?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-new-practice" workspace="0in">
+    <title>Practice: A New Integral</title>
+    <introduction>
+      <p>
+        Now carry out the entire process yourself, from setting up the Riemann sum through
+        taking the limit, for a new integral: <m>\displaystyle\int_0^3 (2x^2-5x)\,dx</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-practice-setup" workspace="1.5in">
+      <statement>
+        <p>
+          Partition <m>[0,3]</m> into <m>n</m> equal subintervals. For <m>f(x)=2x^2-5x</m>,
+          write <m>\Delta x</m> and <m>x_k</m> (the right endpoint of the <m>k</m>th
+          subinterval), then write the right Riemann sum for <m>\displaystyle\int_0^3
+          (2x^2-5x)\,dx</m> in summation notation.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-practice-expand" workspace="1.5in">
+      <statement>
+        <p>
+          Substitute your expression for <m>x_k</m> into <m>f(x_k)</m>, then expand and simplify
+          so the summand is written as separate terms in powers of <m>k</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-practice-split" workspace="1.5in">
+      <statement>
+        <p>
+          Use the sum rule and constant multiple rule to split your summation into one separate
+          summation for each term from the previous task.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-practice-evaluate" workspace="2in">
+      <statement>
+        <p>
+          Use the summation formulas to evaluate each piece, then combine and simplify to write
+          the right Riemann sum for <m>\displaystyle\int_0^3 (2x^2-5x)\,dx</m> as a single
+          closed-form expression in <m>n</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-practice-limit" workspace="1.25in">
+      <statement>
+        <p>
+          Take the limit of your formula as <m>n\to\infty</m>, and use the definition to state
+          the value of <m>\displaystyle\int_0^3 (2x^2-5x)\,dx</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <definition xml:id="def-accumulation-function">
+    <title>Accumulation Functions</title>
+    <statement>
+      <p>
+        Every definite integral you have evaluated so far has had two fixed numbers as its limits
+        of integration. Suppose instead the lower limit is fixed at <m>a</m>, but the upper limit
+        is left as a symbol <m>b</m>. We can still work through the steps and get the value of the limit that depends on <m>b</m>.
+        The result,
+        <md>\displaystyle A(b) = \int_a^b f(x)\,dx\text{,}</md>
+        is a function of <m>b</m>, called an <em>accumulation function</em>: its value at
+        any particular <m>b</m> is the accumulated change, or signed area, from <m>a</m> up to
+        that point.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise xml:id="ex-accumulation-functions" workspace="0in">
+    <title>Three Accumulation Functions</title>
+    <introduction>
+      <p>
+        Find the accumulation function based at <m>a=0</m> for three power functions:
+        <m>f(x)=x</m>, <m>f(x)=x^2</m>, and <m>f(x)=x^3</m>. In each case <m>\Delta x = b/n</m>
+        and <m>x_k = kb/n</m>, exactly as before but with a fixed number replaced by the symbol
+        <m>b</m>. Because each of these functions is a single power of <m>x</m>, no expanding or
+        splitting is needed: one summation formula does all the work.
+      </p>
+    </introduction>
+    <task xml:id="task-accum-x" workspace="2in">
+      <statement>
+        <p>
+          Find <m>\displaystyle\int_0^b x\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-accum-x2" workspace="2in">
+      <statement>
+        <p>
+          Find <m>\displaystyle\int_0^b x^2\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-accum-x3" workspace="2in">
+      <statement>
+        <p>
+          Find <m>\displaystyle\int_0^b x^3\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-accum-pattern" workspace="1.25in">
+      <statement>
+        <p>
+          Line up your three results. What pattern do you notice? Based on that pattern, and
+          without computing any Riemann sum, conjecture a formula for <m>\displaystyle\int_0^b
+          x^4\,dx</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-looking-ahead-accumulation">
+    <title>Looking Ahead</title>
+    <p>
+      You now have accumulation functions for three different power functions, and a conjecture
+      for a fourth, all found the same way: by evaluating a Riemann sum and taking a limit. In an
+      upcoming class we will see that this pattern is not a coincidence, and connect it to
+      antiderivatives.
+    </p>
+  </remark>
+
+</worksheet>

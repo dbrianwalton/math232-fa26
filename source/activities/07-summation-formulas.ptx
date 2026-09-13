@@ -285,7 +285,7 @@
     </task>
   </exercise>
 
-  <remark xml:id="rem-looking-ahead">
+  <remark xml:id="rem-looking-ahead-definite-integral">
     <title>Looking Ahead</title>
     <p>
       You now have a single formula that gives the right Riemann sum for
