@@ -451,13 +451,94 @@ var ptx_lunr_docs = [
   "body": " Generalizing to Any   Repeat the same process, but leave as a symbol instead of fixing it at . Partition into equal subintervals. Then and , so the right Riemann sum is Be careful: is still the index that changes from term to term, but now plays the same role as the or in the summation formulas and rules: a fixed number that doesn't change as runs from to . It just happens to be a number we haven't chosen a specific value for.     Expand the square , then distribute the factor of , so the summand is again written as a constant term, a term with , and a term with (each of these terms will now involve as well).      Use the sum rule and constant multiple rule to split the summation into three separate pieces, one for each term from the previous task, exactly as you did for .      Use the four summation formulas to evaluate each piece in terms of , then combine and simplify to write the right Riemann sum for as a single formula in .      Substitute into your formula from the previous task. Does it match the number you found in the previous exercise?    "
 },
 {
-  "id": "rem-looking-ahead",
+  "id": "rem-looking-ahead-definite-integral",
   "level": "2",
-  "url": "activity-summation-formulas.html#rem-looking-ahead",
+  "url": "activity-summation-formulas.html#rem-looking-ahead-definite-integral",
   "type": "Remark",
   "number": "10",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have a single formula that gives the right Riemann sum for for any number of subintervals , without adding up individual terms. In a future class, we'll ask what happens to that formula as grows larger and larger without bound.  "
+},
+{
+  "id": "activity-definite-integral-as-limit",
+  "level": "1",
+  "url": "activity-definite-integral-as-limit.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "The Definite Integral as a Limit of Riemann Sums",
+  "body": " The Definite Integral as a Limit of Riemann Sums    Use a numerical tool to confirm a closed-form Riemann sum formula against a directly computed sum, and observe how its value changes as the number of subintervals grows without bound.  State the definition of the definite integral as the limit, as , of a right Riemann sum.  Evaluate the limit of a closed-form Riemann sum formula by examining the behavior of each of its terms as .  Independently carry out the full process, setup, evaluation, and limit, to compute a new definite integral.  Compute the accumulation function for , , and , and recognize an emerging pattern in the results.     In the previous activity, you partitioned into equal subintervals and used the summation formulas to evaluate the right Riemann sum for as a single closed-form expression in : This activity starts from that formula.  Team Roles: Manager, Recorder, Spokesperson, and Reflector.    Checking the Formula, and Watching It Converge   Open the Riemann sum calculator linked below. It graphs and lets you set , , and with sliders; it reports and the value of the right Riemann sum directly.   Riemann Sum Calculator (Desmos)      Set , , and . Confirm that the sum Desmos reports matches what your formula from the previous activity gives when .      Now increase , trying several larger values. Record what happens to the value of the sum as grows.      Based on what you observed, what single number does the sum appear to be approaching? How does it compare to ?      The Definite Integral   For a function defined on an interval , partition into equal subintervals of width , and let denote the right endpoint of the th subinterval. The definite integral of from to is defined as provided this limit exists.  Officially, the value must be able to be replaced by using any  between and . A Riemann sum is only ever an approximation, and the limit is the exact value.     Taking the Limit   Apply the definition to the formula you already have for :      Consider the two terms and separately. What happens to each one as ? Explain in terms of a fraction with a fixed numerator whose denominator grows without bound.      Use the previous task to evaluate , and use the definition to state the value of .      How does this value compare to the number the Desmos sum appeared to be approaching in the previous exercise?      Practice: A New Integral   Now carry out the entire process yourself, from setting up the Riemann sum through taking the limit, for a new integral: .     Partition into equal subintervals. For , write and (the right endpoint of the th subinterval), then write the right Riemann sum for in summation notation.      Substitute your expression for into , then expand and simplify so the summand is written as separate terms in powers of .      Use the sum rule and constant multiple rule to split your summation into one separate summation for each term from the previous task.      Use the summation formulas to evaluate each piece, then combine and simplify to write the right Riemann sum for as a single closed-form expression in .      Take the limit of your formula as , and use the definition to state the value of .      Accumulation Functions   Every definite integral you have evaluated so far has had two fixed numbers as its limits of integration. Suppose instead the lower limit is fixed at , but the upper limit is left as a symbol . We can still work through the steps and get the value of the limit that depends on . The result, is a function of , called an accumulation function : its value at any particular is the accumulated change, or signed area, from up to that point.     Three Accumulation Functions   Find the accumulation function based at for three power functions: , , and . In each case and , exactly as before but with a fixed number replaced by the symbol . Because each of these functions is a single power of , no expanding or splitting is needed: one summation formula does all the work.     Find .      Find .      Find .      Line up your three results. What pattern do you notice? Based on that pattern, and without computing any Riemann sum, conjecture a formula for .      Looking Ahead  You now have accumulation functions for three different power functions, and a conjecture for a fourth, all found the same way: by evaluating a Riemann sum and taking a limit. In an upcoming class we will see that this pattern is not a coincidence, and connect it to antiderivatives.   "
+},
+{
+  "id": "obj-definite-integral-as-limit",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#obj-definite-integral-as-limit",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Use a numerical tool to confirm a closed-form Riemann sum formula against a directly computed sum, and observe how its value changes as the number of subintervals grows without bound.  State the definition of the definite integral as the limit, as , of a right Riemann sum.  Evaluate the limit of a closed-form Riemann sum formula by examining the behavior of each of its terms as .  Independently carry out the full process, setup, evaluation, and limit, to compute a new definite integral.  Compute the accumulation function for , , and , and recognize an emerging pattern in the results.   "
+},
+{
+  "id": "ex-desmos-convergence",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#ex-desmos-convergence",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Checking the Formula, and Watching It Converge.",
+  "body": " Checking the Formula, and Watching It Converge   Open the Riemann sum calculator linked below. It graphs and lets you set , , and with sliders; it reports and the value of the right Riemann sum directly.   Riemann Sum Calculator (Desmos)      Set , , and . Confirm that the sum Desmos reports matches what your formula from the previous activity gives when .      Now increase , trying several larger values. Record what happens to the value of the sum as grows.      Based on what you observed, what single number does the sum appear to be approaching? How does it compare to ?    "
+},
+{
+  "id": "def-definite-integral",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#def-definite-integral",
+  "type": "Definition",
+  "number": "11",
+  "title": "The Definite Integral.",
+  "body": " The Definite Integral   For a function defined on an interval , partition into equal subintervals of width , and let denote the right endpoint of the th subinterval. The definite integral of from to is defined as provided this limit exists.  Officially, the value must be able to be replaced by using any  between and . A Riemann sum is only ever an approximation, and the limit is the exact value.   "
+},
+{
+  "id": "ex-evaluate-limit",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#ex-evaluate-limit",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Taking the Limit.",
+  "body": " Taking the Limit   Apply the definition to the formula you already have for :      Consider the two terms and separately. What happens to each one as ? Explain in terms of a fraction with a fixed numerator whose denominator grows without bound.      Use the previous task to evaluate , and use the definition to state the value of .      How does this value compare to the number the Desmos sum appeared to be approaching in the previous exercise?    "
+},
+{
+  "id": "ex-new-practice",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#ex-new-practice",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Practice: A New Integral.",
+  "body": " Practice: A New Integral   Now carry out the entire process yourself, from setting up the Riemann sum through taking the limit, for a new integral: .     Partition into equal subintervals. For , write and (the right endpoint of the th subinterval), then write the right Riemann sum for in summation notation.      Substitute your expression for into , then expand and simplify so the summand is written as separate terms in powers of .      Use the sum rule and constant multiple rule to split your summation into one separate summation for each term from the previous task.      Use the summation formulas to evaluate each piece, then combine and simplify to write the right Riemann sum for as a single closed-form expression in .      Take the limit of your formula as , and use the definition to state the value of .    "
+},
+{
+  "id": "def-accumulation-function",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#def-accumulation-function",
+  "type": "Definition",
+  "number": "12",
+  "title": "Accumulation Functions.",
+  "body": " Accumulation Functions   Every definite integral you have evaluated so far has had two fixed numbers as its limits of integration. Suppose instead the lower limit is fixed at , but the upper limit is left as a symbol . We can still work through the steps and get the value of the limit that depends on . The result, is a function of , called an accumulation function : its value at any particular is the accumulated change, or signed area, from up to that point.   "
+},
+{
+  "id": "ex-accumulation-functions",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#ex-accumulation-functions",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Three Accumulation Functions.",
+  "body": " Three Accumulation Functions   Find the accumulation function based at for three power functions: , , and . In each case and , exactly as before but with a fixed number replaced by the symbol . Because each of these functions is a single power of , no expanding or splitting is needed: one summation formula does all the work.     Find .      Find .      Find .      Line up your three results. What pattern do you notice? Based on that pattern, and without computing any Riemann sum, conjecture a formula for .    "
+},
+{
+  "id": "rem-looking-ahead-accumulation",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#rem-looking-ahead-accumulation",
+  "type": "Remark",
+  "number": "13",
+  "title": "Looking Ahead.",
+  "body": " Looking Ahead  You now have accumulation functions for three different power functions, and a conjecture for a fourth, all found the same way: by evaluating a Riemann sum and taking a limit. In an upcoming class we will see that this pattern is not a coincidence, and connect it to antiderivatives.  "
 },
 {
   "id": "handouts",
