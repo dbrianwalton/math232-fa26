@@ -21,19 +21,19 @@
       <!-- Other documents could go here, like a schedule, project description, etc. -->
     </chapter>
 
-    <chapter xml:id="course-notes">
-      <title>Course Notes</title>
+    <chapter xml:id="course-outcomes">
+      <title>Student Learning Outcomes</title>
 
       <introduction>
         <p>
-          The following notes are intended to remind you what we covered each week.
-          They are not a substitute for attending class and not a substitute for reading the textbook.
+          While our course goals are to address many concepts in calculus,
+          there will be a select number of them that are considered key
+          measures of success in the course. These are the course's measured
+          student learning outcomes.
         </p>
       </introduction>
 
-      <xi:include href="./notes/week01.ptx"/>
-      <xi:include href="./notes/week02.ptx"/>
-      <!-- etc. -->
+      <xi:include href="./outcomes/outcomes.ptx"/>
 
     </chapter>
 
@@ -57,12 +57,6 @@
       <xi:include href="./activities/08-definite-integral-as-limit.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
-    </chapter>
-
-    <chapter xml:id="handouts">
-      <title>Handouts</title>
-      <!-- Include handouts -->
-      <!--<xi:include href="./handouts/handout-filename.ptx"/>-->
     </chapter>
 
     <chapter xml:id="homework">

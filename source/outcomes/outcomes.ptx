@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-outcomes-1">
+
+  <subsection xml:id="subsec-R1">
+    <title>R1 From Derivative Graph to Function Graph</title>
+
+    <assemblage xml:id="assemblage-R1">
+      <title>R1</title>
+      <p>
+        I can interpret the graph of a rate of change or the derivative <m>f'(x)</m>
+        to describe and construct the graph of the function <m>f(x)</m>.
+      </p>
+    </assemblage>
+    
+    <exercise label="R1_Graph_From_Derivative">
+      <statement>
+        <p>
+          The following graph is the graph of <m>y=f'(x)</m>, where <m>f'(x)</m> is the derivative of another function <m>f(x)</m>. Interpret <m>f'(x)</m> in order to draw a potential graph of <m>y=f(x)</m>. Your graph must clearly demonstrate correct intervals for increasing, decreasing, and concavity. Label the x-values for all local extremes and inflection points.
+        </p>
+        <figure xml:id="R1_exercise_derivative_graph">
+          <caption>Graph of <m>f'(x)</m></caption>
+          <image width="75%">
+            <shortdescription>Graph of a smooth function roughly like a rounded W that crosses the x-axis at -3, -1, 1, and 3. The graph is above the x-axis to the left of -3, between -1 and 1, and again to the right of 3; and it is below the x-axis between -3 and -1 and again between 1 and 3. The graph shows a valley at approximately x=-2.25 and another at x=+2.25, with a peak value at x=0.</shortdescription>
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}
+                [ xmin=-5.5, xmax=5.5, ymin=-8.5, ymax=8.5, axis lines=center, grid=both, xlabel={$x$}, ylabel={$y=f'(x)$}, 
+                minor x tick num=1, minor y tick num=4 ]
+                \addplot [domain=-5.5:5.5, samples=100, very thick] { (x^2-1)*(x^2-9)/4 };
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+      </statement>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-R2">
+    <title>R2 Definite Integrals for Net Change in Quantity</title>
+    
+    <assemblage xml:id="assemblage-R2">
+      <title>R2</title>
+      <p>
+        I can calculate the definite integral of a rate function
+        using geometric area formulas and interpret the value as
+        the total increment of the changing value.
+      </p>
+    </assemblage>
+
+    <exercise label="R2_Integral_For_Net_Change">
+      <statement>
+        <p>
+          The graph below represents the rate <m>r(t)</m> at which water is being added to a tank (or removed, as appropriate) in gallons/minute. 
+          If the tank started (<m>t=0</m>) with 15 gallons, state and use an appropriate definite integral to find the amount of water at <m>t=10</m> minutes.
+          A correct solution must show the correct notation for the definite integral and calculate its value using appropriate geometric formulas.
+        </p>
+        <figure xml:id="R2_exercise_rate_graph">
+          <caption>Graph of the rate of change of water in gal/min</caption>
+          <image width="75%">
+            <shortdescription>
+              Graph of a rate function made from piecewise linear functions.
+              It has a constant rate with a value of 2 gal/min between the times 0 and 2 minutes.
+              It changes linearly between times 2 and 3 minutes to reach a rate of 0 gal/min at 3 minutes.
+              It then changes linearly between times 3 and 5 minutes to reach a rate of -6 gal/min at 5 minutes, then changes back to 0 gal/min in a linear way at 7 minutes.
+              It then increases linearly to 4 gal/min at 8 minutes.
+              It remains constant at 4 gal/min until 10 minutes.
+            </shortdescription>
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  width=8cm, height=6cm,
+                  axis lines=middle,
+                    grid=major,
+                    axis on top,
+                  xlabel={$t$ (min)}, ylabel={$r(t)$ (gal/min)},
+                  xlabel style={anchor=west}, ylabel style={anchor=south},
+                  xmin=-0.5, xmax=10.5, ymin=-8, ymax=6,
+                  xtick={2,3,5,7,8}, ytick={2,4,-6},
+                  extra x ticks={0,10},
+                  clip=false,
+                ]
+                  \draw[thick,blue]
+                    (axis cs:0,2) -- (axis cs:2,2) -- (axis cs:3,0) --
+                    (axis cs:5,-6) -- (axis cs:7,0) -- (axis cs:8,4) -- (axis cs:10,4);
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+      </statement>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-R3">
+    <title>R3 Applying Properties of Definite Integrals</title>
+    
+    <assemblage xml:id="assemblage-R3">
+      <title>R3</title>
+      <p>
+        I can apply a combination of the properties of definite integrals,
+        including the splitting property, the sum rule, and the constant multiple rule,
+        to compute the value of a definite integral involving a combination of
+        two functions.
+      </p>
+    </assemblage>
+
+    <exercise label="R3_Definite_Integral_Properties">
+      <statement>
+        <p>
+          Suppose that for a function <m>f(x)</m> (not shown) we have
+          <m>\displaystyle \int_1^3 f(x) \, dx = 5</m> and
+          <m>\displaystyle \int_1^8 f(x) \,dx = 2</m>.
+          A graph of <m>g(x)</m> is shown below with regions between the graph and the <m>x</m>-axis labeled with areas <m>R_1=4</m>, <m>R_2=3</m> and <m>R_3=6</m>.
+        </p>
+        <figure xml:id="R3_exercise_function_with_regions">
+          <caption>Graph of g(x)</caption>
+          <image width="75%">
+            <shortdescription>
+              Graph of a function that is above the axis when x is less than 3,
+              below the axis for x values between 3 and 5, and then above the axis for x greater than 5. Three regions are created with areas between the x-axis and the function graph: 
+              R1 is above the axis and created with x going from 1 to 3,
+              R2 is below the axis and created with x going from 3 to 5,
+              and R3 is above the axis and created with x going from 5 to 8.
+            </shortdescription>
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  width=11cm, height=6cm,
+                  axis lines=middle,
+                  axis on top,
+                  xlabel={$x$},
+                  xlabel style={anchor=west},
+                  xmin=-1.7, xmax=9.8, ymin=-1.6, ymax=1.7,
+                  xtick={1,3,5,8},
+                  major tick style={thick, black},
+                  major tick length=7pt,
+                  ytick=\empty,
+                  clip=false,
+                ]
+                  % shaded regions, drawn first so the curve sits on top
+                  \fill[blue!15] (axis cs:1,0)
+                    -- plot[smooth, tension=0.7] coordinates {
+                      (axis cs:1,0.9) (axis cs:1.6,1.15) (axis cs:2.2,1.15) (axis cs:2.7,0.5) (axis cs:3,0)
+                    }
+                    -- cycle;
+                  \fill[blue!15] (axis cs:3,0)
+                    -- plot[smooth, tension=0.7] coordinates {
+                      (axis cs:3,0) (axis cs:3.4,-0.6) (axis cs:4,-1.0) (axis cs:4.6,-0.6) (axis cs:5,0)
+                    }
+                    -- cycle;
+                  \fill[blue!15] (axis cs:5,0)
+                    -- plot[smooth, tension=0.7] coordinates {
+                      (axis cs:5,0) (axis cs:5.6,0.7) (axis cs:6.5,1.1) (axis cs:7.3,1.0) (axis cs:8,0.8)
+                    }
+                    -- (axis cs:8,0)
+                    -- cycle;
+
+                  % the curve itself, drawn continuously (extends past x=1 and x=8)
+                  \draw[thick, blue] plot[smooth, tension=0.7] coordinates {
+                    (axis cs:-1,0.3) (axis cs:-0.3,0.55) (axis cs:0.4,0.5) (axis cs:1,0.9)
+                    (axis cs:1.6,1.15) (axis cs:2.2,1.15) (axis cs:2.7,0.5) (axis cs:3,0)
+                    (axis cs:3.4,-0.6) (axis cs:4,-1.0) (axis cs:4.6,-0.6) (axis cs:5,0)
+                    (axis cs:5.6,0.7) (axis cs:6.5,1.1) (axis cs:7.3,1.0) (axis cs:8,0.8)
+                    (axis cs:8.6,0.5) (axis cs:9,0.65) (axis cs:9.5,0.45)
+                  };
+
+                  % function label
+                  \node[anchor=south west] at (axis cs:8.7,0.85) {$y=g(x)$};
+
+                  % vertical connectors at x=1 and x=8
+                  \draw[dashed] (axis cs:1,0) -- (axis cs:1,0.9);
+                  \draw[dashed] (axis cs:8,0) -- (axis cs:8,0.8);
+
+                  % region labels
+                  \node at (axis cs:2,0.5) {$R_1$};
+                  \node at (axis cs:4,-0.4) {$R_2$};
+                  \node at (axis cs:6.4,0.45) {$R_3$};
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+        <p>
+          Use this information to find <m>\displaystyle \int_3^8 2f(x) + g(x) \, dx</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+  
+</section>
