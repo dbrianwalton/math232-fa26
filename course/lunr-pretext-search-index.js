@@ -19,22 +19,40 @@ var ptx_lunr_docs = [
   "body": "course name (MATH xxx, section xxx) "
 },
 {
-  "id": "notes-week-01",
+  "id": "sec-outcomes-1",
   "level": "1",
-  "url": "notes-week-01.html",
+  "url": "sec-outcomes-1.html",
   "type": "Section",
   "number": "",
-  "title": "Week 1",
-  "body": " Week 1   This is an outline of the topics we covered in the first week of class.     Monday 8\/22      Wednesday 8\/24      Friday 8\/26     "
+  "title": "",
+  "body": "  R1 From Derivative Graph to Function Graph   R1  I can interpret the graph of a rate of change or the derivative to describe and construct the graph of the function .     The following graph is the graph of , where is the derivative of another function . Interpret in order to draw a potential graph of . Your graph must clearly demonstrate correct intervals for increasing, decreasing, and concavity. Label the x-values for all local extremes and inflection points.   Graph of   Graph of a smooth function roughly like a rounded W that crosses the x-axis at -3, -1, 1, and 3. The graph is above the x-axis to the left of -3, between -1 and 1, and again to the right of 3; and it is below the x-axis between -3 and -1 and again between 1 and 3. The graph shows a valley at approximately x=-2.25 and another at x=+2.25, with a peak value at x=0.         R2 Definite Integrals for Net Change in Quantity   R2  I can calculate the definite integral of a rate function using geometric area formulas and interpret the value as the total increment of the changing value.     The graph below represents the rate at which water is being added to a tank (or removed, as appropriate) in gallons\/minute. If the tank started ( ) with 15 gallons, state and use an appropriate definite integral to find the amount of water at minutes. A correct solution must show the correct notation for the definite integral and calculate its value using appropriate geometric formulas.   Graph of the rate of change of water in gal\/min   Graph of a rate function made from piecewise linear functions. It has a constant rate with a value of 2 gal\/min between the times 0 and 2 minutes. It changes linearly between times 2 and 3 minutes to reach a rate of 0 gal\/min at 3 minutes. It then changes linearly between times 3 and 5 minutes to reach a rate of -6 gal\/min at 5 minutes, then changes back to 0 gal\/min in a linear way at 7 minutes. It then increases linearly to 4 gal\/min at 8 minutes. It remains constant at 4 gal\/min until 10 minutes.         R3 Applying Properties of Definite Integrals   R3  I can apply a combination of the properties of definite integrals, including the splitting property, the sum rule, and the constant multiple rule, to compute the value of a definite integral involving a combination of two functions.     Suppose that for a function (not shown) we have and . A graph of is shown below with regions between the graph and the -axis labeled with areas , and .   Graph of g(x)   Graph of a function that is above the axis when x is less than 3, below the axis for x values between 3 and 5, and then above the axis for x greater than 5. Three regions are created with areas between the x-axis and the function graph: R1 is above the axis and created with x going from 1 to 3, R2 is below the axis and created with x going from 3 to 5, and R3 is above the axis and created with x going from 5 to 8.     Use this information to find .     "
 },
 {
-  "id": "notes-week-02",
-  "level": "1",
-  "url": "notes-week-02.html",
-  "type": "Section",
-  "number": "",
-  "title": "Week 2",
-  "body": " Week 2   Monday      Wednesday      Friday     "
+  "id": "R1_Graph_From_Derivative",
+  "level": "2",
+  "url": "sec-outcomes-1.html#R1_Graph_From_Derivative",
+  "type": "Checkpoint",
+  "number": "1",
+  "title": "",
+  "body": "  The following graph is the graph of , where is the derivative of another function . Interpret in order to draw a potential graph of . Your graph must clearly demonstrate correct intervals for increasing, decreasing, and concavity. Label the x-values for all local extremes and inflection points.   Graph of   Graph of a smooth function roughly like a rounded W that crosses the x-axis at -3, -1, 1, and 3. The graph is above the x-axis to the left of -3, between -1 and 1, and again to the right of 3; and it is below the x-axis between -3 and -1 and again between 1 and 3. The graph shows a valley at approximately x=-2.25 and another at x=+2.25, with a peak value at x=0.      "
+},
+{
+  "id": "R2_Integral_For_Net_Change",
+  "level": "2",
+  "url": "sec-outcomes-1.html#R2_Integral_For_Net_Change",
+  "type": "Checkpoint",
+  "number": "3",
+  "title": "",
+  "body": "  The graph below represents the rate at which water is being added to a tank (or removed, as appropriate) in gallons\/minute. If the tank started ( ) with 15 gallons, state and use an appropriate definite integral to find the amount of water at minutes. A correct solution must show the correct notation for the definite integral and calculate its value using appropriate geometric formulas.   Graph of the rate of change of water in gal\/min   Graph of a rate function made from piecewise linear functions. It has a constant rate with a value of 2 gal\/min between the times 0 and 2 minutes. It changes linearly between times 2 and 3 minutes to reach a rate of 0 gal\/min at 3 minutes. It then changes linearly between times 3 and 5 minutes to reach a rate of -6 gal\/min at 5 minutes, then changes back to 0 gal\/min in a linear way at 7 minutes. It then increases linearly to 4 gal\/min at 8 minutes. It remains constant at 4 gal\/min until 10 minutes.      "
+},
+{
+  "id": "R3_Definite_Integral_Properties",
+  "level": "2",
+  "url": "sec-outcomes-1.html#R3_Definite_Integral_Properties",
+  "type": "Checkpoint",
+  "number": "5",
+  "title": "",
+  "body": "  Suppose that for a function (not shown) we have and . A graph of is shown below with regions between the graph and the -axis labeled with areas , and .   Graph of g(x)   Graph of a function that is above the axis when x is less than 3, below the axis for x values between 3 and 5, and then above the axis for x greater than 5. Three regions are created with areas between the x-axis and the function graph: R1 is above the axis and created with x going from 1 to 3, R2 is below the axis and created with x going from 3 to 5, and R3 is above the axis and created with x going from 5 to 8.     Use this information to find .   "
 },
 {
   "id": "activity-derivative-graph-shape",
@@ -131,7 +149,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#def-integral-accumulated-change",
   "type": "Definition",
-  "number": "1",
+  "number": "7",
   "title": "Notation: Accumulated Change.",
   "body": " Notation: Accumulated Change   What you just discovered works for any rate of change, not only velocity. If a quantity has value at time and changes at rate , then its value at a later time is the starting value plus the accumulated change over the interval. Mathematicians write that accumulated change using the definite integral symbol: Read as \"the accumulated change in the quantity from to .\" When is a positive constant on an interval of length , this is just , the same as the rectangle areas you computed above.   "
 },
@@ -140,7 +158,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#def-integral-area",
   "type": "Definition",
-  "number": "2",
+  "number": "8",
   "title": "Notation: Area Under a Graph.",
   "body": " Notation: Area Under a Graph   The very same symbol describes area. For a function , the area of the region between the graph of and the -axis, from to , is written This is not a coincidence: it's the same idea from Exercise 3, written in general notation.   "
 },
@@ -158,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#rem-signed-area-and-beyond",
   "type": "Remark",
-  "number": "3",
+  "number": "9",
   "title": "Signed Area, and Rates That Aren’t Constant.",
   "body": " Signed Area, and Rates That Aren't Constant  What you just worked out is called signed area : regions above the -axis count as positive area, and regions below it count as negative area. This is exactly why the definite integral, and not just \"area,\" is the right tool for accumulated change. It automatically keeps track of when a quantity is increasing versus decreasing.  Everything above used constant rates, so every region was a rectangle. But the notation , and its meaning as signed area, works exactly the same way even when is not constant. Later in the course you'll learn algebraic techniques (the Fundamental Theorem of Calculus and antiderivative formulas) for evaluating such integrals exactly. However, you have everything you need to evaluate a definite integral whenever the region between the graph and the axis is built from shapes you can already measure: rectangles, triangles, and trapezoids.  "
 },
@@ -239,7 +257,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-properties-of-the-integral.html#rem-provable-vs-adopted",
   "type": "Remark",
-  "number": "4",
+  "number": "10",
   "title": "Two Kinds of \"Always True\".",
   "body": " Two Kinds of \"Always True\"  Look back at everything in this activity. The splitting property for , the sum rule, and the constant multiple rule are all things you proved . In each case, you could point to an arithmetic reason (the linearity of the area formulas) that makes each one true. The zero-width fact is even more immediate: it's just what \"width\" means.  The reverse-order property is different in kind. There is no region you can shade for \"the area from to when is bigger than \". We can not directly visualize with a picture what it means to shade a region in reverse . Instead, we adopt an interpretation, because it's the only choice that lets the splitting rule keep working for any three numbers and not only when they are in increasing order. This is a mathematical mode of reasoning that we will encounter multiple times.  "
 },
@@ -284,7 +302,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-riemann-sum-approximation.html#rem-riemann-sum-name",
   "type": "Remark",
-  "number": "5",
+  "number": "11",
   "title": "Naming What You Just Built.",
   "body": " Naming What You Just Built  Each of your two staircases is an example of a Riemann sum : an approximation to the area under a curve built by partitioning an interval into subintervals, choosing one height on each piece, and adding up the resulting rectangle areas. What you built are called the left Riemann sum (using left-edge heights) and the right Riemann sum (using right-edge heights), each with subintervals.  "
 },
@@ -329,7 +347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-riemann-sum-notation.html#def-summation-notation",
   "type": "Definition",
-  "number": "6",
+  "number": "12",
   "title": "Summation Notation.",
   "body": " Summation Notation   The symbol (capital Greek sigma) is a compact way to write \"add up a list of terms that follow a pattern.\" The notation means: start at (the number written below ), evaluate the expression , then repeat for , , and so on, up through (the number written above ), adding every result together. Written out in full, it means the same thing as Nothing here says how to find the value of that total — it's just notation for which terms to add.   "
 },
@@ -347,7 +365,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-riemann-sum-notation.html#rem-four-step-recipe",
   "type": "Remark",
-  "number": "7",
+  "number": "13",
   "title": "The General Recipe.",
   "body": " The General Recipe  Whatever the function, interval, or , setting up the right Riemann sum for always follows the same four steps:  Find the width of each subinterval: .  Write the th right endpoint: .  Substitute into to get .  Assemble the sum: .  The next three exercises are all the same four steps, applied to new functions.  "
 },
@@ -410,7 +428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-summation-formulas.html#def-summation-formulas",
   "type": "Definition",
-  "number": "8",
+  "number": "14",
   "title": "Four Summation Formulas.",
   "body": " Four Summation Formulas   The following four formulas are given as facts. (Each can each be proved, but proving them is not a course goal.) In each, is a number that does not depend on , and is the number of terms being added.         "
 },
@@ -419,7 +437,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-summation-formulas.html#def-sum-rules",
   "type": "Definition",
-  "number": "9",
+  "number": "15",
   "title": "Sum Rule and Constant Multiple Rule.",
   "body": " Sum Rule and Constant Multiple Rule   Summations also split over addition and let a constant factor be pulled out, the same way you already expect from other kinds of sums:      Together with the four formulas above, these two rules let you evaluate any summation whose th term is a polynomial in , exactly the kind of summation a Riemann sum for a polynomial produces.   "
 },
@@ -455,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-summation-formulas.html#rem-looking-ahead-definite-integral",
   "type": "Remark",
-  "number": "10",
+  "number": "16",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have a single formula that gives the right Riemann sum for for any number of subintervals , without adding up individual terms. In a future class, we'll ask what happens to that formula as grows larger and larger without bound.  "
 },
@@ -491,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-definite-integral-as-limit.html#def-definite-integral",
   "type": "Definition",
-  "number": "11",
+  "number": "17",
   "title": "The Definite Integral.",
   "body": " The Definite Integral   For a function defined on an interval , partition into equal subintervals of width , and let denote the right endpoint of the th subinterval. The definite integral of from to is defined as provided this limit exists.  Officially, the value must be able to be replaced by using any  between and . A Riemann sum is only ever an approximation, and the limit is the exact value.   "
 },
@@ -518,7 +536,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-definite-integral-as-limit.html#def-accumulation-function",
   "type": "Definition",
-  "number": "12",
+  "number": "18",
   "title": "Accumulation Functions.",
   "body": " Accumulation Functions   Every definite integral you have evaluated so far has had two fixed numbers as its limits of integration. Suppose instead the lower limit is fixed at , but the upper limit is left as a symbol . We can still work through the steps and get the value of the limit that depends on . The result, is a function of , called an accumulation function : its value at any particular is the accumulated change, or signed area, from up to that point.   "
 },
@@ -536,18 +554,81 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-definite-integral-as-limit.html#rem-looking-ahead-accumulation",
   "type": "Remark",
-  "number": "13",
+  "number": "19",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have accumulation functions for three different power functions, and a conjecture for a fourth, all found the same way: by evaluating a Riemann sum and taking a limit. In an upcoming class we will see that this pattern is not a coincidence, and connect it to antiderivatives.  "
 },
 {
-  "id": "handouts",
+  "id": "activity-polynomial-accumulation-functions",
   "level": "1",
-  "url": "handouts.html",
-  "type": "Chapter",
+  "url": "activity-polynomial-accumulation-functions.html",
+  "type": "Worksheet",
   "number": "",
-  "title": "Handouts",
-  "body": " Handouts    "
+  "title": "Accumulation Functions for Polynomials",
+  "body": " Accumulation Functions for Polynomials    Recall the four basic accumulation formulas, for , , , and , found previously.  Use the sum rule and constant multiple rule to build the accumulation function for any polynomial of degree at most , one term at a time.  Use the splitting property to write in terms of an accumulation function, , and use this to evaluate definite integrals of polynomials of degree at most .     On the previous worksheet, you found the accumulation function for , , , and , each by setting up a right Riemann sum and taking its limit as . Now you'll put those four results to work: combining them to get the accumulation function for an entire polynomial, then using that to evaluate definite integrals without ever taking another limit.  Team Roles: Manager, Recorder, Spokesperson, and Reflector.    Recall: Four Basic Accumulation Formulas  From last activity:          Reminder: Sum Rule and Constant Multiple Rule  Recall that the definite integral satisfies a sum rule and a constant multiple rule: These rules apply just as well when the upper limit is the symbol , which means they apply directly to accumulation functions. Combined with the four basic formulas above, they let you build the accumulation function for any polynomial of degree at most , one term at a time. For example, for :     Building Accumulation Formulas for Polynomials   Use the same process as the worked example above to find the accumulation function for each polynomial below.     Find for .      Find for .      Find for .      Reminder: The Splitting Property  Recall the splitting property from the same earlier activity: , for any numbers and . Since and , solving for the middle term gives a way to evaluate any definite integral once you know its accumulation function: .    Evaluating Definite Integrals with   Use the accumulation formulas you built in the previous exercise, together with , to evaluate each definite integral below. You should not need to take another limit.     Using your accumulation function from , evaluate .      Using your accumulation function from , evaluate .      Using your accumulation function from , evaluate .      Looking Ahead  You now have a way to build the accumulation function for any polynomial of degree at most , and to use it to evaluate any definite integral of such a polynomial without taking a limit. In an upcoming class we will connect this pattern to antiderivatives.   "
+},
+{
+  "id": "obj-polynomial-accumulation-functions",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#obj-polynomial-accumulation-functions",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Recall the four basic accumulation formulas, for , , , and , found previously.  Use the sum rule and constant multiple rule to build the accumulation function for any polynomial of degree at most , one term at a time.  Use the splitting property to write in terms of an accumulation function, , and use this to evaluate definite integrals of polynomials of degree at most .   "
+},
+{
+  "id": "rem-basic-accumulation-recall",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#rem-basic-accumulation-recall",
+  "type": "Remark",
+  "number": "20",
+  "title": "Recall: Four Basic Accumulation Formulas.",
+  "body": " Recall: Four Basic Accumulation Formulas  From last activity:        "
+},
+{
+  "id": "rem-sum-cm-rule-reminder",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#rem-sum-cm-rule-reminder",
+  "type": "Remark",
+  "number": "21",
+  "title": "Reminder: Sum Rule and Constant Multiple Rule.",
+  "body": " Reminder: Sum Rule and Constant Multiple Rule  Recall that the definite integral satisfies a sum rule and a constant multiple rule: These rules apply just as well when the upper limit is the symbol , which means they apply directly to accumulation functions. Combined with the four basic formulas above, they let you build the accumulation function for any polynomial of degree at most , one term at a time. For example, for :   "
+},
+{
+  "id": "ex-build-accum-polynomials",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#ex-build-accum-polynomials",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Building Accumulation Formulas for Polynomials.",
+  "body": " Building Accumulation Formulas for Polynomials   Use the same process as the worked example above to find the accumulation function for each polynomial below.     Find for .      Find for .      Find for .    "
+},
+{
+  "id": "rem-splitting-reminder",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#rem-splitting-reminder",
+  "type": "Remark",
+  "number": "22",
+  "title": "Reminder: The Splitting Property.",
+  "body": " Reminder: The Splitting Property  Recall the splitting property from the same earlier activity: , for any numbers and . Since and , solving for the middle term gives a way to evaluate any definite integral once you know its accumulation function: .  "
+},
+{
+  "id": "ex-evaluate-with-accum",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#ex-evaluate-with-accum",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Evaluating Definite Integrals with <span class=\"process-math\">\\(A(b)-A(a)\\)<\/span>.",
+  "body": " Evaluating Definite Integrals with   Use the accumulation formulas you built in the previous exercise, together with , to evaluate each definite integral below. You should not need to take another limit.     Using your accumulation function from , evaluate .      Using your accumulation function from , evaluate .      Using your accumulation function from , evaluate .    "
+},
+{
+  "id": "rem-looking-ahead-power-rule",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#rem-looking-ahead-power-rule",
+  "type": "Remark",
+  "number": "23",
+  "title": "Looking Ahead.",
+  "body": " Looking Ahead  You now have a way to build the accumulation function for any polynomial of degree at most , and to use it to evaluate any definite integral of such a polynomial without taking a limit. In an upcoming class we will connect this pattern to antiderivatives.  "
 },
 {
   "id": "homework",
