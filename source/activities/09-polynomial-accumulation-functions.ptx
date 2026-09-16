@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- POGIL-style activity, Day 9. Picks up directly after the definite-integral-as-a-limit -->
+<!-- activity (Activity 8), which is assumed to have been COMPLETED in the previous class -->
+<!-- session: students have already defined the definite integral, defined the accumulation -->
+<!-- function, found int_0^b x dx = b^2/2, int_0^b x^2 dx = b^3/3, and int_0^b x^3 dx = b^4/4 by -->
+<!-- Riemann sum and limit, and already conjectured the pattern for int_0^b x^4 dx there. -->
+
+<!-- This activity does NOT re-derive any of that. It opens with a one-line recall of the four -->
+<!-- basic accumulation formulas as already-known facts, then moves straight into new content: -->
+<!-- using the sum rule and constant multiple rule (already established for definite integrals -->
+<!-- generally, back in the properties-of-the-integral activity) to build accumulation formulas -->
+<!-- for whole polynomials of degree at most 3, then using the splitting property to evaluate -->
+<!-- definite integrals via A(b)-A(a). -->
+
+<!-- Deliberately AVOIDS: re-deriving the four basic accumulation formulas, re-deriving the sum -->
+<!-- rule / constant multiple rule / splitting property from scratch (all already proved -->
+<!-- earlier in the course), and revisiting the x^4 conjecture (already asked in Activity 8; -->
+<!-- repeating it here would be pure duplication). Also avoids anything beyond degree 3. -->
+
+<!-- Answer key, for instructor reference (not shown to students): -->
+<!--   task-build-cubic: p(x)=x^3-2x+5 gives A(b) = b^4/4 - b^2 + 5b. -->
+<!--   task-build-quadratic: p(x)=4x^2+3x gives A(b) = (4/3)b^3 + (3/2)b^2. -->
+<!--   task-build-mixed: p(x)=x^3-x^2+x-1 gives A(b) = b^4/4 - b^3/3 + b^2/2 - b. -->
+<!--   task-eval-cubic: using A(b)=b^4/4-b^2+5b from task-build-cubic, int_2^4 (x^3-2x+5) dx = -->
+<!--     A(4)-A(2) = 68 - 10 = 58. -->
+<!--   task-eval-quadratic: using A(b)=(4/3)b^3+(3/2)b^2 from task-build-quadratic, -->
+<!--     int_{-1}^3 (4x^2+3x) dx = A(3)-A(-1) = 99/2 - 1/6 = 148/3. -->
+<!--   task-eval-mixed: using A(b)=b^4/4-b^3/3+b^2/2-b from task-build-mixed, -->
+<!--     int_0^2 (x^3-x^2+x-1) dx = A(2)-A(0) = 4/3 - 0 = 4/3. -->
+
+<!-- Suggested pacing for a ~30-35 minute block (approximate, not enforced; shorter than a full -->
+<!-- period since it picks up mid-topic rather than opening one): -->
+<!--   Intro + recall of the four basic accumulation formulas .................. ~2  min -->
+<!--   Reminder: sum rule and constant multiple rule, worked example ........... ~5  min -->
+<!--   Exercise 1: building accumulation formulas for polynomials .............. ~10 min -->
+<!--   Reminder: splitting property, one-line derivation of A(b)-A(a) .......... ~4  min -->
+<!--   Exercise 2: evaluating definite integrals with A(b)-A(a) ................ ~12 min -->
+<!--   TOTAL ..................................................................... ~33 min -->
+
+<!-- Where to cut if you're running short (in order of preference): -->
+<!--   1. In Exercise 1 and Exercise 2, do two of the three practice tasks in class and assign -->
+<!--      the third as follow-up; the pattern is already visible after two. -->
+<!--   2. Do NOT cut the worked example under "Sum Rule and Constant Multiple Rule": without it, -->
+<!--      groups have no model for how to combine the four basic formulas term by term. -->
+<!--   3. Do NOT cut Exercise 1 (building polynomial accumulation formulas) or Exercise 2 -->
+<!--      (evaluating with A(b)-A(a)): these are the entire new content of the day. -->
+
+<worksheet xml:id="activity-polynomial-accumulation-functions">
+  <title>Accumulation Functions for Polynomials</title>
+
+  <objectives xml:id="obj-polynomial-accumulation-functions">
+    <ul>
+      <li><p>Recall the four basic accumulation formulas, for <m>1</m>, <m>x</m>, <m>x^2</m>, and <m>x^3</m>, found previously.</p></li>
+      <li><p>Use the sum rule and constant multiple rule to build the accumulation function for any polynomial of degree at most <m>3</m>, one term at a time.</p></li>
+      <li><p>Use the splitting property to write <m>\displaystyle\int_a^b f(x)\,dx</m> in terms of an accumulation function, <m>\displaystyle\int_a^b f(x)\,dx = A(b)-A(a)</m>, and use this to evaluate definite integrals of polynomials of degree at most <m>3</m>.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      On the previous worksheet, you found the accumulation function 
+      <m>\displaystyle A(b) = \int_0^b f(x)\,dx</m>
+      for <m>f(x)=1</m>, <m>x</m>, <m>x^2</m>, and <m>x^3</m>, each by setting up a right Riemann
+      sum and taking its limit as <m>n\to\infty</m>. Now you'll put those four results to work:
+      combining them to get the accumulation function for an entire polynomial, then using that
+      to evaluate definite integrals without ever taking another limit.
+    </p>
+    <p>
+      Team Roles: Manager, Recorder, Spokesperson, and Reflector.
+    </p>
+  </introduction>
+
+  <remark xml:id="rem-basic-accumulation-recall">
+    <title>Recall: Four Basic Accumulation Formulas</title>
+    <p>
+      From last activity:
+    </p>
+    <ul>
+      <li><p><m>\displaystyle\int_0^b 1\,dx = b</m></p></li>
+      <li><p><m>\displaystyle\int_0^b x\,dx = \frac{b^2}{2}</m></p></li>
+      <li><p><m>\displaystyle\int_0^b x^2\,dx = \frac{b^3}{3}</m></p></li>
+      <li><p><m>\displaystyle\int_0^b x^3\,dx = \frac{b^4}{4}</m></p></li>
+    </ul>
+  </remark>
+
+  <remark xml:id="rem-sum-cm-rule-reminder">
+    <title>Reminder: Sum Rule and Constant Multiple Rule</title>
+    <p>
+      Recall that the definite integral satisfies a
+      sum rule and a constant multiple rule:
+      <md>
+        <mrow>\int_a^b [f(x)+g(x)]\,dx \amp = \int_a^b f(x)\,dx + \int_a^b g(x)\,dx,</mrow>
+        <mrow>\int_a^b k\,f(x)\,dx \amp = k\int_a^b f(x)\,dx.</mrow>          
+      </md>
+      These rules apply just as well when the upper limit is the symbol <m>b</m>, which means
+      they apply directly to accumulation functions. Combined with the four basic formulas
+      above, they let you build the accumulation function for <em>any</em> polynomial of degree
+      at most <m>3</m>, one term at a time. For example, for <m>p(x) = 3x^2-4x+1</m>:
+      <md>
+        <mrow>\int_0^b p(x)\,dx \amp = 3\int_0^b x^2\,dx - 4\int_0^b x\,dx + \int_0^b 1\,dx </mrow>
+        <mrow> \amp = 3\cdot\frac{b^3}{3} - 4\cdot\frac{b^2}{2} + b </mrow>
+        <mrow> \amp = b^3-2b^2+b </mrow>
+      </md>
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-build-accum-polynomials" workspace="0in">
+    <title>Building Accumulation Formulas for Polynomials</title>
+    <introduction>
+      <p>
+        Use the same process as the worked example above to find the accumulation function
+        <m>\displaystyle A(b) = \int_0^b p(x)\,dx</m> for each polynomial below.
+      </p>
+    </introduction>
+    <task xml:id="task-build-cubic" workspace="1.5in">
+      <statement>
+        <p>
+          Find <m>A(b)</m> for <m>p(x) = x^3-2x+5</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-build-quadratic" workspace="1.5in">
+      <statement>
+        <p>
+          Find <m>A(b)</m> for <m>p(x) = 4x^2+3x</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-build-mixed" workspace="1.5in">
+      <statement>
+        <p>
+          Find <m>A(b)</m> for <m>p(x) = x^3-x^2+x-1</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-splitting-reminder">
+    <title>Reminder: The Splitting Property</title>
+    <p>
+      Recall the splitting property from the same earlier activity:
+      <md>\displaystyle\int_0^a f(x)\,dx + \int_a^b f(x)\,dx = \int_0^b f(x)\,dx</md>, for any
+      numbers <m>a</m> and <m>b</m>. Since <m>A(a) = \int_0^a f(x)\,dx</m> and
+      <m>A(b) = \int_0^b f(x)\,dx</m>, solving for the middle term gives a way to evaluate any
+      definite integral once you know its accumulation function:
+      <md>\int_a^b f(x)\,dx = A(b) - A(a)</md>.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-evaluate-with-accum" workspace="0in">
+    <title>Evaluating Definite Integrals with <m>A(b)-A(a)</m></title>
+    <introduction>
+      <p>
+        Use the accumulation formulas you built in the previous exercise, together with
+        <m>\displaystyle\int_a^b f(x)\,dx = A(b)-A(a)</m>, to evaluate each definite integral
+        below. You should not need to take another limit.
+      </p>
+    </introduction>
+    <task xml:id="task-eval-cubic" workspace="1.5in">
+      <statement>
+        <p>
+          Using your accumulation function from <m>p(x)=x^3-2x+5</m>, evaluate
+          <m>\displaystyle\int_2^4 (x^3-2x+5)\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-eval-quadratic" workspace="1.5in">
+      <statement>
+        <p>
+          Using your accumulation function from <m>p(x)=4x^2+3x</m>, evaluate
+          <m>\displaystyle\int_{-1}^3 (4x^2+3x)\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-eval-mixed" workspace="1.5in">
+      <statement>
+        <p>
+          Using your accumulation function from <m>p(x)=x^3-x^2+x-1</m>, evaluate
+          <m>\displaystyle\int_0^2 (x^3-x^2+x-1)\,dx</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-looking-ahead-power-rule">
+    <title>Looking Ahead</title>
+    <p>
+      You now have a way to build the accumulation function for any polynomial of degree at
+      most <m>3</m>, and to use it to evaluate any definite integral of such a polynomial
+      without taking a limit. In an upcoming class we will connect this pattern to
+      antiderivatives.
+    </p>
+  </remark>
+
+</worksheet>

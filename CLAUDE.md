@@ -44,6 +44,12 @@ As with any team task, the framing is that the goal isn't to race to an answer, 
 
 Time and pacing considerations carry over from the same real-classroom constraints as other activity-based courses: content that feels like a modest amount of material tends to fill the whole class period once group work and whole-class discussion are folded in. Design conservatively rather than assuming discussion time is separate from the content's own footprint.
 
+That said, POGIL's default pace, one concept, thoroughly discovered, per class, is not sustainable across an entire course with a fixed number of class periods; strict adherence to it will not finish the syllabus. Multiple related sub-skills routinely need to be packed into a single day's activity. In practice this means:
+
+* Give some results as stated facts (a `<definition>` or a reminder `<remark>`) rather than having the group discover everything for itself, especially for a second or third instance of a pattern already established once. For example, if an activity asks students to derive two similar results by the same method, it is fine to derive the first in full and then just state or lightly re-derive the second, rather than repeating the full derivation.
+* Use a suggested-pacing comment (per-exercise timing estimates) and an explicit "where to cut if you're running short" list, in priority order, as standard practice on every activity, not only when pacing looks tight. Follow the pattern already established in `07-summation-formulas.ptx` and `08-definite-integral-as-limit.ptx`.
+* Treat "we didn't finish" as a normal, expected outcome to design around, not a failure of the activity. When writing the next activity in sequence, check where the class actually stopped and write that activity to pick up from there, rather than assuming the previous one was completed in full. If the previous activity's ending content wasn't reached, it is fine for the next activity to include it (even though it also still lives, unreached, in the earlier file) rather than leaving a gap.
+
 Activity XML conventions
 
 Based on the existing activities (`02-derivative-graph-shape.ptx`, `03-accumulated-change-and-area.ptx`, `04-properties-of-the-integral.ptx`, `05-riemann-sum-approximation.ptx`, `06-riemann-sum-notation.ptx`):
