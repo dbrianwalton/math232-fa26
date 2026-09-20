@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="handout-fundamental-theorem-calculus">
+  <title>The Fundamental Theorem of Calculus</title>
+
+  <objectives xml:id="obj-fundamental-theorem-calculus">
+    <ul>
+      <li><p>Accumulation functions are functions and we can write <m>A(x)</m>.</p></li>
+      <li><p>For the examples we have seen thus far, if we compute the accumulation function 
+        <m>A(x)</m> belonging to a polynomial <m>p(x)</m> and then compute its
+        derivative <m>A'(x)</m>, we discover <m>A'(x) = p(x)</m>.</p></li>
+      <li><p>This means <m>A(x)</m> is called an <term>antiderivative</term> of <m>p(x)</m>.</p></li>
+      <li>
+        <p>
+          The <term>Fundamental Theorem of Calculus</term> says this will <em>always</em> happen.
+          Every <term>continuous</term> function <m>f(x)</m> will have an accumulation function
+          <m>A(x)</m> and <m>A'(x)=f(x)</m>.
+          Every accumulation function is an antiderivative where <m>f(x)</m> is continuous.
+      </p>
+      </li>
+      <li><p>Apply the Fundamental Theorem of Calculus directly to find <m>A'(x)</m> for an
+        accumulation function <m>A(x) = \int_a^x f(t)\,dt</m> built from a simple algebraic
+        function <m>f</m>.</p></li>
+      <li><p>Rewrite a definite integral whose upper and lower limits are both formulas in
+        <m>x</m> as a difference <m>A(u_2)-A(u_1)</m>, and use the chain rule together with the
+        Fundamental Theorem of Calculus to differentiate it.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      This discussion will be more theoretical in order to reach the fundamental theorem of calculus.
+      We start by looking at a pattern in our accumulation functions.
+      <md>
+        <mrow>p(x) = 1 \quad \amp \Rightarrow \quad A(b) = \int_0^b 1 \,dx = b </mrow>
+        <mrow>p(x) = x \quad \amp \Rightarrow \quad A(b) = \int_0^b x \,dx = \frac{1}{2}b^2 </mrow>
+        <mrow>p(x) = x^2 \quad \amp \Rightarrow \quad A(b) = \int_0^b x^2 \,dx = \frac{1}{3}b^3 </mrow>
+        <mrow>p(x) = x^3 \quad \amp \Rightarrow \quad A(b) = \int_0^b x^3 \,dx = \frac{1}{4}b^4 </mrow>
+      </md>
+      For each of these accumulation functions, we have used <m>b</m> as the ending end point of the definite integral.
+      Once the function is identified, we can use any variable such as <m>A(x)</m>.
+    </p>
+    <p>
+      What happens if we now compute the derivatives of the accumulation functions?
+      <md>
+        <mrow>p(x) = 1 \quad \amp \Rightarrow \quad A(x) = x 
+          \quad \Rightarrow \quad A'(x) = 1 </mrow>
+        <mrow>p(x) = x \quad \amp \Rightarrow \quad A(x) = \frac{1}{2} x^2 
+          \quad \Rightarrow \quad A'(x) = \frac{1}{2}(2x) = x </mrow>
+        <mrow>p(x) = x^2 \quad \amp \Rightarrow \quad A(x) = \frac{1}{3}x^3 
+          \quad \Rightarrow \quad A'(x) = \frac{1}{3}(3x^2) = x^2 </mrow>
+        <mrow>p(x) = x^3 \quad \amp \Rightarrow \quad A(x) = \frac{1}{4}x^4 
+          \quad \Rightarrow \quad A'(x) = \frac{1}{4}(4x^3) = x^3 </mrow>
+      </md>
+      In each of these cases, we discovered <m>A'(x) = p(x)</m>.
+    </p>
+    <p>
+      The <term>Fundamental Theorem of Calculus</term> tells us this behavior is to be expected.
+    </p>
+  </introduction>
+
+  <p>
+    Here is an outline of the argument.
+    <ul>
+      <li>
+        <p>
+          Using a variable <m>x</m> as the input for the accumulation function requires changing the variable of integration:
+          <md>
+            A(x) = \int_a^x f(t) \, dt
+          </md>
+        </p>
+      </li>
+      <li>
+        <p>
+          We can then use the <term>definition</term> of the derivative:
+          <md>
+            A'(x) = \lim_{h \to 0} \frac{A(x+h)-A(x)}{h}.
+          </md>
+          Subtracting <m>A(x+h)-A(x)</m> uses the splitting property of definite integrals to give
+          <md>
+            A(x+h)-A(x) = \int_{x}^{x+h} f(t) \, dt
+          </md>
+        </p>
+      </li>
+      <li>
+        <p>
+          When <m>f(t)</m> is <term>continuous</term> on <m>[x,x+h]</m>, there must be both
+          a maximum value <m>f_{\mathrm{max}}</m> and a minimum value <m>f_{\mathrm{min}}</m>
+          because of the Extreme Value Theorem. This means:
+          <md>
+            f_{\mathrm{min}} \cdot h \le A(x+h)-A(x) \le f_{\mathrm{max}} \cdot h
+          </md>
+        </p>
+        <p>
+          Again using continuity, by the Intermediate Value Theorem, there must be some actual value
+          <m>t^*</m> between <m>x</m> and <m>x+h</m> such that <m>A(x+h)-A(x) = f(t^*) \cdot h</m>.
+          That value <m>t^*</m> depends on <m>h</m>, which we write <m>t^*(h)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Using the limit, since <m>t^*(h) \to x</m> and <m>f(x)</m> is continuous,
+          we must have <m>A'(x) = f(x)</m>.
+        </p>
+      </li>
+    </ul>
+  </p>
+
+  <theorem>
+    <title>The Fundamental Theorem of Calculus</title>
+    
+    <statement>
+      <p>
+        If <m>f(x)</m> is continuous and has an accumulation function
+        <md>
+          A(x) = \int_a^x f(t) \, dt
+        </md>
+        then <m>A'(x) = f(x)</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <remark>
+    <p>
+      Note that we don't need to know the formula for <m>A(x)</m> in order to know the derivative's formula <m>A'(x) = f(x)</m>.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-ftc-derivative-practice" workspace="0in">
+    <title>Practice: Differentiating Accumulation Functions</title>
+    <introduction>
+      <p>
+        The Fundamental Theorem of Calculus tells us that if
+        <m>\displaystyle A(x) = \int_a^x f(t)\,dt</m>, then <m>A'(x) = f(x)</m>, no matter what
+        the lower limit <m>a</m> is and without ever finding a formula for <m>A(x)</m> itself.
+        For each accumulation function below, use the theorem directly to find <m>A'(x)</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-ftc-derivative-linear" workspace="1in">
+      <statement>
+        <p>
+          For <m>\displaystyle A(x) = \int_0^x (2t+3)\,dt</m>, find <m>A'(x)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc-derivative-quadratic" workspace="1in">
+      <statement>
+        <p>
+          For <m>\displaystyle A(x) = \int_{-3}^x (t^2-4t)\,dt</m>, find <m>A'(x)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc-derivative-sqrt" workspace="1in">
+      <statement>
+        <p>
+          For <m>\displaystyle A(x) = \int_1^x \sqrt{t}\,dt</m>, find <m>A'(x)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc-derivative-cubic" workspace="1in">
+      <statement>
+        <p>
+          For <m>\displaystyle A(x) = \int_4^x (5-t^3)\,dt</m>, find <m>A'(x)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-variable-limits-setup" workspace="0in">
+    <title>Definite Integrals with Two Variable Limits</title>
+    <introduction>
+      <p>
+        So far every accumulation function has had a fixed lower limit and <m>x</m> itself as the
+        upper limit. Now suppose both limits of integration are formulas in <m>x</m>, say
+        <m>u_1(x)</m> and <m>u_2(x)</m>, instead of <m>x</m> alone. Using the same splitting
+        property of definite integrals we relied on earlier, and an accumulation function
+        <m>\displaystyle A(x) = \int_a^x f(t)\,dt</m> for a convenient fixed <m>a</m>, we can
+        write
+        <md>
+          \int_{u_1(x)}^{u_2(x)} f(t)\,dt = A(u_2(x)) - A(u_1(x))\text{.}
+        </md>
+        You do not need a formula for <m>A</m> itself to write an integral this way.
+      </p>
+    </introduction>
+    <task xml:id="task-variable-limits-linear" workspace="1in">
+      <statement>
+        <p>
+          Rewrite <m>\displaystyle \int_{x}^{x^3} (2t+3)\,dt</m> in the form
+          <m>A(u_2)-A(u_1)</m>, identifying <m>u_1</m> and <m>u_2</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-variable-limits-quadratic" workspace="1in">
+      <statement>
+        <p>
+          Rewrite <m>\displaystyle \int_{x^2}^{2x+1} (t^2-4t)\,dt</m> in the form
+          <m>A(u_2)-A(u_1)</m>, identifying <m>u_1</m> and <m>u_2</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-variable-limits-sqrt" workspace="1in">
+      <statement>
+        <p>
+          Rewrite <m>\displaystyle \int_{4x}^{x^2} \sqrt{t}\,dt</m> in the form
+          <m>A(u_2)-A(u_1)</m>, identifying <m>u_1</m> and <m>u_2</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-variable-limits-cubic" workspace="1in">
+      <statement>
+        <p>
+          Rewrite <m>\displaystyle \int_{x}^{3x} (5-t^3)\,dt</m> in the form
+          <m>A(u_2)-A(u_1)</m>, identifying <m>u_1</m> and <m>u_2</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-chain-rule-for-ftc">
+    <title>Differentiating Through the Chain Rule</title>
+    <p>
+      Rewriting an integral as <m>A(u_2)-A(u_1)</m> is progress, but <m>A(u_2)</m> and
+      <m>A(u_1)</m> are not simply <m>A</m> evaluated at <m>x</m>. They are <m>A</m> composed
+      with the functions <m>u_2(x)</m> and <m>u_1(x)</m>, so differentiating either one requires
+      the <em>chain rule</em>. Since <m>A'(x) = f(x)</m>, the chain rule gives
+      <md>
+        \frac{d}{dx}\big[A(u_2)\big] = A'(u_2)\cdot u_2' = f(u_2)\cdot u_2'
+        \qquad\text{and}\qquad
+        \frac{d}{dx}\big[A(u_1)\big] = A'(u_1)\cdot u_1' = f(u_1)\cdot u_1'\text{.}
+      </md>
+      Putting the two pieces together,
+      <md>
+        \frac{d}{dx}\left[\int_{u_1(x)}^{u_2(x)} f(t)\,dt\right] = f(u_2)\cdot u_2' - f(u_1)\cdot u_1'\text{.}
+      </md>
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-chain-rule-practice" workspace="0in">
+    <title>Practice: Differentiating with Two Variable Limits</title>
+    <introduction>
+      <p>
+        Return to the four integrals from the previous exercise. For each one, use
+        <m>\displaystyle \frac{d}{dx}\left[\int_{u_1(x)}^{u_2(x)} f(t)\,dt\right] =
+        f(u_2)\cdot u_2' - f(u_1)\cdot u_1'</m> to find the derivative.
+      </p>
+    </introduction>
+    <task xml:id="task-chain-rule-linear" workspace="1.5in">
+      <statement>
+        <p>
+          Find <m>\displaystyle \frac{d}{dx}\left[\int_{x}^{x^3} (2t+3)\,dt\right]</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-rule-quadratic" workspace="1.5in">
+      <statement>
+        <p>
+          Find <m>\displaystyle \frac{d}{dx}\left[\int_{x^2}^{2x+1} (t^2-4t)\,dt\right]</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-rule-sqrt" workspace="1.5in">
+      <statement>
+        <p>
+          Find <m>\displaystyle \frac{d}{dx}\left[\int_{4x}^{x^2} \sqrt{t}\,dt\right]</m>.
+          (Assume <m>x&gt;0</m>, so <m>\sqrt{x^2}=x</m>.)
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-rule-cubic" workspace="1.5in">
+      <statement>
+        <p>
+          Find <m>\displaystyle \frac{d}{dx}\left[\int_{x}^{3x} (5-t^3)\,dt\right]</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>
