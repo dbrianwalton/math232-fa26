@@ -27,107 +27,6 @@
     </ul>
   </objectives>
 
-  <introduction>
-    <p>
-      This discussion will be more theoretical in order to reach the fundamental theorem of calculus.
-      We start by looking at a pattern in our accumulation functions.
-      <md>
-        <mrow>p(x) = 1 \quad \amp \Rightarrow \quad A(b) = \int_0^b 1 \,dx = b </mrow>
-        <mrow>p(x) = x \quad \amp \Rightarrow \quad A(b) = \int_0^b x \,dx = \frac{1}{2}b^2 </mrow>
-        <mrow>p(x) = x^2 \quad \amp \Rightarrow \quad A(b) = \int_0^b x^2 \,dx = \frac{1}{3}b^3 </mrow>
-        <mrow>p(x) = x^3 \quad \amp \Rightarrow \quad A(b) = \int_0^b x^3 \,dx = \frac{1}{4}b^4 </mrow>
-      </md>
-      For each of these accumulation functions, we have used <m>b</m> as the ending end point of the definite integral.
-      Once the function is identified, we can use any variable such as <m>A(x)</m>.
-    </p>
-    <p>
-      What happens if we now compute the derivatives of the accumulation functions?
-      <md>
-        <mrow>p(x) = 1 \quad \amp \Rightarrow \quad A(x) = x 
-          \quad \Rightarrow \quad A'(x) = 1 </mrow>
-        <mrow>p(x) = x \quad \amp \Rightarrow \quad A(x) = \frac{1}{2} x^2 
-          \quad \Rightarrow \quad A'(x) = \frac{1}{2}(2x) = x </mrow>
-        <mrow>p(x) = x^2 \quad \amp \Rightarrow \quad A(x) = \frac{1}{3}x^3 
-          \quad \Rightarrow \quad A'(x) = \frac{1}{3}(3x^2) = x^2 </mrow>
-        <mrow>p(x) = x^3 \quad \amp \Rightarrow \quad A(x) = \frac{1}{4}x^4 
-          \quad \Rightarrow \quad A'(x) = \frac{1}{4}(4x^3) = x^3 </mrow>
-      </md>
-      In each of these cases, we discovered <m>A'(x) = p(x)</m>.
-    </p>
-    <p>
-      The <term>Fundamental Theorem of Calculus</term> tells us this behavior is to be expected.
-    </p>
-  </introduction>
-  <theorem>
-    <title>The Fundamental Theorem of Calculus</title>
-    
-    <statement>
-      <p>
-        If <m>f(x)</m> is continuous and has an accumulation function
-        <md>
-          A(x) = \int_a^x f(t) \, dt
-        </md>
-        then <m>A'(x) = f(x)</m>.
-      </p>
-      <p>
-        In other words, an accumulation function <m>A(x)</m> is an <term>antiderivative</term> of <m>f(x)</m>.
-      </p>
-    </statement>
-  </theorem>
-
-  <p>
-    Here is an outline of the argument.
-    <ul>
-      <li>
-        <p>
-          Using a variable <m>x</m> as the input for the accumulation function requires changing the variable of integration:
-          <md>
-            A(x) = \int_a^x f(t) \, dt
-          </md>
-        </p>
-      </li>
-      <li>
-        <p>
-          We can then use the <term>definition</term> of the derivative:
-          <md>
-            A'(x) = \lim_{h \to 0} \frac{A(x+h)-A(x)}{h}.
-          </md>
-          Subtracting <m>A(x+h)-A(x)</m> uses the splitting property of definite integrals to give
-          <md>
-            A(x+h)-A(x) = \int_{x}^{x+h} f(t) \, dt
-          </md>
-        </p>
-      </li>
-      <li>
-        <p>
-          When <m>f(t)</m> is <term>continuous</term> on <m>[x,x+h]</m>, there must be both
-          a maximum value <m>f_{\mathrm{max}}</m> and a minimum value <m>f_{\mathrm{min}}</m>
-          because of the Extreme Value Theorem. This means:
-          <md>
-            f_{\mathrm{min}} \cdot h \le A(x+h)-A(x) \le f_{\mathrm{max}} \cdot h
-          </md>
-        </p>
-        <p>
-          Again using continuity, by the Intermediate Value Theorem, there must be some actual value
-          <m>t^*</m> between <m>x</m> and <m>x+h</m> such that <m>A(x+h)-A(x) = f(t^*) \cdot h</m>.
-          That value <m>t^*</m> depends on <m>h</m>, which we write <m>t^*(h)</m>.
-        </p>
-      </li>
-      <li>
-        <p>
-          Using the limit, since <m>t^*(h) \to x</m> and <m>f(x)</m> is continuous,
-          we must have <m>A'(x) = f(x)</m>.
-        </p>
-      </li>
-    </ul>
-  </p>
-
-  <remark>
-    <p>
-      Note that we don't need to know the formula for <m>A(x)</m> in order to know the derivative's formula <m>A'(x) = f(x)</m>.
-    </p>
-  </remark>
-
   <exercise xml:id="ex-ftc-derivative-practice" workspace="0in">
     <title>Practice: Differentiating Accumulation Functions</title>
     <introduction>
@@ -278,4 +177,103 @@
       </statement>
     </task>
   </exercise>
+
+    <p>
+      This discussion will be more theoretical in order to reach the fundamental theorem of calculus.
+      We start by looking at a pattern in our accumulation functions.
+      <md>
+        <mrow>p(x) = 1 \quad \amp \Rightarrow \quad A(b) = \int_0^b 1 \,dx = b </mrow>
+        <mrow>p(x) = x \quad \amp \Rightarrow \quad A(b) = \int_0^b x \,dx = \frac{1}{2}b^2 </mrow>
+        <mrow>p(x) = x^2 \quad \amp \Rightarrow \quad A(b) = \int_0^b x^2 \,dx = \frac{1}{3}b^3 </mrow>
+        <mrow>p(x) = x^3 \quad \amp \Rightarrow \quad A(b) = \int_0^b x^3 \,dx = \frac{1}{4}b^4 </mrow>
+      </md>
+      For each of these accumulation functions, we have used <m>b</m> as the ending end point of the definite integral.
+      Once the function is identified, we can use any variable such as <m>A(x)</m>.
+    </p>
+    <p>
+      What happens if we now compute the derivatives of the accumulation functions?
+      <md>
+        <mrow>p(x) = 1 \quad \amp \Rightarrow \quad A(x) = x 
+          \quad \Rightarrow \quad A'(x) = 1 </mrow>
+        <mrow>p(x) = x \quad \amp \Rightarrow \quad A(x) = \frac{1}{2} x^2 
+          \quad \Rightarrow \quad A'(x) = \frac{1}{2}(2x) = x </mrow>
+        <mrow>p(x) = x^2 \quad \amp \Rightarrow \quad A(x) = \frac{1}{3}x^3 
+          \quad \Rightarrow \quad A'(x) = \frac{1}{3}(3x^2) = x^2 </mrow>
+        <mrow>p(x) = x^3 \quad \amp \Rightarrow \quad A(x) = \frac{1}{4}x^4 
+          \quad \Rightarrow \quad A'(x) = \frac{1}{4}(4x^3) = x^3 </mrow>
+      </md>
+      In each of these cases, we discovered <m>A'(x) = p(x)</m>.
+    </p>
+    <p>
+      The <term>Fundamental Theorem of Calculus</term> tells us this behavior is to be expected.
+    </p>
+  <theorem>
+    <title>The Fundamental Theorem of Calculus</title>
+    
+    <statement>
+      <p>
+        If <m>f(x)</m> is continuous and has an accumulation function
+        <md>
+          A(x) = \int_a^x f(t) \, dt
+        </md>
+        then <m>A'(x) = f(x)</m>.
+      </p>
+      <p>
+        In other words, an accumulation function <m>A(x)</m> is an <term>antiderivative</term> of <m>f(x)</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Here is an outline of the argument.
+    <ul>
+      <li>
+        <p>
+          Using a variable <m>x</m> as the input for the accumulation function requires changing the variable of integration:
+          <md>
+            A(x) = \int_a^x f(t) \, dt
+          </md>
+        </p>
+      </li>
+      <li>
+        <p>
+          We can then use the <term>definition</term> of the derivative:
+          <md>
+            A'(x) = \lim_{h \to 0} \frac{A(x+h)-A(x)}{h}.
+          </md>
+          Subtracting <m>A(x+h)-A(x)</m> uses the splitting property of definite integrals to give
+          <md>
+            A(x+h)-A(x) = \int_{x}^{x+h} f(t) \, dt
+          </md>
+        </p>
+      </li>
+      <li>
+        <p>
+          When <m>f(t)</m> is <term>continuous</term> on <m>[x,x+h]</m>, there must be both
+          a maximum value <m>f_{\mathrm{max}}</m> and a minimum value <m>f_{\mathrm{min}}</m>
+          because of the Extreme Value Theorem. This means:
+          <md>
+            f_{\mathrm{min}} \cdot h \le A(x+h)-A(x) \le f_{\mathrm{max}} \cdot h
+          </md>
+        </p>
+        <p>
+          Again using continuity, by the Intermediate Value Theorem, there must be some actual value
+          <m>t^*</m> between <m>x</m> and <m>x+h</m> such that <m>A(x+h)-A(x) = f(t^*) \cdot h</m>.
+          That value <m>t^*</m> depends on <m>h</m>, which we write <m>t^*(h)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Using the limit, since <m>t^*(h) \to x</m> and <m>f(x)</m> is continuous,
+          we must have <m>A'(x) = f(x)</m>.
+        </p>
+      </li>
+    </ul>
+  </p>
+
+  <remark>
+    <p>
+      Note that we don't need to know the formula for <m>A(x)</m> in order to know the derivative's formula <m>A'(x) = f(x)</m>.
+    </p>
+  </remark>
 </worksheet>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-accumulation" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Rates of Accumulation</title>
+
+  <introduction>
+    <p>
+      This provides supplemental reading for thinking about definite integrals, calculations involving rates of change, and accumulation functions.
+    </p>
+  </introduction>
+
+  <xi:include href="./rate-functions.ptx" />
+
+</section>

@@ -38,6 +38,13 @@
     </chapter>
 
 
+    <chapter xml:id="coures-notes">
+      <title>Supplemental Readings</title>
+      
+      <xi:include href="./notes/accumulation-section.ptx"/>
+    </chapter>
+
+
     <chapter xml:id="activities">
       <title>In-Class Activities</title>
 
