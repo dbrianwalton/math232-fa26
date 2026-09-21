@@ -56,6 +56,7 @@
       <xi:include href="./activities/07-summation-formulas.ptx"/>
       <xi:include href="./activities/08-definite-integral-as-limit.ptx"/>
       <xi:include href="./activities/09-polynomial-accumulation-functions.ptx"/>
+      <xi:include href="./activities/10-fundamental-theorem-calculus.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>

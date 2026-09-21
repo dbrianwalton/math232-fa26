@@ -58,6 +58,22 @@
       The <term>Fundamental Theorem of Calculus</term> tells us this behavior is to be expected.
     </p>
   </introduction>
+  <theorem>
+    <title>The Fundamental Theorem of Calculus</title>
+    
+    <statement>
+      <p>
+        If <m>f(x)</m> is continuous and has an accumulation function
+        <md>
+          A(x) = \int_a^x f(t) \, dt
+        </md>
+        then <m>A'(x) = f(x)</m>.
+      </p>
+      <p>
+        In other words, an accumulation function <m>A(x)</m> is an <term>antiderivative</term> of <m>f(x)</m>.
+      </p>
+    </statement>
+  </theorem>
 
   <p>
     Here is an outline of the argument.
@@ -105,20 +121,6 @@
       </li>
     </ul>
   </p>
-
-  <theorem>
-    <title>The Fundamental Theorem of Calculus</title>
-    
-    <statement>
-      <p>
-        If <m>f(x)</m> is continuous and has an accumulation function
-        <md>
-          A(x) = \int_a^x f(t) \, dt
-        </md>
-        then <m>A'(x) = f(x)</m>.
-      </p>
-    </statement>
-  </theorem>
 
   <remark>
     <p>
@@ -225,7 +227,9 @@
       the <em>chain rule</em>. Since <m>A'(x) = f(x)</m>, the chain rule gives
       <md>
         \frac{d}{dx}\big[A(u_2)\big] = A'(u_2)\cdot u_2' = f(u_2)\cdot u_2'
-        \qquad\text{and}\qquad
+      </md>
+      and
+      <md>
         \frac{d}{dx}\big[A(u_1)\big] = A'(u_1)\cdot u_1' = f(u_1)\cdot u_1'\text{.}
       </md>
       Putting the two pieces together,
