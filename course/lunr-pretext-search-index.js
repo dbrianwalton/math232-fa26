@@ -19,22 +19,40 @@ var ptx_lunr_docs = [
   "body": "course name (MATH xxx, section xxx) "
 },
 {
-  "id": "notes-week-01",
+  "id": "sec-outcomes-1",
   "level": "1",
-  "url": "notes-week-01.html",
+  "url": "sec-outcomes-1.html",
   "type": "Section",
   "number": "",
-  "title": "Week 1",
-  "body": " Week 1   This is an outline of the topics we covered in the first week of class.     Monday 8\/22      Wednesday 8\/24      Friday 8\/26     "
+  "title": "",
+  "body": "  R1 From Derivative Graph to Function Graph   R1  I can interpret the graph of a rate of change or the derivative to describe and construct the graph of the function .     The following graph is the graph of , where is the derivative of another function . Interpret in order to draw a potential graph of . Your graph must clearly demonstrate correct intervals for increasing, decreasing, and concavity. Label the x-values for all local extremes and inflection points.   Graph of   Graph of a smooth function roughly like a rounded W that crosses the x-axis at -3, -1, 1, and 3. The graph is above the x-axis to the left of -3, between -1 and 1, and again to the right of 3; and it is below the x-axis between -3 and -1 and again between 1 and 3. The graph shows a valley at approximately x=-2.25 and another at x=+2.25, with a peak value at x=0.         R2 Definite Integrals for Net Change in Quantity   R2  I can calculate the definite integral of a rate function using geometric area formulas and interpret the value as the total increment of the changing value.     The graph below represents the rate at which water is being added to a tank (or removed, as appropriate) in gallons\/minute. If the tank started ( ) with 15 gallons, state and use an appropriate definite integral to find the amount of water at minutes. A correct solution must show the correct notation for the definite integral and calculate its value using appropriate geometric formulas.   Graph of the rate of change of water in gal\/min   Graph of a rate function made from piecewise linear functions. It has a constant rate with a value of 2 gal\/min between the times 0 and 2 minutes. It changes linearly between times 2 and 3 minutes to reach a rate of 0 gal\/min at 3 minutes. It then changes linearly between times 3 and 5 minutes to reach a rate of -6 gal\/min at 5 minutes, then changes back to 0 gal\/min in a linear way at 7 minutes. It then increases linearly to 4 gal\/min at 8 minutes. It remains constant at 4 gal\/min until 10 minutes.         R3 Applying Properties of Definite Integrals   R3  I can apply a combination of the properties of definite integrals, including the splitting property, the sum rule, and the constant multiple rule, to compute the value of a definite integral involving a combination of two functions.     Suppose that for a function (not shown) we have and . A graph of is shown below with regions between the graph and the -axis labeled with areas , and .   Graph of g(x)   Graph of a function that is above the axis when x is less than 3, below the axis for x values between 3 and 5, and then above the axis for x greater than 5. Three regions are created with areas between the x-axis and the function graph: R1 is above the axis and created with x going from 1 to 3, R2 is below the axis and created with x going from 3 to 5, and R3 is above the axis and created with x going from 5 to 8.     Use this information to find .     "
 },
 {
-  "id": "notes-week-02",
-  "level": "1",
-  "url": "notes-week-02.html",
-  "type": "Section",
-  "number": "",
-  "title": "Week 2",
-  "body": " Week 2   Monday      Wednesday      Friday     "
+  "id": "R1_Graph_From_Derivative",
+  "level": "2",
+  "url": "sec-outcomes-1.html#R1_Graph_From_Derivative",
+  "type": "Checkpoint",
+  "number": "1",
+  "title": "",
+  "body": "  The following graph is the graph of , where is the derivative of another function . Interpret in order to draw a potential graph of . Your graph must clearly demonstrate correct intervals for increasing, decreasing, and concavity. Label the x-values for all local extremes and inflection points.   Graph of   Graph of a smooth function roughly like a rounded W that crosses the x-axis at -3, -1, 1, and 3. The graph is above the x-axis to the left of -3, between -1 and 1, and again to the right of 3; and it is below the x-axis between -3 and -1 and again between 1 and 3. The graph shows a valley at approximately x=-2.25 and another at x=+2.25, with a peak value at x=0.      "
+},
+{
+  "id": "R2_Integral_For_Net_Change",
+  "level": "2",
+  "url": "sec-outcomes-1.html#R2_Integral_For_Net_Change",
+  "type": "Checkpoint",
+  "number": "3",
+  "title": "",
+  "body": "  The graph below represents the rate at which water is being added to a tank (or removed, as appropriate) in gallons\/minute. If the tank started ( ) with 15 gallons, state and use an appropriate definite integral to find the amount of water at minutes. A correct solution must show the correct notation for the definite integral and calculate its value using appropriate geometric formulas.   Graph of the rate of change of water in gal\/min   Graph of a rate function made from piecewise linear functions. It has a constant rate with a value of 2 gal\/min between the times 0 and 2 minutes. It changes linearly between times 2 and 3 minutes to reach a rate of 0 gal\/min at 3 minutes. It then changes linearly between times 3 and 5 minutes to reach a rate of -6 gal\/min at 5 minutes, then changes back to 0 gal\/min in a linear way at 7 minutes. It then increases linearly to 4 gal\/min at 8 minutes. It remains constant at 4 gal\/min until 10 minutes.      "
+},
+{
+  "id": "R3_Definite_Integral_Properties",
+  "level": "2",
+  "url": "sec-outcomes-1.html#R3_Definite_Integral_Properties",
+  "type": "Checkpoint",
+  "number": "5",
+  "title": "",
+  "body": "  Suppose that for a function (not shown) we have and . A graph of is shown below with regions between the graph and the -axis labeled with areas , and .   Graph of g(x)   Graph of a function that is above the axis when x is less than 3, below the axis for x values between 3 and 5, and then above the axis for x greater than 5. Three regions are created with areas between the x-axis and the function graph: R1 is above the axis and created with x going from 1 to 3, R2 is below the axis and created with x going from 3 to 5, and R3 is above the axis and created with x going from 5 to 8.     Use this information to find .   "
 },
 {
   "id": "activity-derivative-graph-shape",
@@ -131,7 +149,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#def-integral-accumulated-change",
   "type": "Definition",
-  "number": "1",
+  "number": "7",
   "title": "Notation: Accumulated Change.",
   "body": " Notation: Accumulated Change   What you just discovered works for any rate of change, not only velocity. If a quantity has value at time and changes at rate , then its value at a later time is the starting value plus the accumulated change over the interval. Mathematicians write that accumulated change using the definite integral symbol: Read as \"the accumulated change in the quantity from to .\" When is a positive constant on an interval of length , this is just , the same as the rectangle areas you computed above.   "
 },
@@ -140,7 +158,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#def-integral-area",
   "type": "Definition",
-  "number": "2",
+  "number": "8",
   "title": "Notation: Area Under a Graph.",
   "body": " Notation: Area Under a Graph   The very same symbol describes area. For a function , the area of the region between the graph of and the -axis, from to , is written This is not a coincidence: it's the same idea from Exercise 3, written in general notation.   "
 },
@@ -158,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#rem-signed-area-and-beyond",
   "type": "Remark",
-  "number": "3",
+  "number": "9",
   "title": "Signed Area, and Rates That Aren’t Constant.",
   "body": " Signed Area, and Rates That Aren't Constant  What you just worked out is called signed area : regions above the -axis count as positive area, and regions below it count as negative area. This is exactly why the definite integral, and not just \"area,\" is the right tool for accumulated change. It automatically keeps track of when a quantity is increasing versus decreasing.  Everything above used constant rates, so every region was a rectangle. But the notation , and its meaning as signed area, works exactly the same way even when is not constant. Later in the course you'll learn algebraic techniques (the Fundamental Theorem of Calculus and antiderivative formulas) for evaluating such integrals exactly. However, you have everything you need to evaluate a definite integral whenever the region between the graph and the axis is built from shapes you can already measure: rectangles, triangles, and trapezoids.  "
 },
@@ -239,7 +257,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-properties-of-the-integral.html#rem-provable-vs-adopted",
   "type": "Remark",
-  "number": "4",
+  "number": "10",
   "title": "Two Kinds of \"Always True\".",
   "body": " Two Kinds of \"Always True\"  Look back at everything in this activity. The splitting property for , the sum rule, and the constant multiple rule are all things you proved . In each case, you could point to an arithmetic reason (the linearity of the area formulas) that makes each one true. The zero-width fact is even more immediate: it's just what \"width\" means.  The reverse-order property is different in kind. There is no region you can shade for \"the area from to when is bigger than \". We can not directly visualize with a picture what it means to shade a region in reverse . Instead, we adopt an interpretation, because it's the only choice that lets the splitting rule keep working for any three numbers and not only when they are in increasing order. This is a mathematical mode of reasoning that we will encounter multiple times.  "
 },
@@ -284,7 +302,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-riemann-sum-approximation.html#rem-riemann-sum-name",
   "type": "Remark",
-  "number": "5",
+  "number": "11",
   "title": "Naming What You Just Built.",
   "body": " Naming What You Just Built  Each of your two staircases is an example of a Riemann sum : an approximation to the area under a curve built by partitioning an interval into subintervals, choosing one height on each piece, and adding up the resulting rectangle areas. What you built are called the left Riemann sum (using left-edge heights) and the right Riemann sum (using right-edge heights), each with subintervals.  "
 },
@@ -298,13 +316,409 @@ var ptx_lunr_docs = [
   "body": " More Rectangles, and a Limit   Four rectangles was a choice, not a requirement. Open the Riemann sum visualization linked below, which plots together with a slider for , the number of subintervals, and reports the left- and right-Riemann sum totals as you change it.   Riemann Sum Visualization (Desmos)      Set the slider to on the interval and confirm the left- and right-sum values match what you computed by hand in Exercise 2.      Now increase . Try , then , then as large as the tool allows. What happens to the left-sum value and the right-sum value as grows?      Both sums appear to approach a single number as gets larger and larger. That number is, by definition, the exact value of . Record the value you observe. Later in the course, the Fundamental Theorem of Calculus will let you find this number directly, without taking any limit by hand.    "
 },
 {
-  "id": "handouts",
+  "id": "activity-riemann-sum-notation",
   "level": "1",
-  "url": "handouts.html",
-  "type": "Chapter",
+  "url": "activity-riemann-sum-notation.html",
+  "type": "Worksheet",
   "number": "",
-  "title": "Handouts",
-  "body": " Handouts    "
+  "title": "Setting Up Riemann Sums with Summation Notation",
+  "body": " Setting Up Riemann Sums with Summation Notation    Write for a partition of into equal subintervals, as a formula in rather than a number tied to one specific choice of .  Write the th right endpoint of the partition as , and check a general formula against known specific values from a previous example.  Use function composition to substitute into simple algebraic functions.  Read and write summation notation as shorthand for \"add up the terms through ,\" including expanding a short sum into its individual terms.  Assemble , , and into the full right Riemann sum for a specific function and interval, for any number of subintervals , without evaluating it.     Last class, we approximated using left and right Riemann sums for on by hand, using a specific choice of rectangles: you found the five partition points , read off five function values from a table, and added up four rectangle areas. That works, but it required a fresh picture and a fresh table every time changed. Today you'll write down the pattern behind those numbers instead using formulas that work for any number of subintervals , and a compact notation for \"add these up\" that doesn't require writing out every single term.  To keep things manageable, we'll set up only the right Riemann sum today (always using the right endpoint of each subinterval). The goal in every task below is to correctly write an expression. At this stage, we will not evaluate it, simplify it, or find its value as a formula in .  Team Roles: Manager, Recorder, Spokesperson, and Reflector.    From to Any   Recall the example from last class approximating , the integral of on . With subintervals, the width of each piece was , and the four right endpoints were , , , .     In general, partitioning an interval into equal-width subintervals gives each one a width of . Using and from our example, but leaving as a symbol, write as an expression in . Check that your expression gives when .      Each partition point is reached by taking steps of size away from the left endpoint . That is, the th right endpoint is , where counts how many steps have been taken (so is one step from , is two steps, and so on). Using and your expression for from the previous task, write as an expression in and .      Check your formula: substitute into your expression for , then evaluate it at , , , and . Do you recover , , , and ?      Summation Notation   The symbol (capital Greek sigma) is a compact way to write \"add up a list of terms that follow a pattern.\" The notation means: start at (the number written below ), evaluate the expression , then repeat for , , and so on, up through (the number written above ), adding every result together. Written out in full, it means the same thing as Nothing here says how to find the value of that total — it's just notation for which terms to add.     Reading and Using Summation Notation    Write out as five separate terms (substituting one at a time), then add them up.      Now use summation notation for something you've already computed. For on with , recall and , , , . Write out as four separate terms (each a number, not a symbol), then add them up. Does your total match the right Riemann sum you found by hand last class?      Finally, replace the specific value with a general . Using your expressions for and from Exercise 1, write for , then assemble the full right Riemann sum for , entirely in terms of and . Do not simplify or evaluate — just set it up.      The General Recipe  Whatever the function, interval, or , setting up the right Riemann sum for always follows the same four steps:  Find the width of each subinterval: .  Write the th right endpoint: .  Substitute into to get .  Assemble the sum: .  The next three exercises are all the same four steps, applied to new functions.    Practice: A Power Function   Set up the right Riemann sum for , using on with subintervals.     Find as an expression in .      Write as an expression in and .      Substitute your expression for into to write . (You don't need to expand the cube — leaving it as something cubed is fine.)      Assemble the full right Riemann sum for this integral.      Practice: A Quadratic Polynomial   Set up the right Riemann sum for , using on with subintervals. This time isn't a single power of , so substituting means replacing every  in the formula for — not just the one inside a power.     Find as an expression in .      Write as an expression in and .      Substitute your expression for in for every  in to write . (Again, you don't need to simplify — correctly substituting is the point of this task.)      Assemble the full right Riemann sum for this integral.      Practice: A Rational Function   Set up the right Riemann sum for , using on with subintervals. Here is being substituted into a denominator, so parentheses matter: you're replacing in , not just tacking onto the end of the fraction.     Find as an expression in .      Write as an expression in and .      Substitute your expression for in place of in , keeping it inside parentheses, to write .      Assemble the full right Riemann sum for this integral.     "
+},
+{
+  "id": "obj-riemann-sum-notation",
+  "level": "2",
+  "url": "activity-riemann-sum-notation.html#obj-riemann-sum-notation",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Write for a partition of into equal subintervals, as a formula in rather than a number tied to one specific choice of .  Write the th right endpoint of the partition as , and check a general formula against known specific values from a previous example.  Use function composition to substitute into simple algebraic functions.  Read and write summation notation as shorthand for \"add up the terms through ,\" including expanding a short sum into its individual terms.  Assemble , , and into the full right Riemann sum for a specific function and interval, for any number of subintervals , without evaluating it.   "
+},
+{
+  "id": "ex-general-n-setup",
+  "level": "2",
+  "url": "activity-riemann-sum-notation.html#ex-general-n-setup",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "From <span class=\"process-math\">\\(n=4\\)<\/span> to Any <span class=\"process-math\">\\(n\\)<\/span>.",
+  "body": " From to Any   Recall the example from last class approximating , the integral of on . With subintervals, the width of each piece was , and the four right endpoints were , , , .     In general, partitioning an interval into equal-width subintervals gives each one a width of . Using and from our example, but leaving as a symbol, write as an expression in . Check that your expression gives when .      Each partition point is reached by taking steps of size away from the left endpoint . That is, the th right endpoint is , where counts how many steps have been taken (so is one step from , is two steps, and so on). Using and your expression for from the previous task, write as an expression in and .      Check your formula: substitute into your expression for , then evaluate it at , , , and . Do you recover , , , and ?    "
+},
+{
+  "id": "def-summation-notation",
+  "level": "2",
+  "url": "activity-riemann-sum-notation.html#def-summation-notation",
+  "type": "Definition",
+  "number": "12",
+  "title": "Summation Notation.",
+  "body": " Summation Notation   The symbol (capital Greek sigma) is a compact way to write \"add up a list of terms that follow a pattern.\" The notation means: start at (the number written below ), evaluate the expression , then repeat for , , and so on, up through (the number written above ), adding every result together. Written out in full, it means the same thing as Nothing here says how to find the value of that total — it's just notation for which terms to add.   "
+},
+{
+  "id": "ex-reading-sigma",
+  "level": "2",
+  "url": "activity-riemann-sum-notation.html#ex-reading-sigma",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Reading and Using Summation Notation.",
+  "body": " Reading and Using Summation Notation    Write out as five separate terms (substituting one at a time), then add them up.      Now use summation notation for something you've already computed. For on with , recall and , , , . Write out as four separate terms (each a number, not a symbol), then add them up. Does your total match the right Riemann sum you found by hand last class?      Finally, replace the specific value with a general . Using your expressions for and from Exercise 1, write for , then assemble the full right Riemann sum for , entirely in terms of and . Do not simplify or evaluate — just set it up.    "
+},
+{
+  "id": "rem-four-step-recipe",
+  "level": "2",
+  "url": "activity-riemann-sum-notation.html#rem-four-step-recipe",
+  "type": "Remark",
+  "number": "13",
+  "title": "The General Recipe.",
+  "body": " The General Recipe  Whatever the function, interval, or , setting up the right Riemann sum for always follows the same four steps:  Find the width of each subinterval: .  Write the th right endpoint: .  Substitute into to get .  Assemble the sum: .  The next three exercises are all the same four steps, applied to new functions.  "
+},
+{
+  "id": "ex-practice-cubic",
+  "level": "2",
+  "url": "activity-riemann-sum-notation.html#ex-practice-cubic",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Practice: A Power Function.",
+  "body": " Practice: A Power Function   Set up the right Riemann sum for , using on with subintervals.     Find as an expression in .      Write as an expression in and .      Substitute your expression for into to write . (You don't need to expand the cube — leaving it as something cubed is fine.)      Assemble the full right Riemann sum for this integral.    "
+},
+{
+  "id": "ex-practice-quadratic",
+  "level": "2",
+  "url": "activity-riemann-sum-notation.html#ex-practice-quadratic",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Practice: A Quadratic Polynomial.",
+  "body": " Practice: A Quadratic Polynomial   Set up the right Riemann sum for , using on with subintervals. This time isn't a single power of , so substituting means replacing every  in the formula for — not just the one inside a power.     Find as an expression in .      Write as an expression in and .      Substitute your expression for in for every  in to write . (Again, you don't need to simplify — correctly substituting is the point of this task.)      Assemble the full right Riemann sum for this integral.    "
+},
+{
+  "id": "ex-practice-rational",
+  "level": "2",
+  "url": "activity-riemann-sum-notation.html#ex-practice-rational",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Practice: A Rational Function.",
+  "body": " Practice: A Rational Function   Set up the right Riemann sum for , using on with subintervals. Here is being substituted into a denominator, so parentheses matter: you're replacing in , not just tacking onto the end of the fraction.     Find as an expression in .      Write as an expression in and .      Substitute your expression for in place of in , keeping it inside parentheses, to write .      Assemble the full right Riemann sum for this integral.    "
+},
+{
+  "id": "activity-summation-formulas",
+  "level": "1",
+  "url": "activity-summation-formulas.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Evaluating Riemann Sums with Summation Formulas",
+  "body": " Evaluating Riemann Sums with Summation Formulas    Discover, using a small checkable example, that a summation formula replaces the entire sum with a single expression, not each individual term.  Use the four basic summation formulas for , , , and , along with the sum rule and constant multiple rule to evaluate a summation without listing its individual terms.  Expand and simplify the summand of a right Riemann sum, then use the summation formulas to evaluate the sum as a single number for a specific .  Repeat that process with left as a symbol, treating as a fixed (but unspecified) number rather than as the index of summation, to obtain a closed-form formula for the Riemann sum in terms of .     Last class you learned to write a right Riemann sum using summation notation, such as , without evaluating it. Today you'll actually evaluate sums like this, first by hand-checking what a summation formula really claims, then by using a small toolkit of formulas to turn a Riemann sum into a single number, and finally into a single formula in .  Team Roles: Manager, Recorder, Spokesperson, and Reflector.    Does the Formula Really Replace the Sum?   We start with a formula and you are asked to trust it for the rest of the activity. Before relying on it, check for yourselves what it actually claims.     Compute directly, by adding the six numbers one at a time.      Now substitute into the formula and evaluate it. Compare this to your answer above.      A student claims that the formula means \"replace every individual term in the sum by .\" Using your work above, explain why that is not what the formula says. What does actually replace?      Four Summation Formulas   The following four formulas are given as facts. (Each can each be proved, but proving them is not a course goal.) In each, is a number that does not depend on , and is the number of terms being added.           Sum Rule and Constant Multiple Rule   Summations also split over addition and let a constant factor be pulled out, the same way you already expect from other kinds of sums:      Together with the four formulas above, these two rules let you evaluate any summation whose th term is a polynomial in , exactly the kind of summation a Riemann sum for a polynomial produces.     Combining the Rules   Use the summation formulas and the two rules together on a sum that mixes a multiple of with a constant.     Write out as five separate terms (substituting one at a time), then add them up.      Now evaluate the same sum using the rules instead of listing terms. First use the sum rule and constant multiple rule to rewrite as , then use the summation formulas to evaluate each piece.      Do your two answers agree? Which method would you rather use if the sum had terms instead of ?      Without writing out any individual terms, find using only the summation formulas and rules.      Evaluating a Riemann Sum:   Put the summation formulas to work on an actual Riemann sum. Consider , and partition into equal subintervals. Then and the th right endpoint is , so the right Riemann sum is Right now this is just notation for \"add up twenty numbers.\" Turn it into a single number without computing all twenty terms by hand.     Expand the square , then distribute the factor of , so that the summand is written as three separate terms in powers of : a constant term, a term with , and a term with .      Use the sum rule and constant multiple rule to split into three separate summations, one for each term from the previous task.      Use the four summation formulas, with , to evaluate each of your three summations, then add the results to get a single number for the right Riemann sum.      Generalizing to Any   Repeat the same process, but leave as a symbol instead of fixing it at . Partition into equal subintervals. Then and , so the right Riemann sum is Be careful: is still the index that changes from term to term, but now plays the same role as the or in the summation formulas and rules: a fixed number that doesn't change as runs from to . It just happens to be a number we haven't chosen a specific value for.     Expand the square , then distribute the factor of , so the summand is again written as a constant term, a term with , and a term with (each of these terms will now involve as well).      Use the sum rule and constant multiple rule to split the summation into three separate pieces, one for each term from the previous task, exactly as you did for .      Use the four summation formulas to evaluate each piece in terms of , then combine and simplify to write the right Riemann sum for as a single formula in .      Substitute into your formula from the previous task. Does it match the number you found in the previous exercise?      Looking Ahead  You now have a single formula that gives the right Riemann sum for for any number of subintervals , without adding up individual terms. In a future class, we'll ask what happens to that formula as grows larger and larger without bound.   "
+},
+{
+  "id": "obj-summation-formulas",
+  "level": "2",
+  "url": "activity-summation-formulas.html#obj-summation-formulas",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Discover, using a small checkable example, that a summation formula replaces the entire sum with a single expression, not each individual term.  Use the four basic summation formulas for , , , and , along with the sum rule and constant multiple rule to evaluate a summation without listing its individual terms.  Expand and simplify the summand of a right Riemann sum, then use the summation formulas to evaluate the sum as a single number for a specific .  Repeat that process with left as a symbol, treating as a fixed (but unspecified) number rather than as the index of summation, to obtain a closed-form formula for the Riemann sum in terms of .   "
+},
+{
+  "id": "ex-formula-replaces-sum",
+  "level": "2",
+  "url": "activity-summation-formulas.html#ex-formula-replaces-sum",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Does the Formula Really Replace the Sum?",
+  "body": " Does the Formula Really Replace the Sum?   We start with a formula and you are asked to trust it for the rest of the activity. Before relying on it, check for yourselves what it actually claims.     Compute directly, by adding the six numbers one at a time.      Now substitute into the formula and evaluate it. Compare this to your answer above.      A student claims that the formula means \"replace every individual term in the sum by .\" Using your work above, explain why that is not what the formula says. What does actually replace?    "
+},
+{
+  "id": "def-summation-formulas",
+  "level": "2",
+  "url": "activity-summation-formulas.html#def-summation-formulas",
+  "type": "Definition",
+  "number": "14",
+  "title": "Four Summation Formulas.",
+  "body": " Four Summation Formulas   The following four formulas are given as facts. (Each can each be proved, but proving them is not a course goal.) In each, is a number that does not depend on , and is the number of terms being added.         "
+},
+{
+  "id": "def-sum-rules",
+  "level": "2",
+  "url": "activity-summation-formulas.html#def-sum-rules",
+  "type": "Definition",
+  "number": "15",
+  "title": "Sum Rule and Constant Multiple Rule.",
+  "body": " Sum Rule and Constant Multiple Rule   Summations also split over addition and let a constant factor be pulled out, the same way you already expect from other kinds of sums:      Together with the four formulas above, these two rules let you evaluate any summation whose th term is a polynomial in , exactly the kind of summation a Riemann sum for a polynomial produces.   "
+},
+{
+  "id": "ex-combining-rules",
+  "level": "2",
+  "url": "activity-summation-formulas.html#ex-combining-rules",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Combining the Rules.",
+  "body": " Combining the Rules   Use the summation formulas and the two rules together on a sum that mixes a multiple of with a constant.     Write out as five separate terms (substituting one at a time), then add them up.      Now evaluate the same sum using the rules instead of listing terms. First use the sum rule and constant multiple rule to rewrite as , then use the summation formulas to evaluate each piece.      Do your two answers agree? Which method would you rather use if the sum had terms instead of ?      Without writing out any individual terms, find using only the summation formulas and rules.    "
+},
+{
+  "id": "ex-riemann-n20",
+  "level": "2",
+  "url": "activity-summation-formulas.html#ex-riemann-n20",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Evaluating a Riemann Sum: <span class=\"process-math\">\\(n=20\\)<\/span>.",
+  "body": " Evaluating a Riemann Sum:   Put the summation formulas to work on an actual Riemann sum. Consider , and partition into equal subintervals. Then and the th right endpoint is , so the right Riemann sum is Right now this is just notation for \"add up twenty numbers.\" Turn it into a single number without computing all twenty terms by hand.     Expand the square , then distribute the factor of , so that the summand is written as three separate terms in powers of : a constant term, a term with , and a term with .      Use the sum rule and constant multiple rule to split into three separate summations, one for each term from the previous task.      Use the four summation formulas, with , to evaluate each of your three summations, then add the results to get a single number for the right Riemann sum.    "
+},
+{
+  "id": "ex-riemann-general-n",
+  "level": "2",
+  "url": "activity-summation-formulas.html#ex-riemann-general-n",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Generalizing to Any <span class=\"process-math\">\\(n\\)<\/span>.",
+  "body": " Generalizing to Any   Repeat the same process, but leave as a symbol instead of fixing it at . Partition into equal subintervals. Then and , so the right Riemann sum is Be careful: is still the index that changes from term to term, but now plays the same role as the or in the summation formulas and rules: a fixed number that doesn't change as runs from to . It just happens to be a number we haven't chosen a specific value for.     Expand the square , then distribute the factor of , so the summand is again written as a constant term, a term with , and a term with (each of these terms will now involve as well).      Use the sum rule and constant multiple rule to split the summation into three separate pieces, one for each term from the previous task, exactly as you did for .      Use the four summation formulas to evaluate each piece in terms of , then combine and simplify to write the right Riemann sum for as a single formula in .      Substitute into your formula from the previous task. Does it match the number you found in the previous exercise?    "
+},
+{
+  "id": "rem-looking-ahead-definite-integral",
+  "level": "2",
+  "url": "activity-summation-formulas.html#rem-looking-ahead-definite-integral",
+  "type": "Remark",
+  "number": "16",
+  "title": "Looking Ahead.",
+  "body": " Looking Ahead  You now have a single formula that gives the right Riemann sum for for any number of subintervals , without adding up individual terms. In a future class, we'll ask what happens to that formula as grows larger and larger without bound.  "
+},
+{
+  "id": "activity-definite-integral-as-limit",
+  "level": "1",
+  "url": "activity-definite-integral-as-limit.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "The Definite Integral as a Limit of Riemann Sums",
+  "body": " The Definite Integral as a Limit of Riemann Sums    Use a numerical tool to confirm a closed-form Riemann sum formula against a directly computed sum, and observe how its value changes as the number of subintervals grows without bound.  State the definition of the definite integral as the limit, as , of a right Riemann sum.  Evaluate the limit of a closed-form Riemann sum formula by examining the behavior of each of its terms as .  Independently carry out the full process, setup, evaluation, and limit, to compute a new definite integral.  Compute the accumulation function for , , and , and recognize an emerging pattern in the results.     In the previous activity, you partitioned into equal subintervals and used the summation formulas to evaluate the right Riemann sum for as a single closed-form expression in : This activity starts from that formula.  Team Roles: Manager, Recorder, Spokesperson, and Reflector.    Checking the Formula, and Watching It Converge   Open the Riemann sum calculator linked below. It graphs and lets you set , , and with sliders; it reports and the value of the right Riemann sum directly.   Riemann Sum Calculator (Desmos)      Set , , and . Confirm that the sum Desmos reports matches what your formula from the previous activity gives when .      Now increase , trying several larger values. Record what happens to the value of the sum as grows.      Based on what you observed, what single number does the sum appear to be approaching? How does it compare to ?      The Definite Integral   For a function defined on an interval , partition into equal subintervals of width , and let denote the right endpoint of the th subinterval. The definite integral of from to is defined as provided this limit exists.  Officially, the value must be able to be replaced by using any  between and . A Riemann sum is only ever an approximation, and the limit is the exact value.     Taking the Limit   Apply the definition to the formula you already have for :      Consider the two terms and separately. What happens to each one as ? Explain in terms of a fraction with a fixed numerator whose denominator grows without bound.      Use the previous task to evaluate , and use the definition to state the value of .      How does this value compare to the number the Desmos sum appeared to be approaching in the previous exercise?      Practice: A New Integral   Now carry out the entire process yourself, from setting up the Riemann sum through taking the limit, for a new integral: .     Partition into equal subintervals. For , write and (the right endpoint of the th subinterval), then write the right Riemann sum for in summation notation.      Substitute your expression for into , then expand and simplify so the summand is written as separate terms in powers of .      Use the sum rule and constant multiple rule to split your summation into one separate summation for each term from the previous task.      Use the summation formulas to evaluate each piece, then combine and simplify to write the right Riemann sum for as a single closed-form expression in .      Take the limit of your formula as , and use the definition to state the value of .      Accumulation Functions   Every definite integral you have evaluated so far has had two fixed numbers as its limits of integration. Suppose instead the lower limit is fixed at , but the upper limit is left as a symbol . We can still work through the steps and get the value of the limit that depends on . The result, is a function of , called an accumulation function : its value at any particular is the accumulated change, or signed area, from up to that point.     Three Accumulation Functions   Find the accumulation function based at for three power functions: , , and . In each case and , exactly as before but with a fixed number replaced by the symbol . Because each of these functions is a single power of , no expanding or splitting is needed: one summation formula does all the work.     Find .      Find .      Find .      Line up your three results. What pattern do you notice? Based on that pattern, and without computing any Riemann sum, conjecture a formula for .      Looking Ahead  You now have accumulation functions for three different power functions, and a conjecture for a fourth, all found the same way: by evaluating a Riemann sum and taking a limit. In an upcoming class we will see that this pattern is not a coincidence, and connect it to antiderivatives.   "
+},
+{
+  "id": "obj-definite-integral-as-limit",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#obj-definite-integral-as-limit",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Use a numerical tool to confirm a closed-form Riemann sum formula against a directly computed sum, and observe how its value changes as the number of subintervals grows without bound.  State the definition of the definite integral as the limit, as , of a right Riemann sum.  Evaluate the limit of a closed-form Riemann sum formula by examining the behavior of each of its terms as .  Independently carry out the full process, setup, evaluation, and limit, to compute a new definite integral.  Compute the accumulation function for , , and , and recognize an emerging pattern in the results.   "
+},
+{
+  "id": "ex-desmos-convergence",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#ex-desmos-convergence",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Checking the Formula, and Watching It Converge.",
+  "body": " Checking the Formula, and Watching It Converge   Open the Riemann sum calculator linked below. It graphs and lets you set , , and with sliders; it reports and the value of the right Riemann sum directly.   Riemann Sum Calculator (Desmos)      Set , , and . Confirm that the sum Desmos reports matches what your formula from the previous activity gives when .      Now increase , trying several larger values. Record what happens to the value of the sum as grows.      Based on what you observed, what single number does the sum appear to be approaching? How does it compare to ?    "
+},
+{
+  "id": "def-definite-integral",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#def-definite-integral",
+  "type": "Definition",
+  "number": "17",
+  "title": "The Definite Integral.",
+  "body": " The Definite Integral   For a function defined on an interval , partition into equal subintervals of width , and let denote the right endpoint of the th subinterval. The definite integral of from to is defined as provided this limit exists.  Officially, the value must be able to be replaced by using any  between and . A Riemann sum is only ever an approximation, and the limit is the exact value.   "
+},
+{
+  "id": "ex-evaluate-limit",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#ex-evaluate-limit",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Taking the Limit.",
+  "body": " Taking the Limit   Apply the definition to the formula you already have for :      Consider the two terms and separately. What happens to each one as ? Explain in terms of a fraction with a fixed numerator whose denominator grows without bound.      Use the previous task to evaluate , and use the definition to state the value of .      How does this value compare to the number the Desmos sum appeared to be approaching in the previous exercise?    "
+},
+{
+  "id": "ex-new-practice",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#ex-new-practice",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Practice: A New Integral.",
+  "body": " Practice: A New Integral   Now carry out the entire process yourself, from setting up the Riemann sum through taking the limit, for a new integral: .     Partition into equal subintervals. For , write and (the right endpoint of the th subinterval), then write the right Riemann sum for in summation notation.      Substitute your expression for into , then expand and simplify so the summand is written as separate terms in powers of .      Use the sum rule and constant multiple rule to split your summation into one separate summation for each term from the previous task.      Use the summation formulas to evaluate each piece, then combine and simplify to write the right Riemann sum for as a single closed-form expression in .      Take the limit of your formula as , and use the definition to state the value of .    "
+},
+{
+  "id": "def-accumulation-function",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#def-accumulation-function",
+  "type": "Definition",
+  "number": "18",
+  "title": "Accumulation Functions.",
+  "body": " Accumulation Functions   Every definite integral you have evaluated so far has had two fixed numbers as its limits of integration. Suppose instead the lower limit is fixed at , but the upper limit is left as a symbol . We can still work through the steps and get the value of the limit that depends on . The result, is a function of , called an accumulation function : its value at any particular is the accumulated change, or signed area, from up to that point.   "
+},
+{
+  "id": "ex-accumulation-functions",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#ex-accumulation-functions",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Three Accumulation Functions.",
+  "body": " Three Accumulation Functions   Find the accumulation function based at for three power functions: , , and . In each case and , exactly as before but with a fixed number replaced by the symbol . Because each of these functions is a single power of , no expanding or splitting is needed: one summation formula does all the work.     Find .      Find .      Find .      Line up your three results. What pattern do you notice? Based on that pattern, and without computing any Riemann sum, conjecture a formula for .    "
+},
+{
+  "id": "rem-looking-ahead-accumulation",
+  "level": "2",
+  "url": "activity-definite-integral-as-limit.html#rem-looking-ahead-accumulation",
+  "type": "Remark",
+  "number": "19",
+  "title": "Looking Ahead.",
+  "body": " Looking Ahead  You now have accumulation functions for three different power functions, and a conjecture for a fourth, all found the same way: by evaluating a Riemann sum and taking a limit. In an upcoming class we will see that this pattern is not a coincidence, and connect it to antiderivatives.  "
+},
+{
+  "id": "activity-polynomial-accumulation-functions",
+  "level": "1",
+  "url": "activity-polynomial-accumulation-functions.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Accumulation Functions for Polynomials",
+  "body": " Accumulation Functions for Polynomials    Recall the four basic accumulation formulas, for , , , and , found previously.  Use the sum rule and constant multiple rule to build the accumulation function for any polynomial of degree at most , one term at a time.  Use the splitting property to write in terms of an accumulation function, , and use this to evaluate definite integrals of polynomials of degree at most .     On the previous worksheet, you found the accumulation function for , , , and , each by setting up a right Riemann sum and taking its limit as . Now you'll put those four results to work: combining them to get the accumulation function for an entire polynomial, then using that to evaluate definite integrals without ever taking another limit.  Team Roles: Manager, Recorder, Spokesperson, and Reflector.    Recall: Four Basic Accumulation Formulas  From last activity:          Reminder: Sum Rule and Constant Multiple Rule  Recall that the definite integral satisfies a sum rule and a constant multiple rule: These rules apply just as well when the upper limit is the symbol , which means they apply directly to accumulation functions. Combined with the four basic formulas above, they let you build the accumulation function for any polynomial of degree at most , one term at a time. For example, for :     Building Accumulation Formulas for Polynomials   Use the same process as the worked example above to find the accumulation function for each polynomial below.     Find for .      Find for .      Find for .      Reminder: The Splitting Property  Recall the splitting property from the same earlier activity: , for any numbers and . Since and , solving for the middle term gives a way to evaluate any definite integral once you know its accumulation function: .    Evaluating Definite Integrals with   Use the accumulation formulas you built in the previous exercise, together with , to evaluate each definite integral below. You should not need to take another limit.     Using your accumulation function from , evaluate .      Using your accumulation function from , evaluate .      Using your accumulation function from , evaluate .      Looking Ahead  You now have a way to build the accumulation function for any polynomial of degree at most , and to use it to evaluate any definite integral of such a polynomial without taking a limit. In an upcoming class we will connect this pattern to antiderivatives.   "
+},
+{
+  "id": "obj-polynomial-accumulation-functions",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#obj-polynomial-accumulation-functions",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Recall the four basic accumulation formulas, for , , , and , found previously.  Use the sum rule and constant multiple rule to build the accumulation function for any polynomial of degree at most , one term at a time.  Use the splitting property to write in terms of an accumulation function, , and use this to evaluate definite integrals of polynomials of degree at most .   "
+},
+{
+  "id": "rem-basic-accumulation-recall",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#rem-basic-accumulation-recall",
+  "type": "Remark",
+  "number": "20",
+  "title": "Recall: Four Basic Accumulation Formulas.",
+  "body": " Recall: Four Basic Accumulation Formulas  From last activity:        "
+},
+{
+  "id": "rem-sum-cm-rule-reminder",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#rem-sum-cm-rule-reminder",
+  "type": "Remark",
+  "number": "21",
+  "title": "Reminder: Sum Rule and Constant Multiple Rule.",
+  "body": " Reminder: Sum Rule and Constant Multiple Rule  Recall that the definite integral satisfies a sum rule and a constant multiple rule: These rules apply just as well when the upper limit is the symbol , which means they apply directly to accumulation functions. Combined with the four basic formulas above, they let you build the accumulation function for any polynomial of degree at most , one term at a time. For example, for :   "
+},
+{
+  "id": "ex-build-accum-polynomials",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#ex-build-accum-polynomials",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Building Accumulation Formulas for Polynomials.",
+  "body": " Building Accumulation Formulas for Polynomials   Use the same process as the worked example above to find the accumulation function for each polynomial below.     Find for .      Find for .      Find for .    "
+},
+{
+  "id": "rem-splitting-reminder",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#rem-splitting-reminder",
+  "type": "Remark",
+  "number": "22",
+  "title": "Reminder: The Splitting Property.",
+  "body": " Reminder: The Splitting Property  Recall the splitting property from the same earlier activity: , for any numbers and . Since and , solving for the middle term gives a way to evaluate any definite integral once you know its accumulation function: .  "
+},
+{
+  "id": "ex-evaluate-with-accum",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#ex-evaluate-with-accum",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Evaluating Definite Integrals with <span class=\"process-math\">\\(A(b)-A(a)\\)<\/span>.",
+  "body": " Evaluating Definite Integrals with   Use the accumulation formulas you built in the previous exercise, together with , to evaluate each definite integral below. You should not need to take another limit.     Using your accumulation function from , evaluate .      Using your accumulation function from , evaluate .      Using your accumulation function from , evaluate .    "
+},
+{
+  "id": "rem-looking-ahead-power-rule",
+  "level": "2",
+  "url": "activity-polynomial-accumulation-functions.html#rem-looking-ahead-power-rule",
+  "type": "Remark",
+  "number": "23",
+  "title": "Looking Ahead.",
+  "body": " Looking Ahead  You now have a way to build the accumulation function for any polynomial of degree at most , and to use it to evaluate any definite integral of such a polynomial without taking a limit. In an upcoming class we will connect this pattern to antiderivatives.  "
+},
+{
+  "id": "handout-fundamental-theorem-calculus",
+  "level": "1",
+  "url": "handout-fundamental-theorem-calculus.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "The Fundamental Theorem of Calculus",
+  "body": " The Fundamental Theorem of Calculus    Accumulation functions are functions and we can write .  For the examples we have seen thus far, if we compute the accumulation function belonging to a polynomial and then compute its derivative , we discover .  This means is called an antiderivative of .   The Fundamental Theorem of Calculus says this will always happen. Every continuous function will have an accumulation function and . Every accumulation function is an antiderivative where is continuous.   Apply the Fundamental Theorem of Calculus directly to find for an accumulation function built from a simple algebraic function .  Rewrite a definite integral whose upper and lower limits are both formulas in as a difference , and use the chain rule together with the Fundamental Theorem of Calculus to differentiate it.     This discussion will be more theoretical in order to reach the fundamental theorem of calculus. We start by looking at a pattern in our accumulation functions. For each of these accumulation functions, we have used as the ending end point of the definite integral. Once the function is identified, we can use any variable such as .  What happens if we now compute the derivatives of the accumulation functions? In each of these cases, we discovered .  The Fundamental Theorem of Calculus tells us this behavior is to be expected.    The Fundamental Theorem of Calculus   If is continuous and has an accumulation function then .  In other words, an accumulation function is an antiderivative of .    Here is an outline of the argument.   Using a variable as the input for the accumulation function requires changing the variable of integration:     We can then use the definition of the derivative: Subtracting uses the splitting property of definite integrals to give     When is continuous on , there must be both a maximum value and a minimum value because of the Extreme Value Theorem. This means:   Again using continuity, by the Intermediate Value Theorem, there must be some actual value between and such that . That value depends on , which we write .    Using the limit, since and is continuous, we must have .      Note that we don't need to know the formula for in order to know the derivative's formula .    Practice: Differentiating Accumulation Functions   The Fundamental Theorem of Calculus tells us that if , then , no matter what the lower limit is and without ever finding a formula for itself. For each accumulation function below, use the theorem directly to find .     For , find .      For , find .      For , find .      For , find .      Definite Integrals with Two Variable Limits   So far every accumulation function has had a fixed lower limit and itself as the upper limit. Now suppose both limits of integration are formulas in , say and , instead of alone. Using the same splitting property of definite integrals we relied on earlier, and an accumulation function for a convenient fixed , we can write You do not need a formula for itself to write an integral this way.     Rewrite in the form , identifying and .      Rewrite in the form , identifying and .      Rewrite in the form , identifying and .      Rewrite in the form , identifying and .      Differentiating Through the Chain Rule  Rewriting an integral as is progress, but and are not simply evaluated at . They are composed with the functions and , so differentiating either one requires the chain rule . Since , the chain rule gives and Putting the two pieces together,     Practice: Differentiating with Two Variable Limits   Return to the four integrals from the previous exercise. For each one, use to find the derivative.     Find .      Find .      Find . (Assume , so .)      Find .     "
+},
+{
+  "id": "obj-fundamental-theorem-calculus",
+  "level": "2",
+  "url": "handout-fundamental-theorem-calculus.html#obj-fundamental-theorem-calculus",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Accumulation functions are functions and we can write .  For the examples we have seen thus far, if we compute the accumulation function belonging to a polynomial and then compute its derivative , we discover .  This means is called an antiderivative of .   The Fundamental Theorem of Calculus says this will always happen. Every continuous function will have an accumulation function and . Every accumulation function is an antiderivative where is continuous.   Apply the Fundamental Theorem of Calculus directly to find for an accumulation function built from a simple algebraic function .  Rewrite a definite integral whose upper and lower limits are both formulas in as a difference , and use the chain rule together with the Fundamental Theorem of Calculus to differentiate it.   "
+},
+{
+  "id": "handout-fundamental-theorem-calculus-3-3",
+  "level": "2",
+  "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-3-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Fundamental Theorem of Calculus "
+},
+{
+  "id": "handout-fundamental-theorem-calculus-4",
+  "level": "2",
+  "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-4",
+  "type": "Theorem",
+  "number": "24",
+  "title": "The Fundamental Theorem of Calculus.",
+  "body": " The Fundamental Theorem of Calculus   If is continuous and has an accumulation function then .  In other words, an accumulation function is an antiderivative of .   "
+},
+{
+  "id": "handout-fundamental-theorem-calculus-5",
+  "level": "2",
+  "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "definition continuous "
+},
+{
+  "id": "handout-fundamental-theorem-calculus-6",
+  "level": "2",
+  "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-6",
+  "type": "Remark",
+  "number": "25",
+  "title": "",
+  "body": " Note that we don't need to know the formula for in order to know the derivative's formula .  "
+},
+{
+  "id": "ex-ftc-derivative-practice",
+  "level": "2",
+  "url": "handout-fundamental-theorem-calculus.html#ex-ftc-derivative-practice",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Practice: Differentiating Accumulation Functions.",
+  "body": " Practice: Differentiating Accumulation Functions   The Fundamental Theorem of Calculus tells us that if , then , no matter what the lower limit is and without ever finding a formula for itself. For each accumulation function below, use the theorem directly to find .     For , find .      For , find .      For , find .      For , find .    "
+},
+{
+  "id": "ex-variable-limits-setup",
+  "level": "2",
+  "url": "handout-fundamental-theorem-calculus.html#ex-variable-limits-setup",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Definite Integrals with Two Variable Limits.",
+  "body": " Definite Integrals with Two Variable Limits   So far every accumulation function has had a fixed lower limit and itself as the upper limit. Now suppose both limits of integration are formulas in , say and , instead of alone. Using the same splitting property of definite integrals we relied on earlier, and an accumulation function for a convenient fixed , we can write You do not need a formula for itself to write an integral this way.     Rewrite in the form , identifying and .      Rewrite in the form , identifying and .      Rewrite in the form , identifying and .      Rewrite in the form , identifying and .    "
+},
+{
+  "id": "rem-chain-rule-for-ftc",
+  "level": "2",
+  "url": "handout-fundamental-theorem-calculus.html#rem-chain-rule-for-ftc",
+  "type": "Remark",
+  "number": "26",
+  "title": "Differentiating Through the Chain Rule.",
+  "body": " Differentiating Through the Chain Rule  Rewriting an integral as is progress, but and are not simply evaluated at . They are composed with the functions and , so differentiating either one requires the chain rule . Since , the chain rule gives and Putting the two pieces together,   "
+},
+{
+  "id": "ex-chain-rule-practice",
+  "level": "2",
+  "url": "handout-fundamental-theorem-calculus.html#ex-chain-rule-practice",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Practice: Differentiating with Two Variable Limits.",
+  "body": " Practice: Differentiating with Two Variable Limits   Return to the four integrals from the previous exercise. For each one, use to find the derivative.     Find .      Find .      Find . (Assume , so .)      Find .    "
 },
 {
   "id": "homework",
