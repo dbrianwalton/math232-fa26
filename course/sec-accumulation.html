@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Rates of Accumulation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Calculus with Functions II">
+<meta property="og:title" content="Calculus with Functions II">
+<meta property="book:title" content="Calculus with Functions II">
+<meta name="twitter:description" content="MATH 232-0002 Fall 2026">
+<meta property="og:description" content="MATH 232-0002 Fall 2026">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="root-1-2.html"><span class="title">Calculus with Functions II</span> <span class="subtitle">MATH 232-0002 Fall 2026</span></a></div>
+<p class="byline">Dr. Brian Walton</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-embed-button" class="ptx-embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><dialog class="ptx-dialog ptx-embed-popup" id="ptx-embed-popup"><div class="ptx-embed-popup-controls">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<button class="ptx-embed-close-button button" id="ptx-embed-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-embed-code-container">
+<textarea class="ptx-embed-code-textbox" id="ptx-embed-code-textbox" readonly aria-label="Embed"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button autofocus="autofocus" class="ptx-embed-copy-button button" id="ptx-embed-copy-button" title="Copy"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div></dialog><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="coures-notes.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="coures-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="activities.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul id="ptx-toc-group-course-documents" class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="syllabus.html" class="internal"><span class="title">Syllabus</span></a></div>
+<ul id="ptx-toc-group-syllabus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-course-info" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-assessments" class="internal"><span class="title">Assessments and Grades</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-outcomes.html" class="internal"><span class="title">Student Learning Outcomes</span></a></div>
+<ul id="ptx-toc-group-course-outcomes" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="course-outcomes-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-outcomes-1.html" class="internal"><span class="title"></span></a></div>
+<ul id="ptx-toc-group-sec-outcomes-1" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outcomes-1.html#subsec-R1" class="internal"><span class="title">R1 From Derivative Graph to Function Graph</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outcomes-1.html#subsec-R2" class="internal"><span class="title">R2 Definite Integrals for Net Change in Quantity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outcomes-1.html#subsec-R3" class="internal"><span class="title">R3 Applying Properties of Definite Integrals</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="coures-notes.html" class="internal"><span class="title">Supplemental Readings</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-coures-notes"><li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-accumulation.html" class="internal"><span class="title">Rates of Accumulation</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-sec-accumulation"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-accumulation.html#rate-functions" class="internal"><span class="title">Functions Defined by Their Rates</span></a></div>
+<ul id="ptx-toc-group-rate-functions" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-accumulation.html#rate-functions-3" class="internal"><span class="title">Describing Function Behavior</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-accumulation.html#subsec_derivs_shape" class="internal"><span class="title">Complete Shape Analysis</span></a></div></li>
+</ul>
+</li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></div>
+<ul id="ptx-toc-group-activities" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="activities-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-derivative-graph-shape.html" class="internal"><span class="title">What Does the Graph of the Rate Tell Us?</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-accumulated-change-and-area.html" class="internal"><span class="title">From Rate to Accumulated Change: Distance, Area, and the Definite Integral</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-properties-of-the-integral.html" class="internal"><span class="title">Properties of the Definite Integral: Pipes, Splitting, and Running Time Backward</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-riemann-sum-approximation.html" class="internal"><span class="title">Approximating Area Under a Curve: An Introduction to Riemann Sums</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-riemann-sum-notation.html" class="internal"><span class="title">Setting Up Riemann Sums with Summation Notation</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-summation-formulas.html" class="internal"><span class="title">Evaluating Riemann Sums with Summation Formulas</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-definite-integral-as-limit.html" class="internal"><span class="title">The Definite Integral as a Limit of Riemann Sums</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-polynomial-accumulation-functions.html" class="internal"><span class="title">Accumulation Functions for Polynomials</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="handout-fundamental-theorem-calculus.html" class="internal"><span class="title">The Fundamental Theorem of Calculus</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-accumulation">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rates of Accumulation</span>
+</h1>
+<section class="introduction" id="sec-accumulation-2">
+<div class="para" id="sec-accumulation-2-1">This provides supplemental reading for thinking about definite integrals, calculations involving rates of change, and accumulation functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-accumulation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="section" id="rate-functions">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Functions Defined by Their Rates</span>
+</h2>
+<section class="introduction" id="rate-functions-2">
+<div class="para" id="rate-functions-2-1">When we learned about derivatives, we learned that they define <dfn class="terminology">rates of change</dfn>. As consequences of the Mean Value Theorem, we learned that if a derivative <span class="process-math">\(f'(x)\)</span> stays positive on an entire interval <span class="process-math">\((a,b)\text{,}\)</span> then the function <span class="process-math">\(f(x)\)</span> for which it is the rate must be <dfn class="terminology">increasing</dfn> on the same interval <span class="process-math">\((a,b)\text{.}\)</span> An end point can be included in the interval if <span class="process-math">\(f(x)\)</span> is continuous up to and including the end point. A similar argument works to say that a <em class="emphasis">negative</em> rate of change implies the function is <dfn class="terminology">decreasing</dfn> on the corresponding interval. And if the rate is <em class="emphasis">zero</em> on an interval (not just an isolated point), this implies the funciton is <dfn class="terminology">constant</dfn> on the corresponding interval.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="rate-functions-2-2">A second derivative describes the rate of change of the first derivative. That is, <span class="process-math">\(f''(x)\)</span> determines the <em class="emphasis">slope</em> of the graph of the <span class="process-math">\(f'(x)\)</span> function. A changing rate of change <span class="process-math">\(f'(x)\)</span> corresponds to a curve in the function <span class="process-math">\(f(x)\text{,}\)</span> so the signs of <span class="process-math">\(f''(x)\)</span> are used to describe <dfn class="terminology">concavity</dfn> of <span class="process-math">\(f(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="rate-functions-3">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Describing Function Behavior</span>
+</h3>
+<div class="para logical" id="rate-functions-3-2">
+<div class="para">We can describe the behavior of a quantity <span class="process-math">\(Q\)</span> represented by a function <span class="process-math">\(Q(t)\)</span> by understanding its rate of change <span class="process-math">\(Q'(t) = R(t)\text{.}\)</span>
+</div>
+<ul class="disc" id="rate-functions-3-2-4">
+<li id="rate-functions-3-2-4-1">
+<div class="para" id="rate-functions-3-2-4-1-1">
+<span class="process-math">\(Q\)</span> is <dfn class="terminology">increasing</dfn> when its rate of change is <span class="process-math">\(Q' = R\)</span> is positive on an interval,<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#rate-functions-3-2-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="rate-functions-3-2-4-2">
+<div class="para" id="rate-functions-3-2-4-2-1">
+<span class="process-math">\(Q\)</span> is <dfn class="terminology">decreasing</dfn> when its rate of change <span class="process-math">\(Q' = R\)</span> is negative on an interval.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#rate-functions-3-2-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="rate-functions-3-2-4-3">
+<div class="para" id="rate-functions-3-2-4-3-1">
+<span class="process-math">\(Q\)</span> is <dfn class="terminology">constant</dfn> when its rate of change <span class="process-math">\(Q' = R\)</span> is zero on an interval.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-2-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#rate-functions-3-2-4-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">We describe concavity for <span class="process-math">\(Q\)</span> analogously, but now based on whether the rate <span class="process-math">\(R\)</span> is increasing or decreasing.</div>
+<ul class="disc" id="rate-functions-3-2-7">
+<li id="rate-functions-3-2-7-1">
+<div class="para" id="rate-functions-3-2-7-1-1">
+<span class="process-math">\(Q\)</span> is <dfn class="terminology">concave up</dfn> on <span class="process-math">\(I\)</span> if <span class="process-math">\(R\)</span> is increasing on <span class="process-math">\(I\text{.}\)</span> This in turn occurs when <span class="process-math">\(Q''=R'\)</span> (the slope of the graph of <span class="process-math">\(R\)</span>) is positive.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-2-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#rate-functions-3-2-7-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="rate-functions-3-2-7-2">
+<div class="para" id="rate-functions-3-2-7-2-1">
+<span class="process-math">\(Q\)</span> is <dfn class="terminology">concave down</dfn> on <span class="process-math">\(I\)</span> if <span class="process-math">\(R\)</span> is decreasing on <span class="process-math">\(I\text{.}\)</span> This in turn occurs when <span class="process-math">\(Q''=R'\)</span> is negative.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-2-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#rate-functions-3-2-7-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="rate-functions-3-2-7-3">
+<div class="para" id="rate-functions-3-2-7-3-1">
+<span class="process-math">\(Q\)</span> is <dfn class="terminology">linear</dfn> (straight) on <span class="process-math">\(I\)</span> if <span class="process-math">\(R\)</span> is constant on <span class="process-math">\(I\text{.}\)</span> This in turn occurs when <span class="process-math">\(Q''=R'\)</span> is zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-2-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#rate-functions-3-2-7-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="rate-functions-3-3">Concavity is closely related to the concept of acceleration (by which we also include the idea of deceleration). A constant rate of change leads to a linear relation. On a graph, this is a straight line. Concavity refers to a rate of change that is itself changing. This is acceleration. In physics, acceleration is caused by a force, so we can think of concavity as the effect on an object in the presence of a force.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="rate-functions-3-4">Suppose that a quantity has a positive rate of change (increasing) and is also concave up (an increasing rate of change). This would be like a car moving forward (positive rate) with a rocket pushing it forward (positive acceleration). The result would be that the car continues to go faster (increasing rate), covering ever increasing distances per unit time. A graph of the position would be rising (increasing) and bending up (concave up).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-prototype-incr-ccu"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/fig-prototype-incr-ccu-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(Q\)</span> is an increasing and concave up function of <span class="process-math">\(x\text{.}\)</span> The rate is positive and increasing.<div class="autopermalink" aria-hidden="true" data-description="Figure 7"><a tabindex="-1" href="#fig-prototype-incr-ccu" title="Copy heading and permalink for Figure 7" aria-label="Copy heading and permalink for Figure 7">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="rate-functions-3-6">Next, suppose that a quantity has a positive rate of change (increasing) but is concave down (a decreasing rate of change). This would be like a car moving forward (positive rate) but with a rocket in reverse (negative acceleration). The car would still be moving forward, but the rocket is slowing it down. A graph of position in this case would be rising (increasing) but bending down (concave down).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-prototype-incr-ccd"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/fig-prototype-incr-ccd-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(Q\)</span> is an increasing and concave down function of <span class="process-math">\(x\text{.}\)</span> The rate is positive but decreasing.<div class="autopermalink" aria-hidden="true" data-description="Figure 8"><a tabindex="-1" href="#fig-prototype-incr-ccd" title="Copy heading and permalink for Figure 8" aria-label="Copy heading and permalink for Figure 8">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="rate-functions-3-8">If the rocket continues to exert a negative force, there will be a moment when all of the forward momentum is gone and then the car begins to go backwards. Consequently, we learn that a quantity that is concave down can switch from increasing to decreasing. Graphically, this is exactly what a parabola that opens down does. However, if the rocket is gradually reduced, we might be able to slow the car down without ever changing direction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-prototype-ccd-incr-decr"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/fig-prototype-ccd-incr-decr-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(Q\)</span> is a concave down function of <span class="process-math">\(x\)</span> that is increasing for <span class="process-math">\(x \lt a\)</span> and decreasing for <span class="process-math">\(x \gt a\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 9"><a tabindex="-1" href="#fig-prototype-ccd-incr-decr" title="Copy heading and permalink for Figure 9" aria-label="Copy heading and permalink for Figure 9">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="rate-functions-3-10">Similar behaviors might be described for negative rates of change. This would correspond to a car that is already going backwards. Being concave up (increasing rate of change) corresponds to a positive acceleration (rocket force), which in this case is opposite the motion and would serve to slow the car down maybe to the point of reversing direction. Graphically, this corresponds to a dropping graph that is bending up (moving toward flat). Being concave down (decreasing rate of change) corresponds to negative acceleration (rocket force) which now is the same direction as the motion. This would cause the car to speed up (in the negative direction). Graphically, being concave down corresponds to a graph that is bending down and growing ever steeper.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="rate-functions-3-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="rate-functions-3-11-1-1">
+<div class="para">Suppose <span class="process-math">\(V\)</span> measures the volume of water (liters) in a container and that <span class="process-math">\(V\)</span> is a function of time <span class="process-math">\(t\)</span> (minutes) such that the rate of change (liters per minute) is also a function of time defined by</div>
+<div class="displaymath process-math" id="rate-functions-3-11-1-1-4">
+\begin{equation*}
+\frac{dV}{dt} = R(t) = 10-0.25t.
+\end{equation*}
+</div>
+<div class="para">Describe the behavior of <span class="process-math">\(V\)</span> and sketch a representative graph.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="rate-functions-3-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="rate-functions-3-11-2-1">The rate of change of the volume in the container, <span class="process-math">\(R(t)\)</span> determines the behavior of the volume. Because <span class="process-math">\(R\)</span> has a negative slope <span class="process-math">\(m=-0.25\text{,}\)</span> the rate is decreasing. This tells us that the volume is a concave down function. Solving the inequalities <span class="process-math">\(R(t) \gt 0\)</span> and <span class="process-math">\(R(t) \lt 0\)</span> will allow us to see when the rate is positive or negative, which will imply when the volume is increasing or decreasing, respectively.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="rate-functions-3-11-2-2">
+<div class="para">The inequalities are solved by solving the equation <span class="process-math">\(R(t)=0\)</span> and then testing the inequalities in the resulting intervals.</div>
+<div class="displaymath process-math" id="rate-functions-3-11-2-2-2">
+\begin{gather*}
+10-0.25t = 0 \\
+-0.25t = -10\\
+t = \frac{-10}{-0.25} = 40
+\end{gather*}
+</div>
+<div class="para">Testing the sign of <span class="process-math">\(R(t)\)</span> when <span class="process-math">\(t \lt 40\text{,}\)</span> we find, for example <span class="process-math">\(R(20) = 10-0.25(20) = 5\text{,}\)</span> that the rate is positive. Consequently, <span class="process-math">\(V\)</span> is increasing when <span class="process-math">\(t \lt 40\text{.}\)</span> On the other hand, testing the sign of <span class="process-math">\(R(t)\)</span> when <span class="process-math">\(t \gt 40\text{,}\)</span> such as <span class="process-math">\(R(60) = 0-0.25(60)=-5\text{,}\)</span> we find that the rate is negative so that the volume is decreasing when <span class="process-math">\(t \gt 40\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-11-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="rate-functions-3-11-2-3">The graph of <span class="process-math">\(R(t)\text{,}\)</span> shown below, is consistent with these analyses. The graph is decreasing (corresponding to the negative slope), above the axis for <span class="process-math">\(t \lt 40\)</span> and below the axis for <span class="process-math">\(t \gt 40\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-11-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="rate-functions-3-11-2-4"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/rate-functions-3-11-2-4-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A graph of the rate of change of volume of water as a function of time.<div class="autopermalink" aria-hidden="true" data-description="Figure 11"><a tabindex="-1" href="#rate-functions-3-11-2-4" title="Copy heading and permalink for Figure 11" aria-label="Copy heading and permalink for Figure 11">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="rate-functions-3-11-2-5">The graph of the volume therefore needs to be concave down, increasing for <span class="process-math">\(t \lt 40\)</span> and decreasing for <span class="process-math">\(t \gt 40\text{.}\)</span> We do not know the starting volume (it wasn’t given), so the vertical positions of the graph do not presently have specific meaning. The initial value of 0 was chosen to represent whatever the starting volume happened to be. The graph of this functions is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rate-functions-3-11-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="rate-functions-3-11-2-6"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/rate-functions-3-11-2-6-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A graph of the volume of water as a function of time relative to the starting height.<div class="autopermalink" aria-hidden="true" data-description="Figure 12"><a tabindex="-1" href="#rate-functions-3-11-2-6" title="Copy heading and permalink for Figure 12" aria-label="Copy heading and permalink for Figure 12">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Solution 10.1"><a tabindex="-1" href="#rate-functions-3-11-2" title="Copy heading and permalink for Solution 10.1" aria-label="Copy heading and permalink for Solution 10.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 10"><a tabindex="-1" href="#rate-functions-3-11" title="Copy heading and permalink for Example 10" aria-label="Copy heading and permalink for Example 10">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection: Describing Function Behavior"><a tabindex="-1" href="#rate-functions-3" title="Copy heading and permalink for Subsection: Describing Function Behavior" aria-label="Copy heading and permalink for Subsection: Describing Function Behavior">🔗</a></div>
+</section>
+<section class="subsection" id="subsec_derivs_shape">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Complete Shape Analysis</span>
+</h3>
+<div class="para" id="subsec_derivs_shape-2">When we use both the first and second derivatives, we can find intervals for both monotonicity and concavity. This allows us to describe the shape of the graph.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec_derivs_shape-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex_derivs_to_shape" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex_derivs_to_shape-1-1">Describe the behavior of <span class="process-math">\(f(x)=x^4-12x^2+16x\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex_derivs_to_shape-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex_derivs_to_shape-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="ex_derivs_to_shape-2-1">
+<div class="para">We use <span class="process-math">\(f'(x)\)</span> to understand where <span class="process-math">\(f(x)\)</span> is increasing or decreasing, and <span class="process-math">\(f''(x)\)</span> to understand where <span class="process-math">\(f(x)\)</span> is concave up or concave down. We start by calculating the derivatives so that we can do sign analysis.</div>
+<div class="displaymath process-math" id="ex_derivs_to_shape-2-1-5">
+\begin{align*}
+f(x) &amp;= x^4-12x^2+16x\\
+f'(x) &amp;= 4x^3-24x+16\\
+f''(x) &amp;= 12x^2-24
+\end{align*}
+</div>
+<div class="para">To do sign analysis, we need to find the zeros of the functions. If the functions factor, that is the easiest way to accomplish that.</div>
+<div class="displaymath process-math" id="ex_derivs_to_shape-2-1-6">
+\begin{align*}
+f(x) &amp;= x(x+4)(x-2)^2\\
+f'(x) &amp;= 4(x-2)(x^2+2x-2)\\
+f''(x) &amp;= 12(x^2-2)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex_derivs_to_shape-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex_derivs_to_shape-2-2">To do sign analysis of <span class="process-math">\(f'(x)\text{,}\)</span> we find zeros as solutions of <span class="process-math">\(4=0\)</span> (no solutions), <span class="process-math">\(x-2=0\)</span> at <span class="process-math">\(x=2\text{,}\)</span> and <span class="process-math">\(x^2+2x-2=0\)</span> at <span class="process-math">\(x=-1 \pm \sqrt{3}\text{,}\)</span> approximated by <span class="process-math">\(x \approx -2.732\)</span> and <span class="process-math">\(x \approx 0.732\text{.}\)</span> Putting these on a number line, we can find the intervals we need to test: <span class="process-math">\((-\infty,-1-\sqrt{3})\text{,}\)</span> <span class="process-math">\((-1-\sqrt{3},-1+\sqrt{3})\text{,}\)</span> <span class="process-math">\((-1+\sqrt{3},2)\text{,}\)</span> and <span class="process-math">\((2,\infty)\text{.}\)</span> Evaluating <span class="process-math">\(f'(x)=4(x-2)(x^2+2x-2)\)</span> at a point in each interval, we get the following sign analysis summary.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex_derivs_to_shape-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_fcn_shape_firstD_signs"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/fcn_shape_firstD_signs.svg" role="img" class="contained" alt="sign analysis summary"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sign analysis summary for <span class="process-math">\(\displaystyle f'(x)=4(x-2)(x^2+2x-2)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 14"><a tabindex="-1" href="#fig_fcn_shape_firstD_signs" title="Copy heading and permalink for Figure 14" aria-label="Copy heading and permalink for Figure 14">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ex_derivs_to_shape-2-4">From the first derivative, we know that <span class="process-math">\(f(x)\)</span> is decreasing on the intervals <span class="process-math">\((-\infty,-1-\sqrt{3}]\)</span> and <span class="process-math">\([-1+\sqrt{3},2]\)</span> and is increasing on the intervals <span class="process-math">\([-1-\sqrt{3},-1+\sqrt{3}]\)</span> and <span class="process-math">\([2,\infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex_derivs_to_shape-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex_derivs_to_shape-2-5">The second derivative <span class="process-math">\(f''(x) = 12(x^2-2)\)</span> provides information about concavity. The zeros are at <span class="process-math">\(x=-\sqrt{2}\)</span> and <span class="process-math">\(x=\sqrt{2}\text{.}\)</span> A sign analysis summary of <span class="process-math">\(f''(x)\)</span> is given below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex_derivs_to_shape-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_fcn_shape_secondD_signs"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/fcn_shape_secondD_signs.svg" role="img" class="contained" alt="sign analysis summary"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sign analysis summary for <span class="process-math">\(\displaystyle f''(x)=12(x^2-2)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 15"><a tabindex="-1" href="#fig_fcn_shape_secondD_signs" title="Copy heading and permalink for Figure 15" aria-label="Copy heading and permalink for Figure 15">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ex_derivs_to_shape-2-7">The second derivative test for concavity allows us to conclude that <span class="process-math">\(f(x)\)</span> is concave up on the intervals <span class="process-math">\((-\infty,-\sqrt{2}]\)</span> and <span class="process-math">\([\sqrt{2},\infty)\)</span> and is concave down on the interval <span class="process-math">\([-\sqrt{2},\sqrt{2}]\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex_derivs_to_shape-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex_derivs_to_shape-2-8">A graph of <span class="process-math">\(f(x)\)</span> illustrates these behaviors. It has a local minimum at <span class="process-math">\(x=-1-\sqrt{3}\text{,}\)</span> a local maximum at <span class="process-math">\(x=-1+\sqrt{3}\text{,}\)</span> and another local minimum at <span class="process-math">\(x=2\text{.}\)</span> <span class="process-math">\(f(x)\)</span> also has points of inflection at <span class="process-math">\(x=\pm \sqrt{2}\text{.}\)</span> In the graph, the extremes are marked with circular points, while the inflection points are marked as squares.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex_derivs_to_shape-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_fcn_shape_graph"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/fcn_shape_graph.svg" role="img" class="contained" alt="sign analysis summary"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graph of <span class="process-math">\(y=f(x)=x^4-12x^2+16x\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 16"><a tabindex="-1" href="#fig_fcn_shape_graph" title="Copy heading and permalink for Figure 16" aria-label="Copy heading and permalink for Figure 16">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Solution 13.1"><a tabindex="-1" href="#ex_derivs_to_shape-2" title="Copy heading and permalink for Solution 13.1" aria-label="Copy heading and permalink for Solution 13.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 13"><a tabindex="-1" href="#ex_derivs_to_shape" title="Copy heading and permalink for Example 13" aria-label="Copy heading and permalink for Example 13">🔗</a></div>
+</article></details>
+<div class="para" id="subsec_derivs_shape-4">While these examples focused on finding intervals where the function had the properties of increasing, decreasing, concave up and concave down, this information could also be used to create sketches of the function’s behavior. This will be investigated further in the next section where we consider the idea of an antiderivative.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec_derivs_shape-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection: Complete Shape Analysis"><a tabindex="-1" href="#subsec_derivs_shape" title="Copy heading and permalink for Subsection: Complete Shape Analysis" aria-label="Copy heading and permalink for Subsection: Complete Shape Analysis">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section: Functions Defined by Their Rates"><a tabindex="-1" href="#rate-functions" title="Copy heading and permalink for Section: Functions Defined by Their Rates" aria-label="Copy heading and permalink for Section: Functions Defined by Their Rates">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section: Rates of Accumulation"><a tabindex="-1" href="#sec-accumulation" title="Copy heading and permalink for Section: Rates of Accumulation" aria-label="Copy heading and permalink for Section: Rates of Accumulation">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="coures-notes.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="activities.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

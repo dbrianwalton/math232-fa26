@@ -36,7 +36,7 @@ lang: "en-US",
 <meta name="twitter:description" content="MATH 232-0002 Fall 2026">
 <meta property="og:description" content="MATH 232-0002 Fall 2026">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -156,6 +156,19 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="coures-notes.html" class="internal"><span class="title">Supplemental Readings</span></a></div>
+<ul id="ptx-toc-group-coures-notes" class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-accumulation.html" class="internal"><span class="title">Rates of Accumulation</span></a></div>
+<ul id="ptx-toc-group-sec-accumulation" class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-accumulation.html#rate-functions" class="internal"><span class="title">Functions Defined by Their Rates</span></a></div>
+<ul id="ptx-toc-group-rate-functions" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-accumulation.html#rate-functions-3" class="internal"><span class="title">Describing Function Behavior</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-accumulation.html#subsec_derivs_shape" class="internal"><span class="title">Complete Shape Analysis</span></a></div></li>
+</ul>
+</li></ul>
+</li></ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></div>
@@ -356,7 +369,7 @@ eBookConfig.enable_chatcodes =  false;
 </article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 3: The Same Idea, Seen as Area"><a tabindex="-1" href="#ex-two-rates-geometry" title="Copy heading and permalink for Worksheet Exercise 3: The Same Idea, Seen as Area" aria-label="Copy heading and permalink for Worksheet Exercise 3: The Same Idea, Seen as Area">🔗</a></div>
 </article>
 <article class="definition definition-like" id="def-integral-accumulated-change"><h2 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notation: Accumulated Change.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">17</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notation: Accumulated Change.</span>
 </h2>
 <div class="para logical" id="def-integral-accumulated-change-2-1">
 <div class="para">What you just discovered works for any rate of change, not only velocity. If a quantity has value <span class="process-math">\(s(t_1)\)</span> at time <span class="process-math">\(t_1\)</span> and changes at rate <span class="process-math">\(r(t)\text{,}\)</span> then its value at a later time <span class="process-math">\(t_2\)</span> is the starting value plus the accumulated change over the interval. Mathematicians write that accumulated change using the <em class="emphasis">definite integral</em> symbol:</div>
@@ -368,10 +381,10 @@ s(t_2) \, = \, s(t_1) \, + \, \int_{t_1}^{t_2} r(t)\, dt
 <div class="para">Read <span class="process-math">\(\int_{t_1}^{t_2} r(t)\,dt\)</span> as "the accumulated change in the quantity from <span class="process-math">\(t_1\)</span> to <span class="process-math">\(t_2\text{.}\)</span>" When <span class="process-math">\(r(t)\)</span> is a positive constant <span class="process-math">\(v\)</span> on an interval of length <span class="process-math">\(\Delta t\text{,}\)</span> this is just <span class="process-math">\(v \cdot \Delta t\text{,}\)</span> the same as the rectangle areas you computed above.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-integral-accumulated-change-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 7: Notation: Accumulated Change"><a tabindex="-1" href="#def-integral-accumulated-change" title="Copy heading and permalink for Definition 7: Notation: Accumulated Change" aria-label="Copy heading and permalink for Definition 7: Notation: Accumulated Change">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 17: Notation: Accumulated Change"><a tabindex="-1" href="#def-integral-accumulated-change" title="Copy heading and permalink for Definition 17: Notation: Accumulated Change" aria-label="Copy heading and permalink for Definition 17: Notation: Accumulated Change">🔗</a></div>
 </article>
 <article class="definition definition-like" id="def-integral-area"><h2 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notation: Area Under a Graph.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">18</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notation: Area Under a Graph.</span>
 </h2>
 <div class="para logical" id="def-integral-area-2-1">
 <div class="para">The very same symbol describes area. For a function <span class="process-math">\(f(x)\text{,}\)</span> the area of the region between the graph of <span class="process-math">\(y = f(x)\)</span> and the <span class="process-math">\(x\)</span>-axis, from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{,}\)</span> is written</div>
@@ -383,7 +396,7 @@ s(t_2) \, = \, s(t_1) \, + \, \int_{t_1}^{t_2} r(t)\, dt
 <div class="para">This is not a coincidence: it’s the same idea from Exercise 3, written in general notation.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-integral-area-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 8: Notation: Area Under a Graph"><a tabindex="-1" href="#def-integral-area" title="Copy heading and permalink for Definition 8: Notation: Area Under a Graph" aria-label="Copy heading and permalink for Definition 8: Notation: Area Under a Graph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 18: Notation: Area Under a Graph"><a tabindex="-1" href="#def-integral-area" title="Copy heading and permalink for Definition 18: Notation: Area Under a Graph" aria-label="Copy heading and permalink for Definition 18: Notation: Area Under a Graph">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="ex-signed-area"><h2 class="heading">
 <span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">What If the Rate Is Negative?</span>
@@ -424,13 +437,13 @@ s(t_2) \, = \, s(t_1) \, + \, \int_{t_1}^{t_2} r(t)\, dt
 </article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 4: What If the Rate Is Negative?"><a tabindex="-1" href="#ex-signed-area" title="Copy heading and permalink for Worksheet Exercise 4: What If the Rate Is Negative?" aria-label="Copy heading and permalink for Worksheet Exercise 4: What If the Rate Is Negative?">🔗</a></div>
 </article>
 <article class="remark remark-like" id="rem-signed-area-and-beyond"><h2 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Signed Area, and Rates That Aren’t Constant.</span>
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">19</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Signed Area, and Rates That Aren’t Constant.</span>
 </h2>
 <div class="para" id="rem-signed-area-and-beyond-2">What you just worked out is called <em class="emphasis">signed area</em>: regions above the <span class="process-math">\(t\)</span>-axis count as positive area, and regions below it count as negative area. This is exactly why the definite integral, and not just "area," is the right tool for accumulated change. It automatically keeps track of when a quantity is increasing versus decreasing.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rem-signed-area-and-beyond-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="rem-signed-area-and-beyond-3">Everything above used constant rates, so every region was a rectangle. But the notation <span class="process-math">\(\int_{t_1}^{t_2} r(t)\,dt\text{,}\)</span> and its meaning as signed area, works exactly the same way even when <span class="process-math">\(r(t)\)</span> is not constant. Later in the course you’ll learn algebraic techniques (the Fundamental Theorem of Calculus and antiderivative formulas) for evaluating such integrals exactly. However, you have everything you need to evaluate a definite integral whenever the region between the graph and the axis is built from shapes you can already measure: rectangles, triangles, and trapezoids.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rem-signed-area-and-beyond-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Remark 9: Signed Area, and Rates That Aren’t Constant"><a tabindex="-1" href="#rem-signed-area-and-beyond" title="Copy heading and permalink for Remark 9: Signed Area, and Rates That Aren’t Constant" aria-label="Copy heading and permalink for Remark 9: Signed Area, and Rates That Aren’t Constant">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 19: Signed Area, and Rates That Aren’t Constant"><a tabindex="-1" href="#rem-signed-area-and-beyond" title="Copy heading and permalink for Remark 19: Signed Area, and Rates That Aren’t Constant" aria-label="Copy heading and permalink for Remark 19: Signed Area, and Rates That Aren’t Constant">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="ex-piecewise-total"><h2 class="heading">
 <span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Putting It All Together.</span>

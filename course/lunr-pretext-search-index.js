@@ -55,6 +55,87 @@ var ptx_lunr_docs = [
   "body": "  Suppose that for a function (not shown) we have and . A graph of is shown below with regions between the graph and the -axis labeled with areas , and .   Graph of g(x)   Graph of a function that is above the axis when x is less than 3, below the axis for x values between 3 and 5, and then above the axis for x greater than 5. Three regions are created with areas between the x-axis and the function graph: R1 is above the axis and created with x going from 1 to 3, R2 is below the axis and created with x going from 3 to 5, and R3 is above the axis and created with x going from 5 to 8.     Use this information to find .   "
 },
 {
+  "id": "sec-accumulation",
+  "level": "1",
+  "url": "sec-accumulation.html",
+  "type": "Section",
+  "number": "",
+  "title": "Rates of Accumulation",
+  "body": " Rates of Accumulation   This provides supplemental reading for thinking about definite integrals, calculations involving rates of change, and accumulation functions.    Functions Defined by Their Rates   When we learned about derivatives, we learned that they define rates of change . As consequences of the Mean Value Theorem, we learned that if a derivative stays positive on an entire interval , then the function for which it is the rate must be increasing on the same interval . An end point can be included in the interval if is continuous up to and including the end point. A similar argument works to say that a negative rate of change implies the function is decreasing on the corresponding interval. And if the rate is zero on an interval (not just an isolated point), this implies the funciton is constant on the corresponding interval.  A second derivative describes the rate of change of the first derivative. That is, determines the slope of the graph of the function. A changing rate of change corresponds to a curve in the function , so the signs of are used to describe concavity of .    Describing Function Behavior  We can describe the behavior of a quantity represented by a function by understanding its rate of change .  is increasing when its rate of change is is positive on an interval,  is decreasing when its rate of change is negative on an interval.  is constant when its rate of change is zero on an interval.  We describe concavity for analogously, but now based on whether the rate is increasing or decreasing.   is concave up on if is increasing on . This in turn occurs when (the slope of the graph of ) is positive.   is concave down on if is decreasing on . This in turn occurs when is negative.   is linear (straight) on if is constant on . This in turn occurs when is zero.    Concavity is closely related to the concept of acceleration (by which we also include the idea of deceleration). A constant rate of change leads to a linear relation. On a graph, this is a straight line. Concavity refers to a rate of change that is itself changing. This is acceleration. In physics, acceleration is caused by a force, so we can think of concavity as the effect on an object in the presence of a force.  Suppose that a quantity has a positive rate of change (increasing) and is also concave up (an increasing rate of change). This would be like a car moving forward (positive rate) with a rocket pushing it forward (positive acceleration). The result would be that the car continues to go faster (increasing rate), covering ever increasing distances per unit time. A graph of the position would be rising (increasing) and bending up (concave up).   is an increasing and concave up function of . The rate is positive and increasing.      Next, suppose that a quantity has a positive rate of change (increasing) but is concave down (a decreasing rate of change). This would be like a car moving forward (positive rate) but with a rocket in reverse (negative acceleration). The car would still be moving forward, but the rocket is slowing it down. A graph of position in this case would be rising (increasing) but bending down (concave down).   is an increasing and concave down function of . The rate is positive but decreasing.      If the rocket continues to exert a negative force, there will be a moment when all of the forward momentum is gone and then the car begins to go backwards. Consequently, we learn that a quantity that is concave down can switch from increasing to decreasing. Graphically, this is exactly what a parabola that opens down does. However, if the rocket is gradually reduced, we might be able to slow the car down without ever changing direction.   is a concave down function of that is increasing for and decreasing for .      Similar behaviors might be described for negative rates of change. This would correspond to a car that is already going backwards. Being concave up (increasing rate of change) corresponds to a positive acceleration (rocket force), which in this case is opposite the motion and would serve to slow the car down maybe to the point of reversing direction. Graphically, this corresponds to a dropping graph that is bending up (moving toward flat). Being concave down (decreasing rate of change) corresponds to negative acceleration (rocket force) which now is the same direction as the motion. This would cause the car to speed up (in the negative direction). Graphically, being concave down corresponds to a graph that is bending down and growing ever steeper.    Suppose measures the volume of water (liters) in a container and that is a function of time (minutes) such that the rate of change (liters per minute) is also a function of time defined by Describe the behavior of and sketch a representative graph.    The rate of change of the volume in the container, determines the behavior of the volume. Because has a negative slope , the rate is decreasing. This tells us that the volume is a concave down function. Solving the inequalities and will allow us to see when the rate is positive or negative, which will imply when the volume is increasing or decreasing, respectively.  The inequalities are solved by solving the equation and then testing the inequalities in the resulting intervals. Testing the sign of when , we find, for example , that the rate is positive. Consequently, is increasing when . On the other hand, testing the sign of when , such as , we find that the rate is negative so that the volume is decreasing when .  The graph of , shown below, is consistent with these analyses. The graph is decreasing (corresponding to the negative slope), above the axis for and below the axis for .   A graph of the rate of change of volume of water as a function of time.      The graph of the volume therefore needs to be concave down, increasing for and decreasing for . We do not know the starting volume (it wasn't given), so the vertical positions of the graph do not presently have specific meaning. The initial value of 0 was chosen to represent whatever the starting volume happened to be. The graph of this functions is shown below.   A graph of the volume of water as a function of time relative to the starting height.          Complete Shape Analysis  When we use both the first and second derivatives, we can find intervals for both monotonicity and concavity. This allows us to describe the shape of the graph.    Describe the behavior of .    We use to understand where is increasing or decreasing, and to understand where is concave up or concave down. We start by calculating the derivatives so that we can do sign analysis. To do sign analysis, we need to find the zeros of the functions. If the functions factor, that is the easiest way to accomplish that.   To do sign analysis of , we find zeros as solutions of (no solutions), at , and at , approximated by and . Putting these on a number line, we can find the intervals we need to test: , , , and . Evaluating at a point in each interval, we get the following sign analysis summary.   Sign analysis summary for .   sign analysis summary     From the first derivative, we know that is decreasing on the intervals and and is increasing on the intervals and .  The second derivative provides information about concavity. The zeros are at and . A sign analysis summary of is given below.   Sign analysis summary for .   sign analysis summary     The second derivative test for concavity allows us to conclude that is concave up on the intervals and and is concave down on the interval .  A graph of illustrates these behaviors. It has a local minimum at , a local maximum at , and another local minimum at . also has points of inflection at . In the graph, the extremes are marked with circular points, while the inflection points are marked as squares.   Graph of .   sign analysis summary       While these examples focused on finding intervals where the function had the properties of increasing, decreasing, concave up and concave down, this information could also be used to create sketches of the function's behavior. This will be investigated further in the next section where we consider the idea of an antiderivative.    "
+},
+{
+  "id": "rate-functions-2-1",
+  "level": "2",
+  "url": "sec-accumulation.html#rate-functions-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "rates of change increasing decreasing constant "
+},
+{
+  "id": "rate-functions-2-2",
+  "level": "2",
+  "url": "sec-accumulation.html#rate-functions-2-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "concavity "
+},
+{
+  "id": "rate-functions-3-2",
+  "level": "2",
+  "url": "sec-accumulation.html#rate-functions-3-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "increasing decreasing constant concave up concave down linear "
+},
+{
+  "id": "fig-prototype-incr-ccu",
+  "level": "2",
+  "url": "sec-accumulation.html#fig-prototype-incr-ccu",
+  "type": "Figure",
+  "number": "7",
+  "title": "",
+  "body": " is an increasing and concave up function of . The rate is positive and increasing.     "
+},
+{
+  "id": "fig-prototype-incr-ccd",
+  "level": "2",
+  "url": "sec-accumulation.html#fig-prototype-incr-ccd",
+  "type": "Figure",
+  "number": "8",
+  "title": "",
+  "body": " is an increasing and concave down function of . The rate is positive but decreasing.     "
+},
+{
+  "id": "fig-prototype-ccd-incr-decr",
+  "level": "2",
+  "url": "sec-accumulation.html#fig-prototype-ccd-incr-decr",
+  "type": "Figure",
+  "number": "9",
+  "title": "",
+  "body": " is a concave down function of that is increasing for and decreasing for .     "
+},
+{
+  "id": "rate-functions-3-11",
+  "level": "2",
+  "url": "sec-accumulation.html#rate-functions-3-11",
+  "type": "Example",
+  "number": "10",
+  "title": "",
+  "body": "  Suppose measures the volume of water (liters) in a container and that is a function of time (minutes) such that the rate of change (liters per minute) is also a function of time defined by Describe the behavior of and sketch a representative graph.    The rate of change of the volume in the container, determines the behavior of the volume. Because has a negative slope , the rate is decreasing. This tells us that the volume is a concave down function. Solving the inequalities and will allow us to see when the rate is positive or negative, which will imply when the volume is increasing or decreasing, respectively.  The inequalities are solved by solving the equation and then testing the inequalities in the resulting intervals. Testing the sign of when , we find, for example , that the rate is positive. Consequently, is increasing when . On the other hand, testing the sign of when , such as , we find that the rate is negative so that the volume is decreasing when .  The graph of , shown below, is consistent with these analyses. The graph is decreasing (corresponding to the negative slope), above the axis for and below the axis for .   A graph of the rate of change of volume of water as a function of time.      The graph of the volume therefore needs to be concave down, increasing for and decreasing for . We do not know the starting volume (it wasn't given), so the vertical positions of the graph do not presently have specific meaning. The initial value of 0 was chosen to represent whatever the starting volume happened to be. The graph of this functions is shown below.   A graph of the volume of water as a function of time relative to the starting height.       "
+},
+{
+  "id": "ex_derivs_to_shape",
+  "level": "2",
+  "url": "sec-accumulation.html#ex_derivs_to_shape",
+  "type": "Example",
+  "number": "13",
+  "title": "",
+  "body": "  Describe the behavior of .    We use to understand where is increasing or decreasing, and to understand where is concave up or concave down. We start by calculating the derivatives so that we can do sign analysis. To do sign analysis, we need to find the zeros of the functions. If the functions factor, that is the easiest way to accomplish that.   To do sign analysis of , we find zeros as solutions of (no solutions), at , and at , approximated by and . Putting these on a number line, we can find the intervals we need to test: , , , and . Evaluating at a point in each interval, we get the following sign analysis summary.   Sign analysis summary for .   sign analysis summary     From the first derivative, we know that is decreasing on the intervals and and is increasing on the intervals and .  The second derivative provides information about concavity. The zeros are at and . A sign analysis summary of is given below.   Sign analysis summary for .   sign analysis summary     The second derivative test for concavity allows us to conclude that is concave up on the intervals and and is concave down on the interval .  A graph of illustrates these behaviors. It has a local minimum at , a local maximum at , and another local minimum at . also has points of inflection at . In the graph, the extremes are marked with circular points, while the inflection points are marked as squares.   Graph of .   sign analysis summary      "
+},
+{
   "id": "activity-derivative-graph-shape",
   "level": "1",
   "url": "activity-derivative-graph-shape.html",
@@ -149,7 +230,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#def-integral-accumulated-change",
   "type": "Definition",
-  "number": "7",
+  "number": "17",
   "title": "Notation: Accumulated Change.",
   "body": " Notation: Accumulated Change   What you just discovered works for any rate of change, not only velocity. If a quantity has value at time and changes at rate , then its value at a later time is the starting value plus the accumulated change over the interval. Mathematicians write that accumulated change using the definite integral symbol: Read as \"the accumulated change in the quantity from to .\" When is a positive constant on an interval of length , this is just , the same as the rectangle areas you computed above.   "
 },
@@ -158,7 +239,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#def-integral-area",
   "type": "Definition",
-  "number": "8",
+  "number": "18",
   "title": "Notation: Area Under a Graph.",
   "body": " Notation: Area Under a Graph   The very same symbol describes area. For a function , the area of the region between the graph of and the -axis, from to , is written This is not a coincidence: it's the same idea from Exercise 3, written in general notation.   "
 },
@@ -176,7 +257,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#rem-signed-area-and-beyond",
   "type": "Remark",
-  "number": "9",
+  "number": "19",
   "title": "Signed Area, and Rates That Aren’t Constant.",
   "body": " Signed Area, and Rates That Aren't Constant  What you just worked out is called signed area : regions above the -axis count as positive area, and regions below it count as negative area. This is exactly why the definite integral, and not just \"area,\" is the right tool for accumulated change. It automatically keeps track of when a quantity is increasing versus decreasing.  Everything above used constant rates, so every region was a rectangle. But the notation , and its meaning as signed area, works exactly the same way even when is not constant. Later in the course you'll learn algebraic techniques (the Fundamental Theorem of Calculus and antiderivative formulas) for evaluating such integrals exactly. However, you have everything you need to evaluate a definite integral whenever the region between the graph and the axis is built from shapes you can already measure: rectangles, triangles, and trapezoids.  "
 },
@@ -257,7 +338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-properties-of-the-integral.html#rem-provable-vs-adopted",
   "type": "Remark",
-  "number": "10",
+  "number": "20",
   "title": "Two Kinds of \"Always True\".",
   "body": " Two Kinds of \"Always True\"  Look back at everything in this activity. The splitting property for , the sum rule, and the constant multiple rule are all things you proved . In each case, you could point to an arithmetic reason (the linearity of the area formulas) that makes each one true. The zero-width fact is even more immediate: it's just what \"width\" means.  The reverse-order property is different in kind. There is no region you can shade for \"the area from to when is bigger than \". We can not directly visualize with a picture what it means to shade a region in reverse . Instead, we adopt an interpretation, because it's the only choice that lets the splitting rule keep working for any three numbers and not only when they are in increasing order. This is a mathematical mode of reasoning that we will encounter multiple times.  "
 },
@@ -302,7 +383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-riemann-sum-approximation.html#rem-riemann-sum-name",
   "type": "Remark",
-  "number": "11",
+  "number": "21",
   "title": "Naming What You Just Built.",
   "body": " Naming What You Just Built  Each of your two staircases is an example of a Riemann sum : an approximation to the area under a curve built by partitioning an interval into subintervals, choosing one height on each piece, and adding up the resulting rectangle areas. What you built are called the left Riemann sum (using left-edge heights) and the right Riemann sum (using right-edge heights), each with subintervals.  "
 },
@@ -347,7 +428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-riemann-sum-notation.html#def-summation-notation",
   "type": "Definition",
-  "number": "12",
+  "number": "22",
   "title": "Summation Notation.",
   "body": " Summation Notation   The symbol (capital Greek sigma) is a compact way to write \"add up a list of terms that follow a pattern.\" The notation means: start at (the number written below ), evaluate the expression , then repeat for , , and so on, up through (the number written above ), adding every result together. Written out in full, it means the same thing as Nothing here says how to find the value of that total — it's just notation for which terms to add.   "
 },
@@ -365,7 +446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-riemann-sum-notation.html#rem-four-step-recipe",
   "type": "Remark",
-  "number": "13",
+  "number": "23",
   "title": "The General Recipe.",
   "body": " The General Recipe  Whatever the function, interval, or , setting up the right Riemann sum for always follows the same four steps:  Find the width of each subinterval: .  Write the th right endpoint: .  Substitute into to get .  Assemble the sum: .  The next three exercises are all the same four steps, applied to new functions.  "
 },
@@ -428,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-summation-formulas.html#def-summation-formulas",
   "type": "Definition",
-  "number": "14",
+  "number": "24",
   "title": "Four Summation Formulas.",
   "body": " Four Summation Formulas   The following four formulas are given as facts. (Each can each be proved, but proving them is not a course goal.) In each, is a number that does not depend on , and is the number of terms being added.         "
 },
@@ -437,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-summation-formulas.html#def-sum-rules",
   "type": "Definition",
-  "number": "15",
+  "number": "25",
   "title": "Sum Rule and Constant Multiple Rule.",
   "body": " Sum Rule and Constant Multiple Rule   Summations also split over addition and let a constant factor be pulled out, the same way you already expect from other kinds of sums:      Together with the four formulas above, these two rules let you evaluate any summation whose th term is a polynomial in , exactly the kind of summation a Riemann sum for a polynomial produces.   "
 },
@@ -473,7 +554,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-summation-formulas.html#rem-looking-ahead-definite-integral",
   "type": "Remark",
-  "number": "16",
+  "number": "26",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have a single formula that gives the right Riemann sum for for any number of subintervals , without adding up individual terms. In a future class, we'll ask what happens to that formula as grows larger and larger without bound.  "
 },
@@ -509,7 +590,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-definite-integral-as-limit.html#def-definite-integral",
   "type": "Definition",
-  "number": "17",
+  "number": "27",
   "title": "The Definite Integral.",
   "body": " The Definite Integral   For a function defined on an interval , partition into equal subintervals of width , and let denote the right endpoint of the th subinterval. The definite integral of from to is defined as provided this limit exists.  Officially, the value must be able to be replaced by using any  between and . A Riemann sum is only ever an approximation, and the limit is the exact value.   "
 },
@@ -536,7 +617,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-definite-integral-as-limit.html#def-accumulation-function",
   "type": "Definition",
-  "number": "18",
+  "number": "28",
   "title": "Accumulation Functions.",
   "body": " Accumulation Functions   Every definite integral you have evaluated so far has had two fixed numbers as its limits of integration. Suppose instead the lower limit is fixed at , but the upper limit is left as a symbol . We can still work through the steps and get the value of the limit that depends on . The result, is a function of , called an accumulation function : its value at any particular is the accumulated change, or signed area, from up to that point.   "
 },
@@ -554,7 +635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-definite-integral-as-limit.html#rem-looking-ahead-accumulation",
   "type": "Remark",
-  "number": "19",
+  "number": "29",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have accumulation functions for three different power functions, and a conjecture for a fourth, all found the same way: by evaluating a Riemann sum and taking a limit. In an upcoming class we will see that this pattern is not a coincidence, and connect it to antiderivatives.  "
 },
@@ -581,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-polynomial-accumulation-functions.html#rem-basic-accumulation-recall",
   "type": "Remark",
-  "number": "20",
+  "number": "30",
   "title": "Recall: Four Basic Accumulation Formulas.",
   "body": " Recall: Four Basic Accumulation Formulas  From last activity:        "
 },
@@ -590,7 +671,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-polynomial-accumulation-functions.html#rem-sum-cm-rule-reminder",
   "type": "Remark",
-  "number": "21",
+  "number": "31",
   "title": "Reminder: Sum Rule and Constant Multiple Rule.",
   "body": " Reminder: Sum Rule and Constant Multiple Rule  Recall that the definite integral satisfies a sum rule and a constant multiple rule: These rules apply just as well when the upper limit is the symbol , which means they apply directly to accumulation functions. Combined with the four basic formulas above, they let you build the accumulation function for any polynomial of degree at most , one term at a time. For example, for :   "
 },
@@ -608,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-polynomial-accumulation-functions.html#rem-splitting-reminder",
   "type": "Remark",
-  "number": "22",
+  "number": "32",
   "title": "Reminder: The Splitting Property.",
   "body": " Reminder: The Splitting Property  Recall the splitting property from the same earlier activity: , for any numbers and . Since and , solving for the middle term gives a way to evaluate any definite integral once you know its accumulation function: .  "
 },
@@ -626,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-polynomial-accumulation-functions.html#rem-looking-ahead-power-rule",
   "type": "Remark",
-  "number": "23",
+  "number": "33",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have a way to build the accumulation function for any polynomial of degree at most , and to use it to evaluate any definite integral of such a polynomial without taking a limit. In an upcoming class we will connect this pattern to antiderivatives.  "
 },
@@ -637,7 +718,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "",
   "title": "The Fundamental Theorem of Calculus",
-  "body": " The Fundamental Theorem of Calculus    Accumulation functions are functions and we can write .  For the examples we have seen thus far, if we compute the accumulation function belonging to a polynomial and then compute its derivative , we discover .  This means is called an antiderivative of .   The Fundamental Theorem of Calculus says this will always happen. Every continuous function will have an accumulation function and . Every accumulation function is an antiderivative where is continuous.   Apply the Fundamental Theorem of Calculus directly to find for an accumulation function built from a simple algebraic function .  Rewrite a definite integral whose upper and lower limits are both formulas in as a difference , and use the chain rule together with the Fundamental Theorem of Calculus to differentiate it.     This discussion will be more theoretical in order to reach the fundamental theorem of calculus. We start by looking at a pattern in our accumulation functions. For each of these accumulation functions, we have used as the ending end point of the definite integral. Once the function is identified, we can use any variable such as .  What happens if we now compute the derivatives of the accumulation functions? In each of these cases, we discovered .  The Fundamental Theorem of Calculus tells us this behavior is to be expected.    The Fundamental Theorem of Calculus   If is continuous and has an accumulation function then .  In other words, an accumulation function is an antiderivative of .    Here is an outline of the argument.   Using a variable as the input for the accumulation function requires changing the variable of integration:     We can then use the definition of the derivative: Subtracting uses the splitting property of definite integrals to give     When is continuous on , there must be both a maximum value and a minimum value because of the Extreme Value Theorem. This means:   Again using continuity, by the Intermediate Value Theorem, there must be some actual value between and such that . That value depends on , which we write .    Using the limit, since and is continuous, we must have .      Note that we don't need to know the formula for in order to know the derivative's formula .    Practice: Differentiating Accumulation Functions   The Fundamental Theorem of Calculus tells us that if , then , no matter what the lower limit is and without ever finding a formula for itself. For each accumulation function below, use the theorem directly to find .     For , find .      For , find .      For , find .      For , find .      Definite Integrals with Two Variable Limits   So far every accumulation function has had a fixed lower limit and itself as the upper limit. Now suppose both limits of integration are formulas in , say and , instead of alone. Using the same splitting property of definite integrals we relied on earlier, and an accumulation function for a convenient fixed , we can write You do not need a formula for itself to write an integral this way.     Rewrite in the form , identifying and .      Rewrite in the form , identifying and .      Rewrite in the form , identifying and .      Rewrite in the form , identifying and .      Differentiating Through the Chain Rule  Rewriting an integral as is progress, but and are not simply evaluated at . They are composed with the functions and , so differentiating either one requires the chain rule . Since , the chain rule gives and Putting the two pieces together,     Practice: Differentiating with Two Variable Limits   Return to the four integrals from the previous exercise. For each one, use to find the derivative.     Find .      Find .      Find . (Assume , so .)      Find .     "
+  "body": " The Fundamental Theorem of Calculus    Accumulation functions are functions and we can write .  For the examples we have seen thus far, if we compute the accumulation function belonging to a polynomial and then compute its derivative , we discover .  This means is called an antiderivative of .   The Fundamental Theorem of Calculus says this will always happen. Every continuous function will have an accumulation function and . Every accumulation function is an antiderivative where is continuous.   Apply the Fundamental Theorem of Calculus directly to find for an accumulation function built from a simple algebraic function .  Rewrite a definite integral whose upper and lower limits are both formulas in as a difference , and use the chain rule together with the Fundamental Theorem of Calculus to differentiate it.     Practice: Differentiating Accumulation Functions   The Fundamental Theorem of Calculus tells us that if , then , no matter what the lower limit is and without ever finding a formula for itself. For each accumulation function below, use the theorem directly to find .     For , find .      For , find .      For , find .      For , find .      Definite Integrals with Two Variable Limits   So far every accumulation function has had a fixed lower limit and itself as the upper limit. Now suppose both limits of integration are formulas in , say and , instead of alone. Using the same splitting property of definite integrals we relied on earlier, and an accumulation function for a convenient fixed , we can write You do not need a formula for itself to write an integral this way.     Rewrite in the form , identifying and .      Rewrite in the form , identifying and .      Rewrite in the form , identifying and .      Rewrite in the form , identifying and .      Differentiating Through the Chain Rule  Rewriting an integral as is progress, but and are not simply evaluated at . They are composed with the functions and , so differentiating either one requires the chain rule . Since , the chain rule gives and Putting the two pieces together,     Practice: Differentiating with Two Variable Limits   Return to the four integrals from the previous exercise. For each one, use to find the derivative.     Find .      Find .      Find . (Assume , so .)      Find .     This discussion will be more theoretical in order to reach the fundamental theorem of calculus. We start by looking at a pattern in our accumulation functions. For each of these accumulation functions, we have used as the ending end point of the definite integral. Once the function is identified, we can use any variable such as .  What happens if we now compute the derivatives of the accumulation functions? In each of these cases, we discovered .  The Fundamental Theorem of Calculus tells us this behavior is to be expected.   The Fundamental Theorem of Calculus   If is continuous and has an accumulation function then .  In other words, an accumulation function is an antiderivative of .    Here is an outline of the argument.   Using a variable as the input for the accumulation function requires changing the variable of integration:     We can then use the definition of the derivative: Subtracting uses the splitting property of definite integrals to give     When is continuous on , there must be both a maximum value and a minimum value because of the Extreme Value Theorem. This means:   Again using continuity, by the Intermediate Value Theorem, there must be some actual value between and such that . That value depends on , which we write .    Using the limit, since and is continuous, we must have .      Note that we don't need to know the formula for in order to know the derivative's formula .   "
 },
 {
   "id": "obj-fundamental-theorem-calculus",
@@ -647,42 +728,6 @@ var ptx_lunr_docs = [
   "number": "",
   "title": "",
   "body": "  Accumulation functions are functions and we can write .  For the examples we have seen thus far, if we compute the accumulation function belonging to a polynomial and then compute its derivative , we discover .  This means is called an antiderivative of .   The Fundamental Theorem of Calculus says this will always happen. Every continuous function will have an accumulation function and . Every accumulation function is an antiderivative where is continuous.   Apply the Fundamental Theorem of Calculus directly to find for an accumulation function built from a simple algebraic function .  Rewrite a definite integral whose upper and lower limits are both formulas in as a difference , and use the chain rule together with the Fundamental Theorem of Calculus to differentiate it.   "
-},
-{
-  "id": "handout-fundamental-theorem-calculus-3-3",
-  "level": "2",
-  "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-3-3",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Fundamental Theorem of Calculus "
-},
-{
-  "id": "handout-fundamental-theorem-calculus-4",
-  "level": "2",
-  "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-4",
-  "type": "Theorem",
-  "number": "24",
-  "title": "The Fundamental Theorem of Calculus.",
-  "body": " The Fundamental Theorem of Calculus   If is continuous and has an accumulation function then .  In other words, an accumulation function is an antiderivative of .   "
-},
-{
-  "id": "handout-fundamental-theorem-calculus-5",
-  "level": "2",
-  "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-5",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "definition continuous "
-},
-{
-  "id": "handout-fundamental-theorem-calculus-6",
-  "level": "2",
-  "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-6",
-  "type": "Remark",
-  "number": "25",
-  "title": "",
-  "body": " Note that we don't need to know the formula for in order to know the derivative's formula .  "
 },
 {
   "id": "ex-ftc-derivative-practice",
@@ -707,7 +752,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-fundamental-theorem-calculus.html#rem-chain-rule-for-ftc",
   "type": "Remark",
-  "number": "26",
+  "number": "34",
   "title": "Differentiating Through the Chain Rule.",
   "body": " Differentiating Through the Chain Rule  Rewriting an integral as is progress, but and are not simply evaluated at . They are composed with the functions and , so differentiating either one requires the chain rule . Since , the chain rule gives and Putting the two pieces together,   "
 },
@@ -719,6 +764,42 @@ var ptx_lunr_docs = [
   "number": "3",
   "title": "Practice: Differentiating with Two Variable Limits.",
   "body": " Practice: Differentiating with Two Variable Limits   Return to the four integrals from the previous exercise. For each one, use to find the derivative.     Find .      Find .      Find . (Assume , so .)      Find .    "
+},
+{
+  "id": "handout-fundamental-theorem-calculus-9",
+  "level": "2",
+  "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-9",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Fundamental Theorem of Calculus "
+},
+{
+  "id": "handout-fundamental-theorem-calculus-10",
+  "level": "2",
+  "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-10",
+  "type": "Theorem",
+  "number": "35",
+  "title": "The Fundamental Theorem of Calculus.",
+  "body": " The Fundamental Theorem of Calculus   If is continuous and has an accumulation function then .  In other words, an accumulation function is an antiderivative of .   "
+},
+{
+  "id": "handout-fundamental-theorem-calculus-11",
+  "level": "2",
+  "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-11",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "definition continuous "
+},
+{
+  "id": "handout-fundamental-theorem-calculus-12",
+  "level": "2",
+  "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-12",
+  "type": "Remark",
+  "number": "36",
+  "title": "",
+  "body": " Note that we don't need to know the formula for in order to know the derivative's formula .  "
 },
 {
   "id": "homework",
