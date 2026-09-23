@@ -802,6 +802,141 @@ var ptx_lunr_docs = [
   "body": " Note that we don't need to know the formula for in order to know the derivative's formula .  "
 },
 {
+  "id": "activity-antiderivatives-and-natural-log",
+  "level": "1",
+  "url": "activity-antiderivatives-and-natural-log.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Antiderivatives and a New Kind of Function",
+  "body": " Antiderivatives and a New Kind of Function    Recall the definition of an antiderivative , and generalize the pattern already seen in known accumulation functions to propose and verify a formula for an antiderivative of , for .  Recognize that adding a constant to an antiderivative produces another antiderivative, and that any two antiderivatives of the same function on an interval must differ by a constant.  Use indefinite integral notation, , to describe the entire family of antiderivatives of rather than a single one.  Identify why the power-rule pattern for antiderivatives breaks down at .  Use the Fundamental Theorem of Calculus to construct a new function, the natural logarithm  , as an antiderivative of , and reason directly from this definition about its value at and its domain.     On the last activity, the Fundamental Theorem of Calculus told you that every accumulation function is an antiderivative of the function it accumulates. Today we turn that idea around. Instead of starting with a function and building its accumulation function through a limit, can we start with a function and simply propose a formula whose derivative is , directly, with no limit at all?    Antiderivative   Given a function , another function is called an antiderivative of if .     Recall: Antiderivatives You Have Already Found  Every accumulation function you have built so far is an example: Each of these is a single power of , but we have not stated a single rule that covers every power at once.    Generalizing the Power Rule   Look for the pattern connecting each above to its antiderivative , and use it to make a prediction for a general power .     What pattern would you predict for an antiderivative of ?      Write your proposal for and directly compute using derivative rules. Is your proposal an antiderivative of ? If not, adjust it until .      A Domain Caveat  Our accumulation functions were built as integrals starting at . That definition breaks down for negative powers, such as , because has a discontinuity at : an integral like simply does not exist. The antiderivative formula you just found is still perfectly good as a function in its own right, though. It just needs to be considered on an interval that avoids , rather than being built as an accumulation function starting from .    Adding a Constant   Antiderivatives are not to be unique. This exercise asks you to see why, and to practice using the power rule.     Suppose is an antiderivative of , and let be any constant. Form and compute . Is also an antiderivative of ? How many antiderivatives does a single function actually have?      Using the pattern from the previous exercise, write down at least three different antiderivatives of .      Do the same for . (Rewrite as a power of first.)      Antiderivatives Differ Only By a Constant   If and are both antiderivatives of the same function on an interval , then is a constant on that interval.     Put together with the previous exercise, this theorem says once you know one antiderivative of , you know all of them: every antiderivative of has the form for some constant . There are no other antiderivatives that aren't captured by this family.    The Indefinite Integral   The notation , an integral written with no limits of integration, is called an indefinite integral . It represents the entire family of antiderivatives of , not a single function and not a number. Once one antiderivative is found, every other antiderivative is obtained by adding a constant, so we write where , the constant of integration , is a placeholder for any real number. This is different from the definite integral , whose limits of integration make it a single number.     Practice: Indefinite Integrals   Use the power-rule formula from Exercise 1 to evaluate each indefinite integral below. (The sum rule and constant multiple rule you already know for definite integrals apply here too, term by term.)     Find .      Find .      Find .      Find .      Where the Pattern Breaks Down   The power rule to find antiderivatives of works with . See what happens when .     Try applying your general antiderivative formula to . What goes wrong? Why can this formula not produce an antiderivative of ?      A New Kind of Function  The Fundamental Theorem of Calculus does not care whether a function is built from powers of . It only asks for continuity. The function is continuous everywhere except at , so on any interval avoiding , it has an accumulation function, and that accumulation function must be an antiderivative of , whether or not we have an algebraic formula for it in terms of powers. This gives us a way to create a genuinely new function, one we have not seen before, as an antiderivative of . We name it the natural logarithm : .    Exploring   We will be exploring based on its definition as an integral. In principle, we don't actually know it should be a logarithm, just that it's a valid antiderivative.     What is ? How is that value forced by the integral itself, with no computation needed?      The Fundamental Theorem of Calculus requires that the rate function must be continuous? Based on this, what must the domain of be?      Looking Ahead  You now have a genuinely new function, , defined directly by an integral rather than by any algebraic formula. In an upcoming activity we will explore its other properties.   "
+},
+{
+  "id": "obj-antiderivatives-and-natural-log",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#obj-antiderivatives-and-natural-log",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Recall the definition of an antiderivative , and generalize the pattern already seen in known accumulation functions to propose and verify a formula for an antiderivative of , for .  Recognize that adding a constant to an antiderivative produces another antiderivative, and that any two antiderivatives of the same function on an interval must differ by a constant.  Use indefinite integral notation, , to describe the entire family of antiderivatives of rather than a single one.  Identify why the power-rule pattern for antiderivatives breaks down at .  Use the Fundamental Theorem of Calculus to construct a new function, the natural logarithm  , as an antiderivative of , and reason directly from this definition about its value at and its domain.   "
+},
+{
+  "id": "def-antiderivative",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#def-antiderivative",
+  "type": "Definition",
+  "number": "37",
+  "title": "Antiderivative.",
+  "body": " Antiderivative   Given a function , another function is called an antiderivative of if .   "
+},
+{
+  "id": "rem-known-antiderivatives-recall",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#rem-known-antiderivatives-recall",
+  "type": "Remark",
+  "number": "38",
+  "title": "Recall: Antiderivatives You Have Already Found.",
+  "body": " Recall: Antiderivatives You Have Already Found  Every accumulation function you have built so far is an example: Each of these is a single power of , but we have not stated a single rule that covers every power at once.  "
+},
+{
+  "id": "ex-generalize-power-rule",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#ex-generalize-power-rule",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Generalizing the Power Rule.",
+  "body": " Generalizing the Power Rule   Look for the pattern connecting each above to its antiderivative , and use it to make a prediction for a general power .     What pattern would you predict for an antiderivative of ?      Write your proposal for and directly compute using derivative rules. Is your proposal an antiderivative of ? If not, adjust it until .    "
+},
+{
+  "id": "rem-domain-caveat-negative-powers",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#rem-domain-caveat-negative-powers",
+  "type": "Remark",
+  "number": "39",
+  "title": "A Domain Caveat.",
+  "body": " A Domain Caveat  Our accumulation functions were built as integrals starting at . That definition breaks down for negative powers, such as , because has a discontinuity at : an integral like simply does not exist. The antiderivative formula you just found is still perfectly good as a function in its own right, though. It just needs to be considered on an interval that avoids , rather than being built as an accumulation function starting from .  "
+},
+{
+  "id": "ex-adding-a-constant",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#ex-adding-a-constant",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Adding a Constant.",
+  "body": " Adding a Constant   Antiderivatives are not to be unique. This exercise asks you to see why, and to practice using the power rule.     Suppose is an antiderivative of , and let be any constant. Form and compute . Is also an antiderivative of ? How many antiderivatives does a single function actually have?      Using the pattern from the previous exercise, write down at least three different antiderivatives of .      Do the same for . (Rewrite as a power of first.)    "
+},
+{
+  "id": "thm-antiderivatives-differ-by-constant",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#thm-antiderivatives-differ-by-constant",
+  "type": "Theorem",
+  "number": "40",
+  "title": "Antiderivatives Differ Only By a Constant.",
+  "body": " Antiderivatives Differ Only By a Constant   If and are both antiderivatives of the same function on an interval , then is a constant on that interval.   "
+},
+{
+  "id": "rem-antiderivative-family",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#rem-antiderivative-family",
+  "type": "Remark",
+  "number": "41",
+  "title": "",
+  "body": " Put together with the previous exercise, this theorem says once you know one antiderivative of , you know all of them: every antiderivative of has the form for some constant . There are no other antiderivatives that aren't captured by this family.  "
+},
+{
+  "id": "def-indefinite-integral",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#def-indefinite-integral",
+  "type": "Definition",
+  "number": "42",
+  "title": "The Indefinite Integral.",
+  "body": " The Indefinite Integral   The notation , an integral written with no limits of integration, is called an indefinite integral . It represents the entire family of antiderivatives of , not a single function and not a number. Once one antiderivative is found, every other antiderivative is obtained by adding a constant, so we write where , the constant of integration , is a placeholder for any real number. This is different from the definite integral , whose limits of integration make it a single number.   "
+},
+{
+  "id": "ex-indefinite-integral-practice",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#ex-indefinite-integral-practice",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Practice: Indefinite Integrals.",
+  "body": " Practice: Indefinite Integrals   Use the power-rule formula from Exercise 1 to evaluate each indefinite integral below. (The sum rule and constant multiple rule you already know for definite integrals apply here too, term by term.)     Find .      Find .      Find .      Find .    "
+},
+{
+  "id": "ex-power-rule-breaks",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#ex-power-rule-breaks",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Where the Pattern Breaks Down.",
+  "body": " Where the Pattern Breaks Down   The power rule to find antiderivatives of works with . See what happens when .     Try applying your general antiderivative formula to . What goes wrong? Why can this formula not produce an antiderivative of ?    "
+},
+{
+  "id": "rem-ftc-creates-new-function",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#rem-ftc-creates-new-function",
+  "type": "Remark",
+  "number": "43",
+  "title": "A New Kind of Function.",
+  "body": " A New Kind of Function  The Fundamental Theorem of Calculus does not care whether a function is built from powers of . It only asks for continuity. The function is continuous everywhere except at , so on any interval avoiding , it has an accumulation function, and that accumulation function must be an antiderivative of , whether or not we have an algebraic formula for it in terms of powers. This gives us a way to create a genuinely new function, one we have not seen before, as an antiderivative of . We name it the natural logarithm : .  "
+},
+{
+  "id": "ex-defining-natural-log",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#ex-defining-natural-log",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Exploring <span class=\"process-math\">\\(\\ln(x)\\)<\/span>.",
+  "body": " Exploring   We will be exploring based on its definition as an integral. In principle, we don't actually know it should be a logarithm, just that it's a valid antiderivative.     What is ? How is that value forced by the integral itself, with no computation needed?      The Fundamental Theorem of Calculus requires that the rate function must be continuous? Based on this, what must the domain of be?    "
+},
+{
+  "id": "rem-looking-ahead-log-properties",
+  "level": "2",
+  "url": "activity-antiderivatives-and-natural-log.html#rem-looking-ahead-log-properties",
+  "type": "Remark",
+  "number": "44",
+  "title": "Looking Ahead.",
+  "body": " Looking Ahead  You now have a genuinely new function, , defined directly by an integral rather than by any algebraic formula. In an upcoming activity we will explore its other properties.  "
+},
+{
   "id": "homework",
   "level": "1",
   "url": "homework.html",

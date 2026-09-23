@@ -36,7 +36,7 @@ lang: "en-US",
 <meta name="twitter:description" content="MATH 232-0002 Fall 2026">
 <meta property="og:description" content="MATH 232-0002 Fall 2026">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -119,7 +119,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="activity-polynomial-accumulation-functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="activities.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="homework.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="activity-polynomial-accumulation-functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="activities.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="activity-antiderivatives-and-natural-log.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -183,6 +183,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-definite-integral-as-limit.html" class="internal"><span class="title">The Definite Integral as a Limit of Riemann Sums</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-polynomial-accumulation-functions.html" class="internal"><span class="title">Accumulation Functions for Polynomials</span></a></div></li>
 <li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="handout-fundamental-theorem-calculus.html" class="internal"><span class="title">The Fundamental Theorem of Calculus</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-antiderivatives-and-natural-log.html" class="internal"><span class="title">Antiderivatives and a New Kind of Function</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
@@ -324,7 +325,7 @@ eBookConfig.enable_chatcodes =  false;
 </article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 2: Definite Integrals with Two Variable Limits"><a tabindex="-1" href="#ex-variable-limits-setup" title="Copy heading and permalink for Worksheet Exercise 2: Definite Integrals with Two Variable Limits" aria-label="Copy heading and permalink for Worksheet Exercise 2: Definite Integrals with Two Variable Limits">🔗</a></div>
 </article>
 <article class="remark remark-like" id="rem-chain-rule-for-ftc"><h2 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">34</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiating Through the Chain Rule.</span>
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiating Through the Chain Rule.</span>
 </h2>
 <div class="para logical" id="rem-chain-rule-for-ftc-2">
 <div class="para">Rewriting an integral as <span class="process-math">\(A(u_2)-A(u_1)\)</span> is progress, but <span class="process-math">\(A(u_2)\)</span> and <span class="process-math">\(A(u_1)\)</span> are not simply <span class="process-math">\(A\)</span> evaluated at <span class="process-math">\(x\text{.}\)</span> They are <span class="process-math">\(A\)</span> composed with the functions <span class="process-math">\(u_2(x)\)</span> and <span class="process-math">\(u_1(x)\text{,}\)</span> so differentiating either one requires the <em class="emphasis">chain rule</em>. Since <span class="process-math">\(A'(x) = f(x)\text{,}\)</span> the chain rule gives</div>
@@ -417,7 +418,7 @@ p(x) = x^3 \quad \amp \Rightarrow \quad A(x) = \frac{1}{4}x^4
 <div class="para" id="handout-fundamental-theorem-calculus-9">The <dfn class="terminology">Fundamental Theorem of Calculus</dfn> tells us this behavior is to be expected.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#handout-fundamental-theorem-calculus-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="handout-fundamental-theorem-calculus-10"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">35</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Fundamental Theorem of Calculus.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Fundamental Theorem of Calculus.</span>
 </h2>
 <div class="para logical" id="handout-fundamental-theorem-calculus-10-2-1">
 <div class="para">If <span class="process-math">\(f(x)\)</span> is continuous and has an accumulation function</div>
@@ -499,7 +500,7 @@ f_{\mathrm{min}} \cdot h \le A(x+h)-A(x) \le f_{\mathrm{max}} \cdot h
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="activity-polynomial-accumulation-functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="homework.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="activity-polynomial-accumulation-functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="activity-antiderivatives-and-natural-log.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

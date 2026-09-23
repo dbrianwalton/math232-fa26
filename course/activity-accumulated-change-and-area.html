@@ -36,7 +36,7 @@ lang: "en-US",
 <meta name="twitter:description" content="MATH 232-0002 Fall 2026">
 <meta property="og:description" content="MATH 232-0002 Fall 2026">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -183,6 +183,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-definite-integral-as-limit.html" class="internal"><span class="title">The Definite Integral as a Limit of Riemann Sums</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-polynomial-accumulation-functions.html" class="internal"><span class="title">Accumulation Functions for Polynomials</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="handout-fundamental-theorem-calculus.html" class="internal"><span class="title">The Fundamental Theorem of Calculus</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-antiderivatives-and-natural-log.html" class="internal"><span class="title">Antiderivatives and a New Kind of Function</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
@@ -369,7 +370,7 @@ eBookConfig.enable_chatcodes =  false;
 </article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 3: The Same Idea, Seen as Area"><a tabindex="-1" href="#ex-two-rates-geometry" title="Copy heading and permalink for Worksheet Exercise 3: The Same Idea, Seen as Area" aria-label="Copy heading and permalink for Worksheet Exercise 3: The Same Idea, Seen as Area">🔗</a></div>
 </article>
 <article class="definition definition-like" id="def-integral-accumulated-change"><h2 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">17</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notation: Accumulated Change.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notation: Accumulated Change.</span>
 </h2>
 <div class="para logical" id="def-integral-accumulated-change-2-1">
 <div class="para">What you just discovered works for any rate of change, not only velocity. If a quantity has value <span class="process-math">\(s(t_1)\)</span> at time <span class="process-math">\(t_1\)</span> and changes at rate <span class="process-math">\(r(t)\text{,}\)</span> then its value at a later time <span class="process-math">\(t_2\)</span> is the starting value plus the accumulated change over the interval. Mathematicians write that accumulated change using the <em class="emphasis">definite integral</em> symbol:</div>
@@ -384,7 +385,7 @@ s(t_2) \, = \, s(t_1) \, + \, \int_{t_1}^{t_2} r(t)\, dt
 <div class="autopermalink" aria-hidden="true" data-description="Definition 17: Notation: Accumulated Change"><a tabindex="-1" href="#def-integral-accumulated-change" title="Copy heading and permalink for Definition 17: Notation: Accumulated Change" aria-label="Copy heading and permalink for Definition 17: Notation: Accumulated Change">🔗</a></div>
 </article>
 <article class="definition definition-like" id="def-integral-area"><h2 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">18</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notation: Area Under a Graph.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notation: Area Under a Graph.</span>
 </h2>
 <div class="para logical" id="def-integral-area-2-1">
 <div class="para">The very same symbol describes area. For a function <span class="process-math">\(f(x)\text{,}\)</span> the area of the region between the graph of <span class="process-math">\(y = f(x)\)</span> and the <span class="process-math">\(x\)</span>-axis, from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{,}\)</span> is written</div>
@@ -437,7 +438,7 @@ s(t_2) \, = \, s(t_1) \, + \, \int_{t_1}^{t_2} r(t)\, dt
 </article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 4: What If the Rate Is Negative?"><a tabindex="-1" href="#ex-signed-area" title="Copy heading and permalink for Worksheet Exercise 4: What If the Rate Is Negative?" aria-label="Copy heading and permalink for Worksheet Exercise 4: What If the Rate Is Negative?">🔗</a></div>
 </article>
 <article class="remark remark-like" id="rem-signed-area-and-beyond"><h2 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">19</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Signed Area, and Rates That Aren’t Constant.</span>
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Signed Area, and Rates That Aren’t Constant.</span>
 </h2>
 <div class="para" id="rem-signed-area-and-beyond-2">What you just worked out is called <em class="emphasis">signed area</em>: regions above the <span class="process-math">\(t\)</span>-axis count as positive area, and regions below it count as negative area. This is exactly why the definite integral, and not just "area," is the right tool for accumulated change. It automatically keeps track of when a quantity is increasing versus decreasing.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rem-signed-area-and-beyond-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
