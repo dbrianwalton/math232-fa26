@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- POGIL-style activity, Day 11. Picks up directly after the Fundamental Theorem of Calculus -->
+<!-- activity (Activity 10), which is assumed to have been COMPLETED in the previous class -->
+<!-- session: students already know that every accumulation function is an antiderivative of -->
+<!-- the function it accumulates, and have seen A(x)=x, x^2/2, x^3/3, x^4/4 as the accumulation -->
+<!-- functions (hence antiderivatives) of 1, x, x^2, x^3 respectively (from Activity 09) with the -->
+<!-- FTC justification for why this always works with a continuous function (from Activity 10). -->
+
+<!-- NOTE: as of writing, source/main.ptx's activities chapter includes only through Activity 09; -->
+<!-- Activity 10 (fundamental-theorem-calculus.ptx) exists on disk but was never added to the -->
+<!-- include list. Both the Activity 10 and this Activity 11 include are being added together. -->
+
+<!-- This activity does NOT re-derive the FTC or re-justify why accumulation functions are -->
+<!-- antiderivatives; that was Activity 10's job. It opens by naming the antiderivative concept -->
+<!-- directly (rather than through the accumulation-function limit process), then: -->
+<!--   1. generalizes the power-rule pattern already visible in the four known cases to propose -->
+<!--      and verify a formula for an antiderivative of x^n (n != -1), -->
+<!--   2. notes (briefly) that the accumulation-function definition itself breaks down for -->
+<!--      negative powers because of the discontinuity at 0, though the antiderivative formula -->
+<!--      is still fine away from 0, -->
+<!--   3. has students discover that adding a constant preserves the antiderivative property, and -->
+<!--      states (without proof) that any two antiderivatives of the same function on an interval -->
+<!--      differ by only a constant, -->
+<!--   4. introduces indefinite integral notation, int f(x) dx = F(x)+C, with brief power-rule -->
+<!--      practice, -->
+<!--   5. points out that the power-rule pattern breaks down at f(x)=x^(-1)=1/x, and -->
+<!--   6. uses the FTC to construct ln(x) = int_1^x (1/t) dt as a genuinely new function, ending -->
+<!--      on what ln(1) must be and what the domain of ln(x) must be, straight from the -->
+<!--      definition. -->
+
+<!-- Deliberately AVOIDS: proving the "antiderivatives differ by a constant" theorem (stated as a -->
+<!-- given fact, per instructor's request), giving more than a brief remark on the domain issue -->
+<!-- for negative powers (no dedicated task), and any of the algebraic properties of ln (product, -->
+<!-- quotient, power rules). Those properties are deliberately postponed to a separate activity; -->
+<!-- reaching the definition of ln(x) and these two questions about it is the intended stopping -->
+<!-- point for the day, not a shortfall to correct for. -->
+
+<!-- Answer key, for instructor reference (not shown to students): -->
+<!--   task-predict-power-pattern: F(x) = x^(n+1)/(n+1), by extending the pattern (exponent goes -->
+<!--     up by 1, then divide by the new exponent). -->
+<!--   task-verify-power-formula: F'(x) = (n+1)x^n/(n+1) = x^n, confirming the proposal, provided -->
+<!--     n+1 != 0, i.e. n != -1. -->
+<!--   task-constant-still-antiderivative: G(x)=F(x)+C has G'(x)=F'(x)+0=f(x), so G is also an -->
+<!--     antiderivative. There are infinitely many antiderivatives of any f, one for each C. -->
+<!--   task-multiple-antideriv-x5: general antiderivative is x^6/6 + C; any three distinct -->
+<!--     constants (e.g. x^6/6, x^6/6+2, x^6/6-7) give three different antiderivatives. -->
+<!--   task-multiple-antideriv-sqrt: sqrt(x)=x^(1/2), general antiderivative (2/3)x^(3/2)+C. -->
+<!--   task-indef-power: int x^4 dx = x^5/5 + C. -->
+<!--   task-indef-negative-power: int x^(-3) dx = -x^(-2)/2 + C = -1/(2x^2) + C. -->
+<!--   task-indef-radical: int sqrt(x) dx = (2/3)x^(3/2) + C. -->
+<!--   task-indef-sum: int (3x^2-5) dx = x^3 - 5x + C. -->
+<!--   task-power-rule-breaks: plugging n=-1 into x^(n+1)/(n+1) requires dividing by n+1=0, which -->
+<!--     is undefined. The formula simply does not produce anything for n=-1. -->
+<!--   task-ln-of-one: ln(1) = int_1^1 (1/t) dt = 0, by the zero-width property (the integral of -->
+<!--     any function from a point to itself is 0), with no computation needed. -->
+<!--   task-ln-domain: plugging in x=0 asks for int_1^0 (1/t) dt, but 1/t has a discontinuity -->
+<!--     (vertical asymptote) at t=0, so this integral does not exist; the same problem occurs for -->
+<!--     any negative x, since the path of integration from 1 would have to cross t=0. So the -->
+<!--     domain of ln(x) is only x>0, i.e. the interval (0, infinity). -->
+
+<!-- Suggested pacing for a ~50-55 minute class: -->
+<!--   Intro + antiderivative definition + recall of four known cases ......... ~5  min -->
+<!--   Exercise 1: generalizing the power rule pattern (predict + verify) ..... ~8  min -->
+<!--   Remark: domain caveat for negative powers (brief) ...................... ~2  min -->
+<!--   Exercise 2: adding a constant; multiple antiderivatives of x^5, sqrt(x)  ~8  min -->
+<!--   Theorem (stated) + bridge to indefinite integral notation .............. ~4  min -->
+<!--   Exercise 3: indefinite integral practice (4 short tasks) ............... ~10 min -->
+<!--   Exercise 4: where the power rule breaks down (x^-1) .................... ~5  min -->
+<!--   Remark: FTC constructs a new function; define ln(x) .................... ~3  min -->
+<!--   Exercise 5: ln(1) and the domain of ln(x) ............................... ~8  min -->
+<!--   TOTAL ..................................................................... ~53 min -->
+
+<!-- Where to cut if you're running short (in order of preference): -->
+<!--   1. In Exercise 2, do the x^5 multiple-antiderivatives task in class and assign the sqrt(x) -->
+<!--      repeat as follow-up; the pattern is already visible after one example. -->
+<!--   2. In Exercise 3, do 2 of the 4 practice tasks in class (keep one pure power and the -->
+<!--      radical; drop the negative-power and sum/difference ones) and assign the rest. -->
+<!--   3. State the uniqueness theorem and the domain-caveat remark quickly, without lingering -->
+<!--      class discussion; both are asides to the day's main thread. -->
+<!--   4. Do NOT cut Exercise 1 (generalizing the power rule), Exercise 4 (where the pattern -->
+<!--      breaks down at x^-1), or Exercise 5 (defining ln(x) and its two questions). Reaching -->
+<!--      "ln(x) is a genuinely new function, defined only for x>0, with ln(1)=0" is the intended -->
+<!--      stopping point for the day; the algebraic properties of ln wait for the next activity -->
+<!--      regardless of how much of today's material was reached. -->
+
+<worksheet xml:id="activity-antiderivatives-and-natural-log">
+  <title>Antiderivatives and a New Kind of Function</title>
+
+  <objectives xml:id="obj-antiderivatives-and-natural-log">
+    <ul>
+      <li><p>Recall the definition of an <term>antiderivative</term>, and generalize the pattern already seen in known accumulation functions to propose and verify a formula for an antiderivative of <m>f(x)=x^n</m>, for <m>n\ne -1</m>.</p></li>
+      <li><p>Recognize that adding a constant to an antiderivative produces another antiderivative, and that any two antiderivatives of the same function on an interval must differ by a constant.</p></li>
+      <li><p>Use indefinite integral notation, <m>\displaystyle\int f(x)\,dx = F(x)+C</m>, to describe the entire family of antiderivatives of <m>f(x)</m> rather than a single one.</p></li>
+      <li><p>Identify why the power-rule pattern for antiderivatives breaks down at <m>f(x)=x^{-1}=\frac{1}{x}</m>.</p></li>
+      <li><p>Use the Fundamental Theorem of Calculus to construct a new function, the <term>natural logarithm</term> <m>\displaystyle\ln(x) = \int_1^x \frac{1}{t}\,dt</m>, as an antiderivative of <m>1/x</m>, and reason directly from this definition about its value at <m>x=1</m> and its domain.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      On the last activity, the Fundamental Theorem of Calculus told you that every accumulation
+      function is an antiderivative of the function it accumulates. Today we turn that idea
+      around. Instead of starting with a function and building its accumulation function through
+      a limit, can we start with a function <m>f(x)</m> and simply propose a formula whose
+      derivative is <m>f(x)</m>, directly, with no limit at all?
+    </p>
+  </introduction>
+
+  <definition xml:id="def-antiderivative">
+    <title>Antiderivative</title>
+    <statement>
+      <p>
+        Given a function <m>f(x)</m>, another function <m>F(x)</m> is called an
+        <term>antiderivative</term> of <m>f(x)</m> if <m>F'(x) = f(x)</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark xml:id="rem-known-antiderivatives-recall">
+    <title>Recall: Antiderivatives You Have Already Found</title>
+    <p>
+      Every accumulation function you have built so far is an example:
+      <md>
+        <mrow>f(x) = 1 \quad \amp \Rightarrow \quad F(x) = x</mrow>
+        <mrow>f(x) = x \quad \amp \Rightarrow \quad F(x) = \frac{1}{2}x^2</mrow>
+        <mrow>f(x) = x^2 \quad \amp \Rightarrow \quad F(x) = \frac{1}{3}x^3</mrow>
+        <mrow>f(x) = x^3 \quad \amp \Rightarrow \quad F(x) = \frac{1}{4}x^4</mrow>
+      </md>
+      Each of these is a single power of <m>x</m>, but we have not stated a single rule that
+      covers every power at once.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-generalize-power-rule" workspace="0in">
+    <title>Generalizing the Power Rule</title>
+    <introduction>
+      <p>
+        Look for the pattern connecting each <m>f(x)</m> above to its antiderivative <m>F(x)</m>,
+        and use it to make a prediction for a general power <m>f(x)=x^n</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-predict-power-pattern" workspace="1in">
+      <statement>
+        <p>
+          What pattern would you predict for an antiderivative of <m>f(x) = x^n</m>?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-verify-power-formula" workspace="1.5in">
+      <statement>
+        <p>
+          Write your proposal for <m>F(x)</m> and directly compute <m>F'(x)</m> using derivative
+          rules. Is your proposal an antiderivative of <m>x^n</m>? If not, adjust it until
+          <m>F'(x)=x^n</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-domain-caveat-negative-powers">
+    <title>A Domain Caveat</title>
+    <p>
+      Our accumulation functions were built as integrals starting at <m>0</m>. That definition
+      breaks down for negative powers, such as <m>f(x)=x^{-2}</m>, because <m>f</m> has a
+      discontinuity at <m>x=0</m>: an integral like <m>\int_0^b x^{-2}\,dx</m> simply does not
+      exist. The antiderivative formula you just found is still perfectly good as a function in
+      its own right, though. It just needs to be considered on an interval that avoids <m>x=0</m>,
+      rather than being built as an accumulation function starting from <m>0</m>.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-adding-a-constant" workspace="0in">
+    <title>Adding a Constant</title>
+    <introduction>
+      <p>
+        Antiderivatives are not to be unique. This exercise asks you to see why, and to
+        practice using the power rule.
+      </p>
+    </introduction>
+    <task xml:id="task-constant-still-antiderivative" workspace="1in">
+      <statement>
+        <p>
+          Suppose <m>F(x)</m> is an antiderivative of <m>f(x)</m>, and let <m>C</m> be any
+          constant. Form <m>G(x) = F(x)+C</m> and compute <m>G'(x)</m>. Is <m>G(x)</m> also an
+          antiderivative of <m>f(x)</m>? How many antiderivatives does a single function
+          <m>f(x)</m> actually have?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-multiple-antideriv-x5" workspace="1in">
+      <statement>
+        <p>
+          Using the pattern from the previous exercise, write down at least three different
+          antiderivatives of <m>f(x) = x^5</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-multiple-antideriv-sqrt" workspace="1in">
+      <statement>
+        <p>
+          Do the same for <m>f(x) = \sqrt{x}</m>. (Rewrite <m>\sqrt{x}</m> as a power of <m>x</m>
+          first.)
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <theorem xml:id="thm-antiderivatives-differ-by-constant">
+    <title>Antiderivatives Differ Only By a Constant</title>
+    <statement>
+      <p>
+        If <m>F(x)</m> and <m>G(x)</m> are both antiderivatives of the same function <m>f(x)</m>
+        on an interval <m>[a,b]</m>, then <m>F(x)-G(x)</m> is a constant on that interval.
+      </p>
+    </statement>
+  </theorem>
+
+  <remark xml:id="rem-antiderivative-family">
+    <p>
+      Put together with the previous exercise, this theorem says once you know <em>one</em>
+      antiderivative <m>F(x)</m> of <m>f(x)</m>, you know all of them: every antiderivative of
+      <m>f(x)</m> has the form <m>F(x)+C</m> for some constant <m>C</m>. There are no other
+      antiderivatives that aren't captured by this family.
+    </p>
+  </remark>
+
+  <definition xml:id="def-indefinite-integral">
+    <title>The Indefinite Integral</title>
+    <statement>
+      <p>
+        The notation <m>\displaystyle\int f(x)\,dx</m>, an integral written with no limits of
+        integration, is called an <term>indefinite integral</term>. It represents the entire
+        <em>family</em> of antiderivatives of <m>f(x)</m>, not a single function and not a number.
+        Once one antiderivative <m>F(x)</m> is found, every other antiderivative is obtained by
+        adding a constant, so we write
+        <md>\int f(x)\,dx = F(x) + C\text{,}</md>
+        where <m>C</m>, the <term>constant of integration</term>, is a placeholder for 
+        any real number. This is
+        different from the definite integral <m>\int_a^b f(x)\,dx</m>, whose limits of
+        integration make it a single number.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise xml:id="ex-indefinite-integral-practice" workspace="0in">
+    <title>Practice: Indefinite Integrals</title>
+    <introduction>
+      <p>
+        Use the power-rule formula from Exercise 1 to evaluate each indefinite integral below.
+        (The sum rule and constant multiple rule you already know for definite integrals apply
+        here too, term by term.)
+      </p>
+    </introduction>
+    <task xml:id="task-indef-power" workspace="1in">
+      <statement>
+        <p>
+          Find <m>\displaystyle\int x^4\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-indef-negative-power" workspace="1in">
+      <statement>
+        <p>
+          Find <m>\displaystyle\int x^{-3}\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-indef-radical" workspace="1in">
+      <statement>
+        <p>
+          Find <m>\displaystyle\int \sqrt{x}\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-indef-sum" workspace="1in">
+      <statement>
+        <p>
+          Find <m>\displaystyle\int (3x^2-5)\,dx</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-power-rule-breaks" workspace="0in">
+    <title>Where the Pattern Breaks Down</title>
+    <introduction>
+      <p>
+        The power rule to find antiderivatives of <m>x^n</m> works with <m>n\ne -1</m>.
+        See what happens when <m>n=-1</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-power-rule-breaks" workspace="1.25in">
+      <statement>
+        <p>
+          Try applying your general antiderivative formula to
+          <m>f(x) = x^{-1} = \dfrac{1}{x}</m>. What goes wrong? Why can this formula not produce
+          an antiderivative of <m>1/x</m>?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-ftc-creates-new-function">
+    <title>A New Kind of Function</title>
+    <p>
+      The Fundamental Theorem of Calculus does not care whether a function is built from powers
+      of <m>x</m>. It only asks for continuity. The function <m>f(t)=1/t</m> is continuous
+      everywhere except at <m>t=0</m>, so on any interval avoiding <m>0</m>, it has an
+      accumulation function, and that accumulation function must be an antiderivative of
+      <m>1/t</m>, whether or not we have an algebraic formula for it in terms of powers. This
+      gives us a way to <em>create</em> a genuinely new function, one we have not seen before, as
+      an antiderivative of <m>1/x</m>. We name it the <term>natural logarithm</term>:
+      <md>\ln(x) = \int_1^x \frac{1}{t}\,dt</md>.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-defining-natural-log" workspace="0in">
+    <title>Exploring <m>\ln(x)</m></title>
+    <introduction>
+      <p>
+        We will be exploring <m>\ln(x)</m> based on its
+        definition as an integral. In principle, we don't actually
+        know it should be a logarithm, just that it's a valid antiderivative.
+      </p>
+    </introduction>
+    <task xml:id="task-ln-of-one" workspace=".75in">
+      <statement>
+        <p>
+          What is <m>\ln(1)</m>? How is that value forced by the integral itself, with no
+          computation needed?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ln-domain" workspace="1.25in">
+      <statement>
+        <p>
+          The Fundamental Theorem of Calculus requires that the rate function must be
+          continuous? Based on this, what must the domain of <m>\ln(x)</m> be?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-looking-ahead-log-properties">
+    <title>Looking Ahead</title>
+    <p>
+      You now have a genuinely new function, <m>\ln(x)</m>, defined directly by an integral
+      rather than by any algebraic formula. In an upcoming activity we will explore its
+      other properties.
+    </p>
+  </remark>
+
+</worksheet>
