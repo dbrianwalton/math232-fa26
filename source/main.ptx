@@ -65,6 +65,7 @@
       <xi:include href="./activities/09-polynomial-accumulation-functions.ptx"/>
       <xi:include href="./activities/10-fundamental-theorem-calculus.ptx"/>
       <xi:include href="./activities/11-antiderivatives-and-natural-log.ptx"/>
+      <xi:include href="./activities/12-logarithm-as-integral.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- POGIL-style activity, Day 12 (~50 minutes). Follows the antiderivatives / natural-log -->
+<!-- activity (Activity 11), which ends by DEFINING ln(x) = int_1^x (1/t) dt and asking for ln(1) -->
+<!-- and the domain. Per the "we didn't finish" convention, this activity does not assume those -->
+<!-- last two questions were reached: it restates the definition and recovers both facts in a -->
+<!-- brief remark, so nothing is lost if Activity 11 stopped early. -->
+
+<!-- FORMAT: the first half is INTERACTIVE LECTURE, not group discovery. The definition, remarks -->
+<!-- and theorem below are on the students' page as stated facts to follow along with; the -->
+<!-- arguments live in the instructor notes below. The second half (chain rule exploration) is -->
+<!-- genuine group work. -->
+
+<!-- Deliberately AVOIDS: the exponential function e^x and the inverse relationship between exp -->
+<!-- and ln, general (non-integer) real exponents, and the general power rule for derivatives. The -->
+<!-- log power rule is motivated ONLY for positive integer exponents via repeated use of the -->
+<!-- product rule; irrational and general real exponents wait until exp is defined (then -->
+<!-- a^p := e^(p ln a) makes ln(a^p) = p ln(a) immediate). Also avoids any proof that the -->
+<!-- scaling observation holds for b < 1 (the same term-by-term matching works, with orientation -->
+<!-- reversed); state a, b > 0 and demonstrate with b > 1. -->
+
+<!-- Lecture notes, for instructor reference (not shown to students): -->
+<!--   ln(1): int_1^1 (1/t) dt = 0, zero-width interval. -->
+<!--   Domain: 1/t is not defined at t=0 and the integral from 1 cannot cross that -->
+<!--     discontinuity, so x must stay in (0, infinity). -->
+<!--   Scaling observation: int_a^(ab) (1/t) dt = int_1^b (1/t) dt for a, b > 0. -->
+<!--     Right Riemann sum for the left side with n subintervals: Delta t = (ab-a)/n = a(b-1)/n, -->
+<!--     t_k = a + k*a(b-1)/n = a(1 + k(b-1)/n). Then (1/t_k)*Delta t = -->
+<!--     [1/(a(1+k(b-1)/n))] * a(b-1)/n = (1/(1+k(b-1)/n)) * (b-1)/n. -->
+<!--     The right side has Delta x = (b-1)/n, x_k = 1 + k(b-1)/n, so (1/x_k)*Delta x is the SAME -->
+<!--     expression. The a cancels term by term, so the two Riemann sums are identical for every -->
+<!--     n, and hence so are the limits. Geometric picture: the rectangles on [a,ab] are the -->
+<!--     rectangles on [1,b] stretched horizontally by a and squashed vertically by 1/a, so the -->
+<!--     areas are unchanged. -->
+<!--   Product: int_1^(ab) = int_1^a + int_a^(ab) = ln(a) + int_1^b (scaling) = ln(a) + ln(b). -->
+<!--   Reciprocal: 1 = b*(1/b), so 0 = ln(1) = ln(b) + ln(1/b), hence ln(1/b) = -ln(b). -->
+<!--   Quotient: ln(a/b) = ln(a * (1/b)) = ln(a) + ln(1/b) = ln(a) - ln(b). -->
+<!--   Integer powers: ln(a^2) = ln(a*a) = 2 ln(a); ln(a^3) = ln(a*a^2) = ln(a) + 2 ln(a) = -->
+<!--     3 ln(a); in general ln(a^p) = p ln(a) for positive integers p. -->
+
+<!-- Answer key, for instructor reference (not shown to students): -->
+<!--   task-chain-3x: d/dx ln(3x) = (1/(3x))*3 = 1/x. Domain: 3x > 0, so x > 0. -->
+<!--   task-chain-neg4x: d/dx ln(-4x) = (1/(-4x))*(-4) = 1/x. Domain: -4x > 0, so x < 0. -->
+<!--   task-chain-negx: d/dx ln(-x) = (1/(-x))*(-1) = 1/x. Domain: -x > 0, so x < 0. -->
+<!--   task-chain-power: for a positive integer p, d/dx ln(x^p) = (1/x^p)*p x^(p-1) = p/x. -->
+<!--     Domain: x^p > 0. For odd p this is x > 0. For even p this is all x != 0. This agrees with -->
+<!--     the derivative of p*ln(x), as the integer power rule predicts. -->
+<!--   task-chain-general: d/dx ln(g(x)) = g'(x)/g(x), wherever g(x) > 0. -->
+<!--   task-chain-practice: d/dx ln(x^2+1) = 2x/(x^2+1). Domain is all real numbers, since -->
+<!--     x^2+1 > 0 always. -->
+<!--   task-chain-pattern: every example except the power case gives 1/x, including on the negative -->
+<!--     side of the axis. The negative-side results (ln(-x), ln(-4x)) show the derivative of ln of -->
+<!--     a NEGATIVE-argument expression is still 1/x, which is what lets ln|x| work for x < 0. -->
+<!--   Punchline: for x > 0, |x| = x so d/dx ln|x| = d/dx ln(x) = 1/x. For x < 0, |x| = -x so -->
+<!--     d/dx ln|x| = d/dx ln(-x) = 1/x (the ln(-x) task). So d/dx ln|x| = 1/x for all x != 0, and -->
+<!--     int (1/x) dx = ln|x| + C on any interval avoiding 0. -->
+
+<!-- Suggested pacing for a ~50 minute class: -->
+<!--   Intro + definition + ln(1) and domain remark ............................ ~5  min -->
+<!--   Lecture: scaling observation (Riemann sums, geometric picture) .......... ~8  min -->
+<!--   Lecture: product, reciprocal, quotient rules ............................ ~7  min -->
+<!--   Lecture: integer powers ................................................. ~3  min -->
+<!--   Exercise 1: chain rule with ln (3x, -4x, -x, x^p) ....................... ~12 min -->
+<!--   Exercise 1 wrap-up: general rule + practice task ........................ ~6  min -->
+<!--   Punchline: ln|x|, cases for |x|, and the antiderivative of 1/x ........... ~6  min -->
+<!--   TOTAL ..................................................................... ~47 min -->
+
+<!-- Where to cut if you're running short (in order of preference): -->
+<!--   1. Drop task-chain-practice (x^2+1); the general rule already covers it. -->
+<!--   2. Skip the integer-power lecture demonstration beyond ln(a^2) and ln(a^3), and just state -->
+<!--      the pattern. -->
+<!--   3. In Exercise 1, assign ln(-x) as follow-up ONLY IF ln(-4x) is done; keep at least one -->
+<!--      negative-argument example, because the punchline depends on it. -->
+<!--   4. State the quotient rule without dwelling on it; it is a one-line corollary. -->
+<!--   5. Do NOT cut the scaling observation, the product rule, the negative-argument chain rule -->
+<!--      example, or the ln|x| punchline: these are the core of the day. -->
+
+<worksheet xml:id="activity-logarithm-as-integral">
+  <title>Properties of the Logarithm Defined by an Integral</title>
+
+  <objectives xml:id="obj-logarithm-as-integral">
+    <ul>
+      <li><p>Explain why <m>\ln(1)=0</m> and why the domain of <m>\displaystyle\ln(x)=\int_1^x\frac{1}{t}\,dt</m> is <m>(0,\infty)</m>, directly from the definition.</p></li>
+      <li><p>Recognize that <m>\displaystyle\int_a^{ab}\frac{1}{t}\,dt=\int_1^b\frac{1}{t}\,dt</m> by comparing Riemann sums. Use this to justify <m>\ln(ab)=\ln(a)+\ln(b)</m>.</p></li>
+      <li><p>Use the product rule for <m>\ln</m> to obtain the reciprocal rule, the quotient rule, and the power rule <m>\ln(a^p)=p\ln(a)</m> for positive integers <m>p</m>.</p></li>
+      <li><p>Apply the chain rule to differentiate <m>\ln</m> of a linear or polynomial expression, and determine the domain of the result.</p></li>
+      <li><p>Explain why <m>\displaystyle\frac{d}{dx}\big[\ln|x|\big]=\frac{1}{x}</m> for all <m>x\ne 0</m>.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Last time we used the Fundamental Theorem of Calculus to create a new function that
+      no power rule could produce. Today we find out what it can do. Everything we learn about
+      this function will come from its definition as an integral, not from any formula or from
+      anything you may remember about logarithms.
+    </p>
+    <p>
+      Team Roles: Manager, Recorder, Spokesperson, and Reflector.
+    </p>
+  </introduction>
+
+  <definition xml:id="def-natural-log-integral">
+    <title>The Natural Logarithm</title>
+    <statement>
+      <p>
+        For <m>x\gt 0</m>, the <term>natural logarithm</term> is defined by
+        <md>\ln(x) = \int_1^x \frac{1}{t}\,dt\text{.}</md>
+      </p>
+    </statement>
+  </definition>
+
+  <remark xml:id="rem-ln-two-facts">
+    <title>Two Facts Straight from the Definition</title>
+    <p>
+      First, <m>\ln(1)=\displaystyle\int_1^1\frac{1}{t}\,dt=0</m>, since an integral over an
+      interval of zero width is zero. Second, the integrand <m>1/t</m> is not defined at
+      <m>t=0</m>, and an integral starting at <m>t=1</m> cannot pass through that discontinuity.
+      So the domain of <m>\ln(x)</m> is <m>(0,\infty)</m>.
+    </p>
+  </remark>
+
+  <remark xml:id="rem-ln-scaling-observation">
+    <title>Key Observation: Scaling the Interval</title>
+    <p>
+      For any <m>a\gt 0</m> and <m>b\gt 0</m>,
+      <md>\int_a^{ab}\frac{1}{t}\,dt = \int_1^{b}\frac{1}{t}\,dt\text{.}</md>
+      The reason is that the right Riemann sum for the left integral and the right Riemann sum
+      for the right integral, with the same number of subintervals <m>n</m>, are exactly the
+      same expression. The factor <m>a</m> in the width of each subinterval cancels the factor
+      <m>a</m> in each endpoint, term by term, so the two sums agree for every <m>n</m>, and
+      therefore so do their limits.
+    </p>
+  </remark>
+
+  <theorem xml:id="thm-ln-algebraic-properties">
+    <title>Algebraic Properties of <m>\ln</m></title>
+    <statement>
+      <p>
+        For all <m>a\gt 0</m> and <m>b\gt 0</m>:
+      </p>
+      <p>
+        <ul>
+          <li><p><em>Product rule:</em> <m>\ln(ab)=\ln(a)+\ln(b)</m>.</p></li>
+          <li><p><em>Reciprocal rule:</em> <m>\ln\!\left(\dfrac{1}{b}\right)=-\ln(b)</m>.</p></li>
+          <li><p><em>Quotient rule:</em> <m>\ln\!\left(\dfrac{a}{b}\right)=\ln(a)-\ln(b)</m>.</p></li>
+        </ul>
+      </p>
+    </statement>
+  </theorem>
+
+  <remark xml:id="rem-ln-integer-powers">
+    <title>Powers</title>
+    <p>
+      Suppose <m>p</m> is a positive integer, so that <m>a^p</m> means
+      <m>a\cdot a\cdots a</m> with <m>p</m> factors. Applying the product rule once for each
+      factor gives
+      <md>\ln(a^p)=\ln(a)+\ln(a)+\cdots+\ln(a)=p\,\ln(a)\text{.}</md>
+      For now we only claim this for integers <m>p</m>. Other exponents require additional
+      arguments.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-chain-rule-with-ln" workspace="0in">
+    <title>The Chain Rule with <m>\ln</m></title>
+    <introduction>
+      <p>
+        The Fundamental Theorem of Calculus tells us that
+        <m>\displaystyle\frac{d}{dx}\big[\ln(x)\big]=\frac{1}{x}</m> for <m>x\gt 0</m>. Use this
+        together with the chain rule to differentiate each function below. For each one, also
+        determine the domain, meaning the values of <m>x</m> for which the expression inside
+        the <m>\ln</m> is positive.
+      </p>
+    </introduction>
+    <task xml:id="task-chain-3x" workspace="1.25in">
+      <statement>
+        <p>
+          Find the derivative of <m>\ln(3x)</m> and state its domain.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-neg4x" workspace="1.25in">
+      <statement>
+        <p>
+          Find the derivative of <m>\ln(-4x)</m> and state its domain.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-negx" workspace="1.25in">
+      <statement>
+        <p>
+          Find the derivative of <m>\ln(-x)</m> and state its domain.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-pattern" workspace="1in">
+      <statement>
+        <p>
+          Look back at your answers forthe derivatives of <m>\ln(3x)</m>, <m>\ln(-4x)</m>, and <m>\ln(-x)</m>.
+          What do you notice? How are they different?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-absolute-value-recall">
+    <title>Recall: Absolute Value</title>
+    <p>
+      The absolute value of <m>x</m> is the piecewise function
+      <md>|x| = \begin{cases} x \amp \text{if } x\gt 0 \\ -x \amp \text{if } x\lt 0 \end{cases}</md>
+      so <m>|x|</m> is positive for every <m>x\ne 0</m>. This means <m>\ln|x|</m> makes sense for
+      every <m>x\ne 0</m>, not just for <m>x\gt 0</m>.
+    </p>
+  </remark>
+
+  <theorem xml:id="thm-derivative-ln-absolute-value">
+    <title>The Derivative of <m>\ln|x|</m></title>
+    <statement>
+      <p>
+        For all <m>x\ne 0</m>,
+        <md>\frac{d}{dx}\big[\ln|x|\big]=\frac{1}{x}\text{.}</md>
+      </p>
+    </statement>
+  </theorem>
+
+  <exercise xml:id="ex-generalize-ln-chain-rule" workspace="0in">
+    
+    <task xml:id="task-chain-power" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>p</m> be an integer. Find the derivative of <m>\ln(x^p)</m>. 
+          How does the domain depend on whether <m>p</m> is even or odd?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-power-revisit" workspace="1.5in">
+      <statement>
+        <p>
+          Repeat the derivative of <m>\ln(x^p)</m> but first use the power rule for logarithms.
+          How does this compare to the previous problem?
+        </p>
+      </statement>
+    </task>
+
+    <task xml:id="task-chain-general" workspace="1.25in">
+      <statement>
+        <p>
+          Suppose <m>g(x)</m> is a differentiable function. Write a general rule for
+          <m>\displaystyle\frac{d}{dx}\big[\ln(|g(x)|)\big]</m>, and say where it applies.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-practice1" workspace="1.25in">
+      <statement>
+        <p>
+          Use your rule to differentiate <m>\ln(x^2+1)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-practice2" workspace="1.25in">
+      <statement>
+        <p>
+          Use your rule to differentiate <m>\ln(|x^3-2x^2|)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>
