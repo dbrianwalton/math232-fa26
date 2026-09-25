@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Chain rule material moved here from Activity 12. To be expanded later with work that uses -->
+<!-- the properties of logarithms to handle more complicated formulas. -->
+
+<worksheet xml:id="activity-chain-rule-with-logarithm">
+  <title>The Chain Rule with the Logarithm</title>
+
+  <objectives xml:id="obj-chain-rule-with-logarithm">
+    <ul>
+      <li><p>Apply the chain rule to differentiate <m>\ln</m> of a linear or polynomial expression, and determine the domain of the result.</p></li>
+      <li><p>Explain why <m>\displaystyle\frac{d}{dx}\big[\ln|x|\big]=\frac{1}{x}</m> for all <m>x\ne 0</m>.</p></li>
+      <li><p>Use the power rule for logarithms to simplify before differentiating.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Last time we used the definition <m>\displaystyle\ln(x)=\int_1^x\frac{1}{t}\,dt</m> to
+      establish the algebraic properties of the logarithm in
+      <xref ref="thm-ln-algebraic-properties"/>. Today we turn to derivatives of expressions
+      involving <m>\ln</m>.
+    </p>
+    <p>
+      Team Roles: Manager, Recorder, Spokesperson, and Reflector.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-chain-rule-with-ln" workspace="0in">
+    <title>The Chain Rule with <m>\ln</m></title>
+    <introduction>
+      <p>
+        The Fundamental Theorem of Calculus tells us that
+        <m>\displaystyle\frac{d}{dx}\big[\ln(x)\big]=\frac{1}{x}</m> for <m>x\gt 0</m>. Use this
+        together with the chain rule to differentiate each function below. For each one, also
+        determine the domain, meaning the values of <m>x</m> for which the expression inside
+        the <m>\ln</m> is positive.
+      </p>
+    </introduction>
+    <task xml:id="task-chain-3x" workspace="1.25in">
+      <statement>
+        <p>
+          Find the derivative of <m>\ln(3x)</m> and state its domain.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-neg4x" workspace="1.25in">
+      <statement>
+        <p>
+          Find the derivative of <m>\ln(-4x)</m> and state its domain.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-negx" workspace="1.25in">
+      <statement>
+        <p>
+          Find the derivative of <m>\ln(-x)</m> and state its domain.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-pattern" workspace="1in">
+      <statement>
+        <p>
+          Look back at your answers for the derivatives of <m>\ln(3x)</m>, <m>\ln(-4x)</m>, and <m>\ln(-x)</m>.
+          What do you notice? How are they different?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-absolute-value-recall">
+    <title>Recall: Absolute Value</title>
+    <p>
+      The absolute value of <m>x</m> is the piecewise function
+      <md>|x| = \begin{cases} x \amp \text{if } x\gt 0 \\ -x \amp \text{if } x\lt 0 \end{cases}</md>
+      so <m>|x|</m> is positive for every <m>x\ne 0</m>. This means <m>\ln|x|</m> makes sense for
+      every <m>x\ne 0</m>, not just for <m>x\gt 0</m>.
+    </p>
+  </remark>
+
+  <theorem xml:id="thm-derivative-ln-absolute-value">
+    <title>The Derivative of <m>\ln|x|</m></title>
+    <statement>
+      <p>
+        For all <m>x\ne 0</m>,
+        <md>\frac{d}{dx}\big[\ln|x|\big]=\frac{1}{x}\text{.}</md>
+      </p>
+    </statement>
+  </theorem>
+
+  <exercise xml:id="ex-generalize-ln-chain-rule" workspace="0in">
+    <title>Generalizing the Chain Rule with <m>\ln</m></title>
+    <task xml:id="task-chain-power" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>p</m> be an integer. Find the derivative of <m>\ln(x^p)</m>. 
+          How does the domain depend on whether <m>p</m> is even or odd?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-power-revisit" workspace="1.5in">
+      <statement>
+        <p>
+          Repeat the derivative of <m>\ln(x^p)</m> but first use the power rule for logarithms.
+          How does this compare to the previous problem?
+        </p>
+      </statement>
+    </task>
+
+    <task xml:id="task-chain-general" workspace="1.25in">
+      <statement>
+        <p>
+          Suppose <m>g(x)</m> is a differentiable function. Write a general rule for
+          <m>\displaystyle\frac{d}{dx}\big[\ln(|g(x)|)\big]</m>, and say where it applies.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-practice1" workspace="1.25in">
+      <statement>
+        <p>
+          Use your rule to differentiate <m>\ln(x^2+1)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-chain-practice2" workspace="1.25in">
+      <statement>
+        <p>
+          Use your rule to differentiate <m>\ln(|x^3-2x^2|)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>

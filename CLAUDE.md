@@ -48,7 +48,7 @@ Time and pacing considerations carry over from the same real-classroom constrain
 That said, POGIL's default pace, one concept, thoroughly discovered, per class, is not sustainable across an entire course with a fixed number of class periods; strict adherence to it will not finish the syllabus. Multiple related sub-skills routinely need to be packed into a single day's activity. In practice this means:
 
 * Give some results as stated facts (a `<definition>` or a reminder `<remark>`) rather than having the group discover everything for itself, especially for a second or third instance of a pattern already established once. For example, if an activity asks students to derive two similar results by the same method, it is fine to derive the first in full and then just state or lightly re-derive the second, rather than repeating the full derivation.
-* Use a suggested-pacing comment (per-exercise timing estimates) and an explicit "where to cut if you're running short" list, in priority order, as standard practice on every activity, not only when pacing looks tight. Follow the pattern already established in `07-summation-formulas.ptx` and `08-definite-integral-as-limit.ptx`. Activities `04` through `09` and `11` carry these comments; `02` and `10` do not, and `03` has a pacing comment but no cut list.
+* Think through timing while planning every activity, not only when pacing looks tight. In the planning conversation with the user, estimate how long each exercise will take and, where useful, suggest what could be cut first if the class runs short. This reasoning belongs in the conversation only. Do not record it in the `.ptx` files (see "Comments in activity files" below).
 * Treat "we didn't finish" as a normal, expected outcome to design around, not a failure of the activity. When writing the next activity in sequence, check where the class actually stopped and write that activity to pick up from there, rather than assuming the previous one was completed in full. If the previous activity's ending content wasn't reached, it is fine for the next activity to include it (even though it also still lives, unreached, in the earlier file) rather than leaving a gap.
 
 Activity XML conventions
@@ -64,6 +64,12 @@ Based on the existing activities (`02-derivative-graph-shape.ptx` through `11-an
 * Task statements are written as prose paragraphs posing a question or asking students to do/explain something, not as `<ul>`/`<ol>` step lists (though a handful of activities do use short lists where a genuinely enumerable set of steps calls for it).
 * Inline markup conventions in use: `<m>`/`<md>` for math, `<em>` for emphasis, `<image source="images/....png" width="..."/>` for a supporting graph or figure carried over from a prior class's handout.
 * `<latex-image>` (with a `<shortdescription>`, tikz/pgfplots code, wrapped as needed) is used in some activities (`03`, `04`, `05`) for custom-drawn figures. Follow the existing examples in those files as the pattern rather than treating any one as canonical, since this is still a developing convention.
+
+Comments in activity files
+
+Do not put pacing estimates, "where to cut" lists, answer keys, solutions, instructor lecture notes, or predictions about how the class will go into `.ptx` files as comments (or anywhere else in the source). These are not part of the standard activity pattern. The planning discussion about timing and content happens in conversation with the user and stays there. A brief factual comment (for example, noting that material was moved from another activity) is fine.
+
+Some existing activities (`03` through `09` and `11`) still carry pacing comments, cut lists, or answer keys from before this rule. Do not treat them as a model. Leave them alone unless asked to remove them, and do not add new ones when editing those files.
 
 Notes for future updates to this file
 
