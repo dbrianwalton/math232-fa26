@@ -937,6 +937,105 @@ var ptx_lunr_docs = [
   "body": " Looking Ahead  You now have a genuinely new function, , defined directly by an integral rather than by any algebraic formula. In an upcoming activity we will explore its other properties.  "
 },
 {
+  "id": "activity-logarithm-as-integral",
+  "level": "1",
+  "url": "activity-logarithm-as-integral.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Properties of the Logarithm Defined by an Integral",
+  "body": " Properties of the Logarithm Defined by an Integral    Explain why and why the domain of is , directly from the definition.  Recognize that by comparing Riemann sums. Use this to justify .  Use the product rule for to obtain the reciprocal rule, the quotient rule, and the power rule for positive integers .  Apply the chain rule to differentiate of a linear or polynomial expression, and determine the domain of the result.  Explain why for all .     Last time we used the Fundamental Theorem of Calculus to create a new function that no power rule could produce. Today we find out what it can do. Everything we learn about this function will come from its definition as an integral, not from any formula or from anything you may remember about logarithms.  Team Roles: Manager, Recorder, Spokesperson, and Reflector.    The Natural Logarithm   For , the natural logarithm is defined by      Two Facts Straight from the Definition  First, , since an integral over an interval of zero width is zero. Second, the integrand is not defined at , and an integral starting at cannot pass through that discontinuity. So the domain of is .    Key Observation: Scaling the Interval  For any and , The reason is that the right Riemann sum for the left integral and the right Riemann sum for the right integral, with the same number of subintervals , are exactly the same expression. The factor in the width of each subinterval cancels the factor in each endpoint, term by term, so the two sums agree for every , and therefore so do their limits.    Algebraic Properties of   For all and :    Product rule:  .  Reciprocal rule:  .  Quotient rule:  .       Powers  Suppose is a positive integer, so that means with factors. Applying the product rule once for each factor gives For now we only claim this for integers . Other exponents require additional arguments.    The Chain Rule with   The Fundamental Theorem of Calculus tells us that for . Use this together with the chain rule to differentiate each function below. For each one, also determine the domain, meaning the values of for which the expression inside the is positive.     Find the derivative of and state its domain.      Find the derivative of and state its domain.      Find the derivative of and state its domain.      Look back at your answers forthe derivatives of , , and . What do you notice? How are they different?      Recall: Absolute Value  The absolute value of is the piecewise function so is positive for every . This means makes sense for every , not just for .    The Derivative of   For all ,        Let be an integer. Find the derivative of . How does the domain depend on whether is even or odd?      Repeat the derivative of but first use the power rule for logarithms. How does this compare to the previous problem?      Suppose is a differentiable function. Write a general rule for , and say where it applies.      Use your rule to differentiate .      Use your rule to differentiate .     "
+},
+{
+  "id": "obj-logarithm-as-integral",
+  "level": "2",
+  "url": "activity-logarithm-as-integral.html#obj-logarithm-as-integral",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Explain why and why the domain of is , directly from the definition.  Recognize that by comparing Riemann sums. Use this to justify .  Use the product rule for to obtain the reciprocal rule, the quotient rule, and the power rule for positive integers .  Apply the chain rule to differentiate of a linear or polynomial expression, and determine the domain of the result.  Explain why for all .   "
+},
+{
+  "id": "def-natural-log-integral",
+  "level": "2",
+  "url": "activity-logarithm-as-integral.html#def-natural-log-integral",
+  "type": "Definition",
+  "number": "45",
+  "title": "The Natural Logarithm.",
+  "body": " The Natural Logarithm   For , the natural logarithm is defined by    "
+},
+{
+  "id": "rem-ln-two-facts",
+  "level": "2",
+  "url": "activity-logarithm-as-integral.html#rem-ln-two-facts",
+  "type": "Remark",
+  "number": "46",
+  "title": "Two Facts Straight from the Definition.",
+  "body": " Two Facts Straight from the Definition  First, , since an integral over an interval of zero width is zero. Second, the integrand is not defined at , and an integral starting at cannot pass through that discontinuity. So the domain of is .  "
+},
+{
+  "id": "rem-ln-scaling-observation",
+  "level": "2",
+  "url": "activity-logarithm-as-integral.html#rem-ln-scaling-observation",
+  "type": "Remark",
+  "number": "47",
+  "title": "Key Observation: Scaling the Interval.",
+  "body": " Key Observation: Scaling the Interval  For any and , The reason is that the right Riemann sum for the left integral and the right Riemann sum for the right integral, with the same number of subintervals , are exactly the same expression. The factor in the width of each subinterval cancels the factor in each endpoint, term by term, so the two sums agree for every , and therefore so do their limits.  "
+},
+{
+  "id": "thm-ln-algebraic-properties",
+  "level": "2",
+  "url": "activity-logarithm-as-integral.html#thm-ln-algebraic-properties",
+  "type": "Theorem",
+  "number": "48",
+  "title": "Algebraic Properties of <span class=\"process-math\">\\(\\ln\\)<\/span>.",
+  "body": " Algebraic Properties of   For all and :    Product rule:  .  Reciprocal rule:  .  Quotient rule:  .     "
+},
+{
+  "id": "rem-ln-integer-powers",
+  "level": "2",
+  "url": "activity-logarithm-as-integral.html#rem-ln-integer-powers",
+  "type": "Remark",
+  "number": "49",
+  "title": "Powers.",
+  "body": " Powers  Suppose is a positive integer, so that means with factors. Applying the product rule once for each factor gives For now we only claim this for integers . Other exponents require additional arguments.  "
+},
+{
+  "id": "ex-chain-rule-with-ln",
+  "level": "2",
+  "url": "activity-logarithm-as-integral.html#ex-chain-rule-with-ln",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "The Chain Rule with <span class=\"process-math\">\\(\\ln\\)<\/span>.",
+  "body": " The Chain Rule with   The Fundamental Theorem of Calculus tells us that for . Use this together with the chain rule to differentiate each function below. For each one, also determine the domain, meaning the values of for which the expression inside the is positive.     Find the derivative of and state its domain.      Find the derivative of and state its domain.      Find the derivative of and state its domain.      Look back at your answers forthe derivatives of , , and . What do you notice? How are they different?    "
+},
+{
+  "id": "rem-absolute-value-recall",
+  "level": "2",
+  "url": "activity-logarithm-as-integral.html#rem-absolute-value-recall",
+  "type": "Remark",
+  "number": "50",
+  "title": "Recall: Absolute Value.",
+  "body": " Recall: Absolute Value  The absolute value of is the piecewise function so is positive for every . This means makes sense for every , not just for .  "
+},
+{
+  "id": "thm-derivative-ln-absolute-value",
+  "level": "2",
+  "url": "activity-logarithm-as-integral.html#thm-derivative-ln-absolute-value",
+  "type": "Theorem",
+  "number": "51",
+  "title": "The Derivative of <span class=\"process-math\">\\(\\ln|x|\\)<\/span>.",
+  "body": " The Derivative of   For all ,    "
+},
+{
+  "id": "ex-generalize-ln-chain-rule",
+  "level": "2",
+  "url": "activity-logarithm-as-integral.html#ex-generalize-ln-chain-rule",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "   Let be an integer. Find the derivative of . How does the domain depend on whether is even or odd?      Repeat the derivative of but first use the power rule for logarithms. How does this compare to the previous problem?      Suppose is a differentiable function. Write a general rule for , and say where it applies.      Use your rule to differentiate .      Use your rule to differentiate .    "
+},
+{
   "id": "homework",
   "level": "1",
   "url": "homework.html",
