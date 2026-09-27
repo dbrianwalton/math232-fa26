@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Chain rule material moved here from Activity 12. To be expanded later with work that uses -->
-<!-- the properties of logarithms to handle more complicated formulas. -->
+<!-- Chain rule material moved here from Activity 12. -->
 
 <worksheet xml:id="activity-chain-rule-with-logarithm">
   <title>The Chain Rule with the Logarithm</title>
@@ -11,6 +10,8 @@
       <li><p>Apply the chain rule to differentiate <m>\ln</m> of a linear or polynomial expression, and determine the domain of the result.</p></li>
       <li><p>Explain why <m>\displaystyle\frac{d}{dx}\big[\ln|x|\big]=\frac{1}{x}</m> for all <m>x\ne 0</m>.</p></li>
       <li><p>Use the power rule for logarithms to simplify before differentiating.</p></li>
+      <li><p>Use the product, quotient, and power rules for logarithms to expand the logarithm of a product, quotient, or power of simple polynomials into a sum of simpler terms before differentiating.</p></li>
+      <li><p>Compare differentiating an expanded logarithm with applying the chain rule directly, and explain why <m>\ln(a+b)</m> cannot be expanded.</p></li>
     </ul>
   </objectives>
 
@@ -31,7 +32,7 @@
     <introduction>
       <p>
         The Fundamental Theorem of Calculus tells us that
-        <m>\displaystyle\frac{d}{dx}\big[\ln(x)\big]=\frac{1}{x}</m> for <m>x\gt 0</m>. Use this
+        <m>\displaystyle\frac{d}{dx}\big[\ln(x)\big]=\ln'(x)=\frac{1}{x}</m> for <m>x\gt 0</m>. Use this
         together with the chain rule to differentiate each function below. For each one, also
         determine the domain, meaning the values of <m>x</m> for which the expression inside
         the <m>\ln</m> is positive.
@@ -126,6 +127,78 @@
       <statement>
         <p>
           Use your rule to differentiate <m>\ln(|x^3-2x^2|)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-expand-then-differentiate" workspace="0in">
+    <title>Expand First, Then Differentiate</title>
+    <introduction>
+      <p>
+        The algebraic properties in <xref ref="thm-ln-algebraic-properties"/> can turn the logarithm
+        of a complicated expression into a sum of simpler logarithms. Because
+        <m>|ab|=|a|\,|b|</m>, <m>\left|\dfrac{a}{b}\right|=\dfrac{|a|}{|b|}</m>, and
+        <m>|a^p|=|a|^p</m>, the same properties hold for <m>\ln|\,\cdot\,|</m> whenever the
+        expressions involved are nonzero. In this exercise we ask whether it is easier to differentiate
+        before or after expanding.
+      </p>
+    </introduction>
+    <task xml:id="task-expand-product-direct" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>f(x)=\ln\big|(x-1)(x+3)\big|</m>. Use your general rule from the previous exercise,
+          with <m>g(x)=(x-1)(x+3)</m>, to find <m>f'(x)</m>. You will need the product rule to find
+          <m>g'(x)</m>. Write your answer as a single fraction.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-expand-product-first" workspace="1.25in">
+      <statement>
+        <p>
+          Now use the product rule for logarithms to rewrite <m>f(x)</m> as a sum of two logarithms,
+          and differentiate each term. Where is <m>f'(x)</m> defined?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-expand-product-compare" workspace="1.25in">
+      <statement>
+        <p>
+          Combine the two terms from the previous task over a common denominator. Do you get the
+          answer from the first task? Which route took less work?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-expand-quotient" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>h(x)=\ln\left|\dfrac{x+2}{x^2+1}\right|</m>. Use the quotient rule for logarithms
+          to expand <m>h(x)</m> first, and then find <m>h'(x)</m>. State the domain of <m>h'(x)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-expand-power" workspace="1.25in">
+      <statement>
+        <p>
+          Let <m>k(x)=\ln\big|(2x-1)^5\big|</m>. Use the power rule for logarithms to expand
+          <m>k(x)</m> first, and then find <m>k'(x)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-expand-sqrt" workspace="1.25in">
+      <statement>
+        <p>
+          Let <m>r(x)=\ln\left(\sqrt{x^2+1}\right)</m>. Rewrite the square root as a power, use the
+          power rule for logarithms, and find <m>r'(x)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-expand-combined" workspace="2in">
+      <statement>
+        <p>
+          Let <m>m(x)=\ln\left|\dfrac{(x+1)^3(x-2)}{x^2+4}\right|</m>. Expand <m>m(x)</m> using
+          all three properties, name the property you use at each step, and find <m>m'(x)</m>.
+          State the domain of <m>m'(x)</m>.
         </p>
       </statement>
     </task>
