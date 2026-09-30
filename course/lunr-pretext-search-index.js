@@ -19,18 +19,18 @@ var ptx_lunr_docs = [
   "body": "course name (MATH xxx, section xxx) "
 },
 {
-  "id": "sec-outcomes-1",
+  "id": "sec-outcomes-week-01-02",
   "level": "1",
-  "url": "sec-outcomes-1.html",
+  "url": "sec-outcomes-week-01-02.html",
   "type": "Section",
   "number": "",
-  "title": "",
-  "body": "  R1 From Derivative Graph to Function Graph   R1  I can interpret the graph of a rate of change or the derivative to describe and construct the graph of the function .     The following graph is the graph of , where is the derivative of another function . Interpret in order to draw a potential graph of . Your graph must clearly demonstrate correct intervals for increasing, decreasing, and concavity. Label the x-values for all local extremes and inflection points.   Graph of   Graph of a smooth function roughly like a rounded W that crosses the x-axis at -3, -1, 1, and 3. The graph is above the x-axis to the left of -3, between -1 and 1, and again to the right of 3; and it is below the x-axis between -3 and -1 and again between 1 and 3. The graph shows a valley at approximately x=-2.25 and another at x=+2.25, with a peak value at x=0.         R2 Definite Integrals for Net Change in Quantity   R2  I can calculate the definite integral of a rate function using geometric area formulas and interpret the value as the total increment of the changing value.     The graph below represents the rate at which water is being added to a tank (or removed, as appropriate) in gallons\/minute. If the tank started ( ) with 15 gallons, state and use an appropriate definite integral to find the amount of water at minutes. A correct solution must show the correct notation for the definite integral and calculate its value using appropriate geometric formulas.   Graph of the rate of change of water in gal\/min   Graph of a rate function made from piecewise linear functions. It has a constant rate with a value of 2 gal\/min between the times 0 and 2 minutes. It changes linearly between times 2 and 3 minutes to reach a rate of 0 gal\/min at 3 minutes. It then changes linearly between times 3 and 5 minutes to reach a rate of -6 gal\/min at 5 minutes, then changes back to 0 gal\/min in a linear way at 7 minutes. It then increases linearly to 4 gal\/min at 8 minutes. It remains constant at 4 gal\/min until 10 minutes.         R3 Applying Properties of Definite Integrals   R3  I can apply a combination of the properties of definite integrals, including the splitting property, the sum rule, and the constant multiple rule, to compute the value of a definite integral involving a combination of two functions.     Suppose that for a function (not shown) we have and . A graph of is shown below with regions between the graph and the -axis labeled with areas , and .   Graph of g(x)   Graph of a function that is above the axis when x is less than 3, below the axis for x values between 3 and 5, and then above the axis for x greater than 5. Three regions are created with areas between the x-axis and the function graph: R1 is above the axis and created with x going from 1 to 3, R2 is below the axis and created with x going from 3 to 5, and R3 is above the axis and created with x going from 5 to 8.     Use this information to find .     "
+  "title": "Week 1 and Week 2",
+  "body": " Week 1 and Week 2   These weeks focused on connecting a rate of change to the function it describes. We interpreted the graph of a derivative to sketch the graph of the function, introduced the definite integral as the net change in a quantity computed from a rate graph, and began working with the properties of definite integrals.    R1 From Derivative Graph to Function Graph   R1  I can interpret the graph of a rate of change or the derivative to describe and construct the graph of the function .     The following graph is the graph of , where is the derivative of another function . Interpret in order to draw a potential graph of . Your graph must clearly demonstrate correct intervals for increasing, decreasing, and concavity. Label the x-values for all local extremes and inflection points.   Graph of   Graph of a smooth function roughly like a rounded W that crosses the x-axis at -3, -1, 1, and 3. The graph is above the x-axis to the left of -3, between -1 and 1, and again to the right of 3; and it is below the x-axis between -3 and -1 and again between 1 and 3. The graph shows a valley at approximately x=-2.25 and another at x=+2.25, with a peak value at x=0.         R2 Definite Integrals for Net Change in Quantity   R2  I can calculate the definite integral of a rate function using geometric area formulas and interpret the value as the total increment of the changing value.     The graph below represents the rate at which water is being added to a tank (or removed, as appropriate) in gallons\/minute. If the tank started ( ) with 15 gallons, state and use an appropriate definite integral to find the amount of water at minutes. A correct solution must show the correct notation for the definite integral and calculate its value using appropriate geometric formulas.   Graph of the rate of change of water in gal\/min   Graph of a rate function made from piecewise linear functions. It has a constant rate with a value of 2 gal\/min between the times 0 and 2 minutes. It changes linearly between times 2 and 3 minutes to reach a rate of 0 gal\/min at 3 minutes. It then changes linearly between times 3 and 5 minutes to reach a rate of -6 gal\/min at 5 minutes, then changes back to 0 gal\/min in a linear way at 7 minutes. It then increases linearly to 4 gal\/min at 8 minutes. It remains constant at 4 gal\/min until 10 minutes.         R3 Applying Properties of Definite Integrals   R3  I can apply a combination of the properties of definite integrals, including the splitting property, the sum rule, and the constant multiple rule, to compute the value of a definite integral involving a combination of two functions.     Suppose that for a function (not shown) we have and . A graph of is shown below with regions between the graph and the -axis labeled with areas , and .   Graph of g(x)   Graph of a function that is above the axis when x is less than 3, below the axis for x values between 3 and 5, and then above the axis for x greater than 5. Three regions are created with areas between the x-axis and the function graph: R1 is above the axis and created with x going from 1 to 3, R2 is below the axis and created with x going from 3 to 5, and R3 is above the axis and created with x going from 5 to 8.     Use this information to find .     "
 },
 {
   "id": "R1_Graph_From_Derivative",
   "level": "2",
-  "url": "sec-outcomes-1.html#R1_Graph_From_Derivative",
+  "url": "sec-outcomes-week-01-02.html#R1_Graph_From_Derivative",
   "type": "Checkpoint",
   "number": "1",
   "title": "",
@@ -39,7 +39,7 @@ var ptx_lunr_docs = [
 {
   "id": "R2_Integral_For_Net_Change",
   "level": "2",
-  "url": "sec-outcomes-1.html#R2_Integral_For_Net_Change",
+  "url": "sec-outcomes-week-01-02.html#R2_Integral_For_Net_Change",
   "type": "Checkpoint",
   "number": "3",
   "title": "",
@@ -48,11 +48,83 @@ var ptx_lunr_docs = [
 {
   "id": "R3_Definite_Integral_Properties",
   "level": "2",
-  "url": "sec-outcomes-1.html#R3_Definite_Integral_Properties",
+  "url": "sec-outcomes-week-01-02.html#R3_Definite_Integral_Properties",
   "type": "Checkpoint",
   "number": "5",
   "title": "",
   "body": "  Suppose that for a function (not shown) we have and . A graph of is shown below with regions between the graph and the -axis labeled with areas , and .   Graph of g(x)   Graph of a function that is above the axis when x is less than 3, below the axis for x values between 3 and 5, and then above the axis for x greater than 5. Three regions are created with areas between the x-axis and the function graph: R1 is above the axis and created with x going from 1 to 3, R2 is below the axis and created with x going from 3 to 5, and R3 is above the axis and created with x going from 5 to 8.     Use this information to find .   "
+},
+{
+  "id": "sec-outcomes-week-03-04",
+  "level": "1",
+  "url": "sec-outcomes-week-03-04.html",
+  "type": "Section",
+  "number": "",
+  "title": "Week 3 and Week 4",
+  "body": " Week 3 and Week 4   These weeks focused on turning the idea of accumulated change into a precise definition. We approximated definite integrals with Riemann sums, learned notation and rules for working with summations, and then used accumulation functions built from the power rule to calculate exact values of definite integrals of polynomials.    R4 Setting Up a Riemann Sum   R4  I can write a Riemann sum in summation notation, using a uniform width and right endpoints with an unspecified number of subintervals, to approximate a definite integral.     Create the Riemann sum using a uniform size and right endpoints using an unspecified number of subintervals to approximate . You do not need to evaluate the summations directly, just set them up.      R5 Evaluating Summations with Summation Rules   R5  I can use the constant, sum, and constant multiple rules for summations together with the formulas for sums of powers of to rewrite a summation as a formula in .     The following summation rules are provided: Show how to use these rules as well as the sum and constant multiple rules for summation to find the formula in that equals       R6 Definite Integrals of Polynomials Using Accumulation Functions   R6  I can calculate the value of a definite integral of a polynomial by stating an appropriate accumulation function built with the power rule and using it to find the net accumulated change.     Calculate by stating and then using an appropriate accumulation function involving the power rule.     "
+},
+{
+  "id": "R4_Riemann_Sum_Setup",
+  "level": "2",
+  "url": "sec-outcomes-week-03-04.html#R4_Riemann_Sum_Setup",
+  "type": "Checkpoint",
+  "number": "7",
+  "title": "",
+  "body": "  Create the Riemann sum using a uniform size and right endpoints using an unspecified number of subintervals to approximate . You do not need to evaluate the summations directly, just set them up.   "
+},
+{
+  "id": "R5_Summation_Rules",
+  "level": "2",
+  "url": "sec-outcomes-week-03-04.html#R5_Summation_Rules",
+  "type": "Checkpoint",
+  "number": "8",
+  "title": "",
+  "body": "  The following summation rules are provided: Show how to use these rules as well as the sum and constant multiple rules for summation to find the formula in that equals    "
+},
+{
+  "id": "R6_Polynomial_Accumulation",
+  "level": "2",
+  "url": "sec-outcomes-week-03-04.html#R6_Polynomial_Accumulation",
+  "type": "Checkpoint",
+  "number": "9",
+  "title": "",
+  "body": "  Calculate by stating and then using an appropriate accumulation function involving the power rule.   "
+},
+{
+  "id": "sec-outcomes-week-05-06",
+  "level": "1",
+  "url": "sec-outcomes-week-05-06.html",
+  "type": "Section",
+  "number": "",
+  "title": "Week 5 and Week 6",
+  "body": " Week 5 and Week 6   These weeks focused on the connection between differentiation and integration. We learned the Fundamental Theorem of Calculus and introduced indefinite integrals and antiderivatives. We explored the natural logarithm as being defined by a definite integral, found its properties related to products, quotients, and powers, and computed the derivative of logarithms of the absolute value of algebraic formulas.    I1 Indefinite Integrals and Antiderivatives   I1  I can use an indefinite integral to find a particular antiderivative for a polynomial using the power rule, sums and constant multiples using a known function value.     Find where . Use your result to find the function so that with .      I2 Fundamental Theorem of Calculus   I2  I can compute derivatives of functions defined by definite integrals of continuous functions involving variable limits using the Fundamental Theorem of Calculus and the Chain Rule.     If , find .      E1 Logarithm Properties and Derivatives   E1  I can apply the properties of logarithms to expand logarithms of products, quotients, and powers prior to using the logarithm's derivative and chain rule.     If , apply logarithm properties to expand logarithms of products, quotients and powers as far as possible, and then compute .     "
+},
+{
+  "id": "I1_Indefinite_Integral_Antiderivative",
+  "level": "2",
+  "url": "sec-outcomes-week-05-06.html#I1_Indefinite_Integral_Antiderivative",
+  "type": "Checkpoint",
+  "number": "10",
+  "title": "",
+  "body": "  Find where . Use your result to find the function so that with .   "
+},
+{
+  "id": "I2_Fundamental_Theorem_Calculus",
+  "level": "2",
+  "url": "sec-outcomes-week-05-06.html#I2_Fundamental_Theorem_Calculus",
+  "type": "Checkpoint",
+  "number": "11",
+  "title": "",
+  "body": "  If , find .   "
+},
+{
+  "id": "E1_Logarithm_Properties_Derivative",
+  "level": "2",
+  "url": "sec-outcomes-week-05-06.html#E1_Logarithm_Properties_Derivative",
+  "type": "Checkpoint",
+  "number": "12",
+  "title": "",
+  "body": "  If , apply logarithm properties to expand logarithms of products, quotients and powers as far as possible, and then compute .   "
 },
 {
   "id": "sec-accumulation",
@@ -95,7 +167,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-accumulation.html#fig-prototype-incr-ccu",
   "type": "Figure",
-  "number": "7",
+  "number": "13",
   "title": "",
   "body": " is an increasing and concave up function of . The rate is positive and increasing.     "
 },
@@ -104,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-accumulation.html#fig-prototype-incr-ccd",
   "type": "Figure",
-  "number": "8",
+  "number": "14",
   "title": "",
   "body": " is an increasing and concave down function of . The rate is positive but decreasing.     "
 },
@@ -113,7 +185,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-accumulation.html#fig-prototype-ccd-incr-decr",
   "type": "Figure",
-  "number": "9",
+  "number": "15",
   "title": "",
   "body": " is a concave down function of that is increasing for and decreasing for .     "
 },
@@ -122,7 +194,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-accumulation.html#rate-functions-3-11",
   "type": "Example",
-  "number": "10",
+  "number": "16",
   "title": "",
   "body": "  Suppose measures the volume of water (liters) in a container and that is a function of time (minutes) such that the rate of change (liters per minute) is also a function of time defined by Describe the behavior of and sketch a representative graph.    The rate of change of the volume in the container, determines the behavior of the volume. Because has a negative slope , the rate is decreasing. This tells us that the volume is a concave down function. Solving the inequalities and will allow us to see when the rate is positive or negative, which will imply when the volume is increasing or decreasing, respectively.  The inequalities are solved by solving the equation and then testing the inequalities in the resulting intervals. Testing the sign of when , we find, for example , that the rate is positive. Consequently, is increasing when . On the other hand, testing the sign of when , such as , we find that the rate is negative so that the volume is decreasing when .  The graph of , shown below, is consistent with these analyses. The graph is decreasing (corresponding to the negative slope), above the axis for and below the axis for .   A graph of the rate of change of volume of water as a function of time.      The graph of the volume therefore needs to be concave down, increasing for and decreasing for . We do not know the starting volume (it wasn't given), so the vertical positions of the graph do not presently have specific meaning. The initial value of 0 was chosen to represent whatever the starting volume happened to be. The graph of this functions is shown below.   A graph of the volume of water as a function of time relative to the starting height.       "
 },
@@ -131,7 +203,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-accumulation.html#ex_derivs_to_shape",
   "type": "Example",
-  "number": "13",
+  "number": "19",
   "title": "",
   "body": "  Describe the behavior of .    We use to understand where is increasing or decreasing, and to understand where is concave up or concave down. We start by calculating the derivatives so that we can do sign analysis. To do sign analysis, we need to find the zeros of the functions. If the functions factor, that is the easiest way to accomplish that.   To do sign analysis of , we find zeros as solutions of (no solutions), at , and at , approximated by and . Putting these on a number line, we can find the intervals we need to test: , , , and . Evaluating at a point in each interval, we get the following sign analysis summary.   Sign analysis summary for .   sign analysis summary     From the first derivative, we know that is decreasing on the intervals and and is increasing on the intervals and .  The second derivative provides information about concavity. The zeros are at and . A sign analysis summary of is given below.   Sign analysis summary for .   sign analysis summary     The second derivative test for concavity allows us to conclude that is concave up on the intervals and and is concave down on the interval .  A graph of illustrates these behaviors. It has a local minimum at , a local maximum at , and another local minimum at . also has points of inflection at . In the graph, the extremes are marked with circular points, while the inflection points are marked as squares.   Graph of .   sign analysis summary      "
 },
@@ -230,7 +302,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#def-integral-accumulated-change",
   "type": "Definition",
-  "number": "17",
+  "number": "23",
   "title": "Notation: Accumulated Change.",
   "body": " Notation: Accumulated Change   What you just discovered works for any rate of change, not only velocity. If a quantity has value at time and changes at rate , then its value at a later time is the starting value plus the accumulated change over the interval. Mathematicians write that accumulated change using the definite integral symbol: Read as \"the accumulated change in the quantity from to .\" When is a positive constant on an interval of length , this is just , the same as the rectangle areas you computed above.   "
 },
@@ -239,7 +311,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#def-integral-area",
   "type": "Definition",
-  "number": "18",
+  "number": "24",
   "title": "Notation: Area Under a Graph.",
   "body": " Notation: Area Under a Graph   The very same symbol describes area. For a function , the area of the region between the graph of and the -axis, from to , is written This is not a coincidence: it's the same idea from Exercise 3, written in general notation.   "
 },
@@ -257,7 +329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#rem-signed-area-and-beyond",
   "type": "Remark",
-  "number": "19",
+  "number": "25",
   "title": "Signed Area, and Rates That Aren’t Constant.",
   "body": " Signed Area, and Rates That Aren't Constant  What you just worked out is called signed area : regions above the -axis count as positive area, and regions below it count as negative area. This is exactly why the definite integral, and not just \"area,\" is the right tool for accumulated change. It automatically keeps track of when a quantity is increasing versus decreasing.  Everything above used constant rates, so every region was a rectangle. But the notation , and its meaning as signed area, works exactly the same way even when is not constant. Later in the course you'll learn algebraic techniques (the Fundamental Theorem of Calculus and antiderivative formulas) for evaluating such integrals exactly. However, you have everything you need to evaluate a definite integral whenever the region between the graph and the axis is built from shapes you can already measure: rectangles, triangles, and trapezoids.  "
 },
@@ -338,7 +410,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-properties-of-the-integral.html#rem-provable-vs-adopted",
   "type": "Remark",
-  "number": "20",
+  "number": "26",
   "title": "Two Kinds of \"Always True\".",
   "body": " Two Kinds of \"Always True\"  Look back at everything in this activity. The splitting property for , the sum rule, and the constant multiple rule are all things you proved . In each case, you could point to an arithmetic reason (the linearity of the area formulas) that makes each one true. The zero-width fact is even more immediate: it's just what \"width\" means.  The reverse-order property is different in kind. There is no region you can shade for \"the area from to when is bigger than \". We can not directly visualize with a picture what it means to shade a region in reverse . Instead, we adopt an interpretation, because it's the only choice that lets the splitting rule keep working for any three numbers and not only when they are in increasing order. This is a mathematical mode of reasoning that we will encounter multiple times.  "
 },
@@ -383,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-riemann-sum-approximation.html#rem-riemann-sum-name",
   "type": "Remark",
-  "number": "21",
+  "number": "27",
   "title": "Naming What You Just Built.",
   "body": " Naming What You Just Built  Each of your two staircases is an example of a Riemann sum : an approximation to the area under a curve built by partitioning an interval into subintervals, choosing one height on each piece, and adding up the resulting rectangle areas. What you built are called the left Riemann sum (using left-edge heights) and the right Riemann sum (using right-edge heights), each with subintervals.  "
 },
@@ -428,7 +500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-riemann-sum-notation.html#def-summation-notation",
   "type": "Definition",
-  "number": "22",
+  "number": "28",
   "title": "Summation Notation.",
   "body": " Summation Notation   The symbol (capital Greek sigma) is a compact way to write \"add up a list of terms that follow a pattern.\" The notation means: start at (the number written below ), evaluate the expression , then repeat for , , and so on, up through (the number written above ), adding every result together. Written out in full, it means the same thing as Nothing here says how to find the value of that total — it's just notation for which terms to add.   "
 },
@@ -446,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-riemann-sum-notation.html#rem-four-step-recipe",
   "type": "Remark",
-  "number": "23",
+  "number": "29",
   "title": "The General Recipe.",
   "body": " The General Recipe  Whatever the function, interval, or , setting up the right Riemann sum for always follows the same four steps:  Find the width of each subinterval: .  Write the th right endpoint: .  Substitute into to get .  Assemble the sum: .  The next three exercises are all the same four steps, applied to new functions.  "
 },
@@ -509,7 +581,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-summation-formulas.html#def-summation-formulas",
   "type": "Definition",
-  "number": "24",
+  "number": "30",
   "title": "Four Summation Formulas.",
   "body": " Four Summation Formulas   The following four formulas are given as facts. (Each can each be proved, but proving them is not a course goal.) In each, is a number that does not depend on , and is the number of terms being added.         "
 },
@@ -518,7 +590,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-summation-formulas.html#def-sum-rules",
   "type": "Definition",
-  "number": "25",
+  "number": "31",
   "title": "Sum Rule and Constant Multiple Rule.",
   "body": " Sum Rule and Constant Multiple Rule   Summations also split over addition and let a constant factor be pulled out, the same way you already expect from other kinds of sums:      Together with the four formulas above, these two rules let you evaluate any summation whose th term is a polynomial in , exactly the kind of summation a Riemann sum for a polynomial produces.   "
 },
@@ -554,7 +626,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-summation-formulas.html#rem-looking-ahead-definite-integral",
   "type": "Remark",
-  "number": "26",
+  "number": "32",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have a single formula that gives the right Riemann sum for for any number of subintervals , without adding up individual terms. In a future class, we'll ask what happens to that formula as grows larger and larger without bound.  "
 },
@@ -590,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-definite-integral-as-limit.html#def-definite-integral",
   "type": "Definition",
-  "number": "27",
+  "number": "33",
   "title": "The Definite Integral.",
   "body": " The Definite Integral   For a function defined on an interval , partition into equal subintervals of width , and let denote the right endpoint of the th subinterval. The definite integral of from to is defined as provided this limit exists.  Officially, the value must be able to be replaced by using any  between and . A Riemann sum is only ever an approximation, and the limit is the exact value.   "
 },
@@ -617,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-definite-integral-as-limit.html#def-accumulation-function",
   "type": "Definition",
-  "number": "28",
+  "number": "34",
   "title": "Accumulation Functions.",
   "body": " Accumulation Functions   Every definite integral you have evaluated so far has had two fixed numbers as its limits of integration. Suppose instead the lower limit is fixed at , but the upper limit is left as a symbol . We can still work through the steps and get the value of the limit that depends on . The result, is a function of , called an accumulation function : its value at any particular is the accumulated change, or signed area, from up to that point.   "
 },
@@ -635,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-definite-integral-as-limit.html#rem-looking-ahead-accumulation",
   "type": "Remark",
-  "number": "29",
+  "number": "35",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have accumulation functions for three different power functions, and a conjecture for a fourth, all found the same way: by evaluating a Riemann sum and taking a limit. In an upcoming class we will see that this pattern is not a coincidence, and connect it to antiderivatives.  "
 },
@@ -662,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-polynomial-accumulation-functions.html#rem-basic-accumulation-recall",
   "type": "Remark",
-  "number": "30",
+  "number": "36",
   "title": "Recall: Four Basic Accumulation Formulas.",
   "body": " Recall: Four Basic Accumulation Formulas  From last activity:        "
 },
@@ -671,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-polynomial-accumulation-functions.html#rem-sum-cm-rule-reminder",
   "type": "Remark",
-  "number": "31",
+  "number": "37",
   "title": "Reminder: Sum Rule and Constant Multiple Rule.",
   "body": " Reminder: Sum Rule and Constant Multiple Rule  Recall that the definite integral satisfies a sum rule and a constant multiple rule: These rules apply just as well when the upper limit is the symbol , which means they apply directly to accumulation functions. Combined with the four basic formulas above, they let you build the accumulation function for any polynomial of degree at most , one term at a time. For example, for :   "
 },
@@ -689,7 +761,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-polynomial-accumulation-functions.html#rem-splitting-reminder",
   "type": "Remark",
-  "number": "32",
+  "number": "38",
   "title": "Reminder: The Splitting Property.",
   "body": " Reminder: The Splitting Property  Recall the splitting property from the same earlier activity: , for any numbers and . Since and , solving for the middle term gives a way to evaluate any definite integral once you know its accumulation function: .  "
 },
@@ -707,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-polynomial-accumulation-functions.html#rem-looking-ahead-power-rule",
   "type": "Remark",
-  "number": "33",
+  "number": "39",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have a way to build the accumulation function for any polynomial of degree at most , and to use it to evaluate any definite integral of such a polynomial without taking a limit. In an upcoming class we will connect this pattern to antiderivatives.  "
 },
@@ -752,7 +824,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-fundamental-theorem-calculus.html#rem-chain-rule-for-ftc",
   "type": "Remark",
-  "number": "34",
+  "number": "40",
   "title": "Differentiating Through the Chain Rule.",
   "body": " Differentiating Through the Chain Rule  Rewriting an integral as is progress, but and are not simply evaluated at . They are composed with the functions and , so differentiating either one requires the chain rule . Since , the chain rule gives and Putting the two pieces together,   "
 },
@@ -779,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-10",
   "type": "Theorem",
-  "number": "35",
+  "number": "41",
   "title": "The Fundamental Theorem of Calculus.",
   "body": " The Fundamental Theorem of Calculus   If is continuous and has an accumulation function then .  In other words, an accumulation function is an antiderivative of .   "
 },
@@ -797,7 +869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-12",
   "type": "Remark",
-  "number": "36",
+  "number": "42",
   "title": "",
   "body": " Note that we don't need to know the formula for in order to know the derivative's formula .  "
 },
@@ -824,7 +896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#def-antiderivative",
   "type": "Definition",
-  "number": "37",
+  "number": "43",
   "title": "Antiderivative.",
   "body": " Antiderivative   Given a function , another function is called an antiderivative of if .   "
 },
@@ -833,7 +905,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#rem-known-antiderivatives-recall",
   "type": "Remark",
-  "number": "38",
+  "number": "44",
   "title": "Recall: Antiderivatives You Have Already Found.",
   "body": " Recall: Antiderivatives You Have Already Found  Every accumulation function you have built so far is an example: Each of these is a single power of , but we have not stated a single rule that covers every power at once.  "
 },
@@ -851,7 +923,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#rem-domain-caveat-negative-powers",
   "type": "Remark",
-  "number": "39",
+  "number": "45",
   "title": "A Domain Caveat.",
   "body": " A Domain Caveat  Our accumulation functions were built as integrals starting at . That definition breaks down for negative powers, such as , because has a discontinuity at : an integral like simply does not exist. The antiderivative formula you just found is still perfectly good as a function in its own right, though. It just needs to be considered on an interval that avoids , rather than being built as an accumulation function starting from .  "
 },
@@ -869,7 +941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#thm-antiderivatives-differ-by-constant",
   "type": "Theorem",
-  "number": "40",
+  "number": "46",
   "title": "Antiderivatives Differ Only By a Constant.",
   "body": " Antiderivatives Differ Only By a Constant   If and are both antiderivatives of the same function on an interval , then is a constant on that interval.   "
 },
@@ -878,7 +950,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#rem-antiderivative-family",
   "type": "Remark",
-  "number": "41",
+  "number": "47",
   "title": "",
   "body": " Put together with the previous exercise, this theorem says once you know one antiderivative of , you know all of them: every antiderivative of has the form for some constant . There are no other antiderivatives that aren't captured by this family.  "
 },
@@ -887,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#def-indefinite-integral",
   "type": "Definition",
-  "number": "42",
+  "number": "48",
   "title": "The Indefinite Integral.",
   "body": " The Indefinite Integral   The notation , an integral written with no limits of integration, is called an indefinite integral . It represents the entire family of antiderivatives of , not a single function and not a number. Once one antiderivative is found, every other antiderivative is obtained by adding a constant, so we write where , the constant of integration , is a placeholder for any real number. This is different from the definite integral , whose limits of integration make it a single number.   "
 },
@@ -914,7 +986,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#rem-ftc-creates-new-function",
   "type": "Remark",
-  "number": "43",
+  "number": "49",
   "title": "A New Kind of Function.",
   "body": " A New Kind of Function  The Fundamental Theorem of Calculus does not care whether a function is built from powers of . It only asks for continuity. The function is continuous everywhere except at , so on any interval avoiding , it has an accumulation function, and that accumulation function must be an antiderivative of , whether or not we have an algebraic formula for it in terms of powers. This gives us a way to create a genuinely new function, one we have not seen before, as an antiderivative of . We name it the natural logarithm : .  "
 },
@@ -932,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#rem-looking-ahead-log-properties",
   "type": "Remark",
-  "number": "44",
+  "number": "50",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have a genuinely new function, , defined directly by an integral rather than by any algebraic formula. In an upcoming activity we will explore its other properties.  "
 },
@@ -959,7 +1031,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-logarithm-as-integral.html#def-natural-log-integral",
   "type": "Definition",
-  "number": "45",
+  "number": "51",
   "title": "The Natural Logarithm.",
   "body": " The Natural Logarithm   For , the natural logarithm is defined by    "
 },
@@ -968,7 +1040,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-logarithm-as-integral.html#rem-ln-two-facts",
   "type": "Remark",
-  "number": "46",
+  "number": "52",
   "title": "Two Facts Straight from the Definition.",
   "body": " Two Facts Straight from the Definition  First, , since an integral over an interval of zero width is zero. Second, the integrand is not defined at , and an integral starting at cannot pass through that discontinuity. So the domain of is .  "
 },
@@ -977,7 +1049,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-logarithm-as-integral.html#thm-ln-algebraic-properties",
   "type": "Theorem",
-  "number": "47",
+  "number": "53",
   "title": "Algebraic Properties of <span class=\"process-math\">\\(\\ln\\)<\/span>.",
   "body": " Algebraic Properties of   For all and :    Product rule:  .  Reciprocal rule:  .  Quotient rule:  .  Power rule:  for every real number .     "
 },
@@ -995,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-logarithm-as-integral.html#rem-ln-rational-real-powers",
   "type": "Remark",
-  "number": "48",
+  "number": "54",
   "title": "Beyond Integer Powers.",
   "body": " Beyond Integer Powers  We can show algebraically that the power rule also works for rational powers . When is not rational, we actually define  using limits of rational numbers that approach . The continuity of then guarantees that for every real number .  "
 },
@@ -1049,7 +1121,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-chain-rule-with-logarithm.html#rem-absolute-value-recall",
   "type": "Remark",
-  "number": "49",
+  "number": "55",
   "title": "Recall: Absolute Value.",
   "body": " Recall: Absolute Value  The absolute value of is the piecewise function so is positive for every . This means makes sense for every , not just for .  "
 },
@@ -1058,7 +1130,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-chain-rule-with-logarithm.html#thm-derivative-ln-absolute-value",
   "type": "Theorem",
-  "number": "50",
+  "number": "56",
   "title": "The Derivative of <span class=\"process-math\">\\(\\ln|x|\\)<\/span>.",
   "body": " The Derivative of   For all ,    "
 },
