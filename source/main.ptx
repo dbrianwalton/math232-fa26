@@ -33,7 +33,9 @@
         </p>
       </introduction>
 
-      <xi:include href="./outcomes/outcomes.ptx"/>
+      <xi:include href="./outcomes/week-01-02.ptx"/>
+      <xi:include href="./outcomes/week-03-04.ptx"/>
+      <xi:include href="./outcomes/week-05-06.ptx"/>
 
     </chapter>
 

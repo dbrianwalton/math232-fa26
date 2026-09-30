@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-outcomes-week-05-06">
+  <title>Week 5 and Week 6</title>
+
+  <introduction>
+    <p>
+      These weeks focused on the connection between differentiation and integration.
+      We learned the Fundamental Theorem of Calculus and introduced indefinite integrals
+      and antiderivatives. We explored the natural logarithm as being defined by 
+      a definite integral, found its properties related to products, quotients, and powers, and computed the derivative of logarithms of the absolute value of algebraic formulas.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-I1">
+    <title>I1 Indefinite Integrals and Antiderivatives</title>
+
+    <assemblage xml:id="assemblage-I1">
+      <title>I1</title>
+      <p>
+        I can use an indefinite integral to find a particular antiderivative for a polynomial
+        using the power rule, sums and constant multiples using a known function value.
+      </p>
+    </assemblage>
+
+    <exercise label="I1_Indefinite_Integral_Antiderivative">
+      <statement>
+        <p>
+          Find <m>\displaystyle \int p(x) \, dx</m> where <m>p(x)=10x^4 - 3x^2 + 5x</m>.
+          Use your result to find the function <m>f(x)</m> so that <m>f'(x) = p(x)</m> with <m>f(1) = 3</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-I2">
+    <title>I2 Fundamental Theorem of Calculus</title>
+
+    <assemblage xml:id="assemblage-I2">
+      <title>I2</title>
+      <p>
+        I can compute derivatives of functions defined by definite integrals of continuous functions
+        involving variable limits using the Fundamental Theorem of Calculus and the Chain Rule.
+      </p>
+    </assemblage>
+
+    <exercise label="I2_Fundamental_Theorem_Calculus">
+      <statement>
+        <p>
+          If <m>\displaystyle F(x) = \int_{2x}^{x^2} \frac{1}{2t+3} \, dt</m>, find <m>F'(x)</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-I3">
+    <title>I3 Logarithm Properties and Derivatives</title>
+
+    <assemblage xml:id="assemblage-I3">
+      <title>I3</title>
+      <p>
+        I can apply the properties of logarithms to expand logarithms of products, quotients, and powers
+        prior to using the logarithm's derivative and chain rule.
+      </p>
+    </assemblage>
+
+    <exercise label="I3_Logarithm_Properties_Derivative">
+      <statement>
+        <p>
+          If <m>\displaystyle G(x) = \ln\left(\left| \frac{x^4(x^2+4)^2}{(2x-3)^3}\right|\right)</m>,
+          apply logarithm properties to expand logarithms of products, quotients and powers as far as possible,
+          and then compute <m>G'(x)</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+</section>

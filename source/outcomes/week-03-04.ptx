@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-outcomes-week-03-04">
+  <title>Week 3 and Week 4</title>
+
+  <introduction>
+    <p>
+      These weeks focused on turning the idea of accumulated change into a precise definition.
+      We approximated definite integrals with Riemann sums, learned notation and rules for
+      working with summations, and then used accumulation functions built from the power rule
+      to calculate exact values of definite integrals of polynomials.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-R4">
+    <title>R4 Setting Up a Riemann Sum</title>
+
+    <assemblage xml:id="assemblage-R4">
+      <title>R4</title>
+      <p>
+        I can write a Riemann sum in summation notation, using a uniform width
+        and right endpoints with an unspecified number of subintervals,
+        to approximate a definite integral.
+      </p>
+    </assemblage>
+
+    <exercise label="R4_Riemann_Sum_Setup">
+      <statement>
+        <p>
+          Create the Riemann sum using a uniform size <m>\Delta x</m> and right endpoints using an unspecified number <m>n</m> of subintervals
+          to approximate <m>\displaystyle \int_1^4 (2x^2 + 1) \, dx</m>.
+          You do not need to evaluate the summations directly, just set them up.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-R5">
+    <title>R5 Evaluating Summations with Summation Rules</title>
+
+    <assemblage xml:id="assemblage-R5">
+      <title>R5</title>
+      <p>
+        I can use the constant, sum, and constant multiple rules for summations
+        together with the formulas for sums of powers of <m>k</m>
+        to rewrite a summation as a formula in <m>n</m>.
+      </p>
+    </assemblage>
+
+    <exercise label="R5_Summation_Rules">
+      <statement>
+        <p>
+          The following summation rules are provided:
+          <md>
+            <mrow>\sum_{k=1}^{n} a = a n \qquad \sum_{k=1}^{n} k = \frac{n(n+1)}{2}</mrow>
+            <mrow>\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6} \qquad \sum_{k=1}^{n} k^3 = \frac{n^2(n+1)^2}{4}</mrow>
+          </md>
+          Show how to use these rules as well as the sum and constant multiple rules for summation to find the formula in <m>n</m> that equals
+          <md>
+            <mrow>\sum_{k=1}^{n} \left(\frac{3k}{n^2} + \frac{2k^2}{n^3}\right)</mrow>
+          </md>
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-R6">
+    <title>R6 Definite Integrals of Polynomials Using Accumulation Functions</title>
+
+    <assemblage xml:id="assemblage-R6">
+      <title>R6</title>
+      <p>
+        I can calculate the value of a definite integral of a polynomial
+        by stating an appropriate accumulation function built with the power rule
+        and using it to find the net accumulated change.
+      </p>
+    </assemblage>
+
+    <exercise label="R6_Polynomial_Accumulation">
+      <statement>
+        <p>
+          Calculate <m>\displaystyle \int_1^2 (6x^2 - 4x + 5) \, dx</m> by stating and then using an appropriate accumulation function involving the power rule.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+</section>

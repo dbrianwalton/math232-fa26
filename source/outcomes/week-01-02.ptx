@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-outcomes-1">
+<section xml:id="sec-outcomes-week-01-02">
+  <title>Week 1 and Week 2</title>
+
+  <introduction>
+    <p>
+      These weeks focused on connecting a rate of change to the function it describes.
+      We interpreted the graph of a derivative to sketch the graph of the function,
+      introduced the definite integral as the net change in a quantity computed from a rate graph,
+      and began working with the properties of definite integrals.
+    </p>
+  </introduction>
 
   <subsection xml:id="subsec-R1">
     <title>R1 From Derivative Graph to Function Graph</title>
