@@ -53,18 +53,18 @@
     </exercise>
   </subsection>
 
-  <subsection xml:id="subsec-I3">
-    <title>I3 Logarithm Properties and Derivatives</title>
+  <subsection xml:id="subsec-E1">
+    <title>E1 Logarithm Properties and Derivatives</title>
 
-    <assemblage xml:id="assemblage-I3">
-      <title>I3</title>
+    <assemblage xml:id="assemblage-E1">
+      <title>E1</title>
       <p>
         I can apply the properties of logarithms to expand logarithms of products, quotients, and powers
         prior to using the logarithm's derivative and chain rule.
       </p>
     </assemblage>
 
-    <exercise label="I3_Logarithm_Properties_Derivative">
+    <exercise label="E1_Logarithm_Properties_Derivative">
       <statement>
         <p>
           If <m>\displaystyle G(x) = \ln\left(\left| \frac{x^4(x^2+4)^2}{(2x-3)^3}\right|\right)</m>,
