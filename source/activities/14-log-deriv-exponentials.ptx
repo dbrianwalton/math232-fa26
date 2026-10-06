@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-exponentials-log-differentiation">
+  <title>Exponential Functions and Logarithmic Differentiation</title>
+
+  <objectives xml:id="obj-exponentials-log-differentiation">
+    <ul>
+      <li><p>Build a logarithmic scale by placing each number <m>y</m> at the position <m>x=\ln(y)</m>, and explain why multiplying <m>y</m> by a fixed number shifts its position by a fixed distance.</p></li>
+      <li><p>Use the continuity of <m>\ln</m> to explain why there is a number <m>e</m> with <m>\ln(e)=1</m>, and why every real number is a value of <m>\ln</m>.</p></li>
+      <li><p>Define <m>e^p</m> and <m>b^p</m> for every real power <m>p</m> by the equations <m>\ln(e^p)=p</m> and <m>\ln(b^p)=p\ln(b)</m>, and check that these definitions agree with integer powers.</p></li>
+      <li><p>Differentiate <m>\ln(e^x)=x</m> and <m>\ln(b^x)=x\ln(b)</m> to show that <m>\dfrac{d}{dx}\big[e^x\big]=e^x</m> and <m>\dfrac{d}{dx}\big[b^x\big]=b^x\ln(b)</m>.</p></li>
+      <li><p>Use logarithmic differentiation to prove the power rule for every real power and to recover the product rule.</p></li>
+      <li><p>Use logarithmic differentiation to differentiate functions such as <m>x^x</m>, where neither the power rule nor the exponential rule applies.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      We know a lot about <m>\ln(x)</m>: it is defined by an integral, it turns products into sums,
+      and its derivative is <m>1/x</m>. Today we use <m>\ln</m> to make sense of powers
+      <m>b^p</m> when <m>p</m> is not a whole number, and then to find their derivatives.
+      Throughout, you may use the approximate values
+      <md>\ln(2)\approx 0.693 \qquad\text{and}\qquad \ln(3)\approx 1.099\text{.}</md>
+    </p>
+    <p>
+      Team Roles: Manager, Recorder, Spokesperson, and Reflector.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-building-log-scale" workspace="0in">
+    <title>Building a Logarithmic Scale</title>
+    <introduction>
+      <p>
+        On the number line below, each position <m>x</m> is marked underneath. We will write a
+        number <m>y</m> <em>above</em> the line at the position <m>x=\ln(y)</m>. Since
+        <m>\ln(1)=0</m>, the label <m>y=1</m> has already been placed above <m>x=0</m>.
+      </p>
+      <image width="95%">
+        <shortdescription>
+          A horizontal number line running from x = -3.5 to x = 3.5, with major tick marks at
+          the integers from -3 to 3 labeled below the line and minor tick marks every 0.1. Above
+          the line at x = 0 is the label y = 1. The rest of the space above the line is blank.
+        </shortdescription>
+        <latex-image>
+          \begin{tikzpicture}[x=2.2cm]
+            \draw[thick,&lt;-&gt;] (-3.5,0) -- (3.5,0);
+            \foreach \i in {-34,...,34} {
+              \draw ({\i/10},-0.06) -- ({\i/10},0.06);
+            }
+            \foreach \i in {-3,...,3} {
+              \draw[thick] (\i,-0.15) -- (\i,0.15);
+              \node[below] at (\i,-0.15) {$\i$};
+            }
+            \node[above] at (0,0.15) {$1$};
+            \node[left] at (-3.5,0.45) {$y$};
+            \node[left] at (-3.5,-0.45) {$x$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </introduction>
+    <task xml:id="task-scale-powers-of-two" workspace="1in">
+      <statement>
+        <p>
+          Use the power rule for logarithms to find the position <m>x=\ln(y)</m> for
+          <m>y=2</m>, <m>4</m>, and <m>8</m>. Label each of these values of <m>y</m> above the
+          number line. How far apart are consecutive labels?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-scale-negative-powers" workspace="0.75in">
+      <statement>
+        <p>
+          Now find the positions for <m>y=\frac{1}{2}</m>, <m>\frac{1}{4}</m>, and
+          <m>\frac{1}{8}</m>, and label them. On which side of <m>x=0</m> do they fall, and why?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-scale-threes" workspace="1.25in">
+      <statement>
+        <p>
+          Label <m>y=3</m>, <m>y=6</m>, and <m>y=9</m> on the number line. Starting from any
+          label <m>y</m>, what happens to <m>y</m> when you move a distance <m>\ln(3)</m> to the
+          right? What happens when you move a distance <m>\ln(3)</m> to the left?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-scale-find-e" workspace="1.25in">
+      <statement>
+        <p>
+          Is there a number <m>y</m> that belongs above the position <m>x=1</m>? Between which
+          two labels must it be? Use the fact that <m>\ln</m> is continuous to explain why such a
+          number must exist.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-scale-reach" workspace="0in">
+    <title>Does the Scale Reach Every Position?</title>
+    <task xml:id="task-scale-reach-ten" workspace="1.25in">
+      <statement>
+        <p>
+          Find a power of <m>2</m> whose label sits to the right of <m>x=10</m>, and a power of
+          <m>2</m> whose label sits to the left of <m>x=-10</m>. Explain why there must be a
+          number <m>y</m> with <m>\ln(y)=10</m> and a number <m>y</m> with <m>\ln(y)=-10</m>.
+          Would the same reasoning work for any position <m>p</m> on the number line?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-ln-range">
+    <title>The Range of <m>\ln</m></title>
+    <p>
+      Because <m>\ln'(x)=\dfrac{1}{x}\gt 0</m>, the function <m>\ln</m> is increasing, so no two
+      numbers <m>y</m> are ever placed at the same position. Because <m>\ln(2^n)=n\ln(2)</m> can
+      be made as large or as negative as we like, and <m>\ln</m> is continuous, every position is
+      filled. In other words, the range of <m>\ln</m> is <m>(-\infty,\infty)</m>, and for every
+      real number <m>p</m> there is <em>exactly one</em> <m>y\gt 0</m> with <m>\ln(y)=p</m>.
+    </p>
+  </remark>
+
+  <definition xml:id="def-e-and-exponentials">
+    <title>The Number <m>e</m> and Real Powers</title>
+    <statement>
+      <p>
+        The <term>natural base</term> <m>e</m> is the number with <m>\ln(e)=1</m>.
+      </p>
+      <p>
+        For every real number <m>p</m>, the power <m>e^p</m> is the number with
+        <md>\ln(e^p)=p\text{.}</md>
+        More generally, if <m>b\gt 0</m>, the power <m>b^p</m> is the number with
+        <md>\ln(b^p)=p\ln(b)\text{.}</md>
+        The <term>natural exponential function</term> is <m>\exp(x)=e^x</m>, and the
+        <term>exponential function with base <m>b</m></term> is <m>\exp_b(x)=b^x</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise xml:id="ex-definition-consistency" workspace="0in">
+    <title>Does the Definition Agree with What We Know?</title>
+    <task xml:id="task-consistency-e-cubed" workspace="1in">
+      <statement>
+        <p>
+          Using the definition, <m>e^3</m> is the number whose logarithm is <m>3</m>. Use the
+          product rule for logarithms to find <m>\ln(e\cdot e\cdot e)</m>. Explain why the
+          definition gives the same number <m>e^3</m> as multiplying <m>e</m> by itself three
+          times.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <theorem xml:id="thm-exp-ln-inverse">
+    <title><m>e^x</m> and <m>\ln(x)</m> Are Inverse Functions</title>
+    <statement>
+      <p>
+        For every real number <m>x</m>, <m>\ln(e^x)=x</m>, and for every <m>y\gt 0</m>,
+        <m>e^{\ln(y)}=y</m>. Since <m>\ln</m> is differentiable and its derivative
+        <m>1/y</m> is never zero, its inverse function <m>e^x</m> is also differentiable. For
+        the same reason, <m>b^x</m> is differentiable for every <m>b\gt 0</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <exercise xml:id="ex-derivative-exponentials" workspace="0in">
+    <title>Derivatives of Exponential Functions</title>
+    <introduction>
+      <p>
+        Now that we know <m>e^x</m> and <m>b^x</m> have derivatives, we can find them by
+        differentiating the equations that define them, just as in implicit differentiation.
+      </p>
+    </introduction>
+    <task xml:id="task-derivative-e-x" workspace="1.25in">
+      <statement>
+        <p>
+          Differentiate both sides of <m>\ln(e^x)=x</m> with respect to <m>x</m>. Use the chain
+          rule on the left side. Solve the result for <m>\dfrac{d}{dx}\big[e^x\big]</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-derivative-b-x" workspace="1.25in">
+      <statement>
+        <p>
+          Let <m>b\gt 0</m>. Differentiate both sides of <m>\ln(b^x)=x\ln(b)</m> with respect to
+          <m>x</m>, and solve for <m>\dfrac{d}{dx}\big[b^x\big]</m>. What is special about
+          <m>b=e</m>?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-derivative-b-x-sign" workspace="1in">
+      <statement>
+        <p>
+          The value <m>b^x</m> is always positive. Use the sign of <m>\ln(b)</m> to decide
+          whether <m>b^x</m> is increasing, decreasing, or constant when <m>b\gt 1</m>, when
+          <m>0\lt b\lt 1</m>, and when <m>b=1</m>. Do your answers match what you expect for
+          <m>2^x</m>, <m>\left(\frac{1}{2}\right)^x</m>, and <m>1^x</m>?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-log-differentiation">
+    <title>Logarithmic Differentiation</title>
+    <p>
+      In the last exercise we found a derivative by taking the logarithm first. This works for
+      any differentiable function <m>y=f(x)</m> wherever <m>f(x)\ne 0</m>. Write
+      <m>\ln|y|=\ln|f(x)|</m>, use the properties of <m>\ln</m> to expand the right side, and
+      differentiate both sides. Since <m>\dfrac{d}{dx}\big[\ln|y|\big]=\dfrac{y'}{y}</m>, we can
+      solve for <m>y'</m>:
+      <md>y' = y\cdot\frac{d}{dx}\Big[\ln|f(x)|\Big]\text{.}</md>
+      This method is called <term>logarithmic differentiation</term>.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-log-differentiation-proves" workspace="0in">
+    <title>What Logarithmic Differentiation Proves</title>
+    <task xml:id="task-logdiff-power-rule" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>p</m> be any real number and let <m>y=x^p</m> for <m>x\gt 0</m>. Use
+          logarithmic differentiation to find <m>y'</m>. In Calculus I, the power rule was
+          justified only for certain kinds of powers <m>p</m>. Why does this argument work for
+          <em>every</em> real number <m>p</m>, such as <m>p=\sqrt{2}</m> or <m>p=\pi</m>?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-logdiff-product-rule" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>y=f(x)\,g(x)</m>, where <m>f</m> and <m>g</m> are differentiable and nonzero.
+          Use logarithmic differentiation to find <m>y'</m>, and simplify. Which rule have you
+          found?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-using-new-derivatives" workspace="0in">
+    <title>Using the New Derivatives</title>
+    <task xml:id="task-practice-x2-ex" workspace="1in">
+      <statement>
+        <p>
+          Find the derivative of <m>x^2e^x</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-practice-x-to-x" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>y=x^x</m> for <m>x\gt 0</m>. Explain why neither the power rule nor the rule for
+          <m>b^x</m> applies to this function. Then use logarithmic differentiation to find
+          <m>y'</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-practice-x-to-lnx" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>y=x^{\ln(x)}</m> for <m>x\gt 0</m>. Use logarithmic differentiation to find
+          <m>y'</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>

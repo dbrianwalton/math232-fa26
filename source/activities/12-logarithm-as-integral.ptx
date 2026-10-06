@@ -144,10 +144,11 @@
     <title>Beyond Integer Powers</title>
     <p>
       We can show algebraically that the power rule also works for rational powers
-      <m>p=\dfrac{m}{n}</m>. When <m>p</m> is not rational, we actually <em>define</em>
-      <m>x^p</m> using limits of rational numbers that approach <m>p</m>. The continuity of
-      <m>\ln(x)</m> then guarantees that <m>\ln(x^p)=p\,\ln(x)</m> for every real number
-      <m>p</m>.
+      <m>p=\dfrac{m}{n}</m>. When <m>p</m> is not rational, we first need to decide what
+      <m>x^p</m> means. One way to define it would be to take limits of rational powers
+      <m>x^r</m> as the rational numbers <m>r</m> approach <m>p</m>. In a later activity, we will
+      see an alternative approach that uses the properties of the logarithm as a continuous
+      function to define <m>x^p</m> for every real number <m>p</m>.
     </p>
   </remark>
 
