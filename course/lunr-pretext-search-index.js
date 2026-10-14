@@ -1153,36 +1153,36 @@ var ptx_lunr_docs = [
   "body": " Expand First, Then Differentiate   The algebraic properties in can turn the logarithm of a complicated expression into a sum of simpler logarithms. Because , , and , the same properties hold for whenever the expressions involved are nonzero. In this exercise we ask whether it is easier to differentiate before or after expanding.     Let . Use your general rule from the previous exercise, with , to find . You will need the product rule to find . Write your answer as a single fraction.      Now use the product rule for logarithms to rewrite as a sum of two logarithms, and differentiate each term. Where is defined?      Combine the two terms from the previous task over a common denominator. Do you get the answer from the first task? Which route took less work?      Let . Use the quotient rule for logarithms to expand first, and then find . State the domain of .      Let . Use the power rule for logarithms to expand first, and then find .      Let . Rewrite the square root as a power, use the power rule for logarithms, and find .      Let . Expand using all three properties, name the property you use at each step, and find . State the domain of .    "
 },
 {
-  "id": "activity-exponentials-log-differentiation",
+  "id": "activity-exponentials-functions",
   "level": "1",
-  "url": "activity-exponentials-log-differentiation.html",
+  "url": "activity-exponentials-functions.html",
   "type": "Worksheet",
   "number": "",
-  "title": "Exponential Functions and Logarithmic Differentiation",
-  "body": " Exponential Functions and Logarithmic Differentiation    Use the continuity of to explain why there is a number with , and why every real number is a value of .  Define and for every real power by the equations and , and check that these definitions agree with integer powers.  Differentiate and to show that and .  Use the product and chain rules to find more complicated derivatives involving exponentials.     We know a lot about : it is defined by an integral, it turns changes questions about products into questions about sums, and its derivative is . Today we use to make sense of powers when is not a whole number, and then to find their derivatives. Throughout, you may use the approximate values     Building a Logarithmic Scale   On the number line below, each position is marked underneath. We will write a number  above the line at the position . Since , the label has already been placed above .   A horizontal number line running from x = -3.5 to x = 3.5, with major tick marks at the integers from -3 to 3 labeled below the line and minor tick marks every 0.1. Above the line at x = 0 is the label y = 1. The rest of the space above the line is blank.       Use the power rule for logarithms to find the position for , , and . Label each of these values of above the number line. How far apart are consecutive labels?      Now find the positions for , , and , and label them. On which side of do they fall, and why?      Label , , and on the number line. Starting from any label , what happens to when you move a distance to the right? What happens when you move a distance to the left?      Is there a number that belongs above the position ? Between which two labels must it be? Use the fact that is continuous to explain why such a number must exist.      Does the Scale Reach Every Position?    Find a power of whose label sits to the right of , and a power of whose label sits to the left of . Explain why there must be a number with and a number with . Would the same reasoning work for any position on the number line?      The Range of  Because , the function is increasing, so no two numbers are ever placed at the same position. Because can be made as large or as negative as we like, and is continuous, every position is filled. In other words, the range of is , and for every real number there is exactly one  with .    The Number and Real Powers   The natural base  is the number with .  For every real number , the power is the number with More generally, if , the power is the number with The natural exponential function is , and the exponential function with base is .     Does the Definition Agree with What We Know?    Using the definition, is the number whose logarithm is . Use the product rule for logarithms to find . Explain why the definition gives the same number as multiplying by itself three times.      and Are Inverse Functions   For every real number , , and for every , . Since is differentiable and its derivative is never zero, its inverse function is also differentiable. For the same reason, is differentiable for every .     Derivatives of Exponential Functions   Now that we know and have derivatives, we can find them by differentiating the equations that define them, just as in implicit differentiation.     For , differentiate both sides of with respect to . Use the chain rule on the left side since is a function of . Solve the result for .      Let . For , differentiate both sides of with respect to , and solve for . What happens to this formula when ?      The value is always positive. Use the sign of to decide whether is increasing, decreasing, or constant when , when , and when . Do your answers match what you expect for , , and ?     "
+  "title": "Exponential Functions",
+  "body": " Exponential Functions    Use the continuity of to explain why there is a number with , and why every real number is a value of .  Define and for every real power by the equations and , consistent with integer powers.  Differentiate and to show that and .  Combine the derivatives of exponentials with other derivative rules.     We know a lot about : it is defined by an integral, it turns changes questions about products into questions about sums, and its derivative is . In this activity, we will take advantage of the logarithm being an invertible function. This will allow us to use to make sense of powers when is not a whole number. This will allow us to define exponential functions and then to find their derivatives.    Throughout, you may use the approximate values:     Building a Logarithmic Scale   On the number line below, each position is marked underneath. We will write a number  above the line at the position . Since , the label has already been placed above .   A horizontal number line running from x = -3.5 to x = 3.5, with major tick marks at the integers from -3 to 3 labeled below the line and minor tick marks every 0.1. Above the line at x = 0 is the label y = 1. The rest of the space above the line is blank.       Use the power rule for logarithms to find the position for , , and . Label each of these values of above the number line. How far apart are consecutive labels?      Now find the positions for , , and , and label them. On which side of do they fall, and why?      Label and , and then and on the number line. What happens to values of when you move to the left or right on -values by the distance ?      Is there a number that belongs above the position ? Between which two labels must it be? Use the fact that is continuous to explain why such a number must exist.      Does the Scale Reach Every Position?    Find a power of whose label sits to the right of , and a power of whose label sits to the left of . Explain why there must be a number with and a number with . Would the same reasoning work for any position on the number line?      The Range of  Because , the function is increasing on , so no two numbers are ever placed at the same position. Because can be made as large or as negative as we like, and is continuous, every position is filled. In other words, the range of is , and for every real number there is exactly one  with .  This also proves two limits:     The Number and Real Powers   The natural base  is that number with .  For every real number , the power is the number with . More generally, if , the power is the number with . That is, we define powers so that the power rule for logarithms is valid.  The natural exponential function is , and the exponential function with base is .     and Are Inverse Functions   For every real number , , and for every , . Since is differentiable and its derivative is never zero, its inverse function is also differentiable. For the same reason, is differentiable for every .     Derivatives of Exponential Functions   Now that we know and  have derivatives, we can find them by differentiating the equations that define them using implicit differentiation.     For , differentiate both sides of with respect to . Use the chain rule on the left side since is a function of . Solve the result for .      Let . For , differentiate both sides of with respect to , and solve for . What happens to this formula when ?      The value is always positive. Use the sign of to decide whether is increasing, decreasing, or constant when , when , and when . Do your answers match what you expect for , , and ?      Derivatives of Exponential Functions   By using the chain rule, we can extend these to composition with any formula :      Use the new derivative formulas and rules of differentiation to find the following derivatives.                   If , find .     "
 },
 {
-  "id": "obj-exponentials-log-differentiation",
+  "id": "obj-exponentials-and-differentiation",
   "level": "2",
-  "url": "activity-exponentials-log-differentiation.html#obj-exponentials-log-differentiation",
+  "url": "activity-exponentials-functions.html#obj-exponentials-and-differentiation",
   "type": "Objectives",
   "number": "",
   "title": "",
-  "body": "  Use the continuity of to explain why there is a number with , and why every real number is a value of .  Define and for every real power by the equations and , and check that these definitions agree with integer powers.  Differentiate and to show that and .  Use the product and chain rules to find more complicated derivatives involving exponentials.   "
+  "body": "  Use the continuity of to explain why there is a number with , and why every real number is a value of .  Define and for every real power by the equations and , consistent with integer powers.  Differentiate and to show that and .  Combine the derivatives of exponentials with other derivative rules.   "
 },
 {
   "id": "ex-building-log-scale",
   "level": "2",
-  "url": "activity-exponentials-log-differentiation.html#ex-building-log-scale",
+  "url": "activity-exponentials-functions.html#ex-building-log-scale",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Building a Logarithmic Scale.",
-  "body": " Building a Logarithmic Scale   On the number line below, each position is marked underneath. We will write a number  above the line at the position . Since , the label has already been placed above .   A horizontal number line running from x = -3.5 to x = 3.5, with major tick marks at the integers from -3 to 3 labeled below the line and minor tick marks every 0.1. Above the line at x = 0 is the label y = 1. The rest of the space above the line is blank.       Use the power rule for logarithms to find the position for , , and . Label each of these values of above the number line. How far apart are consecutive labels?      Now find the positions for , , and , and label them. On which side of do they fall, and why?      Label , , and on the number line. Starting from any label , what happens to when you move a distance to the right? What happens when you move a distance to the left?      Is there a number that belongs above the position ? Between which two labels must it be? Use the fact that is continuous to explain why such a number must exist.    "
+  "body": " Building a Logarithmic Scale   On the number line below, each position is marked underneath. We will write a number  above the line at the position . Since , the label has already been placed above .   A horizontal number line running from x = -3.5 to x = 3.5, with major tick marks at the integers from -3 to 3 labeled below the line and minor tick marks every 0.1. Above the line at x = 0 is the label y = 1. The rest of the space above the line is blank.       Use the power rule for logarithms to find the position for , , and . Label each of these values of above the number line. How far apart are consecutive labels?      Now find the positions for , , and , and label them. On which side of do they fall, and why?      Label and , and then and on the number line. What happens to values of when you move to the left or right on -values by the distance ?      Is there a number that belongs above the position ? Between which two labels must it be? Use the fact that is continuous to explain why such a number must exist.    "
 },
 {
   "id": "ex-scale-reach",
   "level": "2",
-  "url": "activity-exponentials-log-differentiation.html#ex-scale-reach",
+  "url": "activity-exponentials-functions.html#ex-scale-reach",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Does the Scale Reach Every Position?",
@@ -1191,34 +1191,25 @@ var ptx_lunr_docs = [
 {
   "id": "rem-ln-range",
   "level": "2",
-  "url": "activity-exponentials-log-differentiation.html#rem-ln-range",
+  "url": "activity-exponentials-functions.html#rem-ln-range",
   "type": "Remark",
   "number": "57",
   "title": "The Range of <span class=\"process-math\">\\(\\ln\\)<\/span>.",
-  "body": " The Range of  Because , the function is increasing, so no two numbers are ever placed at the same position. Because can be made as large or as negative as we like, and is continuous, every position is filled. In other words, the range of is , and for every real number there is exactly one  with .  "
+  "body": " The Range of  Because , the function is increasing on , so no two numbers are ever placed at the same position. Because can be made as large or as negative as we like, and is continuous, every position is filled. In other words, the range of is , and for every real number there is exactly one  with .  This also proves two limits:   "
 },
 {
   "id": "def-e-and-exponentials",
   "level": "2",
-  "url": "activity-exponentials-log-differentiation.html#def-e-and-exponentials",
+  "url": "activity-exponentials-functions.html#def-e-and-exponentials",
   "type": "Definition",
   "number": "58",
   "title": "The Number <span class=\"process-math\">\\(e\\)<\/span> and Real Powers.",
-  "body": " The Number and Real Powers   The natural base  is the number with .  For every real number , the power is the number with More generally, if , the power is the number with The natural exponential function is , and the exponential function with base is .   "
-},
-{
-  "id": "ex-definition-consistency",
-  "level": "2",
-  "url": "activity-exponentials-log-differentiation.html#ex-definition-consistency",
-  "type": "Worksheet Exercise",
-  "number": "3",
-  "title": "Does the Definition Agree with What We Know?",
-  "body": " Does the Definition Agree with What We Know?    Using the definition, is the number whose logarithm is . Use the product rule for logarithms to find . Explain why the definition gives the same number as multiplying by itself three times.    "
+  "body": " The Number and Real Powers   The natural base  is that number with .  For every real number , the power is the number with . More generally, if , the power is the number with . That is, we define powers so that the power rule for logarithms is valid.  The natural exponential function is , and the exponential function with base is .   "
 },
 {
   "id": "thm-exp-ln-inverse",
   "level": "2",
-  "url": "activity-exponentials-log-differentiation.html#thm-exp-ln-inverse",
+  "url": "activity-exponentials-functions.html#thm-exp-ln-inverse",
   "type": "Theorem",
   "number": "59",
   "title": "<span class=\"process-math\">\\(e^x\\)<\/span> and <span class=\"process-math\">\\(\\ln(x)\\)<\/span> Are Inverse Functions.",
@@ -1227,11 +1218,20 @@ var ptx_lunr_docs = [
 {
   "id": "ex-derivative-exponentials",
   "level": "2",
-  "url": "activity-exponentials-log-differentiation.html#ex-derivative-exponentials",
+  "url": "activity-exponentials-functions.html#ex-derivative-exponentials",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Derivatives of Exponential Functions.",
+  "body": " Derivatives of Exponential Functions   Now that we know and  have derivatives, we can find them by differentiating the equations that define them using implicit differentiation.     For , differentiate both sides of with respect to . Use the chain rule on the left side since is a function of . Solve the result for .      Let . For , differentiate both sides of with respect to , and solve for . What happens to this formula when ?      The value is always positive. Use the sign of to decide whether is increasing, decreasing, or constant when , when , and when . Do your answers match what you expect for , , and ?    "
+},
+{
+  "id": "activity-exponentials-functions-12",
+  "level": "2",
+  "url": "activity-exponentials-functions.html#activity-exponentials-functions-12",
   "type": "Worksheet Exercise",
   "number": "4",
-  "title": "Derivatives of Exponential Functions.",
-  "body": " Derivatives of Exponential Functions   Now that we know and have derivatives, we can find them by differentiating the equations that define them, just as in implicit differentiation.     For , differentiate both sides of with respect to . Use the chain rule on the left side since is a function of . Solve the result for .      Let . For , differentiate both sides of with respect to , and solve for . What happens to this formula when ?      The value is always positive. Use the sign of to decide whether is increasing, decreasing, or constant when , when , and when . Do your answers match what you expect for , , and ?    "
+  "title": "",
+  "body": "  Use the new derivative formulas and rules of differentiation to find the following derivatives.                   If , find .    "
 },
 {
   "id": "homework",
