@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<worksheet xml:id="activity-exponentials-log-differentiation">
-  <title>Exponential Functions and Logarithmic Differentiation</title>
+<worksheet xml:id="activity-exponentials-functions">
+  <title>Exponential Functions</title>
 
-  <objectives xml:id="obj-exponentials-log-differentiation">
+  <objectives xml:id="obj-exponentials-and-differentiation">
     <ul>
       <li><p>Use the continuity of <m>\ln</m> to explain why there is a number <m>e</m> with <m>\ln(e)=1</m>, and why every real number is a value of <m>\ln</m>.</p></li>
-      <li><p>Define <m>e^p</m> and <m>b^p</m> for every real power <m>p</m> by the equations <m>\ln(e^p)=p</m> and <m>\ln(b^p)=p\ln(b)</m>, and check that these definitions agree with integer powers.</p></li>
+      <li><p>Define <m>e^p</m> and <m>b^p</m> for every real power <m>p</m> by the equations <m>\ln(e^p)=p</m> and <m>\ln(b^p)=p\ln(b)</m>, consistent with integer powers.</p></li>
       <li><p>Differentiate <m>\ln(e^x)=x</m> and <m>\ln(b^x)=x\ln(b)</m> to show that <m>\dfrac{d}{dx}\big[e^x\big]=e^x</m> and <m>\dfrac{d}{dx}\big[b^x\big]=b^x\ln(b)</m>.</p></li>
-      <li><p>Use the product and chain rules to find more complicated derivatives involving exponentials.</p></li>
+      <li><p>Combine the derivatives of exponentials with other derivative rules.</p></li>
     </ul>
   </objectives>
 
@@ -16,12 +16,22 @@
     <p>
       We know a lot about <m>\ln(x)</m>: it is defined by an integral, it turns changes questions
       about products into questions about sums, and its derivative is <m>1/x</m>.
-      Today we use <m>\ln</m> to make sense of powers
-      <m>b^p</m> when <m>p</m> is not a whole number, and then to find their derivatives.
-      Throughout, you may use the approximate values
-      <md>\ln(2)\approx 0.693 \qquad\text{and}\qquad \ln(3)\approx 1.099\text{.}</md>
+      In this activity, we will take advantage of the logarithm being an invertible function.
+      This will allow us to use <m>\ln</m> to make sense of powers
+      <m>b^p</m> when <m>p</m> is not a whole number.
+      This will allow us to define exponential functions and then to find their derivatives.
     </p>
   </introduction>
+
+  <assemblage xml:id="assemblage-numerical-logarithms">
+    <p>
+      Throughout, you may use the approximate values:
+      <md>
+        <mrow>  \ln(2) \amp \approx 0.693  </mrow>
+        <mrow> \ln(3) \amp \approx 1.099 </mrow>
+      </md>
+    </p>
+  </assemblage>
 
   <exercise xml:id="ex-building-log-scale" workspace="0in">
     <title>Building a Logarithmic Scale</title>
@@ -74,9 +84,9 @@
     <task xml:id="task-scale-threes" workspace="1.25in">
       <statement>
         <p>
-          Label <m>y=3</m>, <m>y=6</m>, and <m>y=9</m> on the number line. Starting from any
-          label <m>y</m>, what happens to <m>y</m> when you move a distance <m>\ln(3)</m> to the
-          right? What happens when you move a distance <m>\ln(3)</m> to the left?
+          Label <m>y=3</m> and <m>y=9</m>, and then <m>y=6</m> and <m>y=12</m> on the number line.
+          What happens to values of <m>y</m> when you move to the left or right on <m>x</m>-values
+          by the distance <m>\ln(3)</m>?
         </p>
       </statement>
     </task>
@@ -108,11 +118,19 @@
   <remark xml:id="rem-ln-range">
     <title>The Range of <m>\ln</m></title>
     <p>
-      Because <m>\ln'(x)=\dfrac{1}{x}\gt 0</m>, the function <m>\ln</m> is increasing, so no two
-      numbers <m>y</m> are ever placed at the same position. Because <m>\ln(2^n)=n\ln(2)</m> can
-      be made as large or as negative as we like, and <m>\ln</m> is continuous, every position is
-      filled. In other words, the range of <m>\ln</m> is <m>(-\infty,\infty)</m>, and for every
+      Because <m>\ln'(x)=\dfrac{1}{x} \gt 0</m>, the function <m>\ln</m> is increasing 
+      on <m>(0,\infty)</m>, so no two numbers <m>y</m> are ever placed at the same position.
+      Because <m>\ln(2^n)=n\ln(2)</m> can be made as large or as negative as we like,
+      and <m>\ln</m> is continuous, every position is filled. In other words,
+      the range of <m>\ln</m> is <m>(-\infty,\infty)</m>, and for every
       real number <m>p</m> there is <em>exactly one</em> <m>y\gt 0</m> with <m>\ln(y)=p</m>.
+    </p>
+    <p>
+      This also proves two limits:
+      <md>
+        <mrow> \lim_{x \to 0^+} \ln(x) \amp = -\infty </mrow>
+        <mrow> \lim_{x \to \infty} \ln(x) \amp = +\infty </mrow>
+      </md>
     </p>
   </remark>
 
@@ -120,32 +138,21 @@
     <title>The Number <m>e</m> and Real Powers</title>
     <statement>
       <p>
-        The <term>natural base</term> <m>e</m> is the number with <m>\ln(e)=1</m>.
+        The <term>natural base</term> <m>e</m> is that number with <m>\ln(e)=1</m>.
       </p>
       <p>
         For every real number <m>p</m>, the power <m>e^p</m> is the number <m>N</m> with
-        <md>e^p = N \quad \Leftrightarrow \quad \ln(N)=p\text{.}</md>
-        More generally, if <m>b\gt 0</m>, the power <m>b^p</m> is the number <m>N</m> with
-        <md>b^p = N \quad \Leftrightarrow \quad \ln(N)=p\ln(b)\text{.}</md>
+        <md>e^p = N \quad \Leftrightarrow \quad \ln(N)=p</md>.
+        More generally, if <m>b \gt 0</m>, the power <m>b^p</m> is the number <m>N</m> with
+        <md>b^p = N \quad \Leftrightarrow \quad \ln(N)=p\ln(b)</md>.
+        That is, we <em>define</em> powers so that the power rule for logarithms is valid.
+      </p>
+      <p>
         The <term>natural exponential function</term> is <m>\exp(x)=e^x</m>, and the
         <term>exponential function with base <m>b</m></term> is <m>\exp_b(x)=b^x</m>.
       </p>
     </statement>
   </definition>
-
-  <exercise xml:id="ex-definition-consistency" workspace="0in">
-    <title>Does the Definition Agree with What We Know?</title>
-    <task xml:id="task-consistency-e-cubed" workspace="1in">
-      <statement>
-        <p>
-          Using the definition, <m>e^3</m> is the number whose logarithm is <m>3</m>. Use the
-          product rule for logarithms to find <m>\ln(e\cdot e\cdot e)</m>. Explain why the
-          definition gives the same number <m>e^3</m> as multiplying <m>e</m> by itself three
-          times.
-        </p>
-      </statement>
-    </task>
-  </exercise>
 
   <theorem xml:id="thm-exp-ln-inverse">
     <title><m>e^x</m> and <m>\ln(x)</m> Are Inverse Functions</title>
@@ -154,7 +161,7 @@
         For every real number <m>x</m>, <m>\ln(e^x)=x</m>, and for every <m>y\gt 0</m>,
         <m>e^{\ln(y)}=y</m>. Since <m>\ln(y)</m> is differentiable and its derivative
         <m>1/y</m> is never zero, its inverse function <m>e^x</m> is also differentiable. For
-        the same reason, <m>b^x</m> is differentiable for every <m>b\gt 0</m>.
+        the same reason, <m>b^x</m> is differentiable for every <m>b \gt 0</m>.
       </p>
     </statement>
   </theorem>
@@ -163,8 +170,9 @@
     <title>Derivatives of Exponential Functions</title>
     <introduction>
       <p>
-        Now that we know <m>e^x</m> and <m>b^x</m> have derivatives, we can find them by
-        differentiating the equations that define them, just as in implicit differentiation.
+        Now that we know <m>e^x</m> and <m>b^x</m> <em>have</em> derivatives,
+        we can <em>find</em> them by differentiating the equations that define them
+        using implicit differentiation.
       </p>
     </introduction>
     <task xml:id="task-derivative-e-x" workspace="1.25in">
@@ -197,5 +205,47 @@
     </task>
   </exercise>
 
+  <assemblage xml:id="assemblage-derivatives-exponentials">
+    <title>Derivatives of Exponential Functions</title>
+    <p>
+      <md>
+        <mrow> \frac{d}{dx}\Big[ e^x \Big] = e^x </mrow>
+        <mrow> \frac{d}{dx}\Big[ b^x \Big] = b^x \cdot \ln(b) </mrow>
+      </md>
+      By using the chain rule, we can extend these to composition with any formula <m>u</m>:
+      <md>
+        <mrow> \frac{d}{dx}\Big[ e^u \Big] = e^u \cdot u' </mrow>
+        <mrow> \frac{d}{dx}\Big[ b^u \Big] = b^u \cdot \ln(b) \cdot u' </mrow>
+      </md>
+    </p>
+  </assemblage>
 
+  <exercise>
+    <introduction>
+      <p>
+        Use the new derivative formulas and rules of differentiation to find the following derivatives.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          <m>\frac{d}{dx} e^{3x} </m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\frac{d}{dx} e^{-x^2} </m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If <m>f(x) = xe^{-2x}</m>, find <m>f'(x)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
 </worksheet>
