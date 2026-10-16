@@ -3,3 +3,5 @@
 output
 logs
 generated-assets
+.DS_Store
+devcontainer-lock.json

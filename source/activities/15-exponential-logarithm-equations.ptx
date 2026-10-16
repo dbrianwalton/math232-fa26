@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-exponential-logarithm-equations">
+  <title>Solving Exponential and Logarithm Equations</title>
+
+  <objectives xml:id="obj-exponential-logarithm-equations">
+    <ul>
+      <li><p>Solve equations with an unknown exponent by isolating the exponential expression and applying <m>\ln</m> to both sides, using <m>e^u=N \Rightarrow u=\ln(N)</m> and <m>b^u=c \Rightarrow u\ln(b)=\ln(c)</m>.</p></li>
+      <li><p>Determine the constants in an exponential model <m>y=Ae^{r(t-t_0)}</m> from two data points, rewrite it in the form <m>y=Ce^{rt}</m>, and interpret doubling time and half-life.</p></li>
+      <li><p>Determine the exponent in a power law model <m>y=A(x/x_0)^p</m> from two data points, and distinguish a power law from an exponential model.</p></li>
+      <li><p>Rewrite any power <m>u^w</m> with <m>u\gt 0</m> as <m>e^{w\ln(u)}</m>, and use this form to express a power with a different base in terms of <m>e</m>.</p></li>
+      <li><p>Interpret <m>\log_b(c)</m> as the exponent <m>u</m> with <m>b^u=c</m>, evaluate simple logarithms such as <m>\log_3(27)</m> and <m>\log_2(1/16)</m> without a calculator, and use <m>\log_b(c)=\dfrac{\ln(c)}{\ln(b)}</m> to evaluate the rest.</p></li>
+      <li><p>Solve equations involving logarithms, checking the domain of each solution.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Now that we have both <m>\ln(x)</m> and <m>e^x</m>, and we know they are inverse functions,
+      we can solve equations where the unknown sits in an exponent. This is the key skill
+      for fitting exponential and power law models to data. The same idea also lets us
+      write every power in terms of <m>e</m>, and every logarithm in terms of <m>\ln</m>, so
+      that the natural exponential and natural logarithm are all we need for any base.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-solve-for-exponent" workspace="0in">
+    <title>Solving for an Unknown Exponent</title>
+    <introduction>
+      <p>
+        Recall from <xref ref="def-e-and-exponentials"/> that <m>e^u=N</m> means exactly that
+        <m>\ln(N)=u</m>, and that <m>\ln(b^u)=u\ln(b)</m>. Because <m>\ln</m> is one-to-one, applying
+        it to both sides of an equation never creates or loses a solution, as long as both sides are positive.
+      </p>
+    </introduction>
+    <task xml:id="task-solve-natural-exponential" workspace="1.25in">
+      <statement>
+        <p>
+          Solve <m>e^{3x-1}=5</m> for <m>x</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-solve-isolate-first" workspace="1.25in">
+      <statement>
+        <p>
+          Solve <m>4e^{-x/2}+1=13</m> for <m>x</m>. What must you do before applying <m>\ln</m>, and why?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-solve-other-base" workspace="1.25in">
+      <statement>
+        <p>
+          Solve <m>2^x=10</m> for <m>x</m> by applying <m>\ln</m> to both sides. Which property of
+          the logarithm moves the unknown out of the exponent?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-solve-other-base-coefficient" workspace="1.25in">
+      <statement>
+        <p>
+          Solve <m>5\cdot 3^{2t}=40</m> for <m>t</m>. Write your exact answer using only <m>\ln(2)</m> and <m>\ln(3)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-solve-no-solution" workspace="1in">
+      <statement>
+        <p>
+          Explain why <m>e^x=-2</m> has no solution. What does this say about the range of <m>e^x</m>?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-solve-error-analysis" workspace="1.5in">
+      <statement>
+        <p>
+          A student solves <m>3+2^x=11</m> by <q>taking the logarithm of both sides</q> and writing
+          <m>\ln(3)+x\ln(2)=\ln(11)</m>. Explain what went wrong. Then solve the equation correctly.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-exponential-models" workspace="0in">
+    <title>Fitting an Exponential Model to Two Data Points</title>
+    <introduction>
+      <p>
+        An exponential model can be written <m>y=Ae^{r(t-t_0)}</m>. When <m>t=t_0</m>, the exponent
+        is zero and <m>y=A</m>, so if one of our data points is <m>(t_0,A)</m>, the constant <m>A</m>
+        is already known. Only the rate <m>r</m> has to be found, and that is an equation with an unknown exponent.
+      </p>
+      <p>
+        A culture of bacteria is observed to have 400 cells at time <m>t=2</m> hours and 1500 cells at
+        time <m>t=5</m> hours.
+      </p>
+    </introduction>
+    <task xml:id="task-model-set-up" workspace="1in">
+      <statement>
+        <p>
+          Which data point should play the role of <m>(t_0,A)</m>? Write the model with this choice,
+          leaving only <m>r</m> unknown.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-model-find-rate" workspace="1.5in">
+      <statement>
+        <p>
+          Substitute the other data point and solve for <m>r</m>. Is <m>r</m> positive or negative?
+          Does that match the data?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-model-doubling-time" workspace="1.5in">
+      <statement>
+        <p>
+          How long does it take for the population to double? Set up the equation
+          <m>Ae^{r\,T}=2A</m>, solve for <m>T</m> in terms of <m>r</m>, and then evaluate. Does your answer depend on
+          the starting size <m>A</m>?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-model-rewrite" workspace="1.25in">
+      <statement>
+        <p>
+          Rewrite your model in the form <m>y=Ce^{rt}</m> by using <m>e^{a+b}=e^a e^b</m>.
+          What is <m>C</m> in terms of <m>A</m>, <m>r</m>, and <m>t_0</m>, and what does it mean in the context of the culture?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-model-decay" workspace="2in">
+      <statement>
+        <p>
+          A drug concentration is measured as 12 mg/L at <m>t=1</m> hour and 3 mg/L at <m>t=4</m> hours.
+          Build a model <m>y=Ae^{r(t-t_0)}</m>, find <m>r</m> exactly, and explain the sign of <m>r</m>.
+          Then find the half-life, the time it takes for the concentration to drop to half of any given value.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-power-law-models" workspace="0in">
+    <title>Fitting a Power Law Model</title>
+    <introduction>
+      <p>
+        A power law model can be written <m>y=A\left(\dfrac{x}{x_0}\right)^p</m>. Again, when <m>x=x_0</m>
+        we get <m>y=A</m>, so one data point <m>(x_0,A)</m> gives the constant, and the other gives an equation
+        for the exponent <m>p</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-power-kepler" workspace="1.75in">
+      <statement>
+        <p>
+          The Earth is <m>1</m> astronomical unit (AU) from the Sun and has an orbital period of <m>1</m> year.
+          Mars is <m>1.524</m> AU from the Sun and has an orbital period of <m>1.881</m> years. Take
+          <m>(x_0,A)=(1,1)</m> to model the period <m>T</m> as a power law in the distance <m>a</m>:
+          <m>T=\left(\dfrac{a}{1}\right)^p</m>. Solve for <m>p</m>. What simple number is your answer close to?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-power-metabolic" workspace="1.75in">
+      <statement>
+        <p>
+          Suppose an animal of mass 4 kg uses energy at a rate of 14 W, and an animal of mass 64 kg uses
+          energy at a rate of 112 W. Model the rate <m>R</m> as <m>R=14\left(\dfrac{m}{4}\right)^p</m>
+          and find <m>p</m> exactly. Your answer should simplify to a rational number. Which property of
+          logarithms makes that happen?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-power-as-exponential" workspace="0in">
+    <title>Every Power Is a Natural Exponential</title>
+    <introduction>
+      <p>
+        By the definition of real powers, <m>\ln(u^w)=w\ln(u)</m> for <m>u\gt 0</m>. Reading this
+        as an exponential equation gives
+        <md>u^w = e^{w\ln(u)} \qquad (u\gt 0)\text{.}</md>
+        This lets us treat any power, including ones where both the base and the exponent vary, as a
+        natural exponential.
+      </p>
+    </introduction>
+    <task xml:id="task-power-rewrite" workspace="1.25in">
+      <statement>
+        <p>
+          Rewrite each as a natural exponential <m>e^{(\cdots)}</m>: <m>5^x</m>, <m>x^\pi</m>, and <m>x^x</m>.
+          For which values of <m>x</m> is each rewriting valid?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-power-rewrite-drug" workspace="1.25in">
+      <statement>
+        <p>
+          The drug concentration from before can be written <m>y=12\left(\tfrac{1}{2}\right)^{2(t-1)/3}</m>.
+          Rewrite it using base <m>e</m>. How does your exponent compare with your model from
+          <xref ref="task-model-decay"/>?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <definition xml:id="def-log-base-b">
+    <title>Logarithm with Base <m>b</m></title>
+    <statement>
+      <p>
+        Let <m>b\gt 0</m> with <m>b\ne 1</m>, and let <m>c\gt 0</m>. The <term>logarithm with base <m>b</m></term>
+        of <m>c</m>, written <m>\log_b(c)</m>, is the exponent <m>u</m> that solves <m>b^u=c</m>:
+        <md>\log_b(c)=u \quad \Leftrightarrow \quad b^u=c\text{.}</md>
+      </p>
+    </statement>
+  </definition>
+
+  <exercise xml:id="ex-log-as-exponent" workspace="0in">
+    <title>A Logarithm Is an Exponent</title>
+    <task xml:id="task-logb-evaluate" workspace="1.75in">
+      <statement>
+        <p>
+          Without a calculator, find <m>\log_3(27)</m> and <m>\log_2\left(\frac{1}{16}\right)</m>.
+          For each, write the equation <m>b^u=c</m> that you are solving.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-logb-evaluate-more" workspace="1.75in">
+      <statement>
+        <p>
+          Find each of <m>\log_5(1)</m>, <m>\log_{10}(0.001)</m>, <m>\log_4(2)</m>, and
+          <m>\log_{1/2}(8)</m>. Which of these are negative, and why does the base or the input tell you so
+          in advance?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-logb-inverse" workspace="1.25in">
+      <statement>
+        <p>
+          Use the definition to explain why <m>\log_b(b^p)=p</m> for every real <m>p</m> and
+          <m>b^{\log_b(x)}=x</m> for every <m>x\gt 0</m>. What does this say about the functions
+          <m>b^x</m> and <m>\log_b(x)</m>?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-logb-not-a-power" workspace="1.5in">
+      <statement>
+        <p>
+          Between which two integers is <m>\log_2(10)</m>? It is not a nice exponent, so
+          solve <m>2^u=10</m> using the method from <xref ref="ex-solve-for-exponent"/> and write <m>u</m> in
+          terms of <m>\ln</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-logb-general-formula" workspace="1.5in">
+      <statement>
+        <p>
+          Repeat the previous task for a general equation <m>b^u=c</m> to find a formula for
+          <m>\log_b(c)</m> in terms of natural logarithms.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <theorem xml:id="thm-change-of-base">
+    <title>Change of Base</title>
+    <statement>
+      <p>
+        For <m>b\gt 0</m>, <m>b\ne 1</m>, and <m>c\gt 0</m>,
+        <md>\log_b(c) = \frac{\ln(c)}{\ln(b)}\text{.}</md>
+        In particular, <m>\ln(c)=\log_e(c)</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <exercise xml:id="ex-solve-log-equations" workspace="0in">
+    <title>Solving Equations with Logarithms</title>
+    <task xml:id="task-logb-properties" workspace="1in">
+      <statement>
+        <p>
+          Use the change of base formula and <xref ref="thm-ln-algebraic-properties"/> to explain why
+          <m>\log_b(xy)=\log_b(x)+\log_b(y)</m>. Which other properties do you expect <m>\log_b</m> to share?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-logb-solve-log-equation" workspace="1.5in">
+      <statement>
+        <p>
+          Solve <m>\ln(2x+1)=3</m> and <m>\log_2(x-1)=3</m>. What do you do to both sides of each
+          equation to undo the logarithm?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-logb-solve-combine" workspace="2in">
+      <statement>
+        <p>
+          Solve <m>\log_2(x)+\log_2(x-2)=3</m>. Combine the logarithms first, and then check each
+          candidate solution against the domain of the original equation.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <assemblage xml:id="assemblage-exp-log-equations-summary">
+    <title>Summary</title>
+    <p>
+      To solve for an unknown exponent, isolate the exponential expression, then apply <m>\ln</m>:
+      <md>
+        <mrow> e^u = N \amp \Rightarrow u = \ln(N) </mrow>
+        <mrow> b^u = c \amp \Rightarrow u\ln(b) = \ln(c) \ \Rightarrow\ u = \log_b(c) </mrow>
+      </md>
+      Every power with a positive base is a natural exponential, <m>u^w=e^{w\ln(u)}</m>, and every
+      logarithm is an exponent, <m>\log_b(c)=u \Leftrightarrow b^u=c</m>, which can be computed from natural
+      logarithms as <m>\log_b(c)=\ln(c)/\ln(b)</m>. When solving
+      an equation with logarithms, undo the logarithm with the matching exponential, and always check
+      that each solution lies in the domain of the original equation.
+    </p>
+  </assemblage>
+</worksheet>
