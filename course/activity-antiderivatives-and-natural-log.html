@@ -36,7 +36,7 @@ lang: "en-US",
 <meta name="twitter:description" content="MATH 232-0002 Fall 2026">
 <meta property="og:description" content="MATH 232-0002 Fall 2026">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -203,6 +203,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-logarithm-as-integral.html" class="internal"><span class="title">Properties of the Logarithm Defined by an Integral</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-chain-rule-with-logarithm.html" class="internal"><span class="title">The Chain Rule with the Logarithm</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-exponentials-functions.html" class="internal"><span class="title">Exponential Functions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-exponential-logarithm-equations.html" class="internal"><span class="title">Solving Exponential and Logarithm Equations</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
@@ -270,14 +271,14 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="activity-antiderivatives-and-natural-log-3-1">On the last activity, the Fundamental Theorem of Calculus told you that every accumulation function is an antiderivative of the function it accumulates. Today we turn that idea around. Instead of starting with a function and building its accumulation function through a limit, can we start with a function <span class="process-math">\(f(x)\)</span> and simply propose a formula whose derivative is <span class="process-math">\(f(x)\text{,}\)</span> directly, with no limit at all?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-antiderivatives-and-natural-log-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <article class="definition definition-like" id="def-antiderivative"><h2 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">43</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Antiderivative.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">43</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Antiderivative.</span>
 </h2>
 <div class="para" id="def-antiderivative-2-1">Given a function <span class="process-math">\(f(x)\text{,}\)</span> another function <span class="process-math">\(F(x)\)</span> is called an <dfn class="terminology">antiderivative</dfn> of <span class="process-math">\(f(x)\)</span> if <span class="process-math">\(F'(x) = f(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-antiderivative-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 43: Antiderivative"><a tabindex="-1" href="#def-antiderivative" title="Copy heading and permalink for Definition 43: Antiderivative" aria-label="Copy heading and permalink for Definition 43: Antiderivative">🔗</a></div>
 </article>
 <article class="remark remark-like" id="rem-known-antiderivatives-recall"><h2 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">44</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Recall: Antiderivatives You Have Already Found.</span>
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">44</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Recall: Antiderivatives You Have Already Found.</span>
 </h2>
 <div class="para logical" id="rem-known-antiderivatives-recall-2">
 <div class="para">Every accumulation function you have built so far is an example:</div>
@@ -315,7 +316,7 @@ f(x) = x^3 \quad \amp \Rightarrow \quad F(x) = \frac{1}{4}x^4
 </article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 1: Generalizing the Power Rule"><a tabindex="-1" href="#ex-generalize-power-rule" title="Copy heading and permalink for Worksheet Exercise 1: Generalizing the Power Rule" aria-label="Copy heading and permalink for Worksheet Exercise 1: Generalizing the Power Rule">🔗</a></div>
 </article>
 <article class="remark remark-like" id="rem-domain-caveat-negative-powers"><h2 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">45</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Domain Caveat.</span>
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">45</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Domain Caveat.</span>
 </h2>
 <div class="para" id="rem-domain-caveat-negative-powers-2">Our accumulation functions were built as integrals starting at <span class="process-math">\(0\text{.}\)</span> That definition breaks down for negative powers, such as <span class="process-math">\(f(x)=x^{-2}\text{,}\)</span> because <span class="process-math">\(f\)</span> has a discontinuity at <span class="process-math">\(x=0\text{:}\)</span> an integral like <span class="process-math">\(\int_0^b x^{-2}\,dx\)</span> simply does not exist. The antiderivative formula you just found is still perfectly good as a function in its own right, though. It just needs to be considered on an interval that avoids <span class="process-math">\(x=0\text{,}\)</span> rather than being built as an accumulation function starting from <span class="process-math">\(0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rem-domain-caveat-negative-powers-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -348,7 +349,7 @@ f(x) = x^3 \quad \amp \Rightarrow \quad F(x) = \frac{1}{4}x^4
 </article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 2: Adding a Constant"><a tabindex="-1" href="#ex-adding-a-constant" title="Copy heading and permalink for Worksheet Exercise 2: Adding a Constant" aria-label="Copy heading and permalink for Worksheet Exercise 2: Adding a Constant">🔗</a></div>
 </article>
 <article class="theorem theorem-like" id="thm-antiderivatives-differ-by-constant"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">46</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Antiderivatives Differ Only By a Constant.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">46</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Antiderivatives Differ Only By a Constant.</span>
 </h2>
 <div class="para" id="thm-antiderivatives-differ-by-constant-2-1">If <span class="process-math">\(F(x)\)</span> and <span class="process-math">\(G(x)\)</span> are both antiderivatives of the same function <span class="process-math">\(f(x)\)</span> on an interval <span class="process-math">\([a,b]\text{,}\)</span> then <span class="process-math">\(F(x)-G(x)\)</span> is a constant on that interval.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-antiderivatives-differ-by-constant-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -362,7 +363,7 @@ f(x) = x^3 \quad \amp \Rightarrow \quad F(x) = \frac{1}{4}x^4
 <div class="autopermalink" aria-hidden="true" data-description="Remark 47"><a tabindex="-1" href="#rem-antiderivative-family" title="Copy heading and permalink for Remark 47" aria-label="Copy heading and permalink for Remark 47">🔗</a></div>
 </article>
 <article class="definition definition-like" id="def-indefinite-integral"><h2 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">48</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Indefinite Integral.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">48</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Indefinite Integral.</span>
 </h2>
 <div class="para logical" id="def-indefinite-integral-2-1">
 <div class="para">The notation <span class="process-math">\(\displaystyle\int f(x)\,dx\text{,}\)</span> an integral written with no limits of integration, is called an <dfn class="terminology">indefinite integral</dfn>. It represents the entire <em class="emphasis">family</em> of antiderivatives of <span class="process-math">\(f(x)\text{,}\)</span> not a single function and not a number. Once one antiderivative <span class="process-math">\(F(x)\)</span> is found, every other antiderivative is obtained by adding a constant, so we write</div>
@@ -423,7 +424,7 @@ f(x) = x^3 \quad \amp \Rightarrow \quad F(x) = \frac{1}{4}x^4
 </article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 4: Where the Pattern Breaks Down"><a tabindex="-1" href="#ex-power-rule-breaks" title="Copy heading and permalink for Worksheet Exercise 4: Where the Pattern Breaks Down" aria-label="Copy heading and permalink for Worksheet Exercise 4: Where the Pattern Breaks Down">🔗</a></div>
 </article>
 <article class="remark remark-like" id="rem-ftc-creates-new-function"><h2 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">49</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A New Kind of Function.</span>
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">49</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A New Kind of Function.</span>
 </h2>
 <div class="para logical" id="rem-ftc-creates-new-function-2">
 <div class="para">The Fundamental Theorem of Calculus does not care whether a function is built from powers of <span class="process-math">\(x\text{.}\)</span> It only asks for continuity. The function <span class="process-math">\(f(t)=1/t\)</span> is continuous everywhere except at <span class="process-math">\(t=0\text{,}\)</span> so on any interval avoiding <span class="process-math">\(0\text{,}\)</span> it has an accumulation function, and that accumulation function must be an antiderivative of <span class="process-math">\(1/t\text{,}\)</span> whether or not we have an algebraic formula for it in terms of powers. This gives us a way to <em class="emphasis">create</em> a genuinely new function, one we have not seen before, as an antiderivative of <span class="process-math">\(1/x\text{.}\)</span> We name it the <dfn class="terminology">natural logarithm</dfn>:</div>
@@ -457,7 +458,7 @@ f(x) = x^3 \quad \amp \Rightarrow \quad F(x) = \frac{1}{4}x^4
 </article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 5: Exploring \ln(x)"><a tabindex="-1" href="#ex-defining-natural-log" title="Copy heading and permalink for Worksheet Exercise 5: Exploring \ln(x)" aria-label="Copy heading and permalink for Worksheet Exercise 5: Exploring \ln(x)">🔗</a></div>
 </article>
 <article class="remark remark-like" id="rem-looking-ahead-log-properties"><h2 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">50</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Looking Ahead.</span>
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">50</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Looking Ahead.</span>
 </h2>
 <div class="para" id="rem-looking-ahead-log-properties-2">You now have a genuinely new function, <span class="process-math">\(\ln(x)\text{,}\)</span> defined directly by an integral rather than by any algebraic formula. In an upcoming activity we will explore its other properties.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rem-looking-ahead-log-properties-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>

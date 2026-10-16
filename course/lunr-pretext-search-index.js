@@ -1234,6 +1234,96 @@ var ptx_lunr_docs = [
   "body": "  Use the new derivative formulas and rules of differentiation to find the following derivatives.                   If , find .    "
 },
 {
+  "id": "activity-exponential-logarithm-equations",
+  "level": "1",
+  "url": "activity-exponential-logarithm-equations.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Solving Exponential and Logarithm Equations",
+  "body": " Solving Exponential and Logarithm Equations    Solve equations with an unknown exponent by isolating the exponential expression and applying to both sides, using and .  Determine the constants in an exponential model from two data points, rewrite it in the form , and interpret doubling time and half-life.  Determine the exponent in a power law model from two data points, and distinguish a power law from an exponential model.  Rewrite any power with as , and use this form to express a power with a different base in terms of .  Interpret as the exponent with , evaluate simple logarithms such as and without a calculator, and use to evaluate the rest.  Solve equations involving logarithms, checking the domain of each solution.     Now that we have both and , and we know they are inverse functions, we can solve equations where the unknown sits in an exponent. This is the key skill for fitting exponential and power law models to data. The same idea also lets us write every power in terms of , and every logarithm in terms of , so that the natural exponential and natural logarithm are all we need for any base.    Solving for an Unknown Exponent   Recall from that means exactly that , and that . Because is one-to-one, applying it to both sides of an equation never creates or loses a solution, as long as both sides are positive.     Solve for .      Solve for . What must you do before applying , and why?      Solve for by applying to both sides. Which property of the logarithm moves the unknown out of the exponent?      Solve for . Write your exact answer using only and .      Explain why has no solution. What does this say about the range of ?      A student solves by taking the logarithm of both sides and writing . Explain what went wrong. Then solve the equation correctly.      Fitting an Exponential Model to Two Data Points   An exponential model can be written . When , the exponent is zero and , so if one of our data points is , the constant is already known. Only the rate has to be found, and that is an equation with an unknown exponent.  A culture of bacteria is observed to have 400 cells at time hours and 1500 cells at time hours.     Which data point should play the role of ? Write the model with this choice, leaving only unknown.      Substitute the other data point and solve for . Is positive or negative? Does that match the data?      How long does it take for the population to double? Set up the equation , solve for in terms of , and then evaluate. Does your answer depend on the starting size ?      Rewrite your model in the form by using . What is in terms of , , and , and what does it mean in the context of the culture?      A drug concentration is measured as 12 mg\/L at hour and 3 mg\/L at hours. Build a model , find exactly, and explain the sign of . Then find the half-life, the time it takes for the concentration to drop to half of any given value.      Fitting a Power Law Model   A power law model can be written . Again, when we get , so one data point gives the constant, and the other gives an equation for the exponent .     The Earth is astronomical unit (AU) from the Sun and has an orbital period of year. Mars is AU from the Sun and has an orbital period of years. Take to model the period as a power law in the distance : . Solve for . What simple number is your answer close to?      Suppose an animal of mass 4 kg uses energy at a rate of 14 W, and an animal of mass 64 kg uses energy at a rate of 112 W. Model the rate as and find exactly. Your answer should simplify to a rational number. Which property of logarithms makes that happen?      Every Power Is a Natural Exponential   By the definition of real powers, for . Reading this as an exponential equation gives This lets us treat any power, including ones where both the base and the exponent vary, as a natural exponential.     Rewrite each as a natural exponential : , , and . For which values of is each rewriting valid?      The drug concentration from before can be written . Rewrite it using base . How does your exponent compare with your model from ?      Logarithm with Base   Let with , and let . The logarithm with base of , written , is the exponent that solves :      A Logarithm Is an Exponent    Without a calculator, find and . For each, write the equation that you are solving.      Find each of , , , and . Which of these are negative, and why does the base or the input tell you so in advance?      Use the definition to explain why for every real and for every . What does this say about the functions and ?      Between which two integers is ? It is not a nice exponent, so solve using the method from and write in terms of .      Repeat the previous task for a general equation to find a formula for in terms of natural logarithms.      Change of Base   For , , and , In particular, .     Solving Equations with Logarithms    Use the change of base formula and to explain why . Which other properties do you expect to share?      Solve and . What do you do to both sides of each equation to undo the logarithm?      Solve . Combine the logarithms first, and then check each candidate solution against the domain of the original equation.      Summary  To solve for an unknown exponent, isolate the exponential expression, then apply : Every power with a positive base is a natural exponential, , and every logarithm is an exponent, , which can be computed from natural logarithms as . When solving an equation with logarithms, undo the logarithm with the matching exponential, and always check that each solution lies in the domain of the original equation.   "
+},
+{
+  "id": "obj-exponential-logarithm-equations",
+  "level": "2",
+  "url": "activity-exponential-logarithm-equations.html#obj-exponential-logarithm-equations",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Solve equations with an unknown exponent by isolating the exponential expression and applying to both sides, using and .  Determine the constants in an exponential model from two data points, rewrite it in the form , and interpret doubling time and half-life.  Determine the exponent in a power law model from two data points, and distinguish a power law from an exponential model.  Rewrite any power with as , and use this form to express a power with a different base in terms of .  Interpret as the exponent with , evaluate simple logarithms such as and without a calculator, and use to evaluate the rest.  Solve equations involving logarithms, checking the domain of each solution.   "
+},
+{
+  "id": "ex-solve-for-exponent",
+  "level": "2",
+  "url": "activity-exponential-logarithm-equations.html#ex-solve-for-exponent",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Solving for an Unknown Exponent.",
+  "body": " Solving for an Unknown Exponent   Recall from that means exactly that , and that . Because is one-to-one, applying it to both sides of an equation never creates or loses a solution, as long as both sides are positive.     Solve for .      Solve for . What must you do before applying , and why?      Solve for by applying to both sides. Which property of the logarithm moves the unknown out of the exponent?      Solve for . Write your exact answer using only and .      Explain why has no solution. What does this say about the range of ?      A student solves by taking the logarithm of both sides and writing . Explain what went wrong. Then solve the equation correctly.    "
+},
+{
+  "id": "ex-exponential-models",
+  "level": "2",
+  "url": "activity-exponential-logarithm-equations.html#ex-exponential-models",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Fitting an Exponential Model to Two Data Points.",
+  "body": " Fitting an Exponential Model to Two Data Points   An exponential model can be written . When , the exponent is zero and , so if one of our data points is , the constant is already known. Only the rate has to be found, and that is an equation with an unknown exponent.  A culture of bacteria is observed to have 400 cells at time hours and 1500 cells at time hours.     Which data point should play the role of ? Write the model with this choice, leaving only unknown.      Substitute the other data point and solve for . Is positive or negative? Does that match the data?      How long does it take for the population to double? Set up the equation , solve for in terms of , and then evaluate. Does your answer depend on the starting size ?      Rewrite your model in the form by using . What is in terms of , , and , and what does it mean in the context of the culture?      A drug concentration is measured as 12 mg\/L at hour and 3 mg\/L at hours. Build a model , find exactly, and explain the sign of . Then find the half-life, the time it takes for the concentration to drop to half of any given value.    "
+},
+{
+  "id": "ex-power-law-models",
+  "level": "2",
+  "url": "activity-exponential-logarithm-equations.html#ex-power-law-models",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Fitting a Power Law Model.",
+  "body": " Fitting a Power Law Model   A power law model can be written . Again, when we get , so one data point gives the constant, and the other gives an equation for the exponent .     The Earth is astronomical unit (AU) from the Sun and has an orbital period of year. Mars is AU from the Sun and has an orbital period of years. Take to model the period as a power law in the distance : . Solve for . What simple number is your answer close to?      Suppose an animal of mass 4 kg uses energy at a rate of 14 W, and an animal of mass 64 kg uses energy at a rate of 112 W. Model the rate as and find exactly. Your answer should simplify to a rational number. Which property of logarithms makes that happen?    "
+},
+{
+  "id": "ex-power-as-exponential",
+  "level": "2",
+  "url": "activity-exponential-logarithm-equations.html#ex-power-as-exponential",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Every Power Is a Natural Exponential.",
+  "body": " Every Power Is a Natural Exponential   By the definition of real powers, for . Reading this as an exponential equation gives This lets us treat any power, including ones where both the base and the exponent vary, as a natural exponential.     Rewrite each as a natural exponential : , , and . For which values of is each rewriting valid?      The drug concentration from before can be written . Rewrite it using base . How does your exponent compare with your model from ?    "
+},
+{
+  "id": "def-log-base-b",
+  "level": "2",
+  "url": "activity-exponential-logarithm-equations.html#def-log-base-b",
+  "type": "Definition",
+  "number": "60",
+  "title": "Logarithm with Base <span class=\"process-math\">\\(b\\)<\/span>.",
+  "body": " Logarithm with Base   Let with , and let . The logarithm with base of , written , is the exponent that solves :    "
+},
+{
+  "id": "ex-log-as-exponent",
+  "level": "2",
+  "url": "activity-exponential-logarithm-equations.html#ex-log-as-exponent",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "A Logarithm Is an Exponent.",
+  "body": " A Logarithm Is an Exponent    Without a calculator, find and . For each, write the equation that you are solving.      Find each of , , , and . Which of these are negative, and why does the base or the input tell you so in advance?      Use the definition to explain why for every real and for every . What does this say about the functions and ?      Between which two integers is ? It is not a nice exponent, so solve using the method from and write in terms of .      Repeat the previous task for a general equation to find a formula for in terms of natural logarithms.    "
+},
+{
+  "id": "thm-change-of-base",
+  "level": "2",
+  "url": "activity-exponential-logarithm-equations.html#thm-change-of-base",
+  "type": "Theorem",
+  "number": "61",
+  "title": "Change of Base.",
+  "body": " Change of Base   For , , and , In particular, .   "
+},
+{
+  "id": "ex-solve-log-equations",
+  "level": "2",
+  "url": "activity-exponential-logarithm-equations.html#ex-solve-log-equations",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Solving Equations with Logarithms.",
+  "body": " Solving Equations with Logarithms    Use the change of base formula and to explain why . Which other properties do you expect to share?      Solve and . What do you do to both sides of each equation to undo the logarithm?      Solve . Combine the logarithms first, and then check each candidate solution against the domain of the original equation.    "
+},
+{
   "id": "homework",
   "level": "1",
   "url": "homework.html",
