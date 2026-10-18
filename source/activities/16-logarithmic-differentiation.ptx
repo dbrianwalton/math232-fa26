@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-logarithmic-differentiation">
+  <title>Logarithmic Differentiation</title>
+
+  <objectives xml:id="obj-logarithmic-differentiation">
+    <ul>
+      <li><p>Take the logarithm of <m>y=f(x)</m>, differentiate both sides implicitly using <m>\dfrac{d}{dx}\big[\ln|y|\big]=\dfrac{y'}{y}</m>, and solve for <m>y'</m>.</p></li>
+      <li><p>Differentiate functions such as <m>x^x</m> in two equivalent ways: by logarithmic differentiation, and by rewriting the power as <m>e^{x\ln(x)}</m>.</p></li>
+      <li><p>Explain why rewriting <m>u^v</m> as <m>e^{v\ln(u)}</m> is the same computation as logarithmic differentiation.</p></li>
+      <li><p>Use logarithmic differentiation to prove the power rule for every real power and to recover the product rule.</p></li>
+      <li><p>Use logarithmic differentiation to differentiate a function built from several products, quotients, and roots, and explain why it is more efficient than the product and quotient rules.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Previously we found the derivative of <m>b^x</m> by taking the
+      logarithm of both sides of <m>y=b^x</m> and differentiating the result. The logarithm
+      turned a power into a product, and a product into something we knew how to differentiate.
+      In this activity, we make that idea into a general strategy and see what it can do for
+      functions that none of our earlier rules can handle.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-taking-log-first" workspace="0in">
+    <title>Taking the Logarithm First</title>
+    <introduction>
+      <p>
+        Let <m>y=f(x)</m> be a differentiable function that is not zero. Then <m>y</m> is a function of
+        <m>x</m>, and by <xref ref="thm-derivative-ln-absolute-value"/> and the chain rule,
+        <md>\frac{d}{dx}\Big[\ln|y|\Big] = \frac{y'}{y}\text{.}</md>
+      </p>
+    </introduction>
+    <task xml:id="task-logdiff-first-example" workspace="2in">
+      <statement>
+        <p>
+          Let <m>y=x^2e^{3x}</m>. Take the natural logarithm of the absolute value of both sides and
+          use the properties of <m>\ln</m> to expand the right side into a sum. Differentiate both
+          sides with respect to <m>x</m>, and then solve for <m>y'</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-logdiff-first-compare" workspace="1in">
+      <statement>
+        <p>
+          Check your answer by using the product rule on <m>x^2e^{3x}</m>. Where in your logarithmic
+          computation did the product rule <q>hide</q>?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <assemblage xml:id="assemblage-logarithmic-differentiation">
+    <title>Logarithmic Differentiation</title>
+    <p>
+      To find <m>y'</m> for a nonzero differentiable function <m>y=f(x)</m>:
+    </p>
+    <p>
+      <ol>
+        <li><p>Take the logarithm of both sides: <m>\ln|y|=\ln|f(x)|</m>.</p></li>
+        <li><p>Use the properties of <m>\ln</m> to expand the right side.</p></li>
+        <li><p>Differentiate both sides with respect to <m>x</m>, using <m>\dfrac{d}{dx}\big[\ln|y|\big]=\dfrac{y'}{y}</m> on the left.</p></li>
+        <li><p>Multiply by <m>y</m> and replace <m>y</m> with <m>f(x)</m>:
+        <m>y'=y\cdot\dfrac{d}{dx}\Big[\ln|f(x)|\Big]</m>.</p></li>
+      </ol>
+    </p>
+  </assemblage>
+
+  <exercise xml:id="ex-variable-base-and-exponent" workspace="0in">
+    <title>When the Base and the Exponent Both Vary</title>
+    <introduction>
+      <p>
+        Consider <m>y=x^x</m> for <m>x\gt 0</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-xx-no-rule" workspace="1in">
+      <statement>
+        <p>
+          Explain why neither the power rule <m>\dfrac{d}{dx}\big[x^p\big]=px^{p-1}</m> nor the
+          exponential rule <m>\dfrac{d}{dx}\big[b^x\big]=b^x\ln(b)</m> applies to <m>x^x</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-xx-logdiff" workspace="1.5in">
+      <statement>
+        <p>
+          <em>Method A.</em> Use logarithmic differentiation to find <m>y'</m> for <m>y=x^x</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-xx-rewrite" workspace="1.5in">
+      <statement>
+        <p>
+          <em>Method B.</em> Rewrite <m>x^x</m> using the base <m>e</m>. Differentiate
+          this form using the rule for <m>\dfrac{d}{dx}\big[e^u\big]</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-xx-compare" workspace="1.25in">
+      <statement>
+        <p>
+          Compare your two answers. In Method A, where did the expression <m>x\ln(x)</m> appear?
+          Explain why the two methods are really the same computation.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-two-views-log-differentiation">
+    <title>Two Views of One Method</title>
+    <p>
+      For any positive function <m>u</m> and any differentiable function <m>v</m>, we can write
+      <m>y=u^v=e^{v\ln(u)}</m>. The rule for <m>e^w</m> then gives
+      <md>\frac{d}{dx}\Big[u^v\Big] = u^v\cdot\frac{d}{dx}\Big[v\ln(u)\Big]\text{.}</md>
+      Logarithmic differentiation gives the same formula, since <m>\ln(y)=v\ln(u)</m> and
+      <m>y'=y\cdot\dfrac{d}{dx}\big[\ln(y)\big]</m>. Rewriting as <m>e^{v\ln(u)}</m> is logarithmic
+      differentiation in disguise. Use whichever form you find easier to remember and to explain.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-practice-variable-powers" workspace="0in">
+    <title>Practice with Variable Powers</title>
+    <task xml:id="task-practice-x-to-lnx" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>y=x^{\ln(x)}</m> for <m>x\gt 0</m>. Find <m>y'</m> using one of the two methods.
+          Then trade with a teammate who used the other method and compare.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-practice-base-varies" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>y=(x^2+1)^x</m>. Find <m>y'</m>. Which part of your answer comes from differentiating
+          the exponent, and which part comes from differentiating the base?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-log-differentiation-proves" workspace="0in">
+    <title>What Logarithmic Differentiation Proves</title>
+    <task xml:id="task-logdiff-power-rule" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>p</m> be any real number and let <m>y=x^p</m> for <m>x\gt 0</m>. Use
+          logarithmic differentiation to find <m>y'</m>. In Calculus I, the power rule was
+          justified only for certain kinds of powers <m>p</m>. Why does this argument work for
+          <em>every</em> real number <m>p</m>, such as <m>p=\sqrt{2}</m> or <m>p=\pi</m>?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-logdiff-product-rule" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>y=f(x)\,g(x)</m>, where <m>f</m> and <m>g</m> are differentiable and nonzero.
+          Use logarithmic differentiation to find <m>y'</m>, and simplify. Which rule have you
+          found?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-many-factors" workspace="0in">
+    <title>Many Factors at Once</title>
+    <introduction>
+      <p>
+        Logarithmic differentiation is not only for variable exponents. It is also a powerful way to
+        differentiate a function built from many products, quotients, and roots. Consider
+        <md>y=\frac{x^2\,(x+1)^3}{(x-2)^3\,\sqrt{2x+1}}\text{.}</md>
+      </p>
+    </introduction>
+    <task xml:id="task-many-rules-count" workspace="1in">
+      <statement>
+        <p>
+          Without carrying it out, describe what it would take to find <m>y'</m> using the product,
+          quotient, and chain rules. How many times would you need to apply a rule, and what would
+          the unsimplified answer look like?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-many-expand" workspace="1.75in">
+      <statement>
+        <p>
+          Take the logarithm of the absolute value of both sides, and 
+          expand the right side into a sum and difference of
+          simple terms. Write the square root as a power.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-many-differentiate" workspace="1.75in">
+      <statement>
+        <p>
+          Differentiate both sides with respect to <m>x</m> and solve for <m>y'</m>. You may leave
+          your answer as <m>y</m> times a sum of fractions, without combining them.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-many-sign" workspace="1.25in">
+      <statement>
+        <p>
+          At <m>x=3</m>, every factor of <m>y</m> is positive. Evaluate the sum of fractions in your
+          answer at <m>x=3</m> and decide whether <m>y</m> is increasing or decreasing there. Did
+          you need the value of <m>y(3)</m>?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-many-why-better" workspace="1in">
+      <statement>
+        <p>
+          Why does logarithmic differentiation handle this function so much more easily than the
+          product and quotient rules? Which property of <m>\ln</m> is doing the work?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-choosing-method" workspace="0in">
+    <title>Choosing a Method</title>
+    <task xml:id="task-choosing-method" workspace="1.25in">
+      <statement>
+        <p>
+          Write a few sentences for a classmate who missed today. When is logarithmic differentiation
+          (or the rewriting <m>u^v=e^{v\ln(u)}</m>) the right tool, and when are the usual rules
+          enough? Include one example of each.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <assemblage xml:id="assemblage-logarithmic-differentiation-summary">
+    <title>Summary</title>
+    <p>
+      For a nonzero differentiable function <m>y=f(x)</m>,
+      <md>y'=y\cdot\frac{d}{dx}\Big[\ln|y|\Big]=f(x)\cdot\frac{d}{dx}\Big[\ln|f(x)|\Big]\text{.}</md>
+      This is most useful when <m>f</m> has a variable in both the base and the exponent, or when
+      <m>f</m> is a product or quotient of many factors. For a power <m>u^v</m> with <m>u\gt 0</m>,
+      <md>\frac{d}{dx}\Big[u^v\Big]=u^v\cdot\frac{d}{dx}\Big[v\ln(u)\Big]\text{,}</md>
+      which comes either from logarithmic differentiation or from rewriting <m>u^v=e^{v\ln(u)}</m>.
+    </p>
+  </assemblage>
+</worksheet>

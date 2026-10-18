@@ -71,6 +71,7 @@
       <xi:include href="./activities/13-chain-rule-with-logarithm.ptx"/>
       <xi:include href="./activities/14-log-deriv-exponentials.ptx"/>
       <xi:include href="./activities/15-exponential-logarithm-equations.ptx"/>
+      <xi:include href="./activities/16-logarithmic-differentiation.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>
