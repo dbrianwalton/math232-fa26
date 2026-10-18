@@ -1324,6 +1324,87 @@ var ptx_lunr_docs = [
   "body": " Solving Equations with Logarithms    Use the change of base formula and to explain why . Which other properties do you expect to share?      Solve and . What do you do to both sides of each equation to undo the logarithm?      Solve . Combine the logarithms first, and then check each candidate solution against the domain of the original equation.    "
 },
 {
+  "id": "activity-logarithmic-differentiation",
+  "level": "1",
+  "url": "activity-logarithmic-differentiation.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Logarithmic Differentiation",
+  "body": " Logarithmic Differentiation    Take the logarithm of , differentiate both sides implicitly using , and solve for .  Differentiate functions such as in two equivalent ways: by logarithmic differentiation, and by rewriting the power as .  Explain why rewriting as is the same computation as logarithmic differentiation.  Use logarithmic differentiation to prove the power rule for every real power and to recover the product rule.  Use logarithmic differentiation to differentiate a function built from several products, quotients, and roots, and explain why it is more efficient than the product and quotient rules.     Previously we found the derivative of by taking the logarithm of both sides of and differentiating the result. The logarithm turned a power into a product, and a product into something we knew how to differentiate. In this activity, we make that idea into a general strategy and see what it can do for functions that none of our earlier rules can handle.    Taking the Logarithm First   Let be a differentiable function that is not zero. Then is a function of , and by and the chain rule,      Let . Take the natural logarithm of the absolute value of both sides and use the properties of to expand the right side into a sum. Differentiate both sides with respect to , and then solve for .      Check your answer by using the product rule on . Where in your logarithmic computation did the product rule hide ?      Logarithmic Differentiation  To find for a nonzero differentiable function :    Take the logarithm of both sides: .  Use the properties of to expand the right side.  Differentiate both sides with respect to , using on the left.  Multiply by and replace with : .      When the Base and the Exponent Both Vary   Consider for .     Explain why neither the power rule nor the exponential rule applies to .       Method A. Use logarithmic differentiation to find for .       Method B. Rewrite using the base . Differentiate this form using the rule for .      Compare your two answers. In Method A, where did the expression appear? Explain why the two methods are really the same computation.      Two Views of One Method  For any positive function and any differentiable function , we can write . The rule for then gives Logarithmic differentiation gives the same formula, since and . Rewriting as is logarithmic differentiation in disguise. Use whichever form you find easier to remember and to explain.    Practice with Variable Powers    Let for . Find using one of the two methods. Then trade with a teammate who used the other method and compare.      Let . Find . Which part of your answer comes from differentiating the exponent, and which part comes from differentiating the base?      What Logarithmic Differentiation Proves    Let be any real number and let for . Use logarithmic differentiation to find . In Calculus I, the power rule was justified only for certain kinds of powers . Why does this argument work for every real number , such as or ?      Let , where and are differentiable and nonzero. Use logarithmic differentiation to find , and simplify. Which rule have you found?      Many Factors at Once   Logarithmic differentiation is not only for variable exponents. It is also a powerful way to differentiate a function built from many products, quotients, and roots. Consider      Without carrying it out, describe what it would take to find using the product, quotient, and chain rules. How many times would you need to apply a rule, and what would the unsimplified answer look like?      Take the logarithm of the absolute value of both sides, and expand the right side into a sum and difference of simple terms. Write the square root as a power.      Differentiate both sides with respect to and solve for . You may leave your answer as times a sum of fractions, without combining them.      At , every factor of is positive. Evaluate the sum of fractions in your answer at and decide whether is increasing or decreasing there. Did you need the value of ?      Why does logarithmic differentiation handle this function so much more easily than the product and quotient rules? Which property of is doing the work?      Choosing a Method    Write a few sentences for a classmate who missed today. When is logarithmic differentiation (or the rewriting ) the right tool, and when are the usual rules enough? Include one example of each.      Summary  For a nonzero differentiable function , This is most useful when has a variable in both the base and the exponent, or when is a product or quotient of many factors. For a power with , which comes either from logarithmic differentiation or from rewriting .   "
+},
+{
+  "id": "obj-logarithmic-differentiation",
+  "level": "2",
+  "url": "activity-logarithmic-differentiation.html#obj-logarithmic-differentiation",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Take the logarithm of , differentiate both sides implicitly using , and solve for .  Differentiate functions such as in two equivalent ways: by logarithmic differentiation, and by rewriting the power as .  Explain why rewriting as is the same computation as logarithmic differentiation.  Use logarithmic differentiation to prove the power rule for every real power and to recover the product rule.  Use logarithmic differentiation to differentiate a function built from several products, quotients, and roots, and explain why it is more efficient than the product and quotient rules.   "
+},
+{
+  "id": "ex-taking-log-first",
+  "level": "2",
+  "url": "activity-logarithmic-differentiation.html#ex-taking-log-first",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Taking the Logarithm First.",
+  "body": " Taking the Logarithm First   Let be a differentiable function that is not zero. Then is a function of , and by and the chain rule,      Let . Take the natural logarithm of the absolute value of both sides and use the properties of to expand the right side into a sum. Differentiate both sides with respect to , and then solve for .      Check your answer by using the product rule on . Where in your logarithmic computation did the product rule hide ?    "
+},
+{
+  "id": "ex-variable-base-and-exponent",
+  "level": "2",
+  "url": "activity-logarithmic-differentiation.html#ex-variable-base-and-exponent",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "When the Base and the Exponent Both Vary.",
+  "body": " When the Base and the Exponent Both Vary   Consider for .     Explain why neither the power rule nor the exponential rule applies to .       Method A. Use logarithmic differentiation to find for .       Method B. Rewrite using the base . Differentiate this form using the rule for .      Compare your two answers. In Method A, where did the expression appear? Explain why the two methods are really the same computation.    "
+},
+{
+  "id": "rem-two-views-log-differentiation",
+  "level": "2",
+  "url": "activity-logarithmic-differentiation.html#rem-two-views-log-differentiation",
+  "type": "Remark",
+  "number": "62",
+  "title": "Two Views of One Method.",
+  "body": " Two Views of One Method  For any positive function and any differentiable function , we can write . The rule for then gives Logarithmic differentiation gives the same formula, since and . Rewriting as is logarithmic differentiation in disguise. Use whichever form you find easier to remember and to explain.  "
+},
+{
+  "id": "ex-practice-variable-powers",
+  "level": "2",
+  "url": "activity-logarithmic-differentiation.html#ex-practice-variable-powers",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Practice with Variable Powers.",
+  "body": " Practice with Variable Powers    Let for . Find using one of the two methods. Then trade with a teammate who used the other method and compare.      Let . Find . Which part of your answer comes from differentiating the exponent, and which part comes from differentiating the base?    "
+},
+{
+  "id": "ex-log-differentiation-proves",
+  "level": "2",
+  "url": "activity-logarithmic-differentiation.html#ex-log-differentiation-proves",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "What Logarithmic Differentiation Proves.",
+  "body": " What Logarithmic Differentiation Proves    Let be any real number and let for . Use logarithmic differentiation to find . In Calculus I, the power rule was justified only for certain kinds of powers . Why does this argument work for every real number , such as or ?      Let , where and are differentiable and nonzero. Use logarithmic differentiation to find , and simplify. Which rule have you found?    "
+},
+{
+  "id": "ex-many-factors",
+  "level": "2",
+  "url": "activity-logarithmic-differentiation.html#ex-many-factors",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Many Factors at Once.",
+  "body": " Many Factors at Once   Logarithmic differentiation is not only for variable exponents. It is also a powerful way to differentiate a function built from many products, quotients, and roots. Consider      Without carrying it out, describe what it would take to find using the product, quotient, and chain rules. How many times would you need to apply a rule, and what would the unsimplified answer look like?      Take the logarithm of the absolute value of both sides, and expand the right side into a sum and difference of simple terms. Write the square root as a power.      Differentiate both sides with respect to and solve for . You may leave your answer as times a sum of fractions, without combining them.      At , every factor of is positive. Evaluate the sum of fractions in your answer at and decide whether is increasing or decreasing there. Did you need the value of ?      Why does logarithmic differentiation handle this function so much more easily than the product and quotient rules? Which property of is doing the work?    "
+},
+{
+  "id": "ex-choosing-method",
+  "level": "2",
+  "url": "activity-logarithmic-differentiation.html#ex-choosing-method",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Choosing a Method.",
+  "body": " Choosing a Method    Write a few sentences for a classmate who missed today. When is logarithmic differentiation (or the rewriting ) the right tool, and when are the usual rules enough? Include one example of each.    "
+},
+{
   "id": "homework",
   "level": "1",
   "url": "homework.html",
