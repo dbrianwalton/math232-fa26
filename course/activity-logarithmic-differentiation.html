@@ -27,7 +27,7 @@ isReact: false,
 htmlPresentation: false,
 lang: "en-US",
 });
-</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Calculus with Functions II">
@@ -36,7 +36,7 @@ lang: "en-US",
 <meta name="twitter:description" content="MATH 232-0002 Fall 2026">
 <meta property="og:description" content="MATH 232-0002 Fall 2026">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -171,6 +171,15 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outcomes-week-05-06.html#subsec-E1" class="internal"><span class="title">E1 Logarithm Properties and Derivatives</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-outcomes-week-08-09.html" class="internal"><span class="title">Week 8 and Week 9</span></a></div>
+<ul id="ptx-toc-group-sec-outcomes-week-08-09" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outcomes-week-08-09.html#subsec-E2" class="internal"><span class="title">E2 Derivatives with the Natural Exponential</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outcomes-week-08-09.html#subsec-E3" class="internal"><span class="title">E3 Exponential and Power Law Models</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outcomes-week-08-09.html#subsec-E4" class="internal"><span class="title">E4 Rewriting Powers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outcomes-week-08-09.html#subsec-E5" class="internal"><span class="title">E5 Logarithmic Differentiation</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -276,7 +285,7 @@ eBookConfig.enable_chatcodes =  false;
 </h2>
 <div class="introduction" id="ex-taking-log-first-2">
 <div class="para logical" id="ex-taking-log-first-2-1">
-<div class="para">Let <span class="process-math">\(y=f(x)\)</span> be a differentiable function that is not zero. Then <span class="process-math">\(y\)</span> is a function of <span class="process-math">\(x\text{,}\)</span> and by <a href="activity-chain-rule-with-logarithm.html#thm-derivative-ln-absolute-value" class="xref" data-knowl="./knowl/xref/thm-derivative-ln-absolute-value.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 56: The Derivative of \ln|x|">Theorem 56</a> and the chain rule,</div>
+<div class="para">Let <span class="process-math">\(y=f(x)\)</span> be a differentiable function that is not zero. Then <span class="process-math">\(y\)</span> is a function of <span class="process-math">\(x\text{,}\)</span> and by <a href="activity-chain-rule-with-logarithm.html#thm-derivative-ln-absolute-value" class="xref" data-knowl="./knowl/xref/thm-derivative-ln-absolute-value.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 61: The Derivative of \ln|x|">Theorem 61</a> and the chain rule,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-derivative-ln-absolute-value.html" id="ex-taking-log-first-2-1-5">
 \begin{equation*}
 \frac{d}{dx}\Big[\ln|y|\Big] = \frac{y'}{y}\text{.}
@@ -363,7 +372,7 @@ eBookConfig.enable_chatcodes =  false;
 </article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 2: When the Base and the Exponent Both Vary"><a tabindex="-1" href="#ex-variable-base-and-exponent" title="Copy heading and permalink for Worksheet Exercise 2: When the Base and the Exponent Both Vary" aria-label="Copy heading and permalink for Worksheet Exercise 2: When the Base and the Exponent Both Vary">🔗</a></div>
 </article>
 <article class="remark remark-like" id="rem-two-views-log-differentiation"><h2 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">62</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Two Views of One Method.</span>
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">67</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Two Views of One Method.</span>
 </h2>
 <div class="para logical" id="rem-two-views-log-differentiation-2">
 <div class="para">For any positive function <span class="process-math">\(u\)</span> and any differentiable function <span class="process-math">\(v\text{,}\)</span> we can write <span class="process-math">\(y=u^v=e^{v\ln(u)}\text{.}\)</span> The rule for <span class="process-math">\(e^w\)</span> then gives</div>
@@ -375,7 +384,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">Logarithmic differentiation gives the same formula, since <span class="process-math">\(\ln(y)=v\ln(u)\)</span> and <span class="process-math">\(y'=y\cdot\dfrac{d}{dx}\big[\ln(y)\big]\text{.}\)</span> Rewriting as <span class="process-math">\(e^{v\ln(u)}\)</span> is logarithmic differentiation in disguise. Use whichever form you find easier to remember and to explain.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rem-two-views-log-differentiation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Remark 62: Two Views of One Method"><a tabindex="-1" href="#rem-two-views-log-differentiation" title="Copy heading and permalink for Remark 62: Two Views of One Method" aria-label="Copy heading and permalink for Remark 62: Two Views of One Method">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 67: Two Views of One Method"><a tabindex="-1" href="#rem-two-views-log-differentiation" title="Copy heading and permalink for Remark 67: Two Views of One Method" aria-label="Copy heading and permalink for Remark 67: Two Views of One Method">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="ex-practice-variable-powers"><h2 class="heading">
 <span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Practice with Variable Powers.</span>

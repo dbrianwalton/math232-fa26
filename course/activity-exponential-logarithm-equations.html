@@ -27,7 +27,7 @@ isReact: false,
 htmlPresentation: false,
 lang: "en-US",
 });
-</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Calculus with Functions II">
@@ -36,7 +36,7 @@ lang: "en-US",
 <meta name="twitter:description" content="MATH 232-0002 Fall 2026">
 <meta property="og:description" content="MATH 232-0002 Fall 2026">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -171,6 +171,15 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outcomes-week-05-06.html#subsec-E1" class="internal"><span class="title">E1 Logarithm Properties and Derivatives</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-outcomes-week-08-09.html" class="internal"><span class="title">Week 8 and Week 9</span></a></div>
+<ul id="ptx-toc-group-sec-outcomes-week-08-09" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outcomes-week-08-09.html#subsec-E2" class="internal"><span class="title">E2 Derivatives with the Natural Exponential</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outcomes-week-08-09.html#subsec-E3" class="internal"><span class="title">E3 Exponential and Power Law Models</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outcomes-week-08-09.html#subsec-E4" class="internal"><span class="title">E4 Rewriting Powers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outcomes-week-08-09.html#subsec-E5" class="internal"><span class="title">E5 Logarithmic Differentiation</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -280,7 +289,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving for an Unknown Exponent.</span>
 </h2>
 <div class="introduction" id="ex-solve-for-exponent-2">
-<div class="para" id="ex-solve-for-exponent-2-1">Recall from <a href="activity-exponentials-functions.html#def-e-and-exponentials" class="xref" data-knowl="./knowl/xref/def-e-and-exponentials.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 58: The Number e and Real Powers">Definition 58</a> that <span class="process-math">\(e^u=N\)</span> means exactly that <span class="process-math">\(\ln(N)=u\text{,}\)</span> and that <span class="process-math">\(\ln(b^u)=u\ln(b)\text{.}\)</span> Because <span class="process-math">\(\ln\)</span> is one-to-one, applying it to both sides of an equation never creates or loses a solution, as long as both sides are positive.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-solve-for-exponent-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-solve-for-exponent-2-1">Recall from <a href="activity-exponentials-functions.html#def-e-and-exponentials" class="xref" data-knowl="./knowl/xref/def-e-and-exponentials.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 63: The Number e and Real Powers">Definition 63</a> that <span class="process-math">\(e^u=N\)</span> means exactly that <span class="process-math">\(\ln(N)=u\text{,}\)</span> and that <span class="process-math">\(\ln(b^u)=u\ln(b)\text{.}\)</span> Because <span class="process-math">\(\ln\)</span> is one-to-one, applying it to both sides of an equation never creates or loses a solution, as long as both sides are positive.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-solve-for-exponent-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
 <article class="task exercise-like" id="task-solve-natural-exponential"><h3 class="heading"><span class="codenumber">(a)</span></h3>
@@ -409,7 +418,7 @@ u^w = e^{w\ln(u)} \qquad (u\gt 0)\text{.}
 </article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 4: Every Power Is a Natural Exponential"><a tabindex="-1" href="#ex-power-as-exponential" title="Copy heading and permalink for Worksheet Exercise 4: Every Power Is a Natural Exponential" aria-label="Copy heading and permalink for Worksheet Exercise 4: Every Power Is a Natural Exponential">🔗</a></div>
 </article>
 <article class="definition definition-like" id="def-log-base-b"><h2 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">60</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Logarithm with Base <span class="process-math">\(b\)</span>.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">65</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Logarithm with Base <span class="process-math">\(b\)</span>.</span>
 </h2>
 <div class="para logical" id="def-log-base-b-2-1">
 <div class="para">Let <span class="process-math">\(b\gt 0\)</span> with <span class="process-math">\(b\ne 1\text{,}\)</span> and let <span class="process-math">\(c\gt 0\text{.}\)</span> The <dfn class="terminology">logarithm with base <span class="process-math">\(b\)</span></dfn> of <span class="process-math">\(c\text{,}\)</span> written <span class="process-math">\(\log_b(c)\text{,}\)</span> is the exponent <span class="process-math">\(u\)</span> that solves <span class="process-math">\(b^u=c\text{:}\)</span>
@@ -421,7 +430,7 @@ u^w = e^{w\ln(u)} \qquad (u\gt 0)\text{.}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-log-base-b-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 60: Logarithm with Base b"><a tabindex="-1" href="#def-log-base-b" title="Copy heading and permalink for Definition 60: Logarithm with Base b" aria-label="Copy heading and permalink for Definition 60: Logarithm with Base b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 65: Logarithm with Base b"><a tabindex="-1" href="#def-log-base-b" title="Copy heading and permalink for Definition 65: Logarithm with Base b" aria-label="Copy heading and permalink for Definition 65: Logarithm with Base b">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="ex-log-as-exponent"><h2 class="heading">
 <span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Logarithm Is an Exponent.</span>
@@ -458,7 +467,7 @@ u^w = e^{w\ln(u)} \qquad (u\gt 0)\text{.}
 </article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 5: A Logarithm Is an Exponent"><a tabindex="-1" href="#ex-log-as-exponent" title="Copy heading and permalink for Worksheet Exercise 5: A Logarithm Is an Exponent" aria-label="Copy heading and permalink for Worksheet Exercise 5: A Logarithm Is an Exponent">🔗</a></div>
 </article>
 <article class="theorem theorem-like" id="thm-change-of-base"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">61</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Change of Base.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">66</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Change of Base.</span>
 </h2>
 <div class="para logical" id="thm-change-of-base-2-1">
 <div class="para">For <span class="process-math">\(b\gt 0\text{,}\)</span> <span class="process-math">\(b\ne 1\text{,}\)</span> and <span class="process-math">\(c\gt 0\text{,}\)</span>
@@ -472,13 +481,13 @@ u^w = e^{w\ln(u)} \qquad (u\gt 0)\text{.}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-change-of-base-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 61: Change of Base"><a tabindex="-1" href="#thm-change-of-base" title="Copy heading and permalink for Theorem 61: Change of Base" aria-label="Copy heading and permalink for Theorem 61: Change of Base">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 66: Change of Base"><a tabindex="-1" href="#thm-change-of-base" title="Copy heading and permalink for Theorem 66: Change of Base" aria-label="Copy heading and permalink for Theorem 66: Change of Base">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="ex-solve-log-equations"><h2 class="heading">
 <span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving Equations with Logarithms.</span>
 </h2>
 <article class="task exercise-like" id="task-logb-properties"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="task-logb-properties-1-1">Use the change of base formula and <a href="activity-logarithm-as-integral.html#thm-ln-algebraic-properties" class="xref" data-knowl="./knowl/xref/thm-ln-algebraic-properties.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 53: Algebraic Properties of \ln">Theorem 53</a> to explain why <span class="process-math">\(\log_b(xy)=\log_b(x)+\log_b(y)\text{.}\)</span> Which other properties do you expect <span class="process-math">\(\log_b\)</span> to share?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-logb-properties-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="task-logb-properties-1-1">Use the change of base formula and <a href="activity-logarithm-as-integral.html#thm-ln-algebraic-properties" class="xref" data-knowl="./knowl/xref/thm-ln-algebraic-properties.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 58: Algebraic Properties of \ln">Theorem 58</a> to explain why <span class="process-math">\(\log_b(xy)=\log_b(x)+\log_b(y)\text{.}\)</span> Which other properties do you expect <span class="process-math">\(\log_b\)</span> to share?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-logb-properties-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1in"></div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 6.a"><a tabindex="-1" href="#task-logb-properties" title="Copy heading and permalink for Task 6.a" aria-label="Copy heading and permalink for Task 6.a">🔗</a></div>
