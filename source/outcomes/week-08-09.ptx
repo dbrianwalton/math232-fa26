@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-outcomes-week-08-09">
+  <title>Week 8 and Week 9</title>
+
+  <introduction>
+    <p>
+      These weeks focused on the natural exponential function and its applications.
+      We computed derivatives involving <m>e^u</m> using the product, quotient, and chain rules,
+      built exponential and power law models through two given points,
+      and rewrote general powers using the natural exponential and natural logarithm.
+      We then used that idea to develop logarithmic differentiation.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-E2">
+    <title>E2 Derivatives with the Natural Exponential</title>
+
+    <assemblage xml:id="assemblage-E2">
+      <title>E2</title>
+      <p>
+        I can compute derivatives using products, quotients and compositions involving <m>e^u</m>.
+      </p>
+    </assemblage>
+
+    <exercise label="E2_Derivatives_Natural_Exponential">
+      <statement>
+        <p>
+          If <m>f(x) = x^2 e^{-2x}</m>, find <m>f'(x)</m>, complete sign analysis on <m>f'(x)</m>,
+          and then interpret the positive and negative intervals to describe the shape of <m>y=f(x)</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-E3">
+    <title>E3 Exponential and Power Law Models</title>
+
+    <assemblage xml:id="assemblage-E3">
+      <title>E3</title>
+      <p>
+        I can solve for variables in the exponent to create exponential and power law models
+        passing through two given points.
+      </p>
+    </assemblage>
+
+    <exercise label="E3_Exponential_Power_Law_Models">
+      <statement>
+        <p>
+          An exponential model depending on time <m>t</m> can be represented by <m>y = Ae^{r(t-t_0)}</m>.
+          A population of bacteria is measured to have 200 cells after <m>t=20</m> minutes.
+          It has 600 cells after <m>t=60</m> minutes.
+          Find the exponential model for the population.
+        </p>
+      </statement>
+    </exercise>
+
+    <remark>
+      <p>
+        A checkpoint model could also use a power law model, which would use a formula
+        <m>y=A(x/x_0)^p</m>. You will be provided the basic model equation.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="subsec-E4">
+    <title>E4 Rewriting Powers</title>
+
+    <assemblage xml:id="assemblage-E4">
+      <title>E4</title>
+      <p>
+        I can rewrite any power involving a positive base by using the natural exponential
+        with base <m>e</m> and natural logarithm.
+      </p>
+    </assemblage>
+
+    <exercise label="E4_Rewriting_Powers">
+      <statement>
+        <p>
+          Rewrite <m>\pi^{\sqrt{2}\, t}</m> as <m>e^{kt}</m> for some number <m>k</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-E5">
+    <title>E5 Logarithmic Differentiation</title>
+
+    <assemblage xml:id="assemblage-E5">
+      <title>E5</title>
+      <p>
+        I can use logarithmic differentiation on <m>y=f(x)</m> by differentiating <m>\ln(|y|)</m>
+        with the chain rule to solve for <m>y' = f'(x)</m> after taking advantage of the expanded logarithm.
+      </p>
+    </assemblage>
+
+    <exercise label="E5_Logarithmic_Differentiation">
+      <statement>
+        <p>
+          Use logarithmic differentiation to find <m>\displaystyle \frac{d}{dx}\left[ x^{\ln(x)} \right]</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+</section>
