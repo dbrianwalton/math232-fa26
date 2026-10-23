@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-lhopitals-rule">
+  <title>L'Hôpital's Rule</title>
+
+  <objectives xml:id="obj-lhopitals-rule">
+    <ul>
+      <li><p>Use the definition of the derivative and the sum rule for exponents to write <m>\dfrac{d}{dx}\big[b^x\big]</m> as <m>b^x</m> times a limit, and identify that limit as <m>\ln(b)</m>.</p></li>
+      <li><p>Recognize limits of the indeterminate forms <m>\frac{0}{0}</m> and <m>\frac{\infty}{\infty}</m>, and explain why substitution alone cannot decide their values.</p></li>
+      <li><p>Verify the requirements of L'Hôpital's rule before using it, and use it to replace a limit with a new limit formed from the ratio of derivatives.</p></li>
+      <li><p>Apply L'Hôpital's rule repeatedly when the new limit is again an indeterminate form.</p></li>
+      <li><p>Rewrite products of the form <m>0\cdot\infty</m> as ratios, and rewrite limits with the variable in both base and exponent using base <m>e</m>, so that L'Hôpital's rule can be used.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Last time we found the derivative of an exponential function by differentiating a
+      logarithm. We never connected that result to the definition of the derivative.
+      Making that connection leads to a limit that none of our earlier techniques can
+      evaluate, and that limit motivates a new tool for computing limits.
+    </p>
+    <p>
+      Team Roles: Manager, Recorder, Spokesperson, and Reflector.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-lh-exponential-derivative-definition" workspace="0in">
+    <title>The Derivative of an Exponential, Revisited</title>
+    <introduction>
+      <p>
+        Recall that the derivative of a function <m>f</m> is defined by
+        <md>
+          <mrow> f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} </mrow>
+        </md>.
+        Let <m>b\gt 0</m> and let <m>\exp_b(x)=b^x</m>. We will apply this definition to <m>\exp_b</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-lh-difference-quotient" workspace="1.5in">
+      <statement>
+        <p>
+          Write the difference quotient for <m>\exp_b</m> and use the sum rule for exponents,
+          <m>b^{x+h}=b^x\cdot b^h</m>, to factor <m>b^x</m> out of the numerator. Explain why
+          <m>b^x</m> can then be moved outside the limit as <m>h \to 0</m>. Show that
+          <md>
+            <mrow> \exp_b'(x) = b^x \cdot \lim_{h \to 0} \frac{b^h-1}{h} </mrow>
+          </md>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-try-to-evaluate" workspace="1in">
+      <statement>
+        <p>
+          Try to evaluate <m>\displaystyle\lim_{h \to 0} \frac{b^h-1}{h}</m> by substituting <m>h=0</m>.
+          What do the numerator and denominator each do as <m>h \to 0</m>? Can you tell what the
+          limit is from this information alone?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-no-cancel" workspace="1in">
+      <statement>
+        <p>
+          In earlier work, a limit of a quotient of simple algebraic formulas that gave this same
+          trouble could be rewritten by canceling a common factor. Is there a common factor of
+          <m>b^h-1</m> and <m>h</m> that you can cancel? Why is this limit different?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-solve-for-limit" workspace="1.25in">
+      <statement>
+        <p>
+          Last time, we found a different formula for the same derivative: using <m>y=b^x</m>,
+          <m>\ln(y)=x\ln(b)</m>, and <m>\ln'(y)=\frac{1}{y}</m>, we showed that
+          <m>\exp_b'(x)=b^x\ln(b)</m>. Set this equal to the formula you found in the first task
+          and solve for the limit <m>\displaystyle\lim_{h \to 0} \frac{b^h-1}{h}</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-lh-limit-equals-ln-b">
+    <title>A Limit We Could Only Find Indirectly</title>
+    <p>
+      For every <m>b\gt 0</m>,
+      <md>
+        <mrow> \lim_{h \to 0} \frac{b^h-1}{h} = \ln(b) </mrow>
+      </md>.
+      We found this value by a clever detour through logarithms, not by evaluating the limit itself.
+      A limit whose numerator and denominator both approach <m>0</m> is said to have the
+      <term>indeterminate form</term> <m>\frac{0}{0}</m>. It is called indeterminate because the
+      form alone does not decide the answer: such a limit might equal any number, or might not
+      exist at all. We need to find a <em>different</em> formula for the limit, one that
+      <em>can</em> be evaluated.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-lh-cancel-common-factor" workspace="0in">
+    <title>Rewriting a Limit by Canceling a Common Factor</title>
+    <introduction>
+      <p>
+        Consider the limit <m>\displaystyle\lim_{x \to 2} \frac{x^2-4}{x^2-3x+2}</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-lh-cancel-substitute" workspace="1in">
+      <statement>
+        <p>
+          What happens to the numerator and the denominator as <m>x \to 2</m>? Why can we not
+          simply evaluate the limit by substitution?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-cancel-factor" workspace="1.25in">
+      <statement>
+        <p>
+          Factor the numerator and the denominator. Identify the common factor and use it to
+          <em>rewrite</em> the quotient as a simpler formula that agrees with the original for
+          every <m>x\ne 2</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-cancel-evaluate" workspace="1.25in">
+      <statement>
+        <p>
+          Explain why the limit of the original quotient as <m>x \to 2</m> is the same as the limit
+          of your simplified formula. Why can the simplified limit be found by evaluation? What is
+          the value of the limit?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <theorem xml:id="thm-lhopitals-rule">
+    <title>L'Hôpital's Rule</title>
+    <statement>
+      <p>
+        If <m>f(x) \to 0</m> and <m>g(x) \to 0</m> as <m>x \to a</m>, and
+        <m>\displaystyle\lim_{x \to a} \frac{f'(x)}{g'(x)} = L</m>, then
+        <m>\displaystyle\lim_{x \to a} \frac{f(x)}{g(x)} = L</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <remark xml:id="rem-lh-how-to-read-the-rule">
+    <title>What the Rule Says and How to Use It</title>
+    <p>
+      Canceling a common factor <em>rewrites</em> a limit of the form <m>\frac{0}{0}</m> as a new
+      limit that we can evaluate. L'Hôpital's rule does the same job for limits where there is no
+      common factor to cancel: it lets us <em>rewrite</em> the limit using a new formula that, we
+      hope, can be evaluated.
+    </p>
+    <p>
+      Notice that we are <em>not</em> computing the derivative of the quotient
+      <m>\frac{f(x)}{g(x)}</m>, and we do not use the quotient rule. We are creating a new
+      <em>limit</em> whose formula is the ratio of the two derivatives <m>f'(x)</m> and <m>g'(x)</m>.
+    </p>
+    <p>
+      The rule has two requirements. <em>Requirement 1:</em> <m>f(x) \to 0</m> and
+      <m>g(x) \to 0</m> as <m>x \to a</m>. <em>Requirement 2:</em> the limit
+      <m>\displaystyle\lim_{x \to a} \frac{f'(x)}{g'(x)}</m> has a value <m>L</m>. We use
+      the rule only <em>after</em> checking these requirements. Once they are satisfied, the rule
+      is the <em>justification</em> for replacing the original limit with the simpler one.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-lh-revisit-rational-example" workspace="0in">
+    <title>Checking the Requirements on a Familiar Limit</title>
+    <introduction>
+      <p>
+        Return to <m>\displaystyle\lim_{x \to 2} \frac{x^2-4}{x^2-3x+2}</m>. Here
+        <m>a=2</m>, <m>f(x)=x^2-4</m>, and <m>g(x)=x^2-3x+2</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-lh-revisit-requirement-1" workspace="1in">
+      <statement>
+        <p>
+          Show that <m>f(2)=0</m> and <m>g(2)=0</m>. Since <m>f</m> and <m>g</m> are continuous,
+          explain why this means <m>f(x) \to 0</m> and <m>g(x) \to 0</m> as <m>x \to 2</m>, so
+          Requirement 1 is satisfied.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-revisit-requirement-2" workspace="1.25in">
+      <statement>
+        <p>
+          Find <m>f'(x)</m> and <m>g'(x)</m>. Form the new limit
+          <m>\displaystyle\lim_{x \to 2} \frac{f'(x)}{g'(x)}</m> and evaluate it. Does this
+          limit have a value, so that Requirement 2 is satisfied?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-revisit-conclusion" workspace="1in">
+      <statement>
+        <p>
+          State the conclusion that L'Hôpital's rule gives for
+          <m>\displaystyle\lim_{x \to 2} \frac{x^2-4}{x^2-3x+2}</m>. Does it agree with the
+          value you found by canceling the common factor?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-lh-arrow-notation">
+    <title>A Shorthand for Requirement 1</title>
+    <p>
+      Checking Requirement 1 comes up so often that it helps to have a shorthand that does not
+      require naming the functions. We write
+      <md>
+        <mrow> \lim_{x \to a} \frac{f(x)}{g(x)} \rightarrow \frac{0}{0} </mrow>
+      </md>
+      to mean that <m>f(x) \to 0</m> and <m>g(x) \to 0</m> as <m>x \to a</m>. The arrow reports
+      what the numerator and denominator are doing. It does not say that the limit equals
+      <m>\frac{0}{0}</m>.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-lh-exponential-over-polynomial" workspace="0in">
+    <title>A Limit with No Common Factor</title>
+    <introduction>
+      <p>
+        Consider <m>\displaystyle\lim_{x \to 2} \frac{3^x-9}{x^2-4}</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-lh-exp-poly-evaluate" workspace="1in">
+      <statement>
+        <p>
+          Why can we not simply evaluate this limit? Can you cancel a common factor?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-exp-poly-requirement-1" workspace="1.25in">
+      <statement>
+        <p>
+          Identify the numerator function <m>f(x)</m> and the denominator function <m>g(x)</m>.
+          Does this limit satisfy Requirement 1? Record your conclusion using the shorthand
+          <m>\displaystyle\lim_{x \to 2} \frac{3^x-9}{x^2-4} \rightarrow \frac{0}{0}</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-exp-poly-requirement-2" workspace="1.25in">
+      <statement>
+        <p>
+          Now that Requirement 1 is verified, find <m>f'(x)</m> and <m>g'(x)</m>, and write the
+          new limit <m>\displaystyle\lim_{x \to 2} \frac{f'(x)}{g'(x)}</m>. Can this limit be
+          evaluated?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-exp-poly-answer" workspace="1in">
+      <statement>
+        <p>
+          What is the value of <m>\displaystyle\lim_{x \to 2} \frac{3^x-9}{x^2-4}</m>, and which
+          statement justifies your answer?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-lh-repeated-application" workspace="0in">
+    <title>Using the Rule More Than Once</title>
+    <introduction>
+      <p>
+        Some limits require repeating the process. Consider
+        <m>\displaystyle\lim_{x \to 0} \frac{e^{2x}-1-2x}{x^2}</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-lh-repeat-first-check" workspace="1in">
+      <statement>
+        <p>
+          Use the arrow notation to decide whether this limit satisfies Requirement 1.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-repeat-first-derivative" workspace="1.25in">
+      <statement>
+        <p>
+          <em>After</em> this verification, create the new limit formed from the ratio of the
+          first derivatives of the numerator and denominator. Try to evaluate it. What do you find?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-repeat-second-derivative" workspace="1.5in">
+      <statement>
+        <p>
+          Verify Requirement 1 for this new limit using the arrow notation. <em>After</em> this
+          second verification, create another new limit using the ratio of the second derivatives.
+          Can this limit be evaluated?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-repeat-work-backwards" workspace="1.5in">
+      <statement>
+        <p>
+          Now work backwards. Which of the three limits did you learn the value of first? Explain
+          how L'Hôpital's rule then gives the value of the middle limit, and then the value of the
+          original limit.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-lh-infinity-over-infinity">
+    <title>The Form <m>\frac{\infty}{\infty}</m></title>
+    <p>
+      L'Hôpital's rule <em>also</em> works when the numerator and denominator both grow without
+      bound. If <m>f(x) \to \pm\infty</m> and <m>g(x) \to \pm\infty</m> as <m>x \to a</m> (or as
+      <m>x \to \pm\infty</m>), and <m>\displaystyle\lim \frac{f'(x)}{g'(x)}=L</m>, then
+      <m>\displaystyle\lim \frac{f(x)}{g(x)}=L</m>. Requirement 1 is simply replaced by checking
+      that the limit has the form <m>\frac{\infty}{\infty}</m> in the arrow notation.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-lh-infinity-over-infinity" workspace="0in">
+    <title>Limits at Infinity</title>
+    <task xml:id="task-lh-infinity-evaluate" workspace="1.5in">
+      <statement>
+        <p>
+          Find <m>\displaystyle\lim_{x \to \infty} \frac{100x}{e^{0.01x}}</m>. Begin by verifying
+          the form with the arrow notation.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-lh-products">
+    <title>Products: The Form <m>0\cdot\infty</m></title>
+    <p>
+      A limit of a product <m>f(x)\,g(x)</m> where <m>f(x) \to 0</m> and
+      <m>g(x) \to \pm\infty</m> is also indeterminate. L'Hôpital's rule only applies to ratios,
+      so the first step is to <em>rewrite</em> the product as a ratio. Moving one factor to the
+      denominator as its reciprocal produces a limit of the form <m>\frac{0}{0}</m> or
+      <m>\frac{\infty}{\infty}</m>, and then we can check the requirements.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-lh-product-form" workspace="0in">
+    <title>Rewriting a Product as a Ratio</title>
+    <task xml:id="task-lh-product-form-identify" workspace="1in">
+      <statement>
+        <p>
+          As <m>x \to 0^+</m>, what does each factor of <m>x\ln(x)</m> do? Why is this limit not
+          yet in a form where L'Hôpital's rule applies?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-product-form-evaluate" workspace="1.75in">
+      <statement>
+        <p>
+          Rewrite <m>x\ln(x)</m> as a ratio by writing <m>x=\dfrac{1}{1/x}</m>, verify the form with
+          the arrow notation, and find <m>\displaystyle\lim_{x \to 0^+} x\ln(x)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-lh-powers">
+    <title>Powers: Variable in the Base and the Exponent</title>
+    <p>
+      A limit of the form <m>\displaystyle\lim f(x)^{g(x)}</m>, where the variable appears in both
+      the base and the exponent, cannot be attacked directly. Instead, rewrite the expression using
+      base <m>e</m> and logarithms:
+      <md>
+        <mrow> f(x)^{g(x)} = e^{g(x)\ln(f(x))} </mrow>
+      </md>.
+      Then find the limit of the <em>exponent</em> <m>g(x)\ln(f(x))</m>. Because <m>e^x</m> is
+      continuous, the limit of interest is <m>e</m> raised to the limit you found for the exponent.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-lh-variable-in-exponent" workspace="0in">
+    <title>Variable in the Base and the Exponent</title>
+    <task xml:id="task-lh-power-rewrite" workspace="1.25in">
+      <statement>
+        <p>
+          As <m>x \to 0</m>, what do the base <m>1+3x</m> and the exponent <m>\frac{2}{x}</m> of
+          <m>(1+3x)^{2/x}</m> each do? Rewrite <m>(1+3x)^{2/x}</m> using base <m>e</m> and
+          <m>\ln</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-power-exponent-limit" workspace="1.75in">
+      <statement>
+        <p>
+          Find the limit of the exponent
+          <m>\displaystyle\lim_{x \to 0} \frac{2\ln(1+3x)}{x}</m>, verifying the form first.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-power-conclusion" workspace="1in">
+      <statement>
+        <p>
+          Use the continuity of <m>e^x</m> to find
+          <m>\displaystyle\lim_{x \to 0} (1+3x)^{2/x}</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>
