@@ -1459,6 +1459,159 @@ var ptx_lunr_docs = [
   "body": " Choosing a Method    Write a few sentences for a classmate who missed today. When is logarithmic differentiation (or the rewriting ) the right tool, and when are the usual rules enough? Include one example of each.    "
 },
 {
+  "id": "activity-lhopitals-rule",
+  "level": "1",
+  "url": "activity-lhopitals-rule.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "L’Hôpital’s Rule",
+  "body": " L'Hôpital's Rule    Use the definition of the derivative and the sum rule for exponents to write as times a limit, and identify that limit as .  Recognize limits of the indeterminate forms and , and explain why substitution alone cannot decide their values.  Verify the requirements of L'Hôpital's rule before using it, and use it to replace a limit with a new limit formed from the ratio of derivatives.  Apply L'Hôpital's rule repeatedly when the new limit is again an indeterminate form.  Rewrite products of the form as ratios, and rewrite limits with the variable in both base and exponent using base , so that L'Hôpital's rule can be used.     We previously found the derivative of an exponential function by differentiating a logarithm. Today we will connect that result to the definition of the derivative, identifying a limit that none of our earlier techniques can evaluate. This will motivate a new tool for computing limits called L'Hôpital's rule.    The Derivative of an Exponential, Revisited   Recall that the derivative of a function is defined by . Let and let . We will apply this definition to .     Write the difference quotient for and use the sum rule for exponents, , to factor out of the numerator. Explain why can then be moved outside the limit as . Show that .      Try to evaluate by substituting . What do the numerator and denominator each do as ? Can you tell what the limit is from this information alone?      In earlier work, a limit of a quotient of simple algebraic formulas that gave an indeterminate form of 0\/0 could be rewritten by canceling a common factor. Is there a common factor of and that you can cancel? Why is this limit different?      Last time, we found a different formula for the same derivative: using , we showed that . Comparing the two formulas, identify the limit .      A Limit We Could Only Find Indirectly  For every , . We found this value recognizing the limit matches a derivative, not by evaluating the limit itself. A limit whose numerator and denominator both approach is said to have the indeterminate form  . It is called indeterminate because the form alone does not decide the answer: such a limit might equal any number, or might not exist at all. We need to find a different formula for the limit, one that can be evaluated.    Rewriting a Limit by Canceling a Common Factor   Consider the limit .     What happens to the numerator and the denominator as ? Why can we not simply evaluate the limit by substitution?      Factor the numerator and the denominator. Identify the common factor and use it to rewrite the quotient as a simpler formula that agrees with the original for every .      Explain why the limit of the original quotient as is the same as the limit of your simplified formula. Why can the simplified limit be found by evaluation? What is the value of the limit?      L'Hôpital's Rule   If and as , and , then .     What the Rule Says and How to Use It  Canceling a common factor rewrites a limit of the form as a new limit that we can evaluate. L'Hôpital's rule does the same job for limits where there is no common factor to cancel: it lets us rewrite the limit using a new formula that we hope can be evaluated.  Notice that we are not computing the derivative of the quotient , and we do not use the quotient rule. We are creating a new limit whose formula is the ratio of the two derivatives and .  The rule has two requirements. Requirement 1:  and as . Requirement 2: the limit has a value . We use the rule only after checking these requirements. Once they are satisfied, the rule is the justification for replacing the original limit with the simpler one.    Checking the Requirements on a Familiar Limit   Return to . Here , , and .     Show that and . Since and are continuous, explain why this means and as , so Requirement 1 is satisfied.      Find and . Form the new limit and evaluate it. Does this limit have a value, so that Requirement 2 is satisfied?      State the conclusion that L'Hôpital's rule gives for . Does it agree with the value you found by canceling the common factor?      A Shorthand for Requirement 1  Checking Requirement 1 comes up so often that it helps to have a shorthand that does not require naming the functions. We write to mean that and as . The arrow reports what the numerator and denominator are doing. It does not say that the limit equals .    A Limit with No Common Factor   Consider .     Why can we not simply evaluate this limit? Can you cancel a common factor?      Identify the numerator function and the denominator function . Does this limit satisfy Requirement 1? Record your conclusion using the shorthand .      Now that Requirement 1 is verified, find and , and write the new limit . Can this limit be evaluated?      What is the value of , and which statement justifies your answer?      Using the Rule More Than Once   Some limits require repeating the process. Consider .     Use the arrow notation to decide whether this limit satisfies Requirement 1.       After this verification, create the new limit formed from the ratio of the first derivatives of the numerator and denominator. Try to evaluate it. What do you find?      Verify Requirement 1 for this new limit using the arrow notation. After this second verification, create another new limit using the ratio of the second derivatives. Can this limit be evaluated?      Now work backwards. Which of the three limits did you learn the value of first? Explain how L'Hôpital's rule then gives the value of the middle limit, and then the value of the original limit.      The Form  L'Hôpital's rule also works when the numerator and denominator both grow without bound. If and as (or as ), and , then . Requirement 1 is simply replaced by checking that the limit has the form in the arrow notation.    Limits at Infinity    Find . Begin by verifying the form with the arrow notation.      Products: The Form  A limit of a product where and is also indeterminate. L'Hôpital's rule only applies to ratios, so the first step is to rewrite the product as a ratio. Moving one factor to the denominator as its reciprocal produces a limit of the form or , and then we can check the requirements.    Rewriting a Product as a Ratio    As , what does each factor of do? Why is this limit not yet in a form where L'Hôpital's rule applies?      Rewrite as a ratio by writing , verify the form with the arrow notation, and find .      Powers: Variable in the Base and the Exponent  A limit of the form , where the variable appears in both the base and the exponent, cannot be attacked directly. Instead, rewrite the expression using base and logarithms: . Then find the limit of the exponent  . Because is continuous, the limit of interest is raised to the limit you found for the exponent.    Variable in the Base and the Exponent   Consider the limit . It is not in the form of a ratio where L'Hôpital's rule would be relevant, so we will transform the formula before testing if it is indeterminate.     As , what limits do the base and the exponent each appraoch? Use arrow notation to indicate this limit form.      Rewrite using base and .      Find the limit of the exponent , verifying the form first.      Use the continuity of to find .     "
+},
+{
+  "id": "obj-lhopitals-rule",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#obj-lhopitals-rule",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Use the definition of the derivative and the sum rule for exponents to write as times a limit, and identify that limit as .  Recognize limits of the indeterminate forms and , and explain why substitution alone cannot decide their values.  Verify the requirements of L'Hôpital's rule before using it, and use it to replace a limit with a new limit formed from the ratio of derivatives.  Apply L'Hôpital's rule repeatedly when the new limit is again an indeterminate form.  Rewrite products of the form as ratios, and rewrite limits with the variable in both base and exponent using base , so that L'Hôpital's rule can be used.   "
+},
+{
+  "id": "ex-lh-exponential-derivative-definition",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#ex-lh-exponential-derivative-definition",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "The Derivative of an Exponential, Revisited.",
+  "body": " The Derivative of an Exponential, Revisited   Recall that the derivative of a function is defined by . Let and let . We will apply this definition to .     Write the difference quotient for and use the sum rule for exponents, , to factor out of the numerator. Explain why can then be moved outside the limit as . Show that .      Try to evaluate by substituting . What do the numerator and denominator each do as ? Can you tell what the limit is from this information alone?      In earlier work, a limit of a quotient of simple algebraic formulas that gave an indeterminate form of 0\/0 could be rewritten by canceling a common factor. Is there a common factor of and that you can cancel? Why is this limit different?      Last time, we found a different formula for the same derivative: using , we showed that . Comparing the two formulas, identify the limit .    "
+},
+{
+  "id": "rem-lh-limit-equals-ln-b",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#rem-lh-limit-equals-ln-b",
+  "type": "Remark",
+  "number": "68",
+  "title": "A Limit We Could Only Find Indirectly.",
+  "body": " A Limit We Could Only Find Indirectly  For every , . We found this value recognizing the limit matches a derivative, not by evaluating the limit itself. A limit whose numerator and denominator both approach is said to have the indeterminate form  . It is called indeterminate because the form alone does not decide the answer: such a limit might equal any number, or might not exist at all. We need to find a different formula for the limit, one that can be evaluated.  "
+},
+{
+  "id": "ex-lh-cancel-common-factor",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#ex-lh-cancel-common-factor",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Rewriting a Limit by Canceling a Common Factor.",
+  "body": " Rewriting a Limit by Canceling a Common Factor   Consider the limit .     What happens to the numerator and the denominator as ? Why can we not simply evaluate the limit by substitution?      Factor the numerator and the denominator. Identify the common factor and use it to rewrite the quotient as a simpler formula that agrees with the original for every .      Explain why the limit of the original quotient as is the same as the limit of your simplified formula. Why can the simplified limit be found by evaluation? What is the value of the limit?    "
+},
+{
+  "id": "thm-lhopitals-rule",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#thm-lhopitals-rule",
+  "type": "Theorem",
+  "number": "69",
+  "title": "L’Hôpital’s Rule.",
+  "body": " L'Hôpital's Rule   If and as , and , then .   "
+},
+{
+  "id": "rem-lh-how-to-read-the-rule",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#rem-lh-how-to-read-the-rule",
+  "type": "Remark",
+  "number": "70",
+  "title": "What the Rule Says and How to Use It.",
+  "body": " What the Rule Says and How to Use It  Canceling a common factor rewrites a limit of the form as a new limit that we can evaluate. L'Hôpital's rule does the same job for limits where there is no common factor to cancel: it lets us rewrite the limit using a new formula that we hope can be evaluated.  Notice that we are not computing the derivative of the quotient , and we do not use the quotient rule. We are creating a new limit whose formula is the ratio of the two derivatives and .  The rule has two requirements. Requirement 1:  and as . Requirement 2: the limit has a value . We use the rule only after checking these requirements. Once they are satisfied, the rule is the justification for replacing the original limit with the simpler one.  "
+},
+{
+  "id": "ex-lh-revisit-rational-example",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#ex-lh-revisit-rational-example",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Checking the Requirements on a Familiar Limit.",
+  "body": " Checking the Requirements on a Familiar Limit   Return to . Here , , and .     Show that and . Since and are continuous, explain why this means and as , so Requirement 1 is satisfied.      Find and . Form the new limit and evaluate it. Does this limit have a value, so that Requirement 2 is satisfied?      State the conclusion that L'Hôpital's rule gives for . Does it agree with the value you found by canceling the common factor?    "
+},
+{
+  "id": "rem-lh-arrow-notation",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#rem-lh-arrow-notation",
+  "type": "Remark",
+  "number": "71",
+  "title": "A Shorthand for Requirement 1.",
+  "body": " A Shorthand for Requirement 1  Checking Requirement 1 comes up so often that it helps to have a shorthand that does not require naming the functions. We write to mean that and as . The arrow reports what the numerator and denominator are doing. It does not say that the limit equals .  "
+},
+{
+  "id": "ex-lh-exponential-over-polynomial",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#ex-lh-exponential-over-polynomial",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "A Limit with No Common Factor.",
+  "body": " A Limit with No Common Factor   Consider .     Why can we not simply evaluate this limit? Can you cancel a common factor?      Identify the numerator function and the denominator function . Does this limit satisfy Requirement 1? Record your conclusion using the shorthand .      Now that Requirement 1 is verified, find and , and write the new limit . Can this limit be evaluated?      What is the value of , and which statement justifies your answer?    "
+},
+{
+  "id": "ex-lh-repeated-application",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#ex-lh-repeated-application",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Using the Rule More Than Once.",
+  "body": " Using the Rule More Than Once   Some limits require repeating the process. Consider .     Use the arrow notation to decide whether this limit satisfies Requirement 1.       After this verification, create the new limit formed from the ratio of the first derivatives of the numerator and denominator. Try to evaluate it. What do you find?      Verify Requirement 1 for this new limit using the arrow notation. After this second verification, create another new limit using the ratio of the second derivatives. Can this limit be evaluated?      Now work backwards. Which of the three limits did you learn the value of first? Explain how L'Hôpital's rule then gives the value of the middle limit, and then the value of the original limit.    "
+},
+{
+  "id": "rem-lh-infinity-over-infinity",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#rem-lh-infinity-over-infinity",
+  "type": "Remark",
+  "number": "72",
+  "title": "The Form <span class=\"process-math\">\\(\\frac{\\infty}{\\infty}\\)<\/span>.",
+  "body": " The Form  L'Hôpital's rule also works when the numerator and denominator both grow without bound. If and as (or as ), and , then . Requirement 1 is simply replaced by checking that the limit has the form in the arrow notation.  "
+},
+{
+  "id": "ex-lh-infinity-over-infinity",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#ex-lh-infinity-over-infinity",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Limits at Infinity.",
+  "body": " Limits at Infinity    Find . Begin by verifying the form with the arrow notation.    "
+},
+{
+  "id": "rem-lh-products",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#rem-lh-products",
+  "type": "Remark",
+  "number": "73",
+  "title": "Products: The Form <span class=\"process-math\">\\(0\\cdot\\infty\\)<\/span>.",
+  "body": " Products: The Form  A limit of a product where and is also indeterminate. L'Hôpital's rule only applies to ratios, so the first step is to rewrite the product as a ratio. Moving one factor to the denominator as its reciprocal produces a limit of the form or , and then we can check the requirements.  "
+},
+{
+  "id": "ex-lh-product-form",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#ex-lh-product-form",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Rewriting a Product as a Ratio.",
+  "body": " Rewriting a Product as a Ratio    As , what does each factor of do? Why is this limit not yet in a form where L'Hôpital's rule applies?      Rewrite as a ratio by writing , verify the form with the arrow notation, and find .    "
+},
+{
+  "id": "rem-lh-powers",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#rem-lh-powers",
+  "type": "Remark",
+  "number": "74",
+  "title": "Powers: Variable in the Base and the Exponent.",
+  "body": " Powers: Variable in the Base and the Exponent  A limit of the form , where the variable appears in both the base and the exponent, cannot be attacked directly. Instead, rewrite the expression using base and logarithms: . Then find the limit of the exponent  . Because is continuous, the limit of interest is raised to the limit you found for the exponent.  "
+},
+{
+  "id": "ex-lh-variable-in-exponent",
+  "level": "2",
+  "url": "activity-lhopitals-rule.html#ex-lh-variable-in-exponent",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "Variable in the Base and the Exponent.",
+  "body": " Variable in the Base and the Exponent   Consider the limit . It is not in the form of a ratio where L'Hôpital's rule would be relevant, so we will transform the formula before testing if it is indeterminate.     As , what limits do the base and the exponent each appraoch? Use arrow notation to indicate this limit form.      Rewrite using base and .      Find the limit of the exponent , verifying the form first.      Use the continuity of to find .    "
+},
+{
   "id": "homework",
   "level": "1",
   "url": "homework.html",
