@@ -15,13 +15,10 @@
 
   <introduction>
     <p>
-      Last time we found the derivative of an exponential function by differentiating a
-      logarithm. We never connected that result to the definition of the derivative.
-      Making that connection leads to a limit that none of our earlier techniques can
-      evaluate, and that limit motivates a new tool for computing limits.
-    </p>
-    <p>
-      Team Roles: Manager, Recorder, Spokesperson, and Reflector.
+      We previously found the derivative of an exponential function by differentiating a
+      logarithm. Today we will connect that result to the definition of the derivative,
+      identifying a limit that none of our earlier techniques can
+      evaluate. This will motivate a new tool for computing limits called L'Hôpital's rule.
     </p>
   </introduction>
 
@@ -60,9 +57,10 @@
     <task xml:id="task-lh-no-cancel" workspace="1in">
       <statement>
         <p>
-          In earlier work, a limit of a quotient of simple algebraic formulas that gave this same
-          trouble could be rewritten by canceling a common factor. Is there a common factor of
-          <m>b^h-1</m> and <m>h</m> that you can cancel? Why is this limit different?
+          In earlier work, a limit of a quotient of simple algebraic formulas that gave 
+          an indeterminate form of 0/0 could be rewritten by canceling a common factor.
+          Is there a common factor of <m>b^h-1</m> and <m>h</m> that you can cancel? 
+          Why is this limit different?
         </p>
       </statement>
     </task>
@@ -70,9 +68,8 @@
       <statement>
         <p>
           Last time, we found a different formula for the same derivative: using <m>y=b^x</m>,
-          <m>\ln(y)=x\ln(b)</m>, and <m>\ln'(y)=\frac{1}{y}</m>, we showed that
-          <m>\exp_b'(x)=b^x\ln(b)</m>. Set this equal to the formula you found in the first task
-          and solve for the limit <m>\displaystyle\lim_{h \to 0} \frac{b^h-1}{h}</m>.
+          we showed that <m>\exp_b'(x)=b^x\ln(b)</m>. Comparing the two formulas,
+          identify the limit <m>\displaystyle\lim_{h \to 0} \frac{b^h-1}{h}</m>.
         </p>
       </statement>
     </task>
@@ -85,7 +82,8 @@
       <md>
         <mrow> \lim_{h \to 0} \frac{b^h-1}{h} = \ln(b) </mrow>
       </md>.
-      We found this value by a clever detour through logarithms, not by evaluating the limit itself.
+      We found this value recognizing the limit matches a derivative,
+      not by evaluating the limit itself.
       A limit whose numerator and denominator both approach <m>0</m> is said to have the
       <term>indeterminate form</term> <m>\frac{0}{0}</m>. It is called indeterminate because the
       form alone does not decide the answer: such a limit might equal any number, or might not
@@ -145,8 +143,8 @@
     <p>
       Canceling a common factor <em>rewrites</em> a limit of the form <m>\frac{0}{0}</m> as a new
       limit that we can evaluate. L'Hôpital's rule does the same job for limits where there is no
-      common factor to cancel: it lets us <em>rewrite</em> the limit using a new formula that, we
-      hope, can be evaluated.
+      common factor to cancel: it lets us <em>rewrite</em> the limit using a new formula that we
+      hope can be evaluated.
     </p>
     <p>
       Notice that we are <em>not</em> computing the derivative of the quotient
@@ -368,12 +366,25 @@
 
   <exercise xml:id="ex-lh-variable-in-exponent" workspace="0in">
     <title>Variable in the Base and the Exponent</title>
-    <task xml:id="task-lh-power-rewrite" workspace="1.25in">
+    <introduction>
+      <p>
+        Consider the limit <m>\displaystyle \lim_{x \to 0} (1+3x)^{2/x}</m>.
+        It is not in the form of a ratio where L'Hôpital's rule would be relevant,
+        so we will transform the formula before testing if it is indeterminate.
+      </p>
+    </introduction>
+    <task xml:id="task-lh-power-limit-form" workspace="0.5in">
       <statement>
         <p>
-          As <m>x \to 0</m>, what do the base <m>1+3x</m> and the exponent <m>\frac{2}{x}</m> of
-          <m>(1+3x)^{2/x}</m> each do? Rewrite <m>(1+3x)^{2/x}</m> using base <m>e</m> and
-          <m>\ln</m>.
+          As <m>x \to 0</m>, what limits do the base <m>1+3x</m> and the exponent <m>\frac{2}{x}</m>
+          each appraoch? Use arrow notation to indicate this limit form.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-lh-power-rewrite" workspace="0.75in">
+      <statement>
+        <p>
+          Rewrite <m>(1+3x)^{2/x}</m> using base <m>e</m> and <m>\ln</m>.
         </p>
       </statement>
     </task>
