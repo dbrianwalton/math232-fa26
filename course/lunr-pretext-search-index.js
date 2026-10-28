@@ -1612,6 +1612,96 @@ var ptx_lunr_docs = [
   "body": " Variable in the Base and the Exponent   Consider the limit . It is not in the form of a ratio where L'Hôpital's rule would be relevant, so we will transform the formula before testing if it is indeterminate.     As , what limits do the base and the exponent each appraoch? Use arrow notation to indicate this limit form.      Rewrite using base and .      Find the limit of the exponent , verifying the form first.      Use the continuity of to find .    "
 },
 {
+  "id": "activity-ftc-part-two",
+  "level": "1",
+  "url": "activity-ftc-part-two.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "The Fundamental Theorem of Calculus, Part Two",
+  "body": " The Fundamental Theorem of Calculus, Part Two    State the Fundamental Theorem of Calculus (Part 2) and use the evaluation notation to compute from any antiderivative .  Write the antiderivative rules for and , and their chain rule versions for and .  Identify and in an integrand, factor out constant multiples, and apply the matching antiderivative rule.  Check that the integrand is continuous on the interval of integration before applying the Fundamental Theorem of Calculus.     We now have enough antiderivative formulas to compute definite integrals exactly. Today we connect the accumulation functions we have been studying to a much faster way of evaluating integrals, and then practice the new antiderivative rules for the exponential and the logarithm.    Facts We Know     An accumulation function can be used to calculate any definite integral: .    The Fundamental Theorem of Calculus guarantees that if is continuous, then is an antiderivative of .    Any two antiderivatives and of differ by a constant on any interval where is continuous, meaning .       An Accumulation Function in Action   Consider the accumulation function .     What is the function giving the rate of accumulation?      What is ?      Find by choosing the antiderivative of that makes equal to the value you found.      Evaluate using .      Evaluate using the simpler accumulation formula we originally learned.      Why do the last two tasks give the same answer? Use the facts about antiderivatives above to explain what happens to the constant when you compute .      The Fundamental Theorem of Calculus (Part 2)   If is any antiderivative of and is continuous between and , then      Evaluation Notation  The notation means . With it, the theorem reads .    Antiderivative Rules for the Exponential and Logarithm   Every derivative rule corresponds to an antiderivative rule. The statement is equivalent to . We have two new basic derivative rules:      Write the integral statement that corresponds to each derivative rule.      The chain rule versions of these derivative rules are Write the integral statement that corresponds to each one.      Sums and Constant Multiples  We still have the sum and constant multiple rules: This means we can work on the individual terms of a sum , and we can factor out constant multiples.    Practice    Find .      Find .      Identifying and   The chain rule factor must be identified and present in the integrand to use the antiderivative rule. We can factor out constant multiples, but we cannot factor out formulas involving the variable. For each problem below:  identify what is likely to be and calculate the required ,  factor out any constant multiples that are not part of , and  use the antiderivative rule.       Find .      Find .      Find . (Hint: Multiply and divide to get )      Computing Definite Integrals with Antiderivatives   Now apply by using your choice of antiderivative to compute each definite integral. Before you begin each one, verify that the interval in question does not include any discontinuities of the integrand.     Evaluate .      A student wants to evaluate and writes . Check the continuity requirement of on the interval . Is the student's computation justified? Explain.      Evaluate .      Evaluate .      Evaluate .     "
+},
+{
+  "id": "obj-ftc-part-two",
+  "level": "2",
+  "url": "activity-ftc-part-two.html#obj-ftc-part-two",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  State the Fundamental Theorem of Calculus (Part 2) and use the evaluation notation to compute from any antiderivative .  Write the antiderivative rules for and , and their chain rule versions for and .  Identify and in an integrand, factor out constant multiples, and apply the matching antiderivative rule.  Check that the integrand is continuous on the interval of integration before applying the Fundamental Theorem of Calculus.   "
+},
+{
+  "id": "ex-ftc2-accumulation-example",
+  "level": "2",
+  "url": "activity-ftc-part-two.html#ex-ftc2-accumulation-example",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "An Accumulation Function in Action.",
+  "body": " An Accumulation Function in Action   Consider the accumulation function .     What is the function giving the rate of accumulation?      What is ?      Find by choosing the antiderivative of that makes equal to the value you found.      Evaluate using .      Evaluate using the simpler accumulation formula we originally learned.      Why do the last two tasks give the same answer? Use the facts about antiderivatives above to explain what happens to the constant when you compute .    "
+},
+{
+  "id": "thm-ftc-part-two",
+  "level": "2",
+  "url": "activity-ftc-part-two.html#thm-ftc-part-two",
+  "type": "Theorem",
+  "number": "75",
+  "title": "The Fundamental Theorem of Calculus (Part 2).",
+  "body": " The Fundamental Theorem of Calculus (Part 2)   If is any antiderivative of and is continuous between and , then    "
+},
+{
+  "id": "rem-ftc2-evaluation-notation",
+  "level": "2",
+  "url": "activity-ftc-part-two.html#rem-ftc2-evaluation-notation",
+  "type": "Remark",
+  "number": "76",
+  "title": "Evaluation Notation.",
+  "body": " Evaluation Notation  The notation means . With it, the theorem reads .  "
+},
+{
+  "id": "ex-ftc2-exp-log-rules",
+  "level": "2",
+  "url": "activity-ftc-part-two.html#ex-ftc2-exp-log-rules",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Antiderivative Rules for the Exponential and Logarithm.",
+  "body": " Antiderivative Rules for the Exponential and Logarithm   Every derivative rule corresponds to an antiderivative rule. The statement is equivalent to . We have two new basic derivative rules:      Write the integral statement that corresponds to each derivative rule.      The chain rule versions of these derivative rules are Write the integral statement that corresponds to each one.    "
+},
+{
+  "id": "rem-ftc2-sum-constant-rules",
+  "level": "2",
+  "url": "activity-ftc-part-two.html#rem-ftc2-sum-constant-rules",
+  "type": "Remark",
+  "number": "77",
+  "title": "Sums and Constant Multiples.",
+  "body": " Sums and Constant Multiples  We still have the sum and constant multiple rules: This means we can work on the individual terms of a sum , and we can factor out constant multiples.  "
+},
+{
+  "id": "ex-ftc2-sum-practice",
+  "level": "2",
+  "url": "activity-ftc-part-two.html#ex-ftc2-sum-practice",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Practice.",
+  "body": " Practice    Find .      Find .    "
+},
+{
+  "id": "ex-ftc2-chain-practice",
+  "level": "2",
+  "url": "activity-ftc-part-two.html#ex-ftc2-chain-practice",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Identifying <span class=\"process-math\">\\(u\\)<\/span> and <span class=\"process-math\">\\(u'\\)<\/span>.",
+  "body": " Identifying and   The chain rule factor must be identified and present in the integrand to use the antiderivative rule. We can factor out constant multiples, but we cannot factor out formulas involving the variable. For each problem below:  identify what is likely to be and calculate the required ,  factor out any constant multiples that are not part of , and  use the antiderivative rule.       Find .      Find .      Find . (Hint: Multiply and divide to get )    "
+},
+{
+  "id": "ex-ftc2-definite-integrals",
+  "level": "2",
+  "url": "activity-ftc-part-two.html#ex-ftc2-definite-integrals",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Computing Definite Integrals with Antiderivatives.",
+  "body": " Computing Definite Integrals with Antiderivatives   Now apply by using your choice of antiderivative to compute each definite integral. Before you begin each one, verify that the interval in question does not include any discontinuities of the integrand.     Evaluate .      A student wants to evaluate and writes . Check the continuity requirement of on the interval . Is the student's computation justified? Explain.      Evaluate .      Evaluate .      Evaluate .    "
+},
+{
   "id": "homework",
   "level": "1",
   "url": "homework.html",
