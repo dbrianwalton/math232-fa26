@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-ftc-part-two">
+  <title>The Fundamental Theorem of Calculus, Part Two</title>
+
+  <objectives xml:id="obj-ftc-part-two">
+    <ul>
+      <li><p>State the Fundamental Theorem of Calculus (Part 2) and use the evaluation notation <m>F(x)\Big|_a^b</m> to compute <m>\int_a^b f(x)\,dx</m> from any antiderivative <m>F</m>.</p></li>
+      <li><p>Write the antiderivative rules for <m>e^x</m> and <m>\frac{1}{x}</m>, and their chain rule versions for <m>e^u u'</m> and <m>\frac{u'}{u}</m>.</p></li>
+      <li><p>Identify <m>u</m> and <m>u'</m> in an integrand, factor out constant multiples, and apply the matching antiderivative rule.</p></li>
+      <li><p>Check that the integrand is continuous on the interval of integration before applying the Fundamental Theorem of Calculus.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      We now have enough antiderivative formulas to compute definite integrals exactly.
+      Today we connect the accumulation functions we have been studying to a much faster way
+      of evaluating integrals, and then practice the new antiderivative rules for the
+      exponential and the logarithm.
+    </p>
+  </introduction>
+
+  <assemblage xml:id="assemblage-ftc2-facts">
+    <title>Facts We Know</title>
+    <p>
+      <ul>
+        <li>
+          <p>
+            An accumulation function <m>A(x)=\int_c^x f(t)\,dt</m> can be used to calculate any
+            definite integral:
+            <m>\displaystyle \int_a^b f(t)\,dt=A(b)-A(a)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The Fundamental Theorem of Calculus guarantees that if <m>f(x)</m> is continuous,
+            then <m>A(x)</m> is an antiderivative of <m>f(x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Any two antiderivatives <m>F(x)</m> and <m>G(x)</m> of <m>f(x)</m> differ by a
+            constant on any interval where <m>f(x)</m> is continuous, meaning
+            <m>G(x)=F(x)+C</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </assemblage>
+
+  <exercise xml:id="ex-ftc2-accumulation-example" workspace="0in">
+    <title>An Accumulation Function in Action</title>
+    <introduction>
+      <p>
+        Consider the accumulation function
+        <m>\displaystyle A(x)=\int_1^x t\,dt</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-ftc2-rate-function" workspace="0.75in">
+      <statement>
+        <p>
+          What is the function <m>f(t)</m> giving the rate of accumulation?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc2-initial-value" workspace="0.75in">
+      <statement>
+        <p>
+          What is <m>A(1)</m>?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc2-find-accumulation" workspace="1.25in">
+      <statement>
+        <p>
+          Find <m>A(x)</m> by choosing the antiderivative of <m>f</m> that makes <m>A(1)</m>
+          equal to the value you found.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc2-evaluate-with-A" workspace="1in">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int_0^3 x\,dx</m> using <m>A(x)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc2-evaluate-with-geometry" workspace="1in">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int_0^3 x\,dx</m> using the simpler accumulation formula
+          we originally learned.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc2-why-same" workspace="1.25in">
+      <statement>
+        <p>
+          Why do the last two tasks give the same answer? Use the facts about antiderivatives
+          above to explain what happens to the constant <m>C</m> when you compute
+          <m>A(3)-A(0)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <theorem xml:id="thm-ftc-part-two">
+    <title>The Fundamental Theorem of Calculus (Part 2)</title>
+    <statement>
+      <p>
+        If <m>F(x)</m> is <em>any</em> antiderivative of <m>f(x)</m> and <m>f(x)</m> is
+        continuous between <m>a</m> and <m>b</m>, then
+        <md>
+          \int_a^b f(x)\,dx = F(b)-F(a)\text{.}
+        </md>
+      </p>
+    </statement>
+  </theorem>
+
+  <remark xml:id="rem-ftc2-evaluation-notation">
+    <title>Evaluation Notation</title>
+    <p>
+      The notation <m>F(x)\Big|_a^b</m> means <m>F(b)-F(a)</m>. With it, the theorem reads
+      <m>\displaystyle \int_a^b f(x)\,dx=F(x)\Big|_a^b</m>.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-ftc2-exp-log-rules" workspace="0in">
+    <title>Antiderivative Rules for the Exponential and Logarithm</title>
+    <introduction>
+      <p>
+        Every derivative rule corresponds to an antiderivative rule. The statement
+        <m>\frac{d}{dx}\big[F(x)\big]=f(x)</m> is equivalent to
+        <m>\int f(x)\,dx=F(x)+C</m>. We have two new basic derivative rules:
+        <md>
+          <mrow>\frac{d}{dx}\big[e^x\big] \amp = e^x</mrow>
+          <mrow>\frac{d}{dx}\big[\ln(|x|)\big] \amp = \frac{1}{x}</mrow>
+        </md>
+      </p>
+    </introduction>
+    <task xml:id="task-ftc2-basic-rules" workspace="1in">
+      <statement>
+        <p>
+          Write the integral statement that corresponds to each derivative rule.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc2-chain-rules" workspace="1.25in">
+      <statement>
+        <p>
+          The chain rule versions of these derivative rules are
+          <md>
+            <mrow>\frac{d}{dx}\big[e^u\big] \amp = e^u\cdot u'</mrow>
+            <mrow>\frac{d}{dx}\big[\ln(|u|)\big] \amp = \frac{u'}{u}\text{.}</mrow>
+          </md>
+          Write the integral statement that corresponds to each one.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-ftc2-sum-constant-rules">
+    <title>Sums and Constant Multiples</title>
+    <p>
+      We still have the sum and constant multiple rules:
+      <md>
+        \int c_1 f(x)+c_2 g(x)\,dx = c_1\int f(x)\,dx + c_2\int g(x)\,dx\text{.}
+      </md>
+      This means we can work on the individual terms of a <em>sum</em>, and we can factor out
+      constant multiples.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-ftc2-sum-practice" workspace="0in">
+    <title>Practice</title>
+    <task xml:id="task-ftc2-practice-poly-recip" workspace="1.25in">
+      <statement>
+        <p>
+          Find <m>\displaystyle \int 2x^3+\frac{3}{x}\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc2-practice-sqrt-exp" workspace="1.25in">
+      <statement>
+        <p>
+          Find <m>\displaystyle \int 4\sqrt{x}-2e^x\,dx</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-ftc2-chain-practice" workspace="0in">
+    <title>Identifying <m>u</m> and <m>u'</m></title>
+    <introduction>
+      <p>
+        The chain rule factor <m>u'</m> must be identified and present in the integrand to use
+        the antiderivative rule. We can factor out constant multiples, but we cannot factor out
+        formulas involving the variable. For each problem below:
+        <ul>
+          <li><p>identify what is likely to be <m>u</m> and calculate the required <m>u'</m>,</p></li>
+          <li><p>factor out any constant multiples that are not part of <m>u'</m>, and</p></li>
+          <li><p>use the antiderivative rule.</p></li>
+        </ul>
+      </p>
+    </introduction>
+    <task xml:id="task-ftc2-chain-exp" workspace="1.5in">
+      <statement>
+        <p>
+          Find <m>\displaystyle \int 4e^{2x}\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc2-chain-ln" workspace="1.5in">
+      <statement>
+        <p>
+          Find <m>\displaystyle \int \frac{6x}{x^2+4}\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc2-chain-exp-constant" workspace="1.5in">
+      <statement>
+        <p>
+          Find <m>\displaystyle \int 2 e^{-3x} \,dx</m>. (Hint: Multiply and divide to get <m>u'</m>)
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-ftc2-definite-integrals" workspace="0in">
+    <title>Computing Definite Integrals with Antiderivatives</title>
+    <introduction>
+      <p>
+        Now apply <xref ref="thm-ftc-part-two"/> by using your choice of antiderivative to
+        compute each definite integral. Before you begin each one, verify that the interval in
+        question does not include any discontinuities of the integrand.
+      </p>
+    </introduction>
+    <task xml:id="task-ftc2-definite-poly-recip" workspace="1.5in">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int_1^3 2x^3+\frac{3}{x}\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc2-continuity-check" workspace="1.75in">
+      <statement>
+        <p>
+          A student wants to evaluate <m>\displaystyle \int_{-1}^{2}\frac{1}{x}\,dx</m> and
+          writes <m>\ln|x|\Big|_{-1}^{2}=\ln(2)-\ln(1)=\ln(2)</m>. Check the continuity
+          requirement of <xref ref="thm-ftc-part-two"/> on the interval <m>[-1,2]</m>. Is the
+          student's computation justified? Explain.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc2-definite-exp" workspace="1.5in">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int_0^2 4e^{2x}\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc2-definite-ln" workspace="1.5in">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int_0^1 \frac{6x}{x^2+4}\,dx</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-ftc2-definite-exp-const" workspace="1.5in">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int_0^4 2 e^{-3x} \,dx</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>

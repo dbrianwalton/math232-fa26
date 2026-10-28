@@ -74,6 +74,7 @@
       <xi:include href="./activities/15-exponential-logarithm-equations.ptx"/>
       <xi:include href="./activities/16-logarithmic-differentiation.ptx"/>
       <xi:include href="./activities/17-lhopitals-rule.ptx"/>
+      <xi:include href="./activities/18-ftc-part-two.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>
