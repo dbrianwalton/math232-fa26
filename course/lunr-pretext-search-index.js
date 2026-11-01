@@ -1702,6 +1702,114 @@ var ptx_lunr_docs = [
   "body": " Computing Definite Integrals with Antiderivatives   Now apply by using your choice of antiderivative to compute each definite integral. Before you begin each one, verify that the interval in question does not include any discontinuities of the integrand.     Evaluate .      A student wants to evaluate and writes . Check the continuity requirement of on the interval . Is the student's computation justified? Explain.      Evaluate .      Evaluate .      Evaluate .    "
 },
 {
+  "id": "activity-right-triangle-trigonometry",
+  "level": "1",
+  "url": "activity-right-triangle-trigonometry.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Right Triangle Trigonometry",
+  "body": " Right Triangle Trigonometry    Identify the legs, the hypotenuse, and the two complementary acute angles of a right triangle, and use the Pythagorean theorem to find a missing side.  Explain why the ratios of side lengths in a right triangle depend only on the acute angle , and use them to define , , and .  Draw and label a right triangle for a physical situation, decide which trigonometric ratio relates the known and unknown quantities, and solve for the unknown length.  Describe the unit triangles in which the hypotenuse, the adjacent side, or the opposite side has length , and identify the remaining side lengths as trigonometric values.  Recognize the three Pythagorean identities as the Pythagorean theorem applied to the three unit triangles.     Trigonometry begins with the study of right triangles. Soon we will extend these ideas to angles of any size by using the unit circle, and then to functions that we can differentiate and integrate. Today we build the foundation: what the trigonometric ratios are, why they make sense, and how they let us measure things that are hard to reach directly.    The Anatomy of a Right Triangle   A right triangle has one angle of , called the right angle. The two sides that meet at the right angle are the legs . The third side, opposite the right angle, is the hypotenuse . The other two angles are less than and are called acute angles.  Throughout this activity we draw the right angle on the right side of the triangle, at the vertex . The angle at is , the angle at is , and the side lengths are labeled , , and as shown.   A right triangle with the right angle at vertex C on the lower right, vertex B at the lower left, and vertex A at the top directly above C. The angle at B is labeled theta and the angle at A is labeled phi. The side from B to C has length a, the side from C to A has length b, and the hypotenuse from B to A has length c.       Suppose . Find . Then explain why, in every right triangle, the two acute angles satisfy . (Two angles that add to are called complementary .)      The Pythagorean Theorem   In a right triangle with legs and and hypotenuse ,      Finding a Missing Side    A right triangle has a leg of length and a hypotenuse of length . Use to find the other leg . Then find the lengths of the legs and hypotenuse of a triangle with the same shape that is twice as large.      Similar Triangles and Trigonometric Ratios   Any two right triangles that share the same acute angle are similar: one is an rescaled copy of the other. Similar triangles have the same ratios between their side lengths. Let us see this in a specific case. Consider a right triangle with , , and , with the angle at .     A second right triangle has the same angle but a hypotenuse of length . Find its legs. Then, for each of the two triangles, compute the three ratios , , and .      What do you notice about the ratios for the two triangles? Explain why the ratios depend on the angle but not on how large the triangle is.      The Trigonometric Ratios   For an acute angle in a right triangle, the side across from is the opposite side, and the leg that touches is the adjacent side. The sine , cosine , and tangent of are the ratios where the last expression in each line refers to the triangle labeled in .     One Triangle, Two Angles    For the triangle with , , and , find , , and . Then find , , and . Be careful: which side is opposite and which is adjacent changes when you switch angles.      Which of your six values are equal to one another? Use the fact that to write what you found as a statement about and .      Applications: A Kite on a String   Trigonometric ratios let us find lengths that are difficult to measure directly. For the problems below, use a calculator in degree mode.  A kite is flying so that the string makes an angle of with the ground. The string is feet long. How high is the kite above the ground?     Draw and label the right triangle. Which side is the length of the string? Which angle is ? Which side is the height that we want to find?      Which two sides of the triangle are involved, one known and one unknown? Which trigonometric ratio relates them? Write the equation and solve for the height of the kite.      Applications: A Flagpole   When you stand feet away from a flagpole, you must look up at an angle of above the horizontal to see the top of the pole. Your eyes are exactly feet above the ground. How tall is the flagpole?     Draw the right triangle. Label the known and unknown lengths and the known angle.      Which trigonometric ratio involves the two sides in question? Write the equation and solve for the unknown length.      Is the length you just found the height of the flagpole? If not, use the height of your eyes to finish the problem.      Unit Triangles  Because similar triangles share the same ratios, we may rescale a right triangle to any size we like without changing its angle . It is especially useful to rescale so that one of the three sides has length . The result is a unit triangle . When is acute, the other two sides of a unit triangle are trigonometric values.    If the hypotenuse is , then the adjacent side is and the opposite side is .  If the adjacent side is , then the hypotenuse is the secant , , and the opposite side is .  If the opposite side is , then the hypotenuse is the cosecant , , and the adjacent side is the cotangent , .      The Three Unit Triangles   Three right triangles side by side, each with the acute angle theta at the lower left and the right angle at the lower right. In the first, the hypotenuse is 1, the horizontal leg is cosine of theta, and the vertical leg is sine of theta. In the second, the horizontal leg is 1, the vertical leg is tangent of theta, and the hypotenuse is secant of theta. In the third, the vertical leg is 1, the horizontal leg is cotangent of theta, and the hypotenuse is cosecant of theta.      The Pythagorean Identities  Applying to each of the three unit triangles gives one identity apiece. Each holds for every acute angle , and we will see that they hold for every angle where the expressions are defined. The first comes from the triangle with hypotenuse , the second from the triangle with adjacent side , and the third from the triangle with opposite side .   "
+},
+{
+  "id": "obj-right-triangle-trigonometry",
+  "level": "2",
+  "url": "activity-right-triangle-trigonometry.html#obj-right-triangle-trigonometry",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Identify the legs, the hypotenuse, and the two complementary acute angles of a right triangle, and use the Pythagorean theorem to find a missing side.  Explain why the ratios of side lengths in a right triangle depend only on the acute angle , and use them to define , , and .  Draw and label a right triangle for a physical situation, decide which trigonometric ratio relates the known and unknown quantities, and solve for the unknown length.  Describe the unit triangles in which the hypotenuse, the adjacent side, or the opposite side has length , and identify the remaining side lengths as trigonometric values.  Recognize the three Pythagorean identities as the Pythagorean theorem applied to the three unit triangles.   "
+},
+{
+  "id": "ex-right-triangle-anatomy",
+  "level": "2",
+  "url": "activity-right-triangle-trigonometry.html#ex-right-triangle-anatomy",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "The Anatomy of a Right Triangle.",
+  "body": " The Anatomy of a Right Triangle   A right triangle has one angle of , called the right angle. The two sides that meet at the right angle are the legs . The third side, opposite the right angle, is the hypotenuse . The other two angles are less than and are called acute angles.  Throughout this activity we draw the right angle on the right side of the triangle, at the vertex . The angle at is , the angle at is , and the side lengths are labeled , , and as shown.   A right triangle with the right angle at vertex C on the lower right, vertex B at the lower left, and vertex A at the top directly above C. The angle at B is labeled theta and the angle at A is labeled phi. The side from B to C has length a, the side from C to A has length b, and the hypotenuse from B to A has length c.       Suppose . Find . Then explain why, in every right triangle, the two acute angles satisfy . (Two angles that add to are called complementary .)    "
+},
+{
+  "id": "thm-rt-pythagorean",
+  "level": "2",
+  "url": "activity-right-triangle-trigonometry.html#thm-rt-pythagorean",
+  "type": "Theorem",
+  "number": "78",
+  "title": "The Pythagorean Theorem.",
+  "body": " The Pythagorean Theorem   In a right triangle with legs and and hypotenuse ,    "
+},
+{
+  "id": "ex-right-triangle-pythagorean-use",
+  "level": "2",
+  "url": "activity-right-triangle-trigonometry.html#ex-right-triangle-pythagorean-use",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Finding a Missing Side.",
+  "body": " Finding a Missing Side    A right triangle has a leg of length and a hypotenuse of length . Use to find the other leg . Then find the lengths of the legs and hypotenuse of a triangle with the same shape that is twice as large.    "
+},
+{
+  "id": "ex-right-triangle-ratios",
+  "level": "2",
+  "url": "activity-right-triangle-trigonometry.html#ex-right-triangle-ratios",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Similar Triangles and Trigonometric Ratios.",
+  "body": " Similar Triangles and Trigonometric Ratios   Any two right triangles that share the same acute angle are similar: one is an rescaled copy of the other. Similar triangles have the same ratios between their side lengths. Let us see this in a specific case. Consider a right triangle with , , and , with the angle at .     A second right triangle has the same angle but a hypotenuse of length . Find its legs. Then, for each of the two triangles, compute the three ratios , , and .      What do you notice about the ratios for the two triangles? Explain why the ratios depend on the angle but not on how large the triangle is.    "
+},
+{
+  "id": "def-rt-trigonometric-ratios",
+  "level": "2",
+  "url": "activity-right-triangle-trigonometry.html#def-rt-trigonometric-ratios",
+  "type": "Definition",
+  "number": "79",
+  "title": "The Trigonometric Ratios.",
+  "body": " The Trigonometric Ratios   For an acute angle in a right triangle, the side across from is the opposite side, and the leg that touches is the adjacent side. The sine , cosine , and tangent of are the ratios where the last expression in each line refers to the triangle labeled in .   "
+},
+{
+  "id": "ex-right-triangle-two-angles",
+  "level": "2",
+  "url": "activity-right-triangle-trigonometry.html#ex-right-triangle-two-angles",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "One Triangle, Two Angles.",
+  "body": " One Triangle, Two Angles    For the triangle with , , and , find , , and . Then find , , and . Be careful: which side is opposite and which is adjacent changes when you switch angles.      Which of your six values are equal to one another? Use the fact that to write what you found as a statement about and .    "
+},
+{
+  "id": "ex-right-triangle-kite",
+  "level": "2",
+  "url": "activity-right-triangle-trigonometry.html#ex-right-triangle-kite",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Applications: A Kite on a String.",
+  "body": " Applications: A Kite on a String   Trigonometric ratios let us find lengths that are difficult to measure directly. For the problems below, use a calculator in degree mode.  A kite is flying so that the string makes an angle of with the ground. The string is feet long. How high is the kite above the ground?     Draw and label the right triangle. Which side is the length of the string? Which angle is ? Which side is the height that we want to find?      Which two sides of the triangle are involved, one known and one unknown? Which trigonometric ratio relates them? Write the equation and solve for the height of the kite.    "
+},
+{
+  "id": "ex-right-triangle-flagpole",
+  "level": "2",
+  "url": "activity-right-triangle-trigonometry.html#ex-right-triangle-flagpole",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Applications: A Flagpole.",
+  "body": " Applications: A Flagpole   When you stand feet away from a flagpole, you must look up at an angle of above the horizontal to see the top of the pole. Your eyes are exactly feet above the ground. How tall is the flagpole?     Draw the right triangle. Label the known and unknown lengths and the known angle.      Which trigonometric ratio involves the two sides in question? Write the equation and solve for the unknown length.      Is the length you just found the height of the flagpole? If not, use the height of your eyes to finish the problem.    "
+},
+{
+  "id": "assemblage-rt-unit-triangles-2",
+  "level": "2",
+  "url": "activity-right-triangle-trigonometry.html#assemblage-rt-unit-triangles-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "unit triangle "
+},
+{
+  "id": "assemblage-rt-unit-triangles-3",
+  "level": "2",
+  "url": "activity-right-triangle-trigonometry.html#assemblage-rt-unit-triangles-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "secant cosecant cotangent "
+},
+{
   "id": "homework",
   "level": "1",
   "url": "homework.html",
