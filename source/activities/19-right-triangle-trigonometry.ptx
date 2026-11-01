@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-right-triangle-trigonometry">
+  <title>Right Triangle Trigonometry</title>
+
+  <objectives xml:id="obj-right-triangle-trigonometry">
+    <ul>
+      <li><p>Identify the legs, the hypotenuse, and the two complementary acute angles of a right triangle, and use the Pythagorean theorem to find a missing side.</p></li>
+      <li><p>Explain why the ratios of side lengths in a right triangle depend only on the acute angle <m>\theta</m>, and use them to define <m>\sin(\theta)</m>, <m>\cos(\theta)</m>, and <m>\tan(\theta)</m>.</p></li>
+      <li><p>Draw and label a right triangle for a physical situation, decide which trigonometric ratio relates the known and unknown quantities, and solve for the unknown length.</p></li>
+      <li><p>Describe the unit triangles in which the hypotenuse, the adjacent side, or the opposite side has length <m>1</m>, and identify the remaining side lengths as trigonometric values.</p></li>
+      <li><p>Recognize the three Pythagorean identities as the Pythagorean theorem applied to the three unit triangles.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Trigonometry begins with the study of right triangles. Soon we will extend these ideas to
+      angles of any size by using the unit circle, and then to functions that we can differentiate
+      and integrate. Today we build the foundation: what the trigonometric ratios are, why they
+      make sense, and how they let us measure things that are hard to reach directly.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-right-triangle-anatomy" workspace="0in">
+    <title>The Anatomy of a Right Triangle</title>
+    <introduction>
+      <p>
+        A <term>right triangle</term> has one angle of <m>90^\circ</m>, called the right angle.
+        The two sides that meet at the right angle are the <term>legs</term>. The third side,
+        opposite the right angle, is the <term>hypotenuse</term>. The other two angles are less than
+        <m>90^\circ</m> and are called <term>acute</term> angles.
+      </p>
+      <p>
+        Throughout this activity we draw the right angle on the right side of the triangle, at the
+        vertex <m>C</m>. The angle at <m>B</m> is <m>\theta</m>, the angle at <m>A</m> is
+        <m>\phi</m>, and the side lengths are labeled <m>a</m>, <m>b</m>, and <m>c</m> as shown.
+      </p>
+      <image width="50%">
+        <shortdescription>
+          A right triangle with the right angle at vertex C on the lower right, vertex B at the
+          lower left, and vertex A at the top directly above C. The angle at B is labeled theta
+          and the angle at A is labeled phi. The side from B to C has length a, the side from C to
+          A has length b, and the hypotenuse from B to A has length c.
+        </shortdescription>
+        <latex-image>
+          \begin{tikzpicture}
+            \coordinate (B) at (0,0);
+            \coordinate (C) at (5,0);
+            \coordinate (A) at (5,3);
+            \draw[thick] (B) -- (C) -- (A) -- cycle;
+            \draw (4.6,0) -- (4.6,0.4) -- (5,0.4);
+            \node[below left] at (B) {$B$};
+            \node[below right] at (C) {$C$};
+            \node[above right] at (A) {$A$};
+            \node at (1.0,0.28) {$\theta$};
+            \node at (4.75,2.3) {$\phi$};
+            \node[below] at (2.5,0) {$a$};
+            \node[right] at (5,1.5) {$b$};
+            \node[above left] at (2.5,1.5) {$c$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </introduction>
+    <task xml:id="task-rt-complementary" workspace="1.25in">
+      <statement>
+        <p>
+          Suppose <m>\theta=35^\circ</m>. Find <m>\phi</m>. Then explain why, in every right triangle,
+          the two acute angles satisfy <m>\theta+\phi=90^\circ</m>. (Two angles that add to
+          <m>90^\circ</m> are called <term>complementary</term>.)
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <theorem xml:id="thm-rt-pythagorean">
+    <title>The Pythagorean Theorem</title>
+    <statement>
+      <p>
+        In a right triangle with legs <m>a</m> and <m>b</m> and hypotenuse <m>c</m>,
+        <md>a^2+b^2=c^2\text{.}</md>
+      </p>
+    </statement>
+  </theorem>
+
+  <exercise xml:id="ex-right-triangle-pythagorean-use" workspace="0in">
+    <title>Finding a Missing Side</title>
+    <task xml:id="task-rt-pythagorean-missing" workspace="1.25in">
+      <statement>
+        <p>
+          A right triangle has a leg of length <m>a=5</m> and a hypotenuse of length <m>c=13</m>. Use
+          <xref ref="thm-rt-pythagorean"/> to find the other leg <m>b</m>. Then find the
+          lengths of the legs and hypotenuse of a triangle with the same shape that is
+          twice as large.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-right-triangle-ratios" workspace="0in">
+    <title>Similar Triangles and Trigonometric Ratios</title>
+    <introduction>
+      <p>
+        Any two right triangles that share the same acute angle <m>\theta</m> are similar: one is
+        an rescaled copy of the other. Similar triangles have the same ratios between
+        their side lengths. Let us see this in a specific case. Consider a right triangle with
+        <m>a=4</m>, <m>b=3</m>, and <m>c=5</m>, with the angle <m>\theta</m> at <m>B</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-rt-similar-copy" workspace="1.5in">
+      <statement>
+        <p>
+          A second right triangle has the same angle <m>\theta</m> but a hypotenuse of length
+          <m>15</m>. Find its legs. Then, for each of the two triangles, compute the three ratios
+          <m>\dfrac{b}{c}</m>, <m>\dfrac{a}{c}</m>, and <m>\dfrac{b}{a}</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-rt-ratio-depends-on-angle" workspace="1in">
+      <statement>
+        <p>
+          What do you notice about the ratios for the two triangles? Explain why the ratios depend
+          on the angle <m>\theta</m> but not on how large the triangle is.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <definition xml:id="def-rt-trigonometric-ratios">
+    <title>The Trigonometric Ratios</title>
+    <statement>
+      <p>
+        For an acute angle <m>\theta</m> in a right triangle, the side across from <m>\theta</m> is
+        the <term>opposite</term> side, and the leg that touches <m>\theta</m> is the
+        <term>adjacent</term> side. The <term>sine</term>, <term>cosine</term>, and
+        <term>tangent</term> of <m>\theta</m> are the ratios
+        <md>
+          <mrow> \sin(\theta) \amp = \frac{\text{opposite}}{\text{hypotenuse}} = \frac{b}{c} </mrow>
+          <mrow> \cos(\theta) \amp = \frac{\text{adjacent}}{\text{hypotenuse}} = \frac{a}{c} </mrow>
+          <mrow> \tan(\theta) \amp = \frac{\text{opposite}}{\text{adjacent}} = \frac{b}{a} </mrow>
+        </md>
+        where the last expression in each line refers to the triangle labeled in
+        <xref ref="ex-right-triangle-anatomy"/>.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise xml:id="ex-right-triangle-two-angles" workspace="0in">
+    <title>One Triangle, Two Angles</title>
+    <task xml:id="task-rt-ratios-both-angles" workspace="1.75in">
+      <statement>
+        <p>
+          For the triangle with <m>a=4</m>, <m>b=3</m>, and <m>c=5</m>, find <m>\sin(\theta)</m>,
+          <m>\cos(\theta)</m>, and <m>\tan(\theta)</m>. Then find <m>\sin(\phi)</m>,
+          <m>\cos(\phi)</m>, and <m>\tan(\phi)</m>. Be careful: which side is
+          opposite and which is adjacent changes when you switch angles.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-rt-cofunction" workspace="1.25in">
+      <statement>
+        <p>
+          Which of your six values are equal to one another? Use the fact that <m>\phi=90^\circ-\theta</m> to
+          write what you found as a statement about <m>\sin(\theta)</m> and
+          <m>\cos(90^\circ-\theta)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-right-triangle-kite" workspace="0in">
+    <title>Applications: A Kite on a String</title>
+    <introduction>
+      <p>
+        Trigonometric ratios let us find lengths that are difficult to measure directly. For the
+        problems below, use a calculator in degree mode.
+      </p>
+      <p>
+        A kite is flying so that the string makes an angle of <m>70^\circ</m> with the ground. The
+        string is <m>100</m> feet long. How high is the kite above the ground?
+      </p>
+    </introduction>
+    <task xml:id="task-kite-diagram" workspace="2in">
+      <statement>
+        <p>
+          Draw and label the right triangle. Which side is the length of the string? Which angle
+          is <m>70^\circ</m>? Which side is the height that we want to find?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-kite-ratio" workspace="1.5in">
+      <statement>
+        <p>
+          Which two sides of the triangle are involved, one known and one unknown? Which
+          trigonometric ratio relates them? Write the equation and solve for the height of the kite.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-right-triangle-flagpole" workspace="0in">
+    <title>Applications: A Flagpole</title>
+    <introduction>
+      <p>
+        When you stand <m>10</m> feet away from a flagpole, you must look up at an angle of
+        <m>50^\circ</m> above the horizontal to see the top of the pole. Your eyes are exactly
+        <m>5</m> feet above the ground. How tall is the flagpole?
+      </p>
+    </introduction>
+    <task xml:id="task-flag-diagram" workspace="2in">
+      <statement>
+        <p>
+          Draw the right triangle. Label the known and unknown lengths and the known angle.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-flag-ratio" workspace="1.5in">
+      <statement>
+        <p>
+          Which trigonometric ratio involves the two sides in question? Write the equation and solve
+          for the unknown length.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-flag-eye-level" workspace="1in">
+      <statement>
+        <p>
+          Is the length you just found the height of the flagpole? If not, use the height of your
+          eyes to finish the problem.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <assemblage xml:id="assemblage-rt-unit-triangles">
+    <title>Unit Triangles</title>
+    <p>
+      Because similar triangles share the same ratios, we may rescale a right triangle to any size
+      we like without changing its angle <m>\theta</m>. It is especially useful to rescale so that
+      one of the three sides has length <m>1</m>. The result is a <term>unit triangle</term>. When
+      <m>\theta</m> is acute, the other two sides of a unit triangle are trigonometric values.
+    </p>
+    <p>
+      <ul>
+        <li><p>If the hypotenuse is <m>1</m>, then the adjacent side is <m>\cos(\theta)</m> and the
+        opposite side is <m>\sin(\theta)</m>.</p></li>
+        <li><p>If the adjacent side is <m>1</m>, then the hypotenuse is the <term>secant</term>,
+        <m>\sec(\theta)=\dfrac{c}{a}=\dfrac{1}{\cos(\theta)}</m>, and the opposite side is
+        <m>\tan(\theta)</m>.</p></li>
+        <li><p>If the opposite side is <m>1</m>, then the hypotenuse is the <term>cosecant</term>,
+        <m>\csc(\theta)=\dfrac{c}{b}=\dfrac{1}{\sin(\theta)}</m>, and the adjacent side is the
+        <term>cotangent</term>, <m>\cot(\theta)=\dfrac{a}{b}=\dfrac{1}{\tan(\theta)}</m>.</p></li>
+      </ul>
+    </p>
+  </assemblage>
+
+  <assemblage xml:id="assemblage-rt-three-unit-triangles">
+    <title>The Three Unit Triangles</title>
+    <image width="100%">
+      <shortdescription>
+        Three right triangles side by side, each with the acute angle theta at the lower left and
+        the right angle at the lower right. In the first, the hypotenuse is 1, the horizontal leg
+        is cosine of theta, and the vertical leg is sine of theta. In the second, the horizontal
+        leg is 1, the vertical leg is tangent of theta, and the hypotenuse is secant of theta. In
+        the third, the vertical leg is 1, the horizontal leg is cotangent of theta, and the
+        hypotenuse is cosecant of theta.
+      </shortdescription>
+      <latex-image>
+        \begin{tikzpicture}
+          \pgfmathsetmacro{\th}{40}
+          \pgfmathsetmacro{\s}{2.6}
+          \pgfmathsetmacro{\cs}{\s*cos(\th)}
+          \pgfmathsetmacro{\sn}{\s*sin(\th)}
+          \pgfmathsetmacro{\tn}{\s*tan(\th)}
+          \pgfmathsetmacro{\ct}{\s/tan(\th)}
+          \begin{scope}
+            \coordinate (B) at (0,0); \coordinate (C) at (\cs,0); \coordinate (A) at (\cs,\sn);
+            \draw[thick] (B)--(C)--(A)--cycle;
+            \draw (\cs-0.25,0)--(\cs-0.25,0.25)--(\cs,0.25);
+            \node at (0.75,0.18) {$\theta$};
+            \node[below] at (\cs/2,0) {$\cos(\theta)$};
+            \node[right] at (\cs,\sn/2) {$\sin(\theta)$};
+            \node[above left] at (\cs/2,\sn/2) {$1$};
+          \end{scope}
+          \begin{scope}[xshift=3.6cm]
+            \coordinate (B) at (0,0); \coordinate (C) at (\s,0); \coordinate (A) at (\s,\tn);
+            \draw[thick] (B)--(C)--(A)--cycle;
+            \draw (\s-0.25,0)--(\s-0.25,0.25)--(\s,0.25);
+            \node at (0.75,0.18) {$\theta$};
+            \node[below] at (\s/2,0) {$1$};
+            \node[right] at (\s,\tn/2) {$\tan(\theta)$};
+            \node[above left] at (\s/2,\tn/2) {$\sec(\theta)$};
+          \end{scope}
+          \begin{scope}[xshift=8cm]
+            \coordinate (B) at (0,0); \coordinate (C) at (\ct,0); \coordinate (A) at (\ct,\s);
+            \draw[thick] (B)--(C)--(A)--cycle;
+            \draw (\ct-0.25,0)--(\ct-0.25,0.25)--(\ct,0.25);
+            \node at (0.75,0.18) {$\theta$};
+            \node[below] at (\ct/2,0) {$\cot(\theta)$};
+            \node[right] at (\ct,\s/2) {$1$};
+            \node[above left] at (\ct/2,\s/2) {$\csc(\theta)$};
+          \end{scope}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </assemblage>
+
+  <assemblage xml:id="assemblage-rt-pythagorean-identities">
+    <title>The Pythagorean Identities</title>
+    <p>
+      Applying <xref ref="thm-rt-pythagorean"/> to each of the three unit triangles gives
+      one identity apiece. Each holds for every acute angle <m>\theta</m>, and we will see that
+      they hold for every angle where the expressions are defined.
+      <md>
+        <mrow> \sin^2(\theta)+\cos^2(\theta) \amp = 1 </mrow>
+        <mrow> \tan^2(\theta)+1 \amp = \sec^2(\theta) </mrow>
+        <mrow> 1+\cot^2(\theta) \amp = \csc^2(\theta) </mrow>
+      </md>
+      The first comes from the triangle with hypotenuse <m>1</m>, the second from the triangle
+      with adjacent side <m>1</m>, and the third from the triangle with opposite side <m>1</m>.
+    </p>
+  </assemblage>
+</worksheet>

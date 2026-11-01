@@ -75,6 +75,7 @@
       <xi:include href="./activities/16-logarithmic-differentiation.ptx"/>
       <xi:include href="./activities/17-lhopitals-rule.ptx"/>
       <xi:include href="./activities/18-ftc-part-two.ptx"/>
+      <xi:include href="./activities/19-right-triangle-trigonometry.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>
