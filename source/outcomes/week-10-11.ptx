@@ -30,7 +30,7 @@
     <remark>
       <p>
         This outcome is unchanged from Week 8 and Week 9.
-        See <xref ref="subsec-E5"/> for the checkpoint practice problem.
+        See <xref ref="subsec-E5" text="title"/> for the checkpoint practice problem.
       </p>
     </remark>
   </subsection>
@@ -74,6 +74,24 @@
           Compute <m>\displaystyle \int_{-1}^{2} x e^{-x^2} \, dx</m>.
         </p>
       </statement>
+      <solution>
+        <p>
+          We will use the Fundamental Theorem of Calculus to evaluate the definite integral,
+          which involves identifying an antiderivative of the integrand <m>x e^{-x^2}</m>
+          and then computing its change.
+          When exponentials are involved, we first check if the integrand is compatible with
+          the derivative of <m>e^u</m>, which is <m>e^{u} u'</m>.
+          In this case <m>u=-x^2</m> so <m>u'=-2x</m>.
+          The form <m>e^u u' = -2x e^{-x^2}</m> is close to the integrand <m>x e^{-x^2}</m>,
+          but we need to multiply and divide by <m>-2</m> to get that form.
+        </p>
+        <md>
+          <mrow>\int_{-1}^{2} x e^{-x^2} \, dx \amp = \int_{-1}^{2} \frac{-2x e^{-x^2}}{-2} \, dx</mrow>
+          <mrow>\amp \overset{\text{FTC}}{=} \left[ \frac{-1}{2} e^{-x^2} \right]_{-1}^{2}</mrow>
+          <mrow>\amp = \left( \frac{-1}{2} e^{-4} \right) - \left( \frac{-1}{2} e^{-1} \right)</mrow>
+          <mrow>\amp = \frac{e^{-1} - e^{-4}}{2}</mrow>
+        </md>
+      </solution>
     </exercise>
   </subsection>
 
@@ -95,6 +113,26 @@
           Compute <m>\displaystyle \int_0^2 \frac{4x}{x^2+1} \, dx</m>.
         </p>
       </statement>
+      <solution>
+        <p>
+          We will use the Fundamental Theorem of Calculus to evaluate the definite integral,
+          which involves identifying an antiderivative of the integrand
+          <m>\displaystyle \frac{4x}{x^2+1}</m> and then computing its change.
+          When logarithms are involved, we look for an integrand with the structure
+          <m>u'/u</m>, because that matches the derivative of <m>\ln(|u|)</m>.
+          In this case the denominator suggests <m>u=x^2+1</m>, so <m>u'=2x</m>.
+          The form <m>u'/u = \dfrac{2x}{x^2+1}</m> is close to the integrand,
+          but the numerator <m>4x</m> is twice as large, so we need to factor out a <m>2</m>
+          to get that form.
+          Since <m>x^2+1</m> is always positive, the absolute value does not change anything on this interval.
+        </p>
+        <md>
+          <mrow>\int_0^2 \frac{4x}{x^2+1} \, dx \amp = \int_0^2 2 \cdot \frac{2x}{x^2+1} \, dx</mrow>
+          <mrow>\amp \overset{\text{FTC}}{=} \Big[ 2 \ln\left(\left|x^2+1\right|\right) \Big]_0^2</mrow>
+          <mrow>\amp = 2 \ln(5) - 2 \ln(1)</mrow>
+          <mrow>\amp = 2 \ln(5)</mrow>
+        </md>
+      </solution>
     </exercise>
   </subsection>
 
@@ -119,6 +157,60 @@
           Use a triangle model and trigonometry to determine the distance between you.
         </p>
       </statement>
+      <solution>
+        <p>
+          To create a triangle model, draw two parallel lines to represent the banks of the river.
+          Draw a line straight across the river to represent your position and the position
+          directly across from you on the other bank.
+          Draw a second line from your position, rotated to the right by <m>50^\circ</m>,
+          to represent the distance to your friend.
+          Label the angle, label the distance across the river as <m>20</m> feet,
+          and label the unknown distance between you and your friend with a variable, say <m>D</m>.
+          Connecting your friend's position to the point directly across from you
+          completes a right triangle.
+        </p>
+        <image width="50%">
+          <shortdescription>
+            Two horizontal parallel lines represent the river banks, with the river shaded between them.
+            You stand at a point on the lower bank. A vertical segment of length 20 feet goes straight up
+            to the point directly across on the upper bank, with a right angle marked there.
+            A second segment of length D goes from you up and to the right to your friend on the upper bank.
+            The angle between the two segments at your position is marked as 50 degrees.
+          </shortdescription>
+          <latex-image>
+            \begin{tikzpicture}[scale=1.2]
+              \fill[blue!10] (-1.5,0) rectangle (5,3);
+              \draw[thick] (-1.5,0) -- (5,0);
+              \draw[thick] (-1.5,3) -- (5,3);
+              \draw[thick] (0,0) -- (0,3);
+              \draw[thick] (0,0) -- (3.575,3);
+              \draw[thick] (0,3) -- (3.575,3);
+              \draw (0,2.8) -- (0.2,2.8) -- (0.2,3);
+              \draw (0,0.9) arc (90:40:0.9);
+              \node at (0.55,1.2) {$50^\circ$};
+              \node[left] at (0,1.5) {$20$ ft};
+              \node[below right] at (1.8,1.5) {$D$};
+              \fill (0,0) circle (2pt);
+              \fill (3.575,3) circle (2pt);
+              \node[below] at (0,0) {You};
+              \node[above] at (3.575,3) {Friend};
+              \node[right] at (5,1.5) {River};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+        <p>
+          The given angle of <m>50^\circ</m> has the known length (the width of the river)
+          as its adjacent leg, and the unknown length (the distance to your friend)
+          is the hypotenuse.
+          This tells us to use the cosine ratio of the adjacent length to the hypotenuse length.
+        </p>
+        <md>
+          <mrow>\cos(50^\circ) \amp = \frac{20}{D}</mrow>
+          <mrow>D \cos(50^\circ) \amp = 20</mrow>
+          <mrow>D \amp = \frac{20}{\cos(50^\circ)}</mrow>
+          <mrow>D \amp \approx 31.1 \text{ ft}</mrow>
+        </md>
+      </solution>
     </exercise>
   </subsection>
 
