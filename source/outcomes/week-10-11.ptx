@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-outcomes-week-10-11">
+  <title>Week 10 and Week 11</title>
+
+  <introduction>
+    <p>
+      Outcome E5 was introduced in Week 8 and Week 9, and it will be repeated this block.
+      You will have another opportunity to demonstrate it alongside the new outcomes.
+    </p>
+    <p>
+      These weeks focus on evaluating indeterminate limits with L'Hôpital's Rule,
+      applying the second part of the Fundamental Theorem of Calculus to
+      definite integrals whose antiderivatives involve exponentials and logarithms,
+      and building right triangle models to solve applied problems with trigonometry.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-E5-repeat">
+    <title>E5 Logarithmic Differentiation (Repeated)</title>
+
+    <assemblage xml:id="assemblage-E5-repeat">
+      <title>E5</title>
+      <p>
+        I can use logarithmic differentiation on <m>y=f(x)</m> by differentiating <m>\ln(|y|)</m>
+        with the chain rule to solve for <m>y' = f'(x)</m> after taking advantage of the expanded logarithm.
+      </p>
+    </assemblage>
+
+    <remark>
+      <p>
+        This outcome is unchanged from Week 8 and Week 9.
+        See <xref ref="subsec-E5"/> for the checkpoint practice problem.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="subsec-E6">
+    <title>E6 L'Hôpital's Rule</title>
+
+    <assemblage xml:id="assemblage-E6">
+      <title>E6</title>
+      <p>
+        I can apply L'Hôpital's rule for indeterminate limits of the form <m>0/0</m> or
+        <m>\infty/\infty</m>, including rewriting other indeterminate forms so that
+        L'Hôpital's rule can be used.
+      </p>
+    </assemblage>
+
+    <exercise label="E6_LHopitals_Rule">
+      <statement>
+        <p>
+          Find the limit <m>\displaystyle \lim_{x\to 0} \frac{e^{-3x} - 1 + 3x}{x^2}</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-I3">
+    <title>I3 Fundamental Theorem of Calculus Part 2 with Exponentials</title>
+
+    <assemblage xml:id="assemblage-I3">
+      <title>I3</title>
+      <p>
+        I can apply the second part of the Fundamental Theorem of Calculus to calculate
+        definite integrals of continuous functions by identifying antiderivatives involving
+        exponentials and then evaluating its change.
+      </p>
+    </assemblage>
+
+    <exercise label="I3_FTC2_Exponentials">
+      <statement>
+        <p>
+          Compute <m>\displaystyle \int_{-1}^{2} x e^{-x^2} \, dx</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-I4">
+    <title>I4 Fundamental Theorem of Calculus Part 2 with Logarithms</title>
+
+    <assemblage xml:id="assemblage-I4">
+      <title>I4</title>
+      <p>
+        I can apply the second part of the Fundamental Theorem of Calculus to calculate
+        definite integrals of continuous functions by identifying antiderivatives involving
+        logarithms and then evaluating its change.
+      </p>
+    </assemblage>
+
+    <exercise label="I4_FTC2_Logarithms">
+      <statement>
+        <p>
+          Compute <m>\displaystyle \int_0^2 \frac{4x}{x^2+1} \, dx</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-T1">
+    <title>T1 Right Triangle Trigonometry</title>
+
+    <assemblage xml:id="assemblage-T1">
+      <title>T1</title>
+      <p>
+        I can create a right triangle model for an applied problem involving lengths and angles
+        and use basic trigonometric ratios to compute the length of an unmeasured side.
+      </p>
+    </assemblage>
+
+    <exercise label="T1_Right_Triangle_Trigonometry">
+      <statement>
+        <p>
+          You are standing on one side of a river along a section where the river is exactly
+          20 feet wide and flows in a perfectly straight path.
+          Your friend is on the opposite bank, but you have to turn 50 degrees to the right
+          to be looking directly at them.
+          Use a triangle model and trigonometry to determine the distance between you.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+</section>
