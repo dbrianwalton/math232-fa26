@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The sum identity material below was moved here from 20-circle-trigonometry.ptx. -->
+<worksheet xml:id="activity-trigonometry-derivatives">
+  <title>Derivatives of Trigonometric Functions</title>
+
+  <objectives xml:id="obj-trigonometry-derivatives">
+    <ul>
+      <li><p>Interpret adding angles as following one rotation by another, and use the sum identities for sine and cosine to find the coordinates of a rotated point.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Last time we defined sine and cosine as the coordinates of a point on the unit circle. To
+      differentiate these functions we will need to know how <m>\sin(x+h)</m> and
+      <m>\cos(x+h)</m> relate to the values at <m>x</m>. We begin by seeing how rotations add, which
+      gives the sum identities for sine and cosine.
+    </p>
+  </introduction>
+
+  <assemblage xml:id="assemblage-uc-adding-rotations">
+    <title>Adding Angles Means Adding Rotations</title>
+    <p>
+      Suppose we rotate by an angle <m>\alpha</m> and then continue by rotating through a further
+      angle <m>\beta</m>. The result is a single rotation by the angle <m>\theta=\alpha+\beta</m>,
+      and its point on the unit circle is <m>(\cos(\alpha+\beta),\sin(\alpha+\beta))</m>. We can find
+      these coordinates from the coordinates of the individual rotations.
+    </p>
+  </assemblage>
+
+  <theorem xml:id="thm-uc-sum-identities">
+    <title>Sum Identities for Sine and Cosine</title>
+    <statement>
+      <p>
+        For all angles <m>\alpha</m> and <m>\beta</m>,
+        <md>
+          <mrow> \sin(\alpha+\beta) \amp = \sin(\alpha)\cos(\beta)+\cos(\alpha)\sin(\beta) </mrow>
+          <mrow> \cos(\alpha+\beta) \amp = \cos(\alpha)\cos(\beta)-\sin(\alpha)\sin(\beta)\text{.} </mrow>
+        </md>
+      </p>
+    </statement>
+  </theorem>
+
+  <exercise xml:id="ex-uc-check-sum-identities" workspace="0in">
+    <title>Checking the Sum Identities</title>
+    <task xml:id="task-uc-check-sum-90" workspace="1.75in">
+      <statement>
+        <p>
+          Take <m>\alpha=60^\circ</m> and <m>\beta=30^\circ</m>. Use <xref ref="thm-uc-sum-identities"/>
+          and the values from the two reference triangles to compute <m>\sin(90^\circ)</m> and
+          <m>\cos(90^\circ)</m>. Do they agree with the values you found for <m>90^\circ</m> earlier?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-uc-rotate-by-difference" workspace="0in">
+    <title>Rotating Back by 60 Degrees</title>
+    <introduction>
+      <p>
+        An angle <m>\varphi</m> has its terminal ray in Quadrant II, and <m>\sin(\varphi)=\dfrac{1}{4}</m>.
+        We want the coordinates of the point on the unit circle for the angle
+        <m>\theta=\varphi-60^\circ</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-uc-find-cos-phi" workspace="1.25in">
+      <statement>
+        <p>
+          Use the unit circle equation and the quadrant to find <m>\cos(\varphi)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-uc-minus-sixty" workspace="1.25in">
+      <statement>
+        <p>
+          Write <m>\theta=\varphi+(-60^\circ)</m>. Use <xref ref="thm-uc-odd-even"/> and the
+          reference triangle for <m>60^\circ</m> to find <m>\cos(-60^\circ)</m> and
+          <m>\sin(-60^\circ)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-uc-apply-sum" workspace="2in">
+      <statement>
+        <p>
+          Use <xref ref="thm-uc-sum-identities"/> to find <m>\cos(\theta)</m> and
+          <m>\sin(\theta)</m>, and state the coordinates of the point for <m>\theta</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-uc-check-on-circle" workspace="1.5in">
+      <statement>
+        <p>
+          Check that your point lies on the unit circle. What does this check tell you?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-circle-trigonometry">
+  <title>Circle Trigonometry</title>
+
+  <objectives xml:id="obj-circle-trigonometry">
+    <ul>
+      <li><p>Explain why the opposite vertex of a unit right triangle with a vertex at the origin has coordinates <m>(\cos(\theta),\sin(\theta))</m>, and connect the Pythagorean theorem to the unit circle equation <m>x^2+y^2=1</m>.</p></li>
+      <li><p>Locate the terminal ray of any angle by rotating from <m>(1,0)</m>, counterclockwise for positive angles and clockwise for negative angles, and use its point on the unit circle to define <m>\sin(\theta)</m> and <m>\cos(\theta)</m> for every angle.</p></li>
+      <li><p>Define <m>\tan(\theta)</m>, <m>\sec(\theta)</m>, <m>\cot(\theta)</m>, and <m>\csc(\theta)</m> as ratios of the coordinates, and decide where each is undefined.</p></li>
+      <li><p>Find all six trigonometric values of an angle by combining a reference triangle with the signs of <m>x</m> and <m>y</m> in the quadrant of the terminal ray.</p></li>
+      <li><p>Use <m>x^2+y^2=1</m> and the quadrant to find all six trigonometric values when only one coordinate is known.</p></li>
+      <li><p>Explain why sine is an odd function and cosine is an even function, using the symmetry of the unit circle.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Last time we rescaled right triangles so that the hypotenuse had length <m>1</m>, and found
+      that the other two sides are <m>\cos(\theta)</m> and <m>\sin(\theta)</m>. That works only for
+      acute angles, because a right triangle cannot have an angle of <m>150^\circ</m> or
+      <m>-40^\circ</m>. Today we place the unit triangle inside a circle. The circle will let us
+      turn what we observed for angles between <m>0^\circ</m> and <m>90^\circ</m> into a
+      <em>definition</em> that works for every angle.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-uc-unit-triangles-in-circle" workspace="0in">
+    <title>Unit Triangles Around the Origin</title>
+    <introduction>
+      <p>
+        The figure shows several right triangles whose hypotenuse has length <m>1</m>. Each has
+        one vertex at the origin <m>(0,0)</m> and one leg along the <m>x</m>-axis. The vertex
+        opposite the origin is a point <m>P=(x,y)</m> on the circle of radius <m>r=1</m> centered at
+        the origin, called the <term>unit circle</term>. The highlighted triangle has the acute
+        angle <m>\theta</m> at the origin.
+      </p>
+      <image width="60%">
+        <shortdescription>
+          The first quadrant of the unit circle with x and y axes. Three right triangles have a
+          vertex at the origin, a hypotenuse of length 1 along a radius to the circle, and a
+          vertical leg dropping to the x-axis. The middle triangle is highlighted. Its angle at the
+          origin is theta, its horizontal leg is labeled cosine of theta, its vertical leg is
+          labeled sine of theta, and its vertex on the circle is labeled with the coordinates
+          cosine of theta, sine of theta. The point 1, 0 is marked on the x-axis.
+        </shortdescription>
+        <latex-image>
+          \begin{tikzpicture}[scale=5]
+            \draw[->] (-0.05,0) -- (1.2,0) node[right] {$x$};
+            \draw[->] (0,-0.05) -- (0,1.2) node[above] {$y$};
+            \draw[thick] (1,0) arc (0:90:1);
+            \foreach \a in {25,75} {
+              \draw[gray] (0,0) -- ({cos(\a)},{sin(\a)}) -- ({cos(\a)},0);
+              \fill[gray] ({cos(\a)},{sin(\a)}) circle (0.012);
+              \draw[gray] ({cos(\a)-0.04},0) -- ({cos(\a)-0.04},0.04) -- ({cos(\a)},0.04);
+            }
+            \draw[thick, blue] (0,0) -- ({cos(50)},{sin(50)}) -- ({cos(50)},0) -- cycle;
+            \draw[blue] ({cos(50)-0.04},0) -- ({cos(50)-0.04},0.04) -- ({cos(50)},0.04);
+            \fill[blue] ({cos(50)},{sin(50)}) circle (0.015);
+            \fill (1,0) circle (0.015);
+            \node[below right] at (1,0) {$(1,0)$};
+            \draw[blue] (0.2,0) arc (0:50:0.2);
+            \node[blue] at (0.27,0.1) {$\theta$};
+            \node[blue, above left] at ({0.5*cos(50)},{0.5*sin(50)}) {$1$};
+            \node[blue, below] at ({cos(50)},-0.01) {$\cos(\theta)$};
+            \node[blue, right] at ({cos(50)},{0.5*sin(50)}) {$\sin(\theta)$};
+            \node[blue, above right] at ({cos(50)},{sin(50)}) {$P=(\cos(\theta),\sin(\theta))$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </introduction>
+    <task xml:id="task-uc-vertex-coordinates" workspace="1.25in">
+      <statement>
+        <p>
+          Using the unit triangle with hypotenuse <m>1</m> from the previous activity, what are the
+          lengths of the horizontal and vertical legs of the highlighted triangle? Explain why the
+          point <m>P</m> has coordinates <m>(\cos(\theta),\sin(\theta))</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-uc-circle-equation" workspace="1.25in">
+      <statement>
+        <p>
+          Apply the Pythagorean theorem to the highlighted triangle to get an equation relating
+          the coordinates <m>x</m> and <m>y</m> of <m>P</m>. What familiar equation is this? Which
+          identity from the previous activity does it give when written using
+          <m>\cos(\theta)</m> and <m>\sin(\theta)</m>?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-uc-angle-zero" workspace="1in">
+      <statement>
+        <p>
+          What happens to the triangle as <m>\theta</m> gets smaller and smaller? Which point on the
+          circle should we assign to the angle <m>\theta=0^\circ</m>?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-uc-arc-length" workspace="1.5in">
+      <statement>
+        <p>
+          Moving along the circle from <m>(1,0)</m> to <m>P</m> covers a distance called the
+          <term>arc length</term>. This distance is a fraction of the full circumference
+          <m>2\pi r=2\pi</m>, and the fraction is the same as the fraction of a full revolution
+          (<m>360^\circ</m>) that the angle covers. Find the arc length for
+          <m>\theta=90^\circ</m> and for <m>\theta=45^\circ</m>. Then write a formula for the arc
+          length when the angle is <m>\theta</m> degrees.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <definition xml:id="def-uc-trig-functions">
+    <title>Trigonometric Functions of Any Angle</title>
+    <statement>
+      <p>
+        To find the point for an angle <m>\theta</m>, start at <m>(1,0)</m> on the unit circle and
+        move along the circle to cover the angle. If <m>\theta\gt 0</m>, rotate in the
+        counterclockwise direction. If <m>\theta\lt 0</m>, rotate in the clockwise direction through
+        <m>|\theta|</m>. The ray from <m>(0,0)</m> through the point reached is the
+        <term>terminal ray</term> of the angle. If the point is <m>(x,y)</m>, then we
+        <em>define</em>
+        <md>
+          <mrow> \cos(\theta) \amp = x \amp \sin(\theta) \amp = y </mrow>
+        </md>
+        and define the other four trigonometric functions as ratios of these coordinates:
+        <md>
+          <mrow> \tan(\theta) \amp = \frac{y}{x} = \frac{\sin(\theta)}{\cos(\theta)} \amp \sec(\theta) \amp = \frac{1}{x} = \frac{1}{\cos(\theta)} </mrow>
+          <mrow> \cot(\theta) \amp = \frac{x}{y} = \frac{\cos(\theta)}{\sin(\theta)} \amp \csc(\theta) \amp = \frac{1}{y} = \frac{1}{\sin(\theta)} </mrow>
+        </md>
+        whenever the denominator is not zero.
+      </p>
+    </statement>
+  </definition>
+
+  <remark xml:id="rem-uc-agrees-with-triangles">
+    <title>Reversing Our Observation</title>
+    <p>
+      For an acute angle, this definition agrees with the right triangle ratios, because we just
+      saw that the point is <m>(\cos(\theta),\sin(\theta))</m> when <m>\theta</m> is acute. The
+      difference is the direction of the logic. Before, the triangle defined the coordinates. Now the
+      coordinates define sine and cosine, and they do so for angles of any size or sign. Every point
+      on the unit circle satisfies <m>x^2+y^2=1</m>, so
+      <md>\cos^2(\theta)+\sin^2(\theta)=1</md>
+      holds for <em>every</em> angle <m>\theta</m>.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-uc-quadrant-signs" workspace="0in">
+    <title>Signs in the Four Quadrants</title>
+    <introduction>
+      <p>
+        The coordinate axes divide the plane into four <term>quadrants</term>, numbered I through IV
+        counterclockwise, with Quadrant I in the upper right.
+      </p>
+    </introduction>
+    <task xml:id="task-uc-sign-chart" workspace="1.5in">
+      <statement>
+        <p>
+          For each quadrant, decide whether <m>x</m> and <m>y</m> are positive or negative for a
+          point in that quadrant. Use this to decide the sign of <m>\cos(\theta)</m>,
+          <m>\sin(\theta)</m>, and <m>\tan(\theta)</m> when the terminal ray of <m>\theta</m> is in
+          that quadrant.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-uc-which-quadrant" workspace="1in">
+      <statement>
+        <p>
+          In which quadrant is the terminal ray for each of the angles <m>150^\circ</m>,
+          <m>200^\circ</m>, <m>-40^\circ</m>, and <m>400^\circ</m>? Describe how you decided for
+          <m>400^\circ</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <assemblage xml:id="assemblage-uc-special-triangles">
+    <title>Two Special Triangles</title>
+    <p>
+      Two right triangles with hypotenuse <m>1</m> have side lengths that we can find exactly.
+    </p>
+    <p>
+      <em>The <m>45^\circ</m>-<m>45^\circ</m>-<m>90^\circ</m> triangle.</em> The two acute angles
+      are equal, so the triangle is isosceles and both legs have the same length <m>x</m>. The
+      Pythagorean theorem gives <m>x^2+x^2=1</m>, so <m>x^2=\dfrac{1}{2}</m> and
+      <m>x=\dfrac{1}{\sqrt{2}}=\dfrac{\sqrt{2}}{2}</m>.
+    </p>
+    <p>
+      <em>The <m>30^\circ</m>-<m>60^\circ</m>-<m>90^\circ</m> triangle.</em> An equilateral
+      triangle with side length <m>1</m> can have one angle bisected to create an angle of <m>30^\circ</m>.
+      The bisector cuts the opposite side in half, so the short leg of each right triangle is
+      <m>\dfrac{1}{2}</m>. The Pythagorean theorem then gives the long leg
+      <m>\sqrt{1-\dfrac{1}{4}}=\dfrac{\sqrt{3}}{2}</m>.
+    </p>
+    <sidebyside widths="35% 35%" valign="middle">
+      <image>
+        <shortdescription>
+          A right triangle with the right angle at the lower right. Both legs are labeled
+          square root of 2 over 2, the hypotenuse is labeled 1, and both acute angles are labeled
+          45 degrees.
+        </shortdescription>
+        <latex-image>
+          \begin{tikzpicture}[scale=1.2]
+            \draw[thick] (0,0) -- (3,0) -- (3,3) -- cycle;
+            \draw (2.7,0) -- (2.7,0.3) -- (3,0.3);
+            \draw (0.8,0) arc (0:45:0.8);
+            \node at (1.2,0.22) {$45^\circ$};
+            \draw (3,2.3) arc (270:225:0.7);
+            \node at (2.45,2.0) {$45^\circ$};
+            \node[below] at (1.5,0) {$\frac{\sqrt{2}}{2}$};
+            \node[right] at (3,1.5) {$\frac{\sqrt{2}}{2}$};
+            \node[above left] at (1.5,1.5) {$1$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+      <image>
+        <shortdescription>
+          An equilateral triangle with side length 1 and one vertex at the origin on the left. A
+          horizontal dashed line from the origin bisects the angle there, with the upper half
+          labeled 30 degrees and the lower half labeled negative 30 degrees. The two slanted sides
+          are labeled 1. The vertical side on the right is cut by the bisector into two pieces,
+          each labeled one half, and the bisector is labeled square root of 3 over 2. A right
+          angle is marked where the bisector meets the vertical side.
+        </shortdescription>
+        <latex-image>
+          \begin{tikzpicture}[scale=4]
+            \pgfmathsetmacro{\c}{sqrt(3)/2}
+            \draw[thick] (0,0) -- (\c,0.5) -- (\c,-0.5) -- cycle;
+            \draw[dashed] (0,0) -- (\c,0);
+            \draw (\c-0.07,0) -- (\c-0.07,0.07) -- (\c,0.07);
+            \draw (0.3,0) arc (0:30:0.3);
+            \draw (0.3,0) arc (0:-30:0.3);
+            \node at (0.2,0.05) {$30^\circ$};
+            \node at (0.77,0.35) {$60^\circ$};
+            \node[above left] at (\c/2,0.25) {$1$};
+            \node[below left] at (\c/2,-0.25) {$1$};
+            \node[right] at (\c,0.25) {$\frac{1}{2}$};
+            \node[right] at (\c,-0.25) {$\frac{1}{2}$};
+            \node[above] at (0.55,0.0) {};
+            \node[below] at (\c/2+0.05,0) {$\frac{\sqrt{3}}{2}$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </sidebyside>
+  </assemblage>
+
+  <assemblage xml:id="assemblage-uc-example-150">
+    <title>Example: The Angle 150 Degrees</title>
+    <p>
+      Find <m>\sin(150^\circ)</m> and <m>\cos(150^\circ)</m>.
+    </p>
+    <p>
+      The angle <m>150^\circ</m> is not acute, so it is not an angle of a right triangle. Instead,
+      we rotate <m>150^\circ</m> counterclockwise from <m>(1,0)</m> and mark the point
+      <m>(x,y)</m> on the unit circle. This point is in Quadrant II. If we draw a vertical line from
+      the point to the <m>x</m>-axis, we get a <term>reference triangle</term>. Its angle at the
+      origin is <m>180^\circ-150^\circ=30^\circ</m>, so its horizontal leg has length
+      <m>\dfrac{\sqrt{3}}{2}</m> and its vertical leg has length <m>\dfrac{1}{2}</m>.
+    </p>
+    <image width="50%">
+      <shortdescription>
+        The unit circle with a terminal ray in the second quadrant at 150 degrees from the positive
+        x-axis. A vertical segment drops from the point x, y on the circle to the negative x-axis,
+        forming a reference triangle whose angle at the origin is 30 degrees. An arc marks the
+        150 degree rotation from the positive x-axis.
+      </shortdescription>
+      <latex-image>
+        \begin{tikzpicture}[scale=2.4]
+          \draw[->] (-1.3,0) -- (1.35,0) node[right] {$x$};
+          \draw[->] (0,-1.3) -- (0,1.35) node[above] {$y$};
+          \draw (0,0) circle (1);
+          \draw[thick, blue] (0,0) -- ({cos(150)},{sin(150)}) -- ({cos(150)},0) -- cycle;
+          \draw[blue] ({cos(150)+0.04},0) -- ({cos(150)+0.04},0.04) -- ({cos(150)},0.04);
+          \fill[blue] ({cos(150)},{sin(150)}) circle (0.025);
+          \node[blue, above left] at ({cos(150)},{sin(150)}) {$(x,y)$};
+          \draw[->, red] (0.25,0) arc (0:150:0.25);
+          \node[red] at (0.12,0.33) {$150^\circ$};
+          \draw[blue] ({0.35*cos(150)},{0.35*sin(150)}) arc (150:180:0.35);
+          \node[blue] at (-0.5,0.07) {$30^\circ$};
+          \node[below right] at (1,0) {$(1,0)$};
+          \node[blue, left] at ({0.5*cos(150)+0.05},{0.5*sin(150)+0.12}) {$1$};
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+    <p>
+      In Quadrant II we have <m>x\lt 0</m> and <m>y\gt 0</m>, so
+      <m>(x,y)=\left(-\dfrac{\sqrt{3}}{2},\dfrac{1}{2}\right)</m>. Therefore
+      <m>\cos(150^\circ)=-\dfrac{\sqrt{3}}{2}</m> and <m>\sin(150^\circ)=\dfrac{1}{2}</m>.
+    </p>
+  </assemblage>
+
+  <exercise xml:id="ex-uc-reference-triangles" workspace="0in">
+    <title>Reference Triangles at Work</title>
+    <task xml:id="task-uc-150-other-four" workspace="1.5in">
+      <statement>
+        <p>
+          Use <xref ref="def-uc-trig-functions"/> and the coordinates found in
+          <xref ref="assemblage-uc-example-150" text="title"/> to find the other four trigonometric function
+          values at <m>150^\circ</m>: <m>\tan(150^\circ)</m>, <m>\sec(150^\circ)</m>,
+          <m>\cot(150^\circ)</m>, and <m>\csc(150^\circ)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-uc-225-reference" workspace="2in">
+      <statement>
+        <p>
+          Sketch the unit circle, the terminal ray for <m>225^\circ</m>, and a reference triangle.
+          What is the angle of the reference triangle at the origin? Find the coordinates of the
+          point, and then <m>\cos(225^\circ)</m> and <m>\sin(225^\circ)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-uc-one-coordinate-known" workspace="0in">
+    <title>When Only One Coordinate Is Known</title>
+    <introduction>
+      <p>
+        An angle <m>\theta</m> has its terminal ray in Quadrant IV, and <m>\cos(\theta)=0.6</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-uc-find-y" workspace="1.5in">
+      <statement>
+        <p>
+          Use the unit circle equation and the quadrant to find <m>y=\sin(\theta)</m>. Be careful
+          about the sign, and sketch the point on the unit circle.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-uc-all-six" workspace="1.5in">
+      <statement>
+        <p>
+          Find all six trigonometric function values of <m>\theta</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-uc-not-special" workspace="0.75in">
+      <statement>
+        <p>
+          Does this angle come from a <m>30^\circ</m>, <m>45^\circ</m>, or <m>60^\circ</m>
+          reference triangle? Did that prevent you from finding its trigonometric values?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <remark xml:id="rem-uc-not-a-list">
+    <title>What <q>Using the Unit Circle</q> Means</title>
+    <p>
+      When we say we are using the unit circle, we are <em>not</em> consulting a memorized list of
+      points built from <m>30^\circ</m>, <m>45^\circ</m>, and <m>60^\circ</m> reference triangles.
+      We are using three ideas together: the equation <m>x^2+y^2=1</m> for points on the circle, the
+      definitions <m>\cos(\theta)=x</m> and <m>\sin(\theta)=y</m>, and the signs of
+      <m>x</m> and <m>y</m> determined by the quadrant of the terminal ray. The special triangles
+      are the cases where the side lengths happen to be especially simple.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-uc-multiples-of-90" workspace="0in">
+    <title>Multiples of 90 Degrees</title>
+    <introduction>
+      <p>
+        When the terminal ray lies along an axis, there is no reference triangle, but the point on
+        the unit circle can be read directly from the picture.
+      </p>
+    </introduction>
+    <task xml:id="task-uc-axis-table" workspace="2.25in">
+      <statement>
+        <p>
+          Make a table with columns <m>\theta</m>, <m>\sin(\theta)</m>, <m>\cos(\theta)</m>, and
+          <m>\tan(\theta)</m>. For each of the angles
+          <m>\theta=0^\circ, 90^\circ, 180^\circ, 270^\circ, -90^\circ, -180^\circ, 450^\circ</m>,
+          sketch the rotation, identify the point <m>(x,y)</m>, and fill in the row. Write
+          <q>undefined</q> where a value does not exist.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-uc-axis-undefined" workspace="1.25in">
+      <statement>
+        <p>
+          Using <xref ref="def-uc-trig-functions"/>, explain why <m>\tan(90^\circ)</m> is undefined.
+          Which of the six trigonometric functions are undefined at <m>0^\circ</m>? At
+          <m>90^\circ</m>?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-uc-opposite-angles" workspace="0in">
+    <title>Opposite Angles</title>
+    <introduction>
+      <p>
+        The points <m>P</m> and <m>Q</m> on the unit circle below correspond to the angles
+        <m>\theta</m> and <m>-\theta</m>. (The picture shows <m>\theta=40^\circ</m>, but the idea
+        works for any angle.)
+      </p>
+      <image width="50%">
+        <shortdescription>
+          The unit circle with two radii. One goes up and to the right at an angle theta above the
+          positive x-axis and ends at the labeled point P on the circle. The other goes down and to
+          the right at an angle theta below the positive x-axis, an angle of negative theta, and
+          ends at the labeled point Q on the circle.
+        </shortdescription>
+        <latex-image>
+          \begin{tikzpicture}[scale=2.4]
+            \draw[->] (-1.3,0) -- (1.35,0) node[right] {$x$};
+            \draw[->] (0,-1.3) -- (0,1.35) node[above] {$y$};
+            \draw (0,0) circle (1);
+            \draw[thick, blue] (0,0) -- ({cos(40)},{sin(40)});
+            \draw[thick, red] (0,0) -- ({cos(-40)},{sin(-40)});
+            \fill[blue] ({cos(40)},{sin(40)}) circle (0.025);
+            \fill[red] ({cos(-40)},{sin(-40)}) circle (0.025);
+            \node[blue, above right] at ({cos(40)},{sin(40)}) {$P$};
+            \node[red, below right] at ({cos(-40)},{sin(-40)}) {$Q$};
+            \draw[->, blue] (0.3,0) arc (0:40:0.3);
+            \node[blue] at (0.45,0.12) {$\theta$};
+            \draw[->, red] (0.5,0) arc (0:-40:0.5);
+            \node[red] at (0.68,-0.12) {$-\theta$};
+            \node[below right] at (1,0) {$(1,0)$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </introduction>
+    <task xml:id="task-uc-compare-p-q" workspace="1.25in">
+      <statement>
+        <p>
+          Write the coordinates of <m>P</m> as <m>(x,y)</m>. How are the coordinates of <m>Q</m>
+          related to those of <m>P</m>? Explain using the symmetry of the circle.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <theorem xml:id="thm-uc-odd-even">
+    <title>Sine Is Odd and Cosine Is Even</title>
+    <statement>
+      <p>
+        For every angle <m>\theta</m>,
+        <md>
+          <mrow> \sin(-\theta) \amp = -\sin(\theta) </mrow>
+          <mrow> \cos(-\theta) \amp = \cos(\theta)\text{.} </mrow>
+        </md>
+        That is, <m>\sin</m> is an odd function and <m>\cos</m> is an even function.
+      </p>
+    </statement>
+  </theorem>
+
+  <exercise xml:id="ex-uc-using-symmetry" workspace="0in">
+    <title>Using Odd and Even</title>
+    <task xml:id="task-uc-negative-150" workspace="1.25in">
+      <statement>
+        <p>
+          Use <xref ref="thm-uc-odd-even"/> and the values at <m>150^\circ</m> to find
+          <m>\sin(-150^\circ)</m> and <m>\cos(-150^\circ)</m>. In which quadrant is the terminal ray
+          for <m>-150^\circ</m>, and do the signs agree with your answer?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>
