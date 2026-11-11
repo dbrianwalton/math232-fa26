@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The sum identity material below was moved here from 20-circle-trigonometry.ptx. -->
+<worksheet xml:id="activity-sine-cosine-sum-rules">
+  <title>Sum Rules for Sine and Cosine</title>
+
+  <objectives xml:id="obj-sine-cosine-sum-rules">
+    <ul>
+      <li><p>Interpret adding angles as following one rotation by another, and use the sum identities for sine and cosine to find the coordinates of a rotated point.</p></li>
+      <li><p>Apply the sum identities by replacing <m>\sin(\theta)</m>, <m>\cos(\theta)</m>, <m>\sin(\varphi)</m>, and <m>\cos(\varphi)</m> with known coordinate values, to find the sine and cosine of angles such as <m>75^\circ</m>, <m>15^\circ</m>, and <m>\theta+60^\circ</m>.</p></li>
+      <li><p>Use the sum identities in the limit definition of the derivative to write <m>\dfrac{d}{dx}\sin(x)</m> and <m>\dfrac{d}{dx}\cos(x)</m> in terms of <m>\sin(x)</m>, <m>\cos(x)</m>, and two limits in <m>h</m>, and identify those two limits.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Last time we defined sine and cosine as the coordinates of a point on the unit circle. To
+      differentiate these functions we will need to know how <m>\sin(x+h)</m> and
+      <m>\cos(x+h)</m> relate to the values at <m>x</m> and at <m>h</m>. We begin by seeing that
+      adding angles means following one rotation by another. This gives the sum identities for sine
+      and cosine, which we then put to work in the limit definition of the derivative.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-td-rotate-other-points" workspace="0in">
+    <title>Rotating Other Starting Points</title>
+    <introduction>
+      <p>
+        Rotating the starting point <m>(1,0)</m> by an angle <m>\theta</m> moves it to the point
+        <m>(\cos(\theta),\sin(\theta))</m> on the unit circle. Where do other starting points go
+        under the same rotation?
+      </p>
+    </introduction>
+    <task xml:id="task-td-rotate-two-zero" workspace="1in">
+      <statement>
+        <p>
+          Where does the point <m>(2,0)</m> move when it is rotated by the angle <m>\theta</m>?
+          Explain your answer using the fact that <m>(2,0)</m> is twice as far from the origin as
+          <m>(1,0)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-td-rotate-zero-one" workspace="2in">
+      <statement>
+        <p>
+          Sketch the unit circle and the point <m>(0,1)</m>. Rotate this point by an acute angle
+          <m>\theta</m> and draw a reference triangle for the new point. Use the triangle to find the
+          coordinates of the new point in terms of <m>\cos(\theta)</m> and <m>\sin(\theta)</m>. Pay
+          attention to where the angle <m>\theta</m> sits in your triangle and to which side of the
+          <m>y</m>-axis the new point lies on.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-td-rotate-zero-three" workspace="1in">
+      <statement>
+        <p>
+          Where does the point <m>(0,3)</m> move when it is rotated by the angle <m>\theta</m>?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <assemblage xml:id="assemblage-td-rotating-by-components">
+    <title>Rotating by Components</title>
+    <p>
+      We can reach a point <m>(a,b)</m> from the origin in two steps: a horizontal displacement
+      <m>a</m>, and then a vertical displacement <m>b</m>. As vectors, this says
+      <md>(a,b) = (a,0) + (0,b)\text{.}</md>
+      Rotation respects this splitting. To rotate the point <m>(a,b)</m>, we can rotate the two
+      displacements <m>(a,0)</m> and <m>(0,b)</m> separately, and then add the results.
+    </p>
+  </assemblage>
+
+  <assemblage xml:id="assemblage-td-adding-rotations">
+    <title>Adding Angles Means Adding Rotations</title>
+    <p>
+      Rotate the point <m>(1,0)</m> by an angle <m>\theta</m>, and then continue by rotating through a
+      further angle <m>\varphi</m>. The total rotation is by the angle <m>\theta+\varphi</m>, so the
+      point we reach is <m>(\cos(\theta+\varphi),\sin(\theta+\varphi))</m>. We can also find this
+      point in pieces.
+    </p>
+    <p>
+      After the rotation by <m>\theta</m> we are at
+      <m>(\cos(\theta),\sin(\theta)) = (\cos(\theta),0)+(0,\sin(\theta))</m>. Now rotate each piece
+      by <m>\varphi</m>, using what we found for <m>(a,0)</m> and <m>(0,b)</m> above:
+      <md>
+        <mrow> (\cos(\theta),0) \amp \longrightarrow \cos(\theta)\bigl(\cos(\varphi),\sin(\varphi)\bigr) = \bigl(\cos(\theta)\cos(\varphi),\ \cos(\theta)\sin(\varphi)\bigr) </mrow>
+        <mrow> (0,\sin(\theta)) \amp \longrightarrow \sin(\theta)\bigl(-\sin(\varphi),\cos(\varphi)\bigr) = \bigl(-\sin(\theta)\sin(\varphi),\ \sin(\theta)\cos(\varphi)\bigr) </mrow>
+      </md>
+      Adding the two rotated pieces gives the point
+      <md>
+        \bigl(\cos(\theta)\cos(\varphi)-\sin(\theta)\sin(\varphi),\ \sin(\theta)\cos(\varphi)+\cos(\theta)\sin(\varphi)\bigr)\text{.}
+      </md>
+      This is the same point as <m>(\cos(\theta+\varphi),\sin(\theta+\varphi))</m>, so the coordinates
+      must match.
+    </p>
+  </assemblage>
+
+  <theorem xml:id="thm-td-sum-identities">
+    <title>Sum Identities for Sine and Cosine</title>
+    <statement>
+      <p>
+        For all angles <m>\theta</m> and <m>\varphi</m>,
+        <md>
+          <mrow> \sin(\theta+\varphi) \amp = \sin(\theta)\cos(\varphi)+\cos(\theta)\sin(\varphi) </mrow>
+          <mrow> \cos(\theta+\varphi) \amp = \cos(\theta)\cos(\varphi)-\sin(\theta)\sin(\varphi)\text{.} </mrow>
+        </md>
+      </p>
+    </statement>
+  </theorem>
+
+  <remark xml:id="rem-td-replace-not-substitute">
+    <title>Replace the Four Quantities</title>
+    <p>
+      In <xref ref="thm-td-sum-identities"/>, the four quantities <m>\sin(\theta)</m>,
+      <m>\cos(\theta)</m>, <m>\sin(\varphi)</m>, and <m>\cos(\varphi)</m> are numbers: they are the
+      coordinates of two points on the unit circle. We use the identities by <em>replacing</em> each
+      of these four quantities with its known coordinate value. We never put a coordinate value
+      inside a sine or cosine. For example, to find <m>\sin(45^\circ+30^\circ)</m> we do not
+      evaluate <m>\sin\bigl(\tfrac{\sqrt{2}}{2}+\tfrac{1}{2}\bigr)</m>. We replace
+      <m>\sin(45^\circ)</m> by <m>\tfrac{\sqrt{2}}{2}</m>, replace <m>\cos(30^\circ)</m> by
+      <m>\tfrac{\sqrt{3}}{2}</m>, and so on, and then combine the numbers.
+    </p>
+  </remark>
+
+  <exercise xml:id="ex-td-adding-rotations" workspace="0in">
+    <title>Adding Rotations in Practice</title>
+    <introduction>
+      <p>
+        Use the values of sine and cosine at <m>30^\circ</m>, <m>45^\circ</m>, and <m>60^\circ</m>
+        from <xref ref="assemblage-uc-special-triangles" text="title"/>.
+      </p>
+    </introduction>
+    <task xml:id="task-td-sum-ninety" workspace="1.75in">
+      <statement>
+        <p>
+          Take <m>\theta=60^\circ</m> and <m>\varphi=30^\circ</m>. Write down the four numbers that
+          replace <m>\sin(\theta)</m>, <m>\cos(\theta)</m>, <m>\sin(\varphi)</m>, and
+          <m>\cos(\varphi)</m>, and then use <xref ref="thm-td-sum-identities"/> to compute
+          <m>\sin(90^\circ)</m> and <m>\cos(90^\circ)</m>. Do they agree with the point you found for
+          <m>90^\circ</m> earlier?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-td-sum-seventy-five" workspace="2in">
+      <statement>
+        <p>
+          Write <m>75^\circ</m> as the sum of two angles from our special triangles. Use
+          <xref ref="thm-td-sum-identities"/> to find <m>\sin(75^\circ)</m> and
+          <m>\cos(75^\circ)</m> exactly.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-td-sum-fifteen" workspace="2in">
+      <statement>
+        <p>
+          What about <m>15^\circ</m>? It is not the sum of two of our special angles, but it is a sum
+          if one of the two angles is negative. Use <xref ref="thm-uc-odd-even"/> to find the
+          sine and cosine of the negative angle, and then find <m>\sin(15^\circ)</m> and
+          <m>\cos(15^\circ)</m> exactly.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-td-rotate-by-sixty" workspace="0in">
+    <title>Rotating a Point Further by 60 Degrees</title>
+    <introduction>
+      <p>
+        An angle <m>\theta</m> has its terminal ray in Quadrant II, and <m>\sin(\theta)=\dfrac{2}{5}</m>. We
+        want the coordinates of the point on the unit circle for the angle <m>\theta+60^\circ</m>.
+        We do not know the angle <m>\theta</m> itself, and we do not need it.
+      </p>
+    </introduction>
+    <task xml:id="task-td-find-cos-theta" workspace="1.25in">
+      <statement>
+        <p>
+          Use the unit circle equation and the quadrant to find <m>\cos(\theta)</m> exactly.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-td-sixty-values" workspace="0.75in">
+      <statement>
+        <p>
+          Find <m>\sin(60^\circ)</m> and <m>\cos(60^\circ)</m> from the reference triangle.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-td-apply-sum" workspace="2in">
+      <statement>
+        <p>
+          Use <xref ref="thm-td-sum-identities"/> to find <m>\cos(\theta+60^\circ)</m> and
+          <m>\sin(\theta+60^\circ)</m>, and state the coordinates of the point for
+          <m>\theta+60^\circ</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-td-derivative-of-sine" workspace="0in">
+    <title>The Derivative of Sine</title>
+    <introduction>
+      <p>
+        By the definition of the derivative, the derivative of <m>f(x)=\sin(x)</m> is
+        <md>
+          \frac{d}{dx}\sin(x) = \lim_{h\to 0}\frac{\sin(x+h)-\sin(x)}{h}\text{.}
+        </md>
+        The obstacle is <m>\sin(x+h)</m>, the sine of a sum. <xref ref="thm-td-sum-identities"/>
+        gives us a way to handle it.
+      </p>
+    </introduction>
+    <task xml:id="task-td-sine-expand" workspace="1.25in">
+      <statement>
+        <p>
+          Apply <xref ref="thm-td-sum-identities"/> to <m>\sin(x+h)</m>, with <m>\theta=x</m> and
+          <m>\varphi=h</m>. Write the difference quotient
+          <m>\dfrac{\sin(x+h)-\sin(x)}{h}</m> using your result.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-td-sine-regroup" workspace="1.25in">
+      <statement>
+        <p>
+          The expression <m>\sin(x)</m> appears in two of the terms. Regroup so that the difference
+          quotient takes the form
+          <md>
+            \sin(x)\cdot\bigl[\ \cdots\ \bigr] + \cos(x)\cdot\bigl[\ \cdots\ \bigr]
+          </md>
+          where each bracket is a single fraction with denominator <m>h</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-td-sine-limit-form" workspace="1.25in">
+      <statement>
+        <p>
+          As <m>h\to 0</m>, the value of <m>x</m> stays fixed. Which parts of your expression depend
+          on <m>h</m>, and which do not? Write <m>\dfrac{d}{dx}\sin(x)</m> as <m>\sin(x)</m> times one
+          limit plus <m>\cos(x)</m> times another limit.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-td-derivative-of-cosine" workspace="0in">
+    <title>The Derivative of Cosine</title>
+    <introduction>
+      <p>
+        The derivative of <m>g(x)=\cos(x)</m> is
+        <md>
+          \frac{d}{dx}\cos(x) = \lim_{h\to 0}\frac{\cos(x+h)-\cos(x)}{h}\text{.}
+        </md>
+        The plan is the same as for sine, now using the identity for <m>\cos(x+h)</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-td-cosine-regroup" workspace="1.75in">
+      <statement>
+        <p>
+          Apply <xref ref="thm-td-sum-identities"/> to <m>\cos(x+h)</m>, and regroup the difference
+          quotient <m>\dfrac{\cos(x+h)-\cos(x)}{h}</m> so that <m>\cos(x)</m> multiplies one fraction
+          with denominator <m>h</m> and <m>\sin(x)</m> multiplies another.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-td-cosine-limit-form" workspace="1in">
+      <statement>
+        <p>
+          Write <m>\dfrac{d}{dx}\cos(x)</m> as <m>\cos(x)</m> times one limit plus (or minus)
+          <m>\sin(x)</m> times another limit.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-td-which-limits" workspace="0in">
+    <title>Which Limits Do We Need?</title>
+    <task xml:id="task-td-name-limits" workspace="1.5in">
+      <statement>
+        <p>
+          Compare your results for sine and for cosine. Two limits in <m>h</m> appear in both. Write
+          them down, and name them
+          <m>A=\displaystyle\lim_{h\to 0}\dfrac{\cos(h)-1}{h}</m> and
+          <m>B=\displaystyle\lim_{h\to 0}\dfrac{\sin(h)}{h}</m> if you have not already. Then write
+          both <m>\dfrac{d}{dx}\sin(x)</m> and <m>\dfrac{d}{dx}\cos(x)</m> in terms of <m>A</m>,
+          <m>B</m>, <m>\sin(x)</m>, and <m>\cos(x)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-td-limits-form" workspace="1in">
+      <statement>
+        <p>
+          What happens to the numerator and denominator of each limit as <m>h\to 0</m>? Can we find
+          <m>A</m> or <m>B</m> by substituting <m>h=0</m>?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>

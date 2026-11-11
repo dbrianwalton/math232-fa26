@@ -78,6 +78,7 @@
       <xi:include href="./activities/18-ftc-part-two.ptx"/>
       <xi:include href="./activities/19-right-triangle-trigonometry.ptx"/>
       <xi:include href="./activities/20-circle-trigonometry.ptx"/>
+      <xi:include href="./activities/21-sine-cosine-sum-rules.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>
