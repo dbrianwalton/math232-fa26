@@ -34,7 +34,7 @@
         the circle cut off by the angle <m>\theta</m>, and a large triangle with height
         <m>\tan(\theta)</m>. Both triangles have a base of length <m>1</m>, the radius of the circle.
       </p>
-      <image width="60%">
+      <image width="30%">
         <shortdescription>
           The first quadrant of the unit circle. A point P on the circle at the angle theta above the
           x-axis has the coordinates cosine of theta, sine of theta. A dashed vertical segment from P
