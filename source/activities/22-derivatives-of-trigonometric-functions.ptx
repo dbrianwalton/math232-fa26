@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-derivatives-trigonometric-functions">
+  <title>Derivatives of Trigonometric Functions</title>
+
+  <objectives xml:id="obj-derivatives-trigonometric-functions">
+    <ul>
+      <li><p>Compare the areas of two triangles and a circular sector on the unit circle to bound <m>\dfrac{\sin(\theta)}{\theta}</m>, and use the Squeeze Theorem to find its limit as <m>\theta\to 0</m>.</p></li>
+      <li><p>Explain why radian measure, where a full turn is <m>\tau=2\pi</m>, is the natural way to measure angles in calculus.</p></li>
+      <li><p>Find <m>\displaystyle\lim_{\theta\to 0}\dfrac{\cos(\theta)-1}{\theta}</m> by multiplying by a conjugate, using a Pythagorean identity, and factoring out a known limit.</p></li>
+      <li><p>Use the two limits to obtain <m>\dfrac{d}{dx}\sin(x)</m> and <m>\dfrac{d}{dx}\cos(x)</m>, and differentiate expressions that combine sine and cosine with the product rule and the chain rule.</p></li>
+      <li><p>Use the quotient rule to find the derivatives of the other four trigonometric functions, and apply them together with the chain rule.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Last time the sum identities reduced the derivatives of sine and cosine to two limits,
+      <m>A=\displaystyle\lim_{h\to 0}\dfrac{\cos(h)-1}{h}</m> and
+      <m>B=\displaystyle\lim_{h\to 0}\dfrac{\sin(h)}{h}</m> (see <xref ref="ex-td-which-limits"/>).
+      Both limits have the form <m>\frac{0}{0}</m>, and we cannot use L'H&#244;pital's rule to find
+      them, because that rule needs the derivative of sine, which is exactly what we are trying to
+      find. Instead we return to the unit circle. Today's work will also show us which units we
+      should use to measure angles.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-dt-compare-regions" workspace="0in">
+    <title>Comparing Three Regions</title>
+    <introduction>
+      <p>
+        The figure shows the first quadrant of the unit circle and an acute angle <m>\theta</m>.
+        Three regions are shaded: a small triangle with height <m>\sin(\theta)</m>, the sector of
+        the circle cut off by the angle <m>\theta</m>, and a large triangle with height
+        <m>\tan(\theta)</m>. Both triangles have a base of length <m>1</m>, the radius of the circle.
+      </p>
+      <image width="60%">
+        <shortdescription>
+          The first quadrant of the unit circle. A point P on the circle at the angle theta above the
+          x-axis has the coordinates cosine of theta, sine of theta. A dashed vertical segment from P
+          to the x-axis is labeled sine of theta. The point S is 1, 0 on the x-axis, the point O is the
+          origin, and the base from O to S is labeled 1. The ray from O through P continues to the
+          point Q on the vertical line through S, and the segment from S up to Q is labeled tangent of
+          theta. The small triangle with vertices O, S, and P is shaded darkly. The sector between the
+          x-axis and the ray, bounded by the circle, is shaded lightly. The large triangle with
+          vertices O, S, and Q is shaded in gray and contains the sector.
+        </shortdescription>
+        <latex-image>
+          \begin{tikzpicture}[scale=5, &gt;=stealth]
+            \pgfmathsetmacro{\a}{40}
+            \pgfmathsetmacro{\px}{cos(\a)}
+            \pgfmathsetmacro{\py}{sin(\a)}
+            \pgfmathsetmacro{\qy}{tan(\a)}
+            \fill[gray!20] (0,0) -- (1,0) -- (1,\qy) -- cycle;
+            \fill[blue!20] (0,0) -- (1,0) arc (0:\a:1) -- cycle;
+            \fill[blue!45] (0,0) -- (1,0) -- (\px,\py) -- cycle;
+            \draw[-&gt;] (-0.05,0) -- (1.25,0) node[right] {$x$};
+            \draw[-&gt;] (0,-0.05) -- (0,1.1) node[above] {$y$};
+            \draw (1,0) arc (0:90:1);
+            \draw[thick] (0,0) -- (1,\qy) -- (1,0);
+            \draw[thick] (0,0) -- (1,0);
+            \draw[thick, blue!70!black] (1,0) arc (0:\a:1);
+            \draw[dashed] (\px,\py) -- (\px,0);
+            \fill (0,0) circle (0.012);
+            \fill (1,0) circle (0.012);
+            \fill (\px,\py) circle (0.012);
+            \fill (1,\qy) circle (0.012);
+            \node[below left] at (0,0) {$O$};
+            \node[below right] at (1,0) {$S$};
+            \node[above left] at (\px,\py) {$P$};
+            \node[above right] at (1,\qy) {$Q$};
+            \draw (0.2,0) arc (0:\a:0.2);
+            \node at (0.29,0.08) {$\theta$};
+            \node[below] at (0.5,0) {$1$};
+            \node[left] at (\px,{\py/2}) {$\sin(\theta)$};
+            \node[right] at (1,{\qy/2}) {$\tan(\theta)$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+      <p>
+        Let <m>\tau</m> be the measure of one full turn around the circle. If angles are measured in
+        degrees then <m>\tau=360</m>, and if angles are measured in radians then
+        <m>\tau=2\pi</m>. In either case, <m>\dfrac{\theta}{\tau}</m> is the fraction of the circle
+        covered by the rotation through the angle <m>\theta</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-dt-triangle-areas" workspace="1.25in">
+      <statement>
+        <p>
+          Find the area of the small triangle and the area of the large triangle, using
+          <m>\frac{1}{2}\cdot\text{base}\cdot\text{height}</m> and the heights marked in the figure.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-dt-sector-area" workspace="1.25in">
+      <statement>
+        <p>
+          The unit circle has area <m>\pi</m>. Explain why the area of the sector is
+          <m>\pi\cdot\dfrac{\theta}{\tau}</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-dt-area-inequality" workspace="1.25in">
+      <statement>
+        <p>
+          Look at how the three regions sit inside one another in the figure. Use this to write an
+          inequality that orders the three areas from smallest to largest, in terms of
+          <m>\sin(\theta)</m>, <m>\theta</m>, <m>\tau</m>, and <m>\tan(\theta)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <theorem xml:id="thm-dt-squeeze">
+    <title>Squeeze Theorem</title>
+    <statement>
+      <p>
+        Suppose <m>g(x)\le f(x)\le h(x)</m> for all <m>x</m> near <m>a</m> (except possibly at
+        <m>x=a</m>), and suppose <m>\displaystyle\lim_{x\to a}g(x)=L=\lim_{x\to a}h(x)</m>. Then
+        <m>\displaystyle\lim_{x\to a}f(x)=L</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <assemblage xml:id="assemblage-dt-squeezing-sine">
+    <title>Squeezing <m>\sin(\theta)/\theta</m></title>
+    <p>
+      The inequality from the last exercise is
+      <md>
+        <mrow> \frac{1}{2}\sin(\theta) \lt \pi\cdot\frac{\theta}{\tau} \lt \frac{1}{2}\tan(\theta)\text{,} </mrow>
+      </md>
+      for <m>0\lt\theta\lt\frac{\tau}{4}</m>. We want <m>\dfrac{\sin(\theta)}{\theta}</m> in the middle.
+      Because <m>\theta\gt 0</m>, we may multiply the left inequality by <m>\dfrac{2}{\theta}</m>
+      without changing its direction, which gives
+      <m>\dfrac{\sin(\theta)}{\theta}\lt\dfrac{2\pi}{\tau}</m>.
+      In the right inequality we replace <m>\tan(\theta)</m> by
+      <m>\dfrac{\sin(\theta)}{\cos(\theta)}</m>. Because <m>\cos(\theta)\gt 0</m> as well, multiplying by
+      <m>\dfrac{2\cos(\theta)}{\theta}</m> gives
+      <m>\dfrac{2\pi}{\tau}\cos(\theta)\lt\dfrac{\sin(\theta)}{\theta}</m>. Together,
+      <md>
+        \frac{2\pi}{\tau}\cos(\theta)\lt\frac{\sin(\theta)}{\theta}\lt\frac{2\pi}{\tau}\text{.}
+      </md>
+      As <m>\theta\to 0^+</m>, the point on the circle approaches <m>(1,0)</m>, so
+      <m>\cos(\theta)\to 1</m>. Both outer expressions then approach <m>\dfrac{2\pi}{\tau}</m>, and
+      <xref ref="thm-dt-squeeze"/> tells us that
+      <md>
+        \lim_{\theta\to 0^+}\frac{\sin(\theta)}{\theta}=\frac{2\pi}{\tau}\text{.}
+      </md>
+      The argument used <m>\theta\gt 0</m>, but sine is odd (see <xref ref="thm-uc-odd-even"/>), so
+      <m>\dfrac{\sin(-\theta)}{-\theta}=\dfrac{\sin(\theta)}{\theta}</m>. The values for negative
+      <m>\theta</m> match the values for positive <m>\theta</m>, so the limit from the left is the
+      same, and <m>\displaystyle\lim_{\theta\to 0}\dfrac{\sin(\theta)}{\theta}=\dfrac{2\pi}{\tau}</m>.
+    </p>
+  </assemblage>
+
+  <exercise xml:id="ex-dt-which-units" workspace="0in">
+    <title>Choosing the Units for Angles</title>
+    <task xml:id="task-dt-degrees-limit" workspace="1in">
+      <statement>
+        <p>
+          Suppose we measure angles in degrees. What is <m>\displaystyle\lim_{\theta\to 0}\dfrac{\sin(\theta)}{\theta}</m>?
+          Give the exact value and a decimal approximation.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-dt-natural-units" workspace="1in">
+      <statement>
+        <p>
+          Which value of <m>\tau</m> makes this limit equal to <m>1</m>? Why would that choice make
+          the derivative of sine simpler to write down?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <assemblage xml:id="assemblage-dt-radians">
+    <title>Radians</title>
+    <p>
+      An angle is measured in <term>radians</term> when a full turn is <m>\tau=2\pi</m>. Then
+      <m>\dfrac{2\pi}{\tau}=1</m>, and the arc of the unit circle covered by a rotation through
+      <m>\theta</m> has length <m>\dfrac{\theta}{2\pi}\cdot 2\pi=\theta</m>. So the radian measure of an angle
+      is the length of the arc it cuts off on the unit circle. With this choice,
+      <md>
+        \lim_{\theta\to 0}\frac{\sin(\theta)}{\theta}=1\text{.}
+      </md>
+      From now on, all angles are measured in radians.
+    </p>
+  </assemblage>
+
+  <exercise xml:id="ex-dt-cosine-limit" workspace="0in">
+    <title>The Limit of <m>(\cos(\theta)-1)/\theta</m></title>
+    <introduction>
+      <p>
+        We now find the second limit, using <m>\displaystyle\lim_{\theta\to 0}\dfrac{\sin(\theta)}{\theta}=1</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-dt-conjugate" workspace="1.5in">
+      <statement>
+        <p>
+          Multiply the numerator and the denominator of <m>\dfrac{\cos(\theta)-1}{\theta}</m> by the
+          conjugate <m>\cos(\theta)+1</m>. Use the Pythagorean identity
+          <m>\sin^2(\theta)+\cos^2(\theta)=1</m> to show that
+          <md>
+            \frac{\cos(\theta)-1}{\theta}=\frac{-\sin^2(\theta)}{\theta\,(\cos(\theta)+1)}\text{.}
+          </md>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-dt-factor-product" workspace="1in">
+      <statement>
+        <p>
+          Write the right side as a product of <m>\dfrac{\sin(\theta)}{\theta}</m> and one other factor
+          that contains <m>\sin(\theta)</m> and <m>\cos(\theta)</m> but no <m>\theta</m> in a
+          denominator.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-dt-product-limit" workspace="1.25in">
+      <statement>
+        <p>
+          Use the limit of a product to find <m>\displaystyle\lim_{\theta\to 0}\dfrac{\cos(\theta)-1}{\theta}</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <assemblage xml:id="assemblage-dt-two-limits">
+    <title>The Two Fundamental Limits</title>
+    <p>
+      For angles measured in radians,
+      <md>
+        <mrow> \lim_{\theta\to 0}\frac{\sin(\theta)}{\theta} \amp = 1 \amp \lim_{\theta\to 0}\frac{\cos(\theta)-1}{\theta} \amp = 0\text{.} </mrow>
+      </md>
+    </p>
+  </assemblage>
+
+  <exercise xml:id="ex-dt-derivative-sin-cos" workspace="0in">
+    <title>Derivatives of Sine and Cosine</title>
+    <introduction>
+      <p>
+        Using the sum identities and the definition of the derivative, last time we wrote
+        <md>
+          <mrow> \frac{d}{dx}\sin(x) \amp = \sin(x)\cdot\lim_{h\to 0}\frac{\cos(h)-1}{h}+\cos(x)\cdot\lim_{h\to 0}\frac{\sin(h)}{h} </mrow>
+          <mrow> \frac{d}{dx}\cos(x) \amp = \cos(x)\cdot\lim_{h\to 0}\frac{\cos(h)-1}{h}-\sin(x)\cdot\lim_{h\to 0}\frac{\sin(h)}{h}\text{.} </mrow>
+        </md>
+        Now we know the value of both limits.
+      </p>
+    </introduction>
+    <task xml:id="task-dt-sine-derivative" workspace="1in">
+      <statement>
+        <p>
+          Substitute the values of the two limits to find <m>\dfrac{d}{dx}\sin(x)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-dt-cosine-derivative" workspace="1in">
+      <statement>
+        <p>
+          Substitute the values of the two limits to find <m>\dfrac{d}{dx}\cos(x)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <theorem xml:id="thm-dt-sine-cosine-derivatives">
+    <title>Derivatives of Sine and Cosine</title>
+    <statement>
+      <p>
+        When <m>x</m> is measured in radians,
+        <md>
+          <mrow> \frac{d}{dx}\sin(x) \amp = \cos(x) \amp \frac{d}{dx}\cos(x) \amp = -\sin(x)\text{.} </mrow>
+        </md>
+      </p>
+    </statement>
+  </theorem>
+
+  <exercise xml:id="ex-dt-practice-sine-cosine" workspace="0in">
+    <title>Practice with Sine and Cosine</title>
+    <introduction>
+      <p>
+        Use <xref ref="thm-dt-sine-cosine-derivatives"/> together with the product rule and the
+        chain rule to find each derivative.
+      </p>
+    </introduction>
+    <task xml:id="task-dt-practice-cos-four" workspace="0.75in">
+      <statement>
+        <p><m>\dfrac{d}{dx}\bigl[\cos(4x)\bigr]</m></p>
+      </statement>
+    </task>
+    <task xml:id="task-dt-practice-x-squared-sine" workspace="0.75in">
+      <statement>
+        <p><m>\dfrac{d}{dx}\bigl[x^2\sin(x)\bigr]</m></p>
+      </statement>
+    </task>
+    <task xml:id="task-dt-practice-sine-cubed" workspace="0.75in">
+      <statement>
+        <p><m>\dfrac{d}{dx}\bigl[\sin^3(x)\bigr]</m></p>
+      </statement>
+    </task>
+    <task xml:id="task-dt-practice-exp-cosine" workspace="1in">
+      <statement>
+        <p><m>\dfrac{d}{dx}\bigl[e^{-x}\cos(2x)\bigr]</m></p>
+      </statement>
+    </task>
+  </exercise>
+
+  <assemblage xml:id="assemblage-dt-example-tangent">
+    <title>Example: The Derivative of Tangent</title>
+    <p>
+      The other four trigonometric functions are quotients involving sine and cosine (see
+      <xref ref="def-uc-trig-functions"/>), so we can find their derivatives with the quotient rule. For
+      tangent, <m>\tan(x)=\dfrac{\sin(x)}{\cos(x)}</m>, and
+      <md>
+        <mrow> \frac{d}{dx}\tan(x) \amp = \frac{d}{dx}\left[\frac{\sin(x)}{\cos(x)}\right] = \frac{\cos(x)\cdot\sin'(x)-\sin(x)\cdot\cos'(x)}{\cos^2(x)} </mrow>
+        <mrow> \amp = \frac{\cos(x)\cdot\cos(x)-\sin(x)\cdot\bigl(-\sin(x)\bigr)}{\cos^2(x)} </mrow>
+        <mrow> \amp = \frac{\cos^2(x)+\sin^2(x)}{\cos^2(x)} = \frac{1}{\cos^2(x)} = \sec^2(x)\text{.} </mrow>
+      </md>
+    </p>
+  </assemblage>
+
+  <exercise xml:id="ex-dt-derivative-secant" workspace="0in">
+    <title>The Derivative of Secant</title>
+    <task xml:id="task-dt-secant-quotient" workspace="1.5in">
+      <statement>
+        <p>
+          Write <m>\sec(x)=\dfrac{1}{\cos(x)}</m> and use the quotient rule (or the chain rule
+          applied to <m>\bigl(\cos(x)\bigr)^{-1}</m>) to find <m>\dfrac{d}{dx}\sec(x)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-dt-secant-rewrite" workspace="1in">
+      <statement>
+        <p>
+          Rewrite your answer as a product of two of the functions <m>\sec(x)</m>, <m>\tan(x)</m>,
+          <m>\csc(x)</m>, and <m>\cot(x)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <assemblage xml:id="assemblage-dt-trig-derivative-rules">
+    <title>Derivatives of the Trigonometric Functions</title>
+    <p>
+      With <m>x</m> in radians, at every <m>x</m> where the function is defined,
+      <md>
+        <mrow> \frac{d}{dx}\sin(x) \amp = \cos(x) \amp \frac{d}{dx}\cos(x) \amp = -\sin(x) </mrow>
+        <mrow> \frac{d}{dx}\tan(x) \amp = \sec^2(x) \amp \frac{d}{dx}\cot(x) \amp = -\csc^2(x) </mrow>
+        <mrow> \frac{d}{dx}\sec(x) \amp = \sec(x)\tan(x) \amp \frac{d}{dx}\csc(x) \amp = -\csc(x)\cot(x)\text{.} </mrow>
+      </md>
+      The derivatives of cotangent and cosecant follow from the quotient rule in the same way as
+      tangent and secant. Notice that the derivative of each <q>co</q> function is negative.
+    </p>
+  </assemblage>
+
+  <exercise xml:id="ex-dt-practice-trig-chain" workspace="0in">
+    <title>Practice with All Six Functions</title>
+    <introduction>
+      <p>
+        Use the rules in <xref ref="assemblage-dt-trig-derivative-rules" text="title"/>, along with
+        the chain rule, product rule, and quotient rule as needed, to find each derivative.
+      </p>
+    </introduction>
+    <task xml:id="task-dt-practice-sec-four" workspace="0.75in">
+      <statement>
+        <p><m>\dfrac{d}{dx}\bigl[\sec(4x)\bigr]</m></p>
+      </statement>
+    </task>
+    <task xml:id="task-dt-practice-exp-tan" workspace="0.75in">
+      <statement>
+        <p><m>\dfrac{d}{dx}\bigl[e^{\tan(x)}\bigr]</m></p>
+      </statement>
+    </task>
+    <task xml:id="task-dt-practice-x-cot" workspace="1in">
+      <statement>
+        <p><m>\dfrac{d}{dx}\bigl[x^2\cot(x)\bigr]</m></p>
+      </statement>
+    </task>
+    <task xml:id="task-dt-practice-ln-sec" workspace="1.25in">
+      <statement>
+        <p>
+          <m>\dfrac{d}{dx}\bigl[\ln\bigl|\sec(x)\bigr|\bigr]</m>.
+          Simplify your answer as much as you can.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>

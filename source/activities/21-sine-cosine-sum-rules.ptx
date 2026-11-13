@@ -77,17 +77,229 @@
       Rotate the point <m>(1,0)</m> by an angle <m>\theta</m>, and then continue by rotating through a
       further angle <m>\varphi</m>. The total rotation is by the angle <m>\theta+\varphi</m>, so the
       point we reach is <m>(\cos(\theta+\varphi),\sin(\theta+\varphi))</m>. We can also find this
-      point in pieces.
+      point in pieces, following the four pictures below.
     </p>
+    <sbsgroup>
+      <sidebyside widths="48% 48%" margins="auto" valign="bottom">
+        <figure xml:id="fig-td-basic-rotations">
+          <caption>Rotating <m>(1,0)</m> and <m>(0,1)</m> by <m>\varphi</m>.</caption>
+          <image width="100%">
+            <shortdescription>The unit circle with a dashed outline. A blue arc carries the point (1,0) counterclockwise through the angle phi to the point (cos phi, sin phi). A red arc carries the point (0,1) through the angle phi to the point (-sin phi, cos phi). The angle phi is marked between each starting axis and the terminal ray.</shortdescription>
+            <latex-image>
+              \begin{tikzpicture}[scale=3.2, >=stealth, axis/.style={->, black!70}, font=\footnotesize]
+                \colorlet{cosc}{blue!75!black}
+                \colorlet{sinc}{red!75!black}
+                \pgfmathsetmacro{\tD}{30}
+                \pgfmathsetmacro{\pD}{50}
+                \pgfmathsetmacro{\pE}{90+\pD}
+
+                \draw[axis] (-1.3,0) -- (1.35,0) node[right] {$x$};
+                \draw[axis] (0,-1.3) -- (0,1.35) node[above] {$y$};
+                \draw[dashed, black!70] (0,0) circle (1);
+
+                % terminal rays
+                \draw[black!50] (0,0) -- (\pD:1);
+                \draw[black!50] (0,0) -- (\pE:1);
+
+                % rotation arcs
+                \draw[->, very thick, cosc] (1,0) arc (0:\pD:1);
+                \draw[->, very thick, sinc] (0,1) arc (90:\pE:1);
+
+                % angle markers
+                \draw[cosc] (0.28,0) arc (0:\pD:0.28);
+                \node[cosc] at ({\pD/2}:0.42) {$\varphi$};
+                \draw[sinc] (90:0.28) arc (90:\pE:0.28);
+                \node[sinc] at ({90+\pD/2}:0.42) {$\varphi$};
+
+                % points
+                \fill (1,0) circle (0.9pt) node[below right] {$(1,0)$};
+                \fill (0,1) circle (0.9pt) node[above right] {$(0,1)$};
+                \fill[cosc] (\pD:1) circle (0.9pt)
+                    node[above right] {$(\cos\varphi,\ \sin\varphi)$};
+                \fill[sinc] (\pE:1) circle (0.9pt)
+                    node[above left] {$(-\sin\varphi,\ \cos\varphi)$};
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+        <figure xml:id="fig-td-rotate-cos-piece">
+          <caption>Rotating <m>(\cos(\theta),0)</m> by <m>\varphi</m>.</caption>
+          <image width="100%">
+            <shortdescription>The point (cos theta, sin theta) on the dotted unit circle, reached by a horizontal blue vector of length cos theta along the x-axis and a vertical vector of length sin theta. A dashed blue circle of radius cos theta carries the end of the blue vector through the angle phi to the point (cos theta cos phi, cos theta sin phi).</shortdescription>
+            <latex-image>
+              \begin{tikzpicture}[scale=3.6, >=stealth, axis/.style={->, black!70}, font=\footnotesize]
+                \colorlet{cosc}{blue!75!black}
+                \colorlet{sinc}{red!75!black}
+                \pgfmathsetmacro{\tD}{30}
+                \pgfmathsetmacro{\pD}{50}
+                \pgfmathsetmacro{\ct}{cos(\tD)}
+                \pgfmathsetmacro{\st}{sin(\tD)}
+
+                \draw[axis] (-0.35,0) -- (1.3,0) node[right] {$x$};
+                \draw[axis] (0,-0.35) -- (0,1.3) node[above] {$y$};
+                \draw[dotted, black!50] (0,0) circle (1);
+
+                % circle of radius cos(theta) and the rotation of (cos theta, 0) by phi
+                \draw[dashed, cosc] (0,0) circle (\ct);
+                \draw[->, thick, cosc] (\ct,0) arc (0:\pD:\ct);
+
+                % vector addition, both ways, to reach (cos theta, sin theta)
+                \draw[->, thin, black!60] (\ct,0) -- (\ct,\st);
+                \draw[->, thin, black!60] (0,0) -- (0,\st);
+                \draw[->, thin, black!60] (0,\st) -- (\ct,\st);
+                \draw[->, black] (0,0) -- (\ct,\st);
+
+                % emphasized horizontal component
+                \draw[->, line width=2.2pt, cosc] (0,0) -- (\ct,0);
+
+                % labels for the sum
+                \fill (\ct,\st) circle (0.5pt)
+                    node[above right, xshift=-1pt] {$(\cos\theta,\ \sin\theta)$};
+                \node[below, cosc] at ({\ct/2},-0.01) {$\cos\theta$};
+                \node[right, black!70] at (\ct,{\st/2}) {$\sin\theta$};
+                \draw[black] (0.2,0) arc (0:\tD:0.2);
+                \node at ({\tD/2}:0.28) {\small$\theta$};
+
+                % rotation by phi
+                \draw[black!50] (0,0) -- (\pD:1.0);
+                \draw[cosc] (0.5,0) arc (0:\pD:0.5);
+                \node[cosc] at ({\pD/2+8}:0.57) {$\varphi$};
+                \fill[cosc] (\ct,0) circle (0.5pt);
+                \fill[cosc] ({\ct*cos(\pD)},{\ct*sin(\pD)}) circle (0.5pt)
+                    node[left, xshift=-1pt, align=center]
+                    {$(\cos\theta\cos\varphi,\ \cos\theta\sin\varphi)$};
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+      <sidebyside widths="48% 48%" margins="auto" valign="bottom">
+        <figure xml:id="fig-td-rotate-sin-piece">
+          <caption>Rotating <m>(0,\sin(\theta))</m> by <m>\varphi</m>.</caption>
+          <image width="100%">
+            <shortdescription>The point (cos theta, sin theta) on the dotted unit circle, reached by a vertical red vector of length sin theta along the y-axis and a horizontal vector of length cos theta. A dashed red circle of radius sin theta carries the end of the red vector through the angle phi to the point (-sin theta sin phi, sin theta cos phi).</shortdescription>
+            <latex-image>
+              \begin{tikzpicture}[scale=3.6, >=stealth, axis/.style={->, black!70}, font=\footnotesize]
+                \colorlet{cosc}{blue!75!black}
+                \colorlet{sinc}{red!75!black}
+                \pgfmathsetmacro{\tD}{30}
+                \pgfmathsetmacro{\pD}{50}
+                \pgfmathsetmacro{\ct}{cos(\tD)}
+                \pgfmathsetmacro{\st}{sin(\tD)}
+                \pgfmathsetmacro{\pE}{90+\pD}
+
+                \draw[axis] (-1.1,0) -- (1.3,0) node[right] {$x$};
+                \draw[axis] (0,-0.35) -- (0,1.3) node[above] {$y$};
+                \draw[dotted, black!50] (0,0) circle (1);
+
+                % circle of radius sin(theta) and the rotation of (0, sin theta) by phi
+                \draw[dashed, sinc] (0,0) circle (\st);
+                \draw[->, thick, sinc] (0,\st) arc (90:\pE:\st);
+
+                % vector addition, both ways, to reach (cos theta, sin theta)
+                \draw[->, thin, sinc] (\ct,0) -- (\ct,\st);
+                \draw[->, thin, black!60] (0,0) -- (\ct,0);
+                \draw[->, thin, black!60] (0,\st) -- (\ct,\st);
+                \draw[->, black] (0,0) -- (\ct,\st);
+
+                % emphasized vertical component
+                \draw[->, line width=2.2pt, sinc] (0,0) -- (0,\st);
+
+                \fill (\ct,\st) circle (0.5pt)
+                    node[above right, xshift=-1pt] {$(\cos\theta,\ \sin\theta)$};
+                \node[below, black!70] at ({\ct/2},-0.02) {$\cos\theta$};
+                \node[right, sinc] at (\ct,{\st/2}) {$\sin\theta$};
+                \draw[black] (0.2,0) arc (0:\tD:0.2);
+                \node at ({\tD/2}:0.28) {\small$\theta$};
+
+                % rotation by phi (angle measured from the y axis)
+                \draw[black!50] (0,0) -- (\pE:0.85);
+                \draw[sinc] (90:0.3) arc (90:\pE:0.3);
+                \node[sinc] at ({90+\pD/2}:0.40) {\small$\varphi$};
+                \fill[sinc] (0,\st) circle (0.5pt);
+                \fill[sinc] ({-\st*sin(\pD)},{\st*cos(\pD)}) circle (0.5pt)
+                    node[left, xshift=-1pt, align=center]
+                    {$(-\sin\theta\sin\varphi,\ \sin\theta\cos\varphi)$};
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+        <figure xml:id="fig-td-sequential-rotations">
+          <caption>Rotating by <m>\theta</m>, then by <m>\varphi</m>, and adding the pieces.</caption>
+          <image width="100%">
+            <shortdescription>A bold black vector from the origin to the point (cos theta, sin theta) on the dotted unit circle, with dashed blue and red component vectors forming a rectangle. A black arc rotates this point through the angle phi to a second bold black vector. The two rotated components, also dashed in blue and red, form a parallelogram whose far corner is the final point (cos theta cos phi - sin theta sin phi, sin theta cos phi + cos theta sin phi).</shortdescription>
+            <latex-image>
+              \begin{tikzpicture}[scale=4, >=stealth, axis/.style={->, black!70}, font=\footnotesize]
+                \colorlet{cosc}{blue!75!black}
+                \colorlet{sinc}{red!75!black}
+                \pgfmathsetmacro{\tD}{30}
+                \pgfmathsetmacro{\pD}{50}
+                \pgfmathsetmacro{\ct}{cos(\tD)}
+                \pgfmathsetmacro{\st}{sin(\tD)}
+                \pgfmathsetmacro{\Ax}{cos(\tD)*cos(\pD)}
+                \pgfmathsetmacro{\Ay}{cos(\tD)*sin(\pD)}
+                \pgfmathsetmacro{\Bx}{-sin(\tD)*sin(\pD)}
+                \pgfmathsetmacro{\By}{sin(\tD)*cos(\pD)}
+                \pgfmathsetmacro{\Sx}{\Ax+\Bx}
+                \pgfmathsetmacro{\Sy}{\Ay+\By}
+                \pgfmathsetmacro{\tp}{\tD+\pD}
+
+                \draw[axis] (-0.5,0) -- (1.25,0) node[right] {$x$};
+                \draw[axis] (0,-0.2) -- (0,1.25) node[above] {$y$};
+                \draw[dotted, black!50] (0,0) circle (1);
+
+                % first rotation (by theta): components of (cos theta, sin theta), dashed
+                \draw[->, dashed, thick, cosc] (0,0) -- (\ct,0);
+                \draw[->, dashed, thick, sinc] (\ct,0) -- (\ct,\st);
+                \draw[->, dashed, thick, sinc] (0,0) -- (0,\st);
+                \draw[->, dashed, thick, cosc] (0,\st) -- (\ct,\st);
+
+                % second rotation (by phi): rotated components and their parallel copies, dashed
+                \draw[->, dashed, thick, cosc] (0,0) -- (\Ax,\Ay);
+                \draw[->, dashed, thick, sinc] (0,0) -- (\Bx,\By);
+                \draw[->, dashed, thick, sinc] (\Ax,\Ay) -- (\Sx,\Sy);
+                \draw[->, dashed, thick, cosc] (\Bx,\By) -- (\Sx,\Sy);
+
+                % rotation arc by theta from (1,0) to (cos theta, sin theta)
+                \draw[->, thick, black] (1,0) arc (0:\tD:1);
+
+                % rotation arc by phi from (cos theta, sin theta) to the final point
+                \draw[->, thick, black] (\tD:1) arc (\tD:\tp:1);
+
+                % bold black vector to (cos theta, sin theta)
+                \draw[->, line width=2.2pt, black] (0,0) -- (\ct,\st);
+
+                % bold black final vector
+                \draw[->, line width=2.2pt, black] (0,0) -- (\Sx,\Sy);
+
+                % angles: theta from the x axis, phi from the first rotated vector
+                \draw[thick, black] (0.25,0) arc (0:\tD:0.25);
+                \node at ({\tD/2}:0.33) {\small$\theta$};
+                \draw[thick, black] (\tD:0.5) arc (\tD:\tp:0.5);
+                \node at ({\tD+\pD/2}:0.38) {\small$\varphi$};
+
+                % only the final point is labeled
+                \fill (\Sx,\Sy) circle (0.4pt)
+                    node[above right, xshift=-2pt, align=left]
+                    {$(\cos\theta\cos\varphi-\sin\theta\sin\varphi,$\\
+                      $\ \sin\theta\cos\varphi+\cos\theta\sin\varphi)$};
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+    </sbsgroup>
     <p>
-      After the rotation by <m>\theta</m> we are at
-      <m>(\cos(\theta),\sin(\theta)) = (\cos(\theta),0)+(0,\sin(\theta))</m>. Now rotate each piece
-      by <m>\varphi</m>, using what we found for <m>(a,0)</m> and <m>(0,b)</m> above:
+      The basic rotations by <m>\varphi</m> are in <xref ref="fig-td-basic-rotations"/>. After the
+      rotation by <m>\theta</m> we are at
+      <m>(\cos(\theta),\sin(\theta)) = (\cos(\theta),0)+(0,\sin(\theta))</m>. Rotating each piece
+      by <m>\varphi</m> gives the two points in <xref ref="fig-td-rotate-cos-piece"/> and
+      <xref ref="fig-td-rotate-sin-piece"/>:
       <md>
-        <mrow> (\cos(\theta),0) \amp \longrightarrow \cos(\theta)\bigl(\cos(\varphi),\sin(\varphi)\bigr) = \bigl(\cos(\theta)\cos(\varphi),\ \cos(\theta)\sin(\varphi)\bigr) </mrow>
-        <mrow> (0,\sin(\theta)) \amp \longrightarrow \sin(\theta)\bigl(-\sin(\varphi),\cos(\varphi)\bigr) = \bigl(-\sin(\theta)\sin(\varphi),\ \sin(\theta)\cos(\varphi)\bigr) </mrow>
+        <mrow> (\cos(\theta),0) \amp \longrightarrow \bigl(\cos(\theta)\cos(\varphi),\ \cos(\theta)\sin(\varphi)\bigr) </mrow>
+        <mrow> (0,\sin(\theta)) \amp \longrightarrow \bigl(-\sin(\theta)\sin(\varphi),\ \sin(\theta)\cos(\varphi)\bigr) </mrow>
       </md>
-      Adding the two rotated pieces gives the point
+      Adding the two rotated pieces, as in <xref ref="fig-td-sequential-rotations"/>, reaches the point
       <md>
         \bigl(\cos(\theta)\cos(\varphi)-\sin(\theta)\sin(\varphi),\ \sin(\theta)\cos(\varphi)+\cos(\theta)\sin(\varphi)\bigr)\text{.}
       </md>
