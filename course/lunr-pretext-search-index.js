@@ -1864,6 +1864,366 @@ var ptx_lunr_docs = [
   "body": "secant cosecant cotangent "
 },
 {
+  "id": "activity-circle-trigonometry",
+  "level": "1",
+  "url": "activity-circle-trigonometry.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Circle Trigonometry",
+  "body": " Circle Trigonometry    Explain why the opposite vertex of a unit right triangle with a vertex at the origin has coordinates , and connect the Pythagorean theorem to the unit circle equation .  Locate the terminal ray of any angle by rotating from , counterclockwise for positive angles and clockwise for negative angles, and use its point on the unit circle to define and for every angle.  Define , , , and as ratios of the coordinates, and decide where each is undefined.  Find all six trigonometric values of an angle by combining a reference triangle with the signs of and in the quadrant of the terminal ray.  Use and the quadrant to find all six trigonometric values when only one coordinate is known.  Explain why sine is an odd function and cosine is an even function, using the symmetry of the unit circle.     Last time we rescaled right triangles so that the hypotenuse had length , and found that the other two sides are and . That works only for acute angles, because a right triangle cannot have an angle of or . Today we place the unit triangle inside a circle. The circle will let us turn what we observed for angles between and into a definition that works for every angle.    Unit Triangles Around the Origin   The figure shows several right triangles whose hypotenuse has length . Each has one vertex at the origin and one leg along the -axis. The vertex opposite the origin is a point on the circle of radius centered at the origin, called the unit circle . The highlighted triangle has the acute angle at the origin.   The first quadrant of the unit circle with x and y axes. Three right triangles have a vertex at the origin, a hypotenuse of length 1 along a radius to the circle, and a vertical leg dropping to the x-axis. The middle triangle is highlighted. Its angle at the origin is theta, its horizontal leg is labeled cosine of theta, its vertical leg is labeled sine of theta, and its vertex on the circle is labeled with the coordinates cosine of theta, sine of theta. The point 1, 0 is marked on the x-axis.       Using the unit triangle with hypotenuse from the previous activity, what are the lengths of the horizontal and vertical legs of the highlighted triangle? Explain why the point has coordinates .      Apply the Pythagorean theorem to the highlighted triangle to get an equation relating the coordinates and of . What familiar equation is this? Which identity from the previous activity does it give when written using and ?      What happens to the triangle as gets smaller and smaller? Which point on the circle should we assign to the angle ?      Moving along the circle from to covers a distance called the arc length . This distance is a fraction of the full circumference , and the fraction is the same as the fraction of a full revolution ( ) that the angle covers. Find the arc length for and for . Then write a formula for the arc length when the angle is degrees.      Trigonometric Functions of Any Angle   To find the point for an angle , start at on the unit circle and move along the circle to cover the angle. If , rotate in the counterclockwise direction. If , rotate in the clockwise direction through . The ray from through the point reached is the terminal ray of the angle. If the point is , then we define  and define the other four trigonometric functions as ratios of these coordinates: whenever the denominator is not zero.     Reversing Our Observation  For an acute angle, this definition agrees with the right triangle ratios, because we just saw that the point is when is acute. The difference is the direction of the logic. Before, the triangle defined the coordinates. Now the coordinates define sine and cosine, and they do so for angles of any size or sign. Every point on the unit circle satisfies , so holds for every angle .    Signs in the Four Quadrants   The coordinate axes divide the plane into four quadrants , numbered I through IV counterclockwise, with Quadrant I in the upper right.     For each quadrant, decide whether and are positive or negative for a point in that quadrant. Use this to decide the sign of , , and when the terminal ray of is in that quadrant.      In which quadrant is the terminal ray for each of the angles , , , and ? Describe how you decided for .      Two Special Triangles  Two right triangles with hypotenuse have side lengths that we can find exactly.   The - - triangle. The two acute angles are equal, so the triangle is isosceles and both legs have the same length . The Pythagorean theorem gives , so and .   The - - triangle. An equilateral triangle with side length can have one angle bisected to create an angle of . The bisector cuts the opposite side in half, so the short leg of each right triangle is . The Pythagorean theorem then gives the long leg .    A right triangle with the right angle at the lower right. Both legs are labeled square root of 2 over 2, the hypotenuse is labeled 1, and both acute angles are labeled 45 degrees.     An equilateral triangle with side length 1 and one vertex at the origin on the left. A horizontal dashed line from the origin bisects the angle there, with the upper half labeled 30 degrees and the lower half labeled negative 30 degrees. The two slanted sides are labeled 1. The vertical side on the right is cut by the bisector into two pieces, each labeled one half, and the bisector is labeled square root of 3 over 2. A right angle is marked where the bisector meets the vertical side.       Example: The Angle 150 Degrees  Find and .  The angle is not acute, so it is not an angle of a right triangle. Instead, we rotate counterclockwise from and mark the point on the unit circle. This point is in Quadrant II. If we draw a vertical line from the point to the -axis, we get a reference triangle . Its angle at the origin is , so its horizontal leg has length and its vertical leg has length .   The unit circle with a terminal ray in the second quadrant at 150 degrees from the positive x-axis. A vertical segment drops from the point x, y on the circle to the negative x-axis, forming a reference triangle whose angle at the origin is 30 degrees. An arc marks the 150 degree rotation from the positive x-axis.    In Quadrant II we have and , so . Therefore and .    Reference Triangles at Work    Use and the coordinates found in to find the other four trigonometric function values at : , , , and .      Sketch the unit circle, the terminal ray for , and a reference triangle. What is the angle of the reference triangle at the origin? Find the coordinates of the point, and then and .      When Only One Coordinate Is Known   An angle has its terminal ray in Quadrant IV, and .     Use the unit circle equation and the quadrant to find . Be careful about the sign, and sketch the point on the unit circle.      Find all six trigonometric function values of .      Does this angle come from a , , or reference triangle? Did that prevent you from finding its trigonometric values?      What Using the Unit Circle Means  When we say we are using the unit circle, we are not consulting a memorized list of points built from , , and reference triangles. We are using three ideas together: the equation for points on the circle, the definitions and , and the signs of and determined by the quadrant of the terminal ray. The special triangles are the cases where the side lengths happen to be especially simple.    Multiples of 90 Degrees   When the terminal ray lies along an axis, there is no reference triangle, but the point on the unit circle can be read directly from the picture.     Make a table with columns , , , and . For each of the angles , sketch the rotation, identify the point , and fill in the row. Write undefined where a value does not exist.      Using , explain why is undefined. Which of the six trigonometric functions are undefined at ? At ?      Opposite Angles   The points and on the unit circle below correspond to the angles and . (The picture shows , but the idea works for any angle.)   The unit circle with two radii. One goes up and to the right at an angle theta above the positive x-axis and ends at the labeled point P on the circle. The other goes down and to the right at an angle theta below the positive x-axis, an angle of negative theta, and ends at the labeled point Q on the circle.       Write the coordinates of as . How are the coordinates of related to those of ? Explain using the symmetry of the circle.      Sine Is Odd and Cosine Is Even   For every angle , That is, is an odd function and is an even function.     Using Odd and Even    Use and the values at to find and . In which quadrant is the terminal ray for , and do the signs agree with your answer?     "
+},
+{
+  "id": "obj-circle-trigonometry",
+  "level": "2",
+  "url": "activity-circle-trigonometry.html#obj-circle-trigonometry",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Explain why the opposite vertex of a unit right triangle with a vertex at the origin has coordinates , and connect the Pythagorean theorem to the unit circle equation .  Locate the terminal ray of any angle by rotating from , counterclockwise for positive angles and clockwise for negative angles, and use its point on the unit circle to define and for every angle.  Define , , , and as ratios of the coordinates, and decide where each is undefined.  Find all six trigonometric values of an angle by combining a reference triangle with the signs of and in the quadrant of the terminal ray.  Use and the quadrant to find all six trigonometric values when only one coordinate is known.  Explain why sine is an odd function and cosine is an even function, using the symmetry of the unit circle.   "
+},
+{
+  "id": "ex-uc-unit-triangles-in-circle",
+  "level": "2",
+  "url": "activity-circle-trigonometry.html#ex-uc-unit-triangles-in-circle",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Unit Triangles Around the Origin.",
+  "body": " Unit Triangles Around the Origin   The figure shows several right triangles whose hypotenuse has length . Each has one vertex at the origin and one leg along the -axis. The vertex opposite the origin is a point on the circle of radius centered at the origin, called the unit circle . The highlighted triangle has the acute angle at the origin.   The first quadrant of the unit circle with x and y axes. Three right triangles have a vertex at the origin, a hypotenuse of length 1 along a radius to the circle, and a vertical leg dropping to the x-axis. The middle triangle is highlighted. Its angle at the origin is theta, its horizontal leg is labeled cosine of theta, its vertical leg is labeled sine of theta, and its vertex on the circle is labeled with the coordinates cosine of theta, sine of theta. The point 1, 0 is marked on the x-axis.       Using the unit triangle with hypotenuse from the previous activity, what are the lengths of the horizontal and vertical legs of the highlighted triangle? Explain why the point has coordinates .      Apply the Pythagorean theorem to the highlighted triangle to get an equation relating the coordinates and of . What familiar equation is this? Which identity from the previous activity does it give when written using and ?      What happens to the triangle as gets smaller and smaller? Which point on the circle should we assign to the angle ?      Moving along the circle from to covers a distance called the arc length . This distance is a fraction of the full circumference , and the fraction is the same as the fraction of a full revolution ( ) that the angle covers. Find the arc length for and for . Then write a formula for the arc length when the angle is degrees.    "
+},
+{
+  "id": "def-uc-trig-functions",
+  "level": "2",
+  "url": "activity-circle-trigonometry.html#def-uc-trig-functions",
+  "type": "Definition",
+  "number": "85",
+  "title": "Trigonometric Functions of Any Angle.",
+  "body": " Trigonometric Functions of Any Angle   To find the point for an angle , start at on the unit circle and move along the circle to cover the angle. If , rotate in the counterclockwise direction. If , rotate in the clockwise direction through . The ray from through the point reached is the terminal ray of the angle. If the point is , then we define  and define the other four trigonometric functions as ratios of these coordinates: whenever the denominator is not zero.   "
+},
+{
+  "id": "rem-uc-agrees-with-triangles",
+  "level": "2",
+  "url": "activity-circle-trigonometry.html#rem-uc-agrees-with-triangles",
+  "type": "Remark",
+  "number": "86",
+  "title": "Reversing Our Observation.",
+  "body": " Reversing Our Observation  For an acute angle, this definition agrees with the right triangle ratios, because we just saw that the point is when is acute. The difference is the direction of the logic. Before, the triangle defined the coordinates. Now the coordinates define sine and cosine, and they do so for angles of any size or sign. Every point on the unit circle satisfies , so holds for every angle .  "
+},
+{
+  "id": "ex-uc-quadrant-signs",
+  "level": "2",
+  "url": "activity-circle-trigonometry.html#ex-uc-quadrant-signs",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Signs in the Four Quadrants.",
+  "body": " Signs in the Four Quadrants   The coordinate axes divide the plane into four quadrants , numbered I through IV counterclockwise, with Quadrant I in the upper right.     For each quadrant, decide whether and are positive or negative for a point in that quadrant. Use this to decide the sign of , , and when the terminal ray of is in that quadrant.      In which quadrant is the terminal ray for each of the angles , , , and ? Describe how you decided for .    "
+},
+{
+  "id": "assemblage-uc-example-150-3",
+  "level": "2",
+  "url": "activity-circle-trigonometry.html#assemblage-uc-example-150-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "reference triangle "
+},
+{
+  "id": "ex-uc-reference-triangles",
+  "level": "2",
+  "url": "activity-circle-trigonometry.html#ex-uc-reference-triangles",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Reference Triangles at Work.",
+  "body": " Reference Triangles at Work    Use and the coordinates found in to find the other four trigonometric function values at : , , , and .      Sketch the unit circle, the terminal ray for , and a reference triangle. What is the angle of the reference triangle at the origin? Find the coordinates of the point, and then and .    "
+},
+{
+  "id": "ex-uc-one-coordinate-known",
+  "level": "2",
+  "url": "activity-circle-trigonometry.html#ex-uc-one-coordinate-known",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "When Only One Coordinate Is Known.",
+  "body": " When Only One Coordinate Is Known   An angle has its terminal ray in Quadrant IV, and .     Use the unit circle equation and the quadrant to find . Be careful about the sign, and sketch the point on the unit circle.      Find all six trigonometric function values of .      Does this angle come from a , , or reference triangle? Did that prevent you from finding its trigonometric values?    "
+},
+{
+  "id": "rem-uc-not-a-list",
+  "level": "2",
+  "url": "activity-circle-trigonometry.html#rem-uc-not-a-list",
+  "type": "Remark",
+  "number": "87",
+  "title": "What “Using the Unit Circle” Means.",
+  "body": " What Using the Unit Circle Means  When we say we are using the unit circle, we are not consulting a memorized list of points built from , , and reference triangles. We are using three ideas together: the equation for points on the circle, the definitions and , and the signs of and determined by the quadrant of the terminal ray. The special triangles are the cases where the side lengths happen to be especially simple.  "
+},
+{
+  "id": "ex-uc-multiples-of-90",
+  "level": "2",
+  "url": "activity-circle-trigonometry.html#ex-uc-multiples-of-90",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Multiples of 90 Degrees.",
+  "body": " Multiples of 90 Degrees   When the terminal ray lies along an axis, there is no reference triangle, but the point on the unit circle can be read directly from the picture.     Make a table with columns , , , and . For each of the angles , sketch the rotation, identify the point , and fill in the row. Write undefined where a value does not exist.      Using , explain why is undefined. Which of the six trigonometric functions are undefined at ? At ?    "
+},
+{
+  "id": "ex-uc-opposite-angles",
+  "level": "2",
+  "url": "activity-circle-trigonometry.html#ex-uc-opposite-angles",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Opposite Angles.",
+  "body": " Opposite Angles   The points and on the unit circle below correspond to the angles and . (The picture shows , but the idea works for any angle.)   The unit circle with two radii. One goes up and to the right at an angle theta above the positive x-axis and ends at the labeled point P on the circle. The other goes down and to the right at an angle theta below the positive x-axis, an angle of negative theta, and ends at the labeled point Q on the circle.       Write the coordinates of as . How are the coordinates of related to those of ? Explain using the symmetry of the circle.    "
+},
+{
+  "id": "thm-uc-odd-even",
+  "level": "2",
+  "url": "activity-circle-trigonometry.html#thm-uc-odd-even",
+  "type": "Theorem",
+  "number": "88",
+  "title": "Sine Is Odd and Cosine Is Even.",
+  "body": " Sine Is Odd and Cosine Is Even   For every angle , That is, is an odd function and is an even function.   "
+},
+{
+  "id": "ex-uc-using-symmetry",
+  "level": "2",
+  "url": "activity-circle-trigonometry.html#ex-uc-using-symmetry",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Using Odd and Even.",
+  "body": " Using Odd and Even    Use and the values at to find and . In which quadrant is the terminal ray for , and do the signs agree with your answer?    "
+},
+{
+  "id": "activity-sine-cosine-sum-rules",
+  "level": "1",
+  "url": "activity-sine-cosine-sum-rules.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Sum Rules for Sine and Cosine",
+  "body": " Sum Rules for Sine and Cosine    Interpret adding angles as following one rotation by another, and use the sum identities for sine and cosine to find the coordinates of a rotated point.  Apply the sum identities by replacing , , , and with known coordinate values, to find the sine and cosine of angles such as , , and .  Use the sum identities in the limit definition of the derivative to write and in terms of , , and two limits in , and identify those two limits.     Last time we defined sine and cosine as the coordinates of a point on the unit circle. To differentiate these functions we will need to know how and relate to the values at and at . We begin by seeing that adding angles means following one rotation by another. This gives the sum identities for sine and cosine, which we then put to work in the limit definition of the derivative.    Rotating Other Starting Points   Rotating the starting point by an angle moves it to the point on the unit circle. Where do other starting points go under the same rotation?     Where does the point move when it is rotated by the angle ? Explain your answer using the fact that is twice as far from the origin as .      Sketch the unit circle and the point . Rotate this point by an acute angle and draw a reference triangle for the new point. Use the triangle to find the coordinates of the new point in terms of and . Pay attention to where the angle sits in your triangle and to which side of the -axis the new point lies on.      Where does the point move when it is rotated by the angle ?      Rotating by Components  We can reach a point from the origin in two steps: a horizontal displacement , and then a vertical displacement . As vectors, this says Rotation respects this splitting. To rotate the point , we can rotate the two displacements and separately, and then add the results.    Adding Angles Means Adding Rotations  Rotate the point by an angle , and then continue by rotating through a further angle . The total rotation is by the angle , so the point we reach is . We can also find this point in pieces, following the four pictures below.     Rotating and by .   The unit circle with a dashed outline. A blue arc carries the point (1,0) counterclockwise through the angle phi to the point (cos phi, sin phi). A red arc carries the point (0,1) through the angle phi to the point (-sin phi, cos phi). The angle phi is marked between each starting axis and the terminal ray.      Rotating by .   The point (cos theta, sin theta) on the dotted unit circle, reached by a horizontal blue vector of length cos theta along the x-axis and a vertical vector of length sin theta. A dashed blue circle of radius cos theta carries the end of the blue vector through the angle phi to the point (cos theta cos phi, cos theta sin phi).        Rotating by .   The point (cos theta, sin theta) on the dotted unit circle, reached by a vertical red vector of length sin theta along the y-axis and a horizontal vector of length cos theta. A dashed red circle of radius sin theta carries the end of the red vector through the angle phi to the point (-sin theta sin phi, sin theta cos phi).      Rotating by , then by , and adding the pieces.   A bold black vector from the origin to the point (cos theta, sin theta) on the dotted unit circle, with dashed blue and red component vectors forming a rectangle. A black arc rotates this point through the angle phi to a second bold black vector. The two rotated components, also dashed in blue and red, form a parallelogram whose far corner is the final point (cos theta cos phi - sin theta sin phi, sin theta cos phi + cos theta sin phi).       The basic rotations by are in . After the rotation by we are at . Rotating each piece by gives the two points in and : Adding the two rotated pieces, as in , reaches the point This is the same point as , so the coordinates must match.    Sum Identities for Sine and Cosine   For all angles and ,      Replace the Four Quantities  In , the four quantities , , , and are numbers: they are the coordinates of two points on the unit circle. We use the identities by replacing each of these four quantities with its known coordinate value. We never put a coordinate value inside a sine or cosine. For example, to find we do not evaluate . We replace by , replace by , and so on, and then combine the numbers.    Adding Rotations in Practice   Use the values of sine and cosine at , , and from .     Take and . Write down the four numbers that replace , , , and , and then use to compute and . Do they agree with the point you found for earlier?      Write as the sum of two angles from our special triangles. Use to find and exactly.      What about ? It is not the sum of two of our special angles, but it is a sum if one of the two angles is negative. Use to find the sine and cosine of the negative angle, and then find and exactly.      Rotating a Point Further by 60 Degrees   An angle has its terminal ray in Quadrant II, and . We want the coordinates of the point on the unit circle for the angle . We do not know the angle itself, and we do not need it.     Use the unit circle equation and the quadrant to find exactly.      Find and from the reference triangle.      Use to find and , and state the coordinates of the point for .      The Derivative of Sine   By the definition of the derivative, the derivative of is The obstacle is , the sine of a sum. gives us a way to handle it.     Apply to , with and . Write the difference quotient using your result.      The expression appears in two of the terms. Regroup so that the difference quotient takes the form where each bracket is a single fraction with denominator .      As , the value of stays fixed. Which parts of your expression depend on , and which do not? Write as times one limit plus times another limit.      The Derivative of Cosine   The derivative of is The plan is the same as for sine, now using the identity for .     Apply to , and regroup the difference quotient so that multiplies one fraction with denominator and multiplies another.      Write as times one limit plus (or minus) times another limit.      Which Limits Do We Need?    Compare your results for sine and for cosine. Two limits in appear in both. Write them down, and name them and if you have not already. Then write both and in terms of , , , and .      What happens to the numerator and denominator of each limit as ? Can we find or by substituting ?     "
+},
+{
+  "id": "obj-sine-cosine-sum-rules",
+  "level": "2",
+  "url": "activity-sine-cosine-sum-rules.html#obj-sine-cosine-sum-rules",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Interpret adding angles as following one rotation by another, and use the sum identities for sine and cosine to find the coordinates of a rotated point.  Apply the sum identities by replacing , , , and with known coordinate values, to find the sine and cosine of angles such as , , and .  Use the sum identities in the limit definition of the derivative to write and in terms of , , and two limits in , and identify those two limits.   "
+},
+{
+  "id": "ex-td-rotate-other-points",
+  "level": "2",
+  "url": "activity-sine-cosine-sum-rules.html#ex-td-rotate-other-points",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Rotating Other Starting Points.",
+  "body": " Rotating Other Starting Points   Rotating the starting point by an angle moves it to the point on the unit circle. Where do other starting points go under the same rotation?     Where does the point move when it is rotated by the angle ? Explain your answer using the fact that is twice as far from the origin as .      Sketch the unit circle and the point . Rotate this point by an acute angle and draw a reference triangle for the new point. Use the triangle to find the coordinates of the new point in terms of and . Pay attention to where the angle sits in your triangle and to which side of the -axis the new point lies on.      Where does the point move when it is rotated by the angle ?    "
+},
+{
+  "id": "fig-td-basic-rotations",
+  "level": "2",
+  "url": "activity-sine-cosine-sum-rules.html#fig-td-basic-rotations",
+  "type": "Figure",
+  "number": "89",
+  "title": "",
+  "body": " Rotating and by .   The unit circle with a dashed outline. A blue arc carries the point (1,0) counterclockwise through the angle phi to the point (cos phi, sin phi). A red arc carries the point (0,1) through the angle phi to the point (-sin phi, cos phi). The angle phi is marked between each starting axis and the terminal ray.    "
+},
+{
+  "id": "fig-td-rotate-cos-piece",
+  "level": "2",
+  "url": "activity-sine-cosine-sum-rules.html#fig-td-rotate-cos-piece",
+  "type": "Figure",
+  "number": "90",
+  "title": "",
+  "body": " Rotating by .   The point (cos theta, sin theta) on the dotted unit circle, reached by a horizontal blue vector of length cos theta along the x-axis and a vertical vector of length sin theta. A dashed blue circle of radius cos theta carries the end of the blue vector through the angle phi to the point (cos theta cos phi, cos theta sin phi).    "
+},
+{
+  "id": "fig-td-rotate-sin-piece",
+  "level": "2",
+  "url": "activity-sine-cosine-sum-rules.html#fig-td-rotate-sin-piece",
+  "type": "Figure",
+  "number": "91",
+  "title": "",
+  "body": " Rotating by .   The point (cos theta, sin theta) on the dotted unit circle, reached by a vertical red vector of length sin theta along the y-axis and a horizontal vector of length cos theta. A dashed red circle of radius sin theta carries the end of the red vector through the angle phi to the point (-sin theta sin phi, sin theta cos phi).    "
+},
+{
+  "id": "fig-td-sequential-rotations",
+  "level": "2",
+  "url": "activity-sine-cosine-sum-rules.html#fig-td-sequential-rotations",
+  "type": "Figure",
+  "number": "92",
+  "title": "",
+  "body": " Rotating by , then by , and adding the pieces.   A bold black vector from the origin to the point (cos theta, sin theta) on the dotted unit circle, with dashed blue and red component vectors forming a rectangle. A black arc rotates this point through the angle phi to a second bold black vector. The two rotated components, also dashed in blue and red, form a parallelogram whose far corner is the final point (cos theta cos phi - sin theta sin phi, sin theta cos phi + cos theta sin phi).    "
+},
+{
+  "id": "thm-td-sum-identities",
+  "level": "2",
+  "url": "activity-sine-cosine-sum-rules.html#thm-td-sum-identities",
+  "type": "Theorem",
+  "number": "93",
+  "title": "Sum Identities for Sine and Cosine.",
+  "body": " Sum Identities for Sine and Cosine   For all angles and ,    "
+},
+{
+  "id": "rem-td-replace-not-substitute",
+  "level": "2",
+  "url": "activity-sine-cosine-sum-rules.html#rem-td-replace-not-substitute",
+  "type": "Remark",
+  "number": "94",
+  "title": "Replace the Four Quantities.",
+  "body": " Replace the Four Quantities  In , the four quantities , , , and are numbers: they are the coordinates of two points on the unit circle. We use the identities by replacing each of these four quantities with its known coordinate value. We never put a coordinate value inside a sine or cosine. For example, to find we do not evaluate . We replace by , replace by , and so on, and then combine the numbers.  "
+},
+{
+  "id": "ex-td-adding-rotations",
+  "level": "2",
+  "url": "activity-sine-cosine-sum-rules.html#ex-td-adding-rotations",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Adding Rotations in Practice.",
+  "body": " Adding Rotations in Practice   Use the values of sine and cosine at , , and from .     Take and . Write down the four numbers that replace , , , and , and then use to compute and . Do they agree with the point you found for earlier?      Write as the sum of two angles from our special triangles. Use to find and exactly.      What about ? It is not the sum of two of our special angles, but it is a sum if one of the two angles is negative. Use to find the sine and cosine of the negative angle, and then find and exactly.    "
+},
+{
+  "id": "ex-td-rotate-by-sixty",
+  "level": "2",
+  "url": "activity-sine-cosine-sum-rules.html#ex-td-rotate-by-sixty",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Rotating a Point Further by 60 Degrees.",
+  "body": " Rotating a Point Further by 60 Degrees   An angle has its terminal ray in Quadrant II, and . We want the coordinates of the point on the unit circle for the angle . We do not know the angle itself, and we do not need it.     Use the unit circle equation and the quadrant to find exactly.      Find and from the reference triangle.      Use to find and , and state the coordinates of the point for .    "
+},
+{
+  "id": "ex-td-derivative-of-sine",
+  "level": "2",
+  "url": "activity-sine-cosine-sum-rules.html#ex-td-derivative-of-sine",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "The Derivative of Sine.",
+  "body": " The Derivative of Sine   By the definition of the derivative, the derivative of is The obstacle is , the sine of a sum. gives us a way to handle it.     Apply to , with and . Write the difference quotient using your result.      The expression appears in two of the terms. Regroup so that the difference quotient takes the form where each bracket is a single fraction with denominator .      As , the value of stays fixed. Which parts of your expression depend on , and which do not? Write as times one limit plus times another limit.    "
+},
+{
+  "id": "ex-td-derivative-of-cosine",
+  "level": "2",
+  "url": "activity-sine-cosine-sum-rules.html#ex-td-derivative-of-cosine",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "The Derivative of Cosine.",
+  "body": " The Derivative of Cosine   The derivative of is The plan is the same as for sine, now using the identity for .     Apply to , and regroup the difference quotient so that multiplies one fraction with denominator and multiplies another.      Write as times one limit plus (or minus) times another limit.    "
+},
+{
+  "id": "ex-td-which-limits",
+  "level": "2",
+  "url": "activity-sine-cosine-sum-rules.html#ex-td-which-limits",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Which Limits Do We Need?",
+  "body": " Which Limits Do We Need?    Compare your results for sine and for cosine. Two limits in appear in both. Write them down, and name them and if you have not already. Then write both and in terms of , , , and .      What happens to the numerator and denominator of each limit as ? Can we find or by substituting ?    "
+},
+{
+  "id": "activity-derivatives-trigonometric-functions",
+  "level": "1",
+  "url": "activity-derivatives-trigonometric-functions.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Derivatives of Trigonometric Functions",
+  "body": " Derivatives of Trigonometric Functions    Compare the areas of two triangles and a circular sector on the unit circle to bound , and use the Squeeze Theorem to find its limit as .  Explain why radian measure, where a full turn is , is the natural way to measure angles in calculus.  Find by multiplying by a conjugate, using a Pythagorean identity, and factoring out a known limit.  Use the two limits to obtain and , and differentiate expressions that combine sine and cosine with the product rule and the chain rule.  Use the quotient rule to find the derivatives of the other four trigonometric functions, and apply them together with the chain rule.     Last time the sum identities reduced the derivatives of sine and cosine to two limits, and (see ). Both limits have the form , and we cannot use L'Hôpital's rule to find them, because that rule needs the derivative of sine, which is exactly what we are trying to find. Instead we return to the unit circle. Today's work will also show us which units we should use to measure angles.    Comparing Three Regions   The figure shows the first quadrant of the unit circle and an acute angle . Three regions are shaded: a small triangle with height , the sector of the circle cut off by the angle , and a large triangle with height . Both triangles have a base of length , the radius of the circle.   The first quadrant of the unit circle. A point P on the circle at the angle theta above the x-axis has the coordinates cosine of theta, sine of theta. A dashed vertical segment from P to the x-axis is labeled sine of theta. The point S is 1, 0 on the x-axis, the point O is the origin, and the base from O to S is labeled 1. The ray from O through P continues to the point Q on the vertical line through S, and the segment from S up to Q is labeled tangent of theta. The small triangle with vertices O, S, and P is shaded darkly. The sector between the x-axis and the ray, bounded by the circle, is shaded lightly. The large triangle with vertices O, S, and Q is shaded in gray and contains the sector.    Let be the measure of one full turn around the circle. If angles are measured in degrees then , and if angles are measured in radians then . In either case, is the fraction of the circle covered by the rotation through the angle .     Find the area of the small triangle and the area of the large triangle, using and the heights marked in the figure.      The unit circle has area . Explain why the area of the sector is .      Look at how the three regions sit inside one another in the figure. Use this to write an inequality that orders the three areas from smallest to largest, in terms of , , , and .      Squeeze Theorem   Suppose for all near (except possibly at ), and suppose . Then .     Squeezing  The inequality from the last exercise is for . We want in the middle. Because , we may multiply the left inequality by without changing its direction, which gives . In the right inequality we replace by . Because as well, multiplying by gives . Together, As , the point on the circle approaches , so . Both outer expressions then approach , and tells us that The argument used , but sine is odd (see ), so . The values for negative match the values for positive , so the limit from the left is the same, and .    Choosing the Units for Angles    Suppose we measure angles in degrees. What is ? Give the exact value and a decimal approximation.      Which value of makes this limit equal to ? Why would that choice make the derivative of sine simpler to write down?      Radians  An angle is measured in radians when a full turn is . Then , and the arc of the unit circle covered by a rotation through has length . So the radian measure of an angle is the length of the arc it cuts off on the unit circle. With this choice, From now on, all angles are measured in radians.    The Limit of   We now find the second limit, using .     Multiply the numerator and the denominator of by the conjugate . Use the Pythagorean identity to show that       Write the right side as a product of and one other factor that contains and but no in a denominator.      Use the limit of a product to find .      The Two Fundamental Limits  For angles measured in radians,     Derivatives of Sine and Cosine   Using the sum identities and the definition of the derivative, last time we wrote Now we know the value of both limits.     Substitute the values of the two limits to find .      Substitute the values of the two limits to find .      Derivatives of Sine and Cosine   When is measured in radians,      Practice with Sine and Cosine   Use together with the product rule and the chain rule to find each derivative.                         Example: The Derivative of Tangent  The other four trigonometric functions are quotients involving sine and cosine (see ), so we can find their derivatives with the quotient rule. For tangent, , and     The Derivative of Secant    Write and use the quotient rule (or the chain rule applied to ) to find .      Rewrite your answer as a product of two of the functions , , , and .      Derivatives of the Trigonometric Functions  With in radians, at every where the function is defined, The derivatives of cotangent and cosecant follow from the quotient rule in the same way as tangent and secant. Notice that the derivative of each co function is negative.    Practice with All Six Functions   Use the rules in , along with the chain rule, product rule, and quotient rule as needed, to find each derivative.                     . Simplify your answer as much as you can.     "
+},
+{
+  "id": "obj-derivatives-trigonometric-functions",
+  "level": "2",
+  "url": "activity-derivatives-trigonometric-functions.html#obj-derivatives-trigonometric-functions",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Compare the areas of two triangles and a circular sector on the unit circle to bound , and use the Squeeze Theorem to find its limit as .  Explain why radian measure, where a full turn is , is the natural way to measure angles in calculus.  Find by multiplying by a conjugate, using a Pythagorean identity, and factoring out a known limit.  Use the two limits to obtain and , and differentiate expressions that combine sine and cosine with the product rule and the chain rule.  Use the quotient rule to find the derivatives of the other four trigonometric functions, and apply them together with the chain rule.   "
+},
+{
+  "id": "ex-dt-compare-regions",
+  "level": "2",
+  "url": "activity-derivatives-trigonometric-functions.html#ex-dt-compare-regions",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Comparing Three Regions.",
+  "body": " Comparing Three Regions   The figure shows the first quadrant of the unit circle and an acute angle . Three regions are shaded: a small triangle with height , the sector of the circle cut off by the angle , and a large triangle with height . Both triangles have a base of length , the radius of the circle.   The first quadrant of the unit circle. A point P on the circle at the angle theta above the x-axis has the coordinates cosine of theta, sine of theta. A dashed vertical segment from P to the x-axis is labeled sine of theta. The point S is 1, 0 on the x-axis, the point O is the origin, and the base from O to S is labeled 1. The ray from O through P continues to the point Q on the vertical line through S, and the segment from S up to Q is labeled tangent of theta. The small triangle with vertices O, S, and P is shaded darkly. The sector between the x-axis and the ray, bounded by the circle, is shaded lightly. The large triangle with vertices O, S, and Q is shaded in gray and contains the sector.    Let be the measure of one full turn around the circle. If angles are measured in degrees then , and if angles are measured in radians then . In either case, is the fraction of the circle covered by the rotation through the angle .     Find the area of the small triangle and the area of the large triangle, using and the heights marked in the figure.      The unit circle has area . Explain why the area of the sector is .      Look at how the three regions sit inside one another in the figure. Use this to write an inequality that orders the three areas from smallest to largest, in terms of , , , and .    "
+},
+{
+  "id": "thm-dt-squeeze",
+  "level": "2",
+  "url": "activity-derivatives-trigonometric-functions.html#thm-dt-squeeze",
+  "type": "Theorem",
+  "number": "95",
+  "title": "Squeeze Theorem.",
+  "body": " Squeeze Theorem   Suppose for all near (except possibly at ), and suppose . Then .   "
+},
+{
+  "id": "ex-dt-which-units",
+  "level": "2",
+  "url": "activity-derivatives-trigonometric-functions.html#ex-dt-which-units",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Choosing the Units for Angles.",
+  "body": " Choosing the Units for Angles    Suppose we measure angles in degrees. What is ? Give the exact value and a decimal approximation.      Which value of makes this limit equal to ? Why would that choice make the derivative of sine simpler to write down?    "
+},
+{
+  "id": "assemblage-dt-radians-2",
+  "level": "2",
+  "url": "activity-derivatives-trigonometric-functions.html#assemblage-dt-radians-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "radians "
+},
+{
+  "id": "ex-dt-cosine-limit",
+  "level": "2",
+  "url": "activity-derivatives-trigonometric-functions.html#ex-dt-cosine-limit",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "The Limit of <span class=\"process-math\">\\((\\cos(\\theta)-1)\/\\theta\\)<\/span>.",
+  "body": " The Limit of   We now find the second limit, using .     Multiply the numerator and the denominator of by the conjugate . Use the Pythagorean identity to show that       Write the right side as a product of and one other factor that contains and but no in a denominator.      Use the limit of a product to find .    "
+},
+{
+  "id": "ex-dt-derivative-sin-cos",
+  "level": "2",
+  "url": "activity-derivatives-trigonometric-functions.html#ex-dt-derivative-sin-cos",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Derivatives of Sine and Cosine.",
+  "body": " Derivatives of Sine and Cosine   Using the sum identities and the definition of the derivative, last time we wrote Now we know the value of both limits.     Substitute the values of the two limits to find .      Substitute the values of the two limits to find .    "
+},
+{
+  "id": "thm-dt-sine-cosine-derivatives",
+  "level": "2",
+  "url": "activity-derivatives-trigonometric-functions.html#thm-dt-sine-cosine-derivatives",
+  "type": "Theorem",
+  "number": "96",
+  "title": "Derivatives of Sine and Cosine.",
+  "body": " Derivatives of Sine and Cosine   When is measured in radians,    "
+},
+{
+  "id": "ex-dt-practice-sine-cosine",
+  "level": "2",
+  "url": "activity-derivatives-trigonometric-functions.html#ex-dt-practice-sine-cosine",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Practice with Sine and Cosine.",
+  "body": " Practice with Sine and Cosine   Use together with the product rule and the chain rule to find each derivative.                       "
+},
+{
+  "id": "ex-dt-derivative-secant",
+  "level": "2",
+  "url": "activity-derivatives-trigonometric-functions.html#ex-dt-derivative-secant",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "The Derivative of Secant.",
+  "body": " The Derivative of Secant    Write and use the quotient rule (or the chain rule applied to ) to find .      Rewrite your answer as a product of two of the functions , , , and .    "
+},
+{
+  "id": "ex-dt-practice-trig-chain",
+  "level": "2",
+  "url": "activity-derivatives-trigonometric-functions.html#ex-dt-practice-trig-chain",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Practice with All Six Functions.",
+  "body": " Practice with All Six Functions   Use the rules in , along with the chain rule, product rule, and quotient rule as needed, to find each derivative.                     . Simplify your answer as much as you can.    "
+},
+{
   "id": "homework",
   "level": "1",
   "url": "homework.html",
