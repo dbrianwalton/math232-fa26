@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-graphs-trigonometric-functions">
+  <title>Graphs of Trigonometric Functions</title>
+
+  <objectives xml:id="obj-graphs-trigonometric-functions">
+    <ul>
+      <li><p>Use the signs of sine and cosine in each quadrant of the unit circle to determine the sign of a function built from them on each interval of <m>[0,2\pi]</m>.</p></li>
+      <li><p>Find the roots and the vertical asymptotes of a trigonometric function and of its first and second derivatives by finding where a numerator or a denominator is zero.</p></li>
+      <li><p>Build sign charts for <m>f</m>, <m>f'</m>, and <m>f''</m>, and use them to decide where the graph is positive or negative, increasing or decreasing, and concave up or concave down.</p></li>
+      <li><p>Combine the sign charts to justify and sketch the graphs of <m>\sin(x)</m>, <m>\cos(x)</m>, and <m>\sec(x)</m> on <m>[0,2\pi]</m>, including the behavior near any vertical asymptote.</p></li>
+      <li><p>Explain why the shape on <m>[0,2\pi]</m> repeats, and use this to describe the graph on any interval.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      We now have derivative formulas for all six trigonometric functions (see
+      <xref ref="assemblage-dt-trig-derivative-rules" text="title"/>). In earlier work we used the signs of
+      <m>f'</m> and <m>f''</m> to describe the shape of a graph, and we located vertical asymptotes at
+      places where we divide by zero. Today we apply both ideas to trigonometric functions.
+    </p>
+    <p>
+      Every trigonometric function is defined by a rotation on the unit circle. Rotating through an
+      additional <m>2\pi</m> returns to the same point, so each of the elementary trigonometric
+      functions repeats every <m>2\pi</m>. It is enough to describe the shape of the graph on
+      <m>[0,2\pi]</m>. The rest of the graph is a copy of that shape.
+    </p>
+  </introduction>
+
+  <assemblage xml:id="assemblage-gt-strategy">
+    <title>Strategy for Describing a Graph</title>
+    <p>
+      <ol>
+        <li><p>Write the function as sine and cosine raised to powers. The roots are where the numerator is zero, and the vertical asymptotes are where the denominator is zero.</p></li>
+        <li><p>Use the quadrants of the unit circle to find the sign of the function on each interval between those points.</p></li>
+        <li><p>Repeat for <m>f'</m> and then for <m>f''</m>.</p></li>
+        <li><p>Interpret: <m>f'\gt 0</m> means increasing, <m>f'\lt 0</m> means decreasing, <m>f''\gt 0</m> means concave up, and <m>f''\lt 0</m> means concave down.</p></li>
+        <li><p>Sketch a graph that matches all three charts.</p></li>
+      </ol>
+    </p>
+  </assemblage>
+
+  <exercise xml:id="ex-gt-quadrant-signs" workspace="0in">
+    <title>Signs on the Unit Circle</title>
+    <introduction>
+      <p>
+        Rotating from the point <m>(1,0)</m> through the angle <m>x</m> reaches the point
+        <m>(\cos(x),\sin(x))</m>. The interval <m>[0,2\pi]</m> is one full turn, and it splits into four
+        quadrants, each a quarter turn of width <m>\pi/2</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-gt-quadrant-table" workspace="0in">
+      <statement>
+        <p>
+          Complete the table by recording whether the <m>x</m>-coordinate (cosine) and the <m>y</m>-coordinate (sine) of the point on the unit circle are positive or negative for angles in each quadrant.
+        </p>
+        <tabular halign="center" top="minor" left="minor">
+          <col right="minor"/><col right="minor"/><col right="minor"/><col right="minor"/>
+          <row header="yes" bottom="minor"><cell>Quadrant</cell><cell>Interval</cell><cell>Sign of <m>\cos(x)</m></cell><cell>Sign of <m>\sin(x)</m></cell></row>
+          <row bottom="minor"><cell><m>\text{I}</m></cell><cell><m>(0,\pi/2)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{negative}}</m></cell></row>
+          <row bottom="minor"><cell><m>\text{II}</m></cell><cell><m>(\pi/2,\pi)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{negative}}</m></cell></row>
+          <row bottom="minor"><cell><m>\text{III}</m></cell><cell><m>(\pi,3\pi/2)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{negative}}</m></cell></row>
+          <row bottom="minor"><cell><m>\text{IV}</m></cell><cell><m>(3\pi/2,2\pi)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{negative}}</m></cell></row>
+        </tabular>
+      </statement>
+    </task>
+    <task xml:id="task-gt-sine-roots" workspace="0.875in">
+      <statement>
+        <p>
+          Let <m>f(x)=\sin(x)</m>. At which angles in <m>[0,2\pi]</m> is the <m>y</m>-coordinate of the point on the unit circle equal to <m>0</m>? These are the roots of <m>f</m>. Is there any division in the formula for <m>\sin(x)</m>? What does that tell you about vertical asymptotes of <m>f</m>?
+        </p>
+
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-gt-sine-sign" workspace="0in">
+    <title>Sign Chart for Sine</title>
+    <task xml:id="task-gt-sine-chart" workspace="0in">
+      <statement>
+        <p>
+          Complete the sign chart. Write <m>0</m> above a tick mark where the function is zero, <m>\text{VA}</m> above a tick mark where there is a vertical asymptote, and the sign <m>(+)</m> or <m>(-)</m> in each interval. Use the table above to decide the sign of <m>f(x)=\sin(x)</m> on each interval.
+        </p>
+        <image width="60%">
+          <shortdescription>A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of f of x.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \draw[thick] (0,0) -- (8.8,0);
+            \draw[thick] (0.0,0.12) -- (0.0,-0.12);
+            \draw[dotted] (0.0,0.12) -- (0.0,1.4);
+            \node[below] at (0.0,-0.12) {$0$};
+            \draw[thick] (2.2,0.12) -- (2.2,-0.12);
+            \draw[dotted] (2.2,0.12) -- (2.2,1.4);
+            \node[below] at (2.2,-0.12) {$\pi/2$};
+            \draw[thick] (4.4,0.12) -- (4.4,-0.12);
+            \draw[dotted] (4.4,0.12) -- (4.4,1.4);
+            \node[below] at (4.4,-0.12) {$\pi$};
+            \draw[thick] (6.6,0.12) -- (6.6,-0.12);
+            \draw[dotted] (6.6,0.12) -- (6.6,1.4);
+            \node[below] at (6.6,-0.12) {$3\pi/2$};
+            \draw[thick] (8.8,0.12) -- (8.8,-0.12);
+            \draw[dotted] (8.8,0.12) -- (8.8,1.4);
+            \node[below] at (8.8,-0.12) {$2\pi$};
+            \node[right] at (9.2,0) {$f(x)$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-gt-sine-first" workspace="0in">
+    <title>Where Is Sine Increasing or Decreasing?</title>
+    <task xml:id="task-gt-sine-fprime" workspace="0.35in">
+      <statement>
+        <p>
+          Write the derivative <m>f'(x)</m> of <m>f(x)=\sin(x)</m>.
+        </p>
+
+      </statement>
+    </task>
+    <task xml:id="task-gt-sine-fprime-roots" workspace="0.7in">
+      <statement>
+        <p>
+          Find the roots and the vertical asymptotes of <m>f'</m> on <m>[0,2\pi]</m>. Which points on the unit circle have <m>x</m>-coordinate <m>0</m>? Is there any division in <m>f'</m>?
+        </p>
+
+      </statement>
+    </task>
+    <task xml:id="task-gt-sine-fprime-chart" workspace="0in">
+      <statement>
+        <p>
+          Complete the sign chart. Write <m>0</m> above a tick mark where the function is zero, <m>\text{VA}</m> above a tick mark where there is a vertical asymptote, and the sign <m>(+)</m> or <m>(-)</m> in each interval. Use the table to decide the sign of <m>f'(x)</m> on each interval.
+        </p>
+        <image width="60%">
+          <shortdescription>A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of f prime of x.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \draw[thick] (0,0) -- (8.8,0);
+            \draw[thick] (0.0,0.12) -- (0.0,-0.12);
+            \draw[dotted] (0.0,0.12) -- (0.0,1.4);
+            \node[below] at (0.0,-0.12) {$0$};
+            \draw[thick] (2.2,0.12) -- (2.2,-0.12);
+            \draw[dotted] (2.2,0.12) -- (2.2,1.4);
+            \node[below] at (2.2,-0.12) {$\pi/2$};
+            \draw[thick] (4.4,0.12) -- (4.4,-0.12);
+            \draw[dotted] (4.4,0.12) -- (4.4,1.4);
+            \node[below] at (4.4,-0.12) {$\pi$};
+            \draw[thick] (6.6,0.12) -- (6.6,-0.12);
+            \draw[dotted] (6.6,0.12) -- (6.6,1.4);
+            \node[below] at (6.6,-0.12) {$3\pi/2$};
+            \draw[thick] (8.8,0.12) -- (8.8,-0.12);
+            \draw[dotted] (8.8,0.12) -- (8.8,1.4);
+            \node[below] at (8.8,-0.12) {$2\pi$};
+            \node[right] at (9.2,0) {$f'(x)$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+    <task xml:id="task-gt-sine-fprime-interpret" workspace="1.05in">
+      <statement>
+        <p>
+          On which intervals is <m>f</m> increasing, and on which is it decreasing? At each root of <m>f'</m>, does the sign of <m>f'</m> change? What does the change tell you about the graph of <m>f</m> at that point, and what is the value of <m>f</m> there?
+        </p>
+
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-gt-sine-second" workspace="0in">
+    <title>Where Is Sine Concave Up or Concave Down?</title>
+    <task xml:id="task-gt-sine-fdoubleprime" workspace="0.35in">
+      <statement>
+        <p>
+          Differentiate <m>f'(x)</m> to find <m>f''(x)</m>.
+        </p>
+
+      </statement>
+    </task>
+    <task xml:id="task-gt-sine-fdoubleprime-chart" workspace="0in">
+      <statement>
+        <p>
+          Complete the sign chart. Write <m>0</m> above a tick mark where the function is zero, <m>\text{VA}</m> above a tick mark where there is a vertical asymptote, and the sign <m>(+)</m> or <m>(-)</m> in each interval. Be careful with the sign in front of the function. Then compare this chart with your chart for <m>f(x)=\sin(x)</m>. What do you notice?
+        </p>
+        <image width="60%">
+          <shortdescription>A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of f double prime of x.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \draw[thick] (0,0) -- (8.8,0);
+            \draw[thick] (0.0,0.12) -- (0.0,-0.12);
+            \draw[dotted] (0.0,0.12) -- (0.0,1.4);
+            \node[below] at (0.0,-0.12) {$0$};
+            \draw[thick] (2.2,0.12) -- (2.2,-0.12);
+            \draw[dotted] (2.2,0.12) -- (2.2,1.4);
+            \node[below] at (2.2,-0.12) {$\pi/2$};
+            \draw[thick] (4.4,0.12) -- (4.4,-0.12);
+            \draw[dotted] (4.4,0.12) -- (4.4,1.4);
+            \node[below] at (4.4,-0.12) {$\pi$};
+            \draw[thick] (6.6,0.12) -- (6.6,-0.12);
+            \draw[dotted] (6.6,0.12) -- (6.6,1.4);
+            \node[below] at (6.6,-0.12) {$3\pi/2$};
+            \draw[thick] (8.8,0.12) -- (8.8,-0.12);
+            \draw[dotted] (8.8,0.12) -- (8.8,1.4);
+            \node[below] at (8.8,-0.12) {$2\pi$};
+            \node[right] at (9.2,0) {$f''(x)$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+    <task xml:id="task-gt-sine-fdoubleprime-interpret" workspace="0.875in">
+      <statement>
+        <p>
+          On which intervals is <m>f</m> concave up, and on which is it concave down? Where are the inflection points of <m>f</m> on <m>[0,2\pi]</m>, and what is the value of <m>f</m> at each?
+        </p>
+
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-gt-sine-sketch" workspace="0in">
+    <title>Sketching Sine</title>
+    <task xml:id="task-gt-sine-table" workspace="0in">
+      <statement>
+        <p>
+          Combine your three charts by completing the table for <m>f(x)=\sin(x)</m>.
+        </p>
+        <tabular halign="center" top="minor" left="minor">
+          <col right="minor"/><col right="minor"/><col right="minor"/><col right="minor"/><col right="minor"/>
+          <row header="yes" bottom="minor"><cell>Quadrant</cell><cell>Interval</cell><cell>Sign of <m>f</m></cell><cell>Direction</cell><cell>Concavity</cell></row>
+          <row bottom="minor"><cell><m>\text{I}</m></cell><cell><m>(0,\pi/2)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{decreasing}}</m></cell><cell><m>\phantom{\text{concave down}}</m></cell></row>
+          <row bottom="minor"><cell><m>\text{II}</m></cell><cell><m>(\pi/2,\pi)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{decreasing}}</m></cell><cell><m>\phantom{\text{concave down}}</m></cell></row>
+          <row bottom="minor"><cell><m>\text{III}</m></cell><cell><m>(\pi,3\pi/2)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{decreasing}}</m></cell><cell><m>\phantom{\text{concave down}}</m></cell></row>
+          <row bottom="minor"><cell><m>\text{IV}</m></cell><cell><m>(3\pi/2,2\pi)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{decreasing}}</m></cell><cell><m>\phantom{\text{concave down}}</m></cell></row>
+        </tabular>
+      </statement>
+    </task>
+    <task xml:id="task-gt-sine-sketch" workspace="0in">
+      <statement>
+        <p>
+          Plot the roots, the maximum, and the minimum on the axes below, and then draw a graph of <m>f(x)=\sin(x)</m> on <m>[0,2\pi]</m> that matches every row of your table.
+        </p>
+        <image width="70%">
+          <shortdescription>Blank axes for sketching sine on the interval from 0 to 2 pi. Vertical dotted guide lines mark multiples of pi over 2, and the vertical axis is marked at 1 and negative 1.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \foreach \x in {2.2,4.4,6.6,8.8} \draw[dotted,gray] (\x,2.0) -- (\x,-2.0);
+            \draw[-&gt;] (-0.5,0) -- (9.4,0) node[right] {$x$};
+            \draw[-&gt;] (0,-2.0) -- (0,2.0) node[above] {$y$};
+            \draw (0.0,0.1) -- (0.0,-0.1);
+            \node[below] at (0.0,-0.1) {$0$};
+            \draw (2.2,0.1) -- (2.2,-0.1);
+            \node[below] at (2.2,-0.1) {$\pi/2$};
+            \draw (4.4,0.1) -- (4.4,-0.1);
+            \node[below] at (4.4,-0.1) {$\pi$};
+            \draw (6.6,0.1) -- (6.6,-0.1);
+            \node[below] at (6.6,-0.1) {$3\pi/2$};
+            \draw (8.8,0.1) -- (8.8,-0.1);
+            \node[below] at (8.8,-0.1) {$2\pi$};
+            \draw (-0.1,1.5) -- (0.1,1.5);
+            \node[left] at (-0.1,1.5) {$1$};
+            \draw (-0.1,-1.5) -- (0.1,-1.5);
+            \node[left] at (-0.1,-1.5) {$-1$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+    <task xml:id="task-gt-sine-periodic" workspace="0.7in">
+      <statement>
+        <p>
+          Use the fact that sine repeats every <m>2\pi</m> to describe the graph of <m>\sin(x)</m> for <m>x</m> in <m>[2\pi,4\pi]</m> and for <m>x</m> in <m>[-2\pi,0]</m>.
+        </p>
+
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-gt-cosine" workspace="0in">
+    <title>The Shape of Cosine</title>
+    <introduction>
+      <p>
+        Repeat the same steps for <m>g(x)=\cos(x)</m> on <m>[0,2\pi]</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-gt-cosine-chart" workspace="0.35in">
+      <statement>
+        <p>
+          Find the roots and vertical asymptotes of <m>g(x)=\cos(x)</m> and complete the sign chart.
+        </p>
+        <image width="60%">
+          <shortdescription>A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of g of x.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \draw[thick] (0,0) -- (8.8,0);
+            \draw[thick] (0.0,0.12) -- (0.0,-0.12);
+            \draw[dotted] (0.0,0.12) -- (0.0,1.4);
+            \node[below] at (0.0,-0.12) {$0$};
+            \draw[thick] (2.2,0.12) -- (2.2,-0.12);
+            \draw[dotted] (2.2,0.12) -- (2.2,1.4);
+            \node[below] at (2.2,-0.12) {$\pi/2$};
+            \draw[thick] (4.4,0.12) -- (4.4,-0.12);
+            \draw[dotted] (4.4,0.12) -- (4.4,1.4);
+            \node[below] at (4.4,-0.12) {$\pi$};
+            \draw[thick] (6.6,0.12) -- (6.6,-0.12);
+            \draw[dotted] (6.6,0.12) -- (6.6,1.4);
+            \node[below] at (6.6,-0.12) {$3\pi/2$};
+            \draw[thick] (8.8,0.12) -- (8.8,-0.12);
+            \draw[dotted] (8.8,0.12) -- (8.8,1.4);
+            \node[below] at (8.8,-0.12) {$2\pi$};
+            \node[right] at (9.2,0) {$g(x)$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+    <task xml:id="task-gt-cosine-first" workspace="0.35in">
+      <statement>
+        <p>
+          Compute <m>g'(x)</m>, find its roots and vertical asymptotes, and complete the sign chart.
+        </p>
+        <image width="60%">
+          <shortdescription>A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of g prime of x.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \draw[thick] (0,0) -- (8.8,0);
+            \draw[thick] (0.0,0.12) -- (0.0,-0.12);
+            \draw[dotted] (0.0,0.12) -- (0.0,1.4);
+            \node[below] at (0.0,-0.12) {$0$};
+            \draw[thick] (2.2,0.12) -- (2.2,-0.12);
+            \draw[dotted] (2.2,0.12) -- (2.2,1.4);
+            \node[below] at (2.2,-0.12) {$\pi/2$};
+            \draw[thick] (4.4,0.12) -- (4.4,-0.12);
+            \draw[dotted] (4.4,0.12) -- (4.4,1.4);
+            \node[below] at (4.4,-0.12) {$\pi$};
+            \draw[thick] (6.6,0.12) -- (6.6,-0.12);
+            \draw[dotted] (6.6,0.12) -- (6.6,1.4);
+            \node[below] at (6.6,-0.12) {$3\pi/2$};
+            \draw[thick] (8.8,0.12) -- (8.8,-0.12);
+            \draw[dotted] (8.8,0.12) -- (8.8,1.4);
+            \node[below] at (8.8,-0.12) {$2\pi$};
+            \node[right] at (9.2,0) {$g'(x)$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+    <task xml:id="task-gt-cosine-second" workspace="0.35in">
+      <statement>
+        <p>
+          Compute <m>g''(x)</m>, find its roots and vertical asymptotes, and complete the sign chart.
+        </p>
+        <image width="60%">
+          <shortdescription>A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of g double prime of x.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \draw[thick] (0,0) -- (8.8,0);
+            \draw[thick] (0.0,0.12) -- (0.0,-0.12);
+            \draw[dotted] (0.0,0.12) -- (0.0,1.4);
+            \node[below] at (0.0,-0.12) {$0$};
+            \draw[thick] (2.2,0.12) -- (2.2,-0.12);
+            \draw[dotted] (2.2,0.12) -- (2.2,1.4);
+            \node[below] at (2.2,-0.12) {$\pi/2$};
+            \draw[thick] (4.4,0.12) -- (4.4,-0.12);
+            \draw[dotted] (4.4,0.12) -- (4.4,1.4);
+            \node[below] at (4.4,-0.12) {$\pi$};
+            \draw[thick] (6.6,0.12) -- (6.6,-0.12);
+            \draw[dotted] (6.6,0.12) -- (6.6,1.4);
+            \node[below] at (6.6,-0.12) {$3\pi/2$};
+            \draw[thick] (8.8,0.12) -- (8.8,-0.12);
+            \draw[dotted] (8.8,0.12) -- (8.8,1.4);
+            \node[below] at (8.8,-0.12) {$2\pi$};
+            \node[right] at (9.2,0) {$g''(x)$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+    <task xml:id="task-gt-cosine-table" workspace="0in">
+      <statement>
+        <p>
+          Complete the table for <m>g(x)=\cos(x)</m>.
+        </p>
+        <tabular halign="center" top="minor" left="minor">
+          <col right="minor"/><col right="minor"/><col right="minor"/><col right="minor"/><col right="minor"/>
+          <row header="yes" bottom="minor"><cell>Quadrant</cell><cell>Interval</cell><cell>Sign of <m>g</m></cell><cell>Direction</cell><cell>Concavity</cell></row>
+          <row bottom="minor"><cell><m>\text{I}</m></cell><cell><m>(0,\pi/2)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{decreasing}}</m></cell><cell><m>\phantom{\text{concave down}}</m></cell></row>
+          <row bottom="minor"><cell><m>\text{II}</m></cell><cell><m>(\pi/2,\pi)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{decreasing}}</m></cell><cell><m>\phantom{\text{concave down}}</m></cell></row>
+          <row bottom="minor"><cell><m>\text{III}</m></cell><cell><m>(\pi,3\pi/2)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{decreasing}}</m></cell><cell><m>\phantom{\text{concave down}}</m></cell></row>
+          <row bottom="minor"><cell><m>\text{IV}</m></cell><cell><m>(3\pi/2,2\pi)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{decreasing}}</m></cell><cell><m>\phantom{\text{concave down}}</m></cell></row>
+        </tabular>
+      </statement>
+    </task>
+    <task xml:id="task-gt-cosine-sketch" workspace="0in">
+      <statement>
+        <p>
+          Sketch the graph of <m>g(x)=\cos(x)</m> on <m>[0,2\pi]</m>. Label the roots, the maximum and minimum values, and the inflection points.
+        </p>
+        <image width="70%">
+          <shortdescription>Blank axes for sketching cosine on the interval from 0 to 2 pi. Vertical dotted guide lines mark multiples of pi over 2, and the vertical axis is marked at 1 and negative 1.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \foreach \x in {2.2,4.4,6.6,8.8} \draw[dotted,gray] (\x,2.0) -- (\x,-2.0);
+            \draw[-&gt;] (-0.5,0) -- (9.4,0) node[right] {$x$};
+            \draw[-&gt;] (0,-2.0) -- (0,2.0) node[above] {$y$};
+            \draw (0.0,0.1) -- (0.0,-0.1);
+            \node[below] at (0.0,-0.1) {$0$};
+            \draw (2.2,0.1) -- (2.2,-0.1);
+            \node[below] at (2.2,-0.1) {$\pi/2$};
+            \draw (4.4,0.1) -- (4.4,-0.1);
+            \node[below] at (4.4,-0.1) {$\pi$};
+            \draw (6.6,0.1) -- (6.6,-0.1);
+            \node[below] at (6.6,-0.1) {$3\pi/2$};
+            \draw (8.8,0.1) -- (8.8,-0.1);
+            \node[below] at (8.8,-0.1) {$2\pi$};
+            \draw (-0.1,1.5) -- (0.1,1.5);
+            \node[left] at (-0.1,1.5) {$1$};
+            \draw (-0.1,-1.5) -- (0.1,-1.5);
+            \node[left] at (-0.1,-1.5) {$-1$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-gt-secant" workspace="0in">
+    <title>The Shape of Secant</title>
+    <introduction>
+      <p>
+        Now let <m>h(x)=\sec(x)</m> on <m>[0,2\pi]</m>. Write <m>h</m> and its derivatives in terms of
+        sine and cosine, and be careful to look for division by zero.
+      </p>
+    </introduction>
+    <task xml:id="task-gt-secant-chart" workspace="0.35in">
+      <statement>
+        <p>
+          Find the roots and vertical asymptotes of <m>h(x)=\sec(x)</m> and complete the sign chart.
+        </p>
+        <image width="60%">
+          <shortdescription>A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of h of x.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \draw[thick] (0,0) -- (8.8,0);
+            \draw[thick] (0.0,0.12) -- (0.0,-0.12);
+            \draw[dotted] (0.0,0.12) -- (0.0,1.4);
+            \node[below] at (0.0,-0.12) {$0$};
+            \draw[thick] (2.2,0.12) -- (2.2,-0.12);
+            \draw[dotted] (2.2,0.12) -- (2.2,1.4);
+            \node[below] at (2.2,-0.12) {$\pi/2$};
+            \draw[thick] (4.4,0.12) -- (4.4,-0.12);
+            \draw[dotted] (4.4,0.12) -- (4.4,1.4);
+            \node[below] at (4.4,-0.12) {$\pi$};
+            \draw[thick] (6.6,0.12) -- (6.6,-0.12);
+            \draw[dotted] (6.6,0.12) -- (6.6,1.4);
+            \node[below] at (6.6,-0.12) {$3\pi/2$};
+            \draw[thick] (8.8,0.12) -- (8.8,-0.12);
+            \draw[dotted] (8.8,0.12) -- (8.8,1.4);
+            \node[below] at (8.8,-0.12) {$2\pi$};
+            \node[right] at (9.2,0) {$h(x)$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+    <task xml:id="task-gt-secant-first" workspace="0.35in">
+      <statement>
+        <p>
+          Compute <m>h'(x)</m>, rewrite it using sine and cosine, find its roots and vertical asymptotes, and complete the sign chart.
+        </p>
+        <image width="60%">
+          <shortdescription>A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of h prime of x.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \draw[thick] (0,0) -- (8.8,0);
+            \draw[thick] (0.0,0.12) -- (0.0,-0.12);
+            \draw[dotted] (0.0,0.12) -- (0.0,1.4);
+            \node[below] at (0.0,-0.12) {$0$};
+            \draw[thick] (2.2,0.12) -- (2.2,-0.12);
+            \draw[dotted] (2.2,0.12) -- (2.2,1.4);
+            \node[below] at (2.2,-0.12) {$\pi/2$};
+            \draw[thick] (4.4,0.12) -- (4.4,-0.12);
+            \draw[dotted] (4.4,0.12) -- (4.4,1.4);
+            \node[below] at (4.4,-0.12) {$\pi$};
+            \draw[thick] (6.6,0.12) -- (6.6,-0.12);
+            \draw[dotted] (6.6,0.12) -- (6.6,1.4);
+            \node[below] at (6.6,-0.12) {$3\pi/2$};
+            \draw[thick] (8.8,0.12) -- (8.8,-0.12);
+            \draw[dotted] (8.8,0.12) -- (8.8,1.4);
+            \node[below] at (8.8,-0.12) {$2\pi$};
+            \node[right] at (9.2,0) {$h'(x)$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+    <task xml:id="task-gt-secant-second" workspace="1.05in">
+      <statement>
+        <p>
+          Compute <m>h''(x)</m>. Simplify until the numerator and denominator are each something whose sign you can read from the unit circle. Then find the roots and vertical asymptotes of <m>h''</m> and complete the sign chart.
+        </p>
+        <image width="60%">
+          <shortdescription>A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of h double prime of x.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \draw[thick] (0,0) -- (8.8,0);
+            \draw[thick] (0.0,0.12) -- (0.0,-0.12);
+            \draw[dotted] (0.0,0.12) -- (0.0,1.4);
+            \node[below] at (0.0,-0.12) {$0$};
+            \draw[thick] (2.2,0.12) -- (2.2,-0.12);
+            \draw[dotted] (2.2,0.12) -- (2.2,1.4);
+            \node[below] at (2.2,-0.12) {$\pi/2$};
+            \draw[thick] (4.4,0.12) -- (4.4,-0.12);
+            \draw[dotted] (4.4,0.12) -- (4.4,1.4);
+            \node[below] at (4.4,-0.12) {$\pi$};
+            \draw[thick] (6.6,0.12) -- (6.6,-0.12);
+            \draw[dotted] (6.6,0.12) -- (6.6,1.4);
+            \node[below] at (6.6,-0.12) {$3\pi/2$};
+            \draw[thick] (8.8,0.12) -- (8.8,-0.12);
+            \draw[dotted] (8.8,0.12) -- (8.8,1.4);
+            \node[below] at (8.8,-0.12) {$2\pi$};
+            \node[right] at (9.2,0) {$h''(x)$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+    <task xml:id="task-gt-secant-table" workspace="0in">
+      <statement>
+        <p>
+          Complete the table for <m>h(x)=\sec(x)</m>.
+        </p>
+        <tabular halign="center" top="minor" left="minor">
+          <col right="minor"/><col right="minor"/><col right="minor"/><col right="minor"/><col right="minor"/>
+          <row header="yes" bottom="minor"><cell>Quadrant</cell><cell>Interval</cell><cell>Sign of <m>h</m></cell><cell>Direction</cell><cell>Concavity</cell></row>
+          <row bottom="minor"><cell><m>\text{I}</m></cell><cell><m>(0,\pi/2)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{decreasing}}</m></cell><cell><m>\phantom{\text{concave down}}</m></cell></row>
+          <row bottom="minor"><cell><m>\text{II}</m></cell><cell><m>(\pi/2,\pi)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{decreasing}}</m></cell><cell><m>\phantom{\text{concave down}}</m></cell></row>
+          <row bottom="minor"><cell><m>\text{III}</m></cell><cell><m>(\pi,3\pi/2)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{decreasing}}</m></cell><cell><m>\phantom{\text{concave down}}</m></cell></row>
+          <row bottom="minor"><cell><m>\text{IV}</m></cell><cell><m>(3\pi/2,2\pi)</m></cell><cell><m>\phantom{\text{negative}}</m></cell><cell><m>\phantom{\text{decreasing}}</m></cell><cell><m>\phantom{\text{concave down}}</m></cell></row>
+        </tabular>
+      </statement>
+    </task>
+    <task xml:id="task-gt-secant-sketch" workspace="0in">
+      <statement>
+        <p>
+          Sketch the graph of <m>h(x)=\sec(x)</m> on <m>[0,2\pi]</m>. Draw each vertical asymptote as a dashed line, and for each side of each asymptote use your table to decide whether the graph rises to <m>+\infty</m> or falls to <m>-\infty</m>. Label the local extreme values.
+        </p>
+        <image width="70%">
+          <shortdescription>Blank axes for sketching secant on the interval from 0 to 2 pi. Vertical dotted guide lines mark multiples of pi over 2, and the vertical axis is marked at 1 and negative 1.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \foreach \x in {2.2,4.4,6.6,8.8} \draw[dotted,gray] (\x,3.0) -- (\x,-3.0);
+            \draw[-&gt;] (-0.5,0) -- (9.4,0) node[right] {$x$};
+            \draw[-&gt;] (0,-3.0) -- (0,3.0) node[above] {$y$};
+            \draw (0.0,0.1) -- (0.0,-0.1);
+            \node[below] at (0.0,-0.1) {$0$};
+            \draw (2.2,0.1) -- (2.2,-0.1);
+            \node[below] at (2.2,-0.1) {$\pi/2$};
+            \draw (4.4,0.1) -- (4.4,-0.1);
+            \node[below] at (4.4,-0.1) {$\pi$};
+            \draw (6.6,0.1) -- (6.6,-0.1);
+            \node[below] at (6.6,-0.1) {$3\pi/2$};
+            \draw (8.8,0.1) -- (8.8,-0.1);
+            \node[below] at (8.8,-0.1) {$2\pi$};
+            \draw (-0.1,0.8) -- (0.1,0.8);
+            \node[left] at (-0.1,0.8) {$1$};
+            \draw (-0.1,-0.8) -- (0.1,-0.8);
+            \node[left] at (-0.1,-0.8) {$-1$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>

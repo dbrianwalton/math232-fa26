@@ -38,6 +38,7 @@
       <xi:include href="./outcomes/week-05-06.ptx"/>
       <xi:include href="./outcomes/week-08-09.ptx"/>
       <xi:include href="./outcomes/week-10-11.ptx"/>
+      <xi:include href="./outcomes/week-12-13.ptx"/>
 
     </chapter>
 
@@ -80,6 +81,7 @@
       <xi:include href="./activities/20-circle-trigonometry.ptx"/>
       <xi:include href="./activities/21-sine-cosine-sum-rules.ptx"/>
       <xi:include href="./activities/22-derivatives-of-trigonometric-functions.ptx"/>
+      <xi:include href="./activities/23-graphs-of-trigonometric-functions.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-outcomes-week-12-13">
+  <title>Week 12 and Week 13</title>
+
+  <introduction>
+    <p>
+      These weeks extend trigonometry beyond right triangles.
+      We use the unit circle definitions of sine and cosine together with the sum identities,
+      differentiate functions involving all six trigonometric functions,
+      and use sign analysis of derivatives to justify the shape of their graphs.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-T2">
+    <title>T2 Unit Circle and Sum Identities</title>
+
+    <assemblage xml:id="assemblage-T2">
+      <title>T2</title>
+      <p>
+        I can use the unit circle definition of sine and cosine along with their sum identities
+        to determine <m>\sin(\theta+\phi)</m> or <m>\cos(\theta+\phi)</m> where <m>\theta</m>
+        and <m>\phi</m> are given based on either common angles or partial unit circle information.
+      </p>
+    </assemblage>
+
+    <p>
+      The unit circle equation <m>x^2+y^2=1</m> is equivalent to the Pythagorean identity
+      <m>\cos^2(\theta)+\sin^2(\theta)=1</m>.
+      Rotating from the point <m>(1,0)</m> by the angle <m>\theta</m> reaches the point
+      <m>(\cos(\theta),\sin(\theta))</m>, so the cosine is the <m>x</m>-coordinate
+      and the sine is the <m>y</m>-coordinate.
+      Solving the unit circle equation for one coordinate gives two solutions, a positive one
+      and a negative one.
+      The quadrant containing the angle determines the signs of sine and cosine,
+      and therefore which solution to keep.
+    </p>
+
+    <p>
+      The sum identities are
+      <m>\sin(\theta+\phi)=\sin(\theta)\cos(\phi)+\cos(\theta)\sin(\phi)</m>
+      and
+      <m>\cos(\theta+\phi)=\cos(\theta)\cos(\phi)-\sin(\theta)\sin(\phi)</m>.
+    </p>
+
+    <p>
+      Recall that a radian measure is (fraction of a full circle) <m>\cdot\, 2\pi</m>.
+      When an angle is written as a fraction times <m>\pi</m>, the fraction is the portion
+      of a half circle.
+      For example, <m>\pi/4</m> is one quarter of a half rotation, which is <m>45^\circ</m>.
+    </p>
+
+    <exercise label="T2_Unit_Circle_Sum_Identities">
+      <statement>
+        <p>
+          Suppose <m>\theta</m> is an angle satisfying <m>-\pi \lt \theta \lt 0</m> with
+          <m>\cos(\theta)=-\frac{1}{3}</m>.
+          Use unit circle reasoning and the sum identities to find <m>\sin\left(\theta+\frac{\pi}{6}\right)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The unit circle equation gives <m>\sin^2(\theta)=1-\cos^2(\theta)=1-\frac{1}{9}=\frac{8}{9}</m>,
+          so <m>\sin(\theta)=\pm\frac{2\sqrt{2}}{3}</m>.
+          The angle satisfies <m>-\pi \lt \theta \lt 0</m>, so it lies below the <m>x</m>-axis
+          and its sine is negative.
+          (Its cosine is also negative, so it is in the third quadrant.)
+          Therefore <m>\sin(\theta)=-\frac{2\sqrt{2}}{3}</m>.
+        </p>
+        <p>
+          Using the sum identity with <m>\cos\left(\frac{\pi}{6}\right)=\frac{\sqrt{3}}{2}</m>
+          and <m>\sin\left(\frac{\pi}{6}\right)=\frac{1}{2}</m>:
+        </p>
+        <md>
+          <mrow>\sin\left(\theta+\frac{\pi}{6}\right) \amp = \sin(\theta)\cos\left(\frac{\pi}{6}\right) + \cos(\theta)\sin\left(\frac{\pi}{6}\right)</mrow>
+          <mrow>\amp = \left(-\frac{2\sqrt{2}}{3}\right)\left(\frac{\sqrt{3}}{2}\right) + \left(-\frac{1}{3}\right)\left(\frac{1}{2}\right)</mrow>
+          <mrow>\amp = -\frac{\sqrt{6}}{3} - \frac{1}{6} = -\frac{2\sqrt{6}+1}{6}</mrow>
+        </md>
+      </solution>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-T3">
+    <title>T3 Derivatives of Trigonometric Functions</title>
+
+    <assemblage xml:id="assemblage-T3">
+      <title>T3</title>
+      <p>
+        I can use derivative rules, including the chain rule, to compute the derivative of
+        functions involving the six basic trigonometric functions.
+      </p>
+    </assemblage>
+
+    <p>
+      The six derivative rules for the basic trigonometric functions are
+    </p>
+    <md>
+      <mrow>\frac{d}{dx}[\sin(x)] \amp = \cos(x) \amp \frac{d}{dx}[\cos(x)] \amp = -\sin(x)</mrow>
+      <mrow>\frac{d}{dx}[\tan(x)] \amp = \sec^2(x) \amp \frac{d}{dx}[\cot(x)] \amp = -\csc^2(x)</mrow>
+      <mrow>\frac{d}{dx}[\sec(x)] \amp = \sec(x)\tan(x) \amp \frac{d}{dx}[\csc(x)] \amp = -\csc(x)\cot(x)</mrow>
+    </md>
+    <p>
+      These form three parallel sets of rules, one for each row.
+      The second function in each row is the complement of the first
+      (sine and cosine, tangent and cotangent, secant and cosecant),
+      and its rule is the first rule with every function replaced by its complement
+      and a negative sign added.
+    </p>
+
+    <p>
+      These rules are combined with the product rule
+      <m>\frac{d}{dx}[uv]=u'v+uv'</m>,
+      the quotient rule
+      <m>\frac{d}{dx}\left[\frac{u}{v}\right]=\frac{u'v-uv'}{v^2}</m>,
+      and the chain rule
+      <m>\frac{d}{dx}[f(u)]=f'(u)\,u'</m>.
+    </p>
+
+    <exercise label="T3_Trig_Derivatives">
+      <statement>
+        <p>
+          Find <m>\displaystyle \frac{d}{dx}\left[x\sin\left(x^2\right)-4\csc(2x)\right]</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The first term needs the product rule with the chain rule for <m>\sin(x^2)</m>.
+          The second term needs the chain rule with the derivative of cosecant.
+        </p>
+        <md>
+          <mrow>\frac{d}{dx}\left[x\sin\left(x^2\right)-4\csc(2x)\right] \amp = \sin\left(x^2\right) + x\cos\left(x^2\right)(2x) - 4\left(-\csc(2x)\cot(2x)\right)(2)</mrow>
+          <mrow>\amp = \sin\left(x^2\right) + 2x^2\cos\left(x^2\right) + 8\csc(2x)\cot(2x)</mrow>
+        </md>
+      </solution>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-T4">
+    <title>T4 Shape of Trigonometric Graphs</title>
+
+    <assemblage xml:id="assemblage-T4">
+      <title>T4</title>
+      <p>
+        I can justify the shape of basic trigonometric functions based on sign analysis of their
+        derivatives in terms of the signs of sine and cosine in each of the four quadrants
+        and of the locations of relevant vertical asymptotes.
+      </p>
+    </assemblage>
+
+    <p>
+      For each trigonometric function <m>f(x)</m>, the derivative <m>f'(x)</m> can be rewritten
+      as sine and cosine raised to various powers.
+      Vertical asymptotes occur at every location where a denominator equals zero.
+      A sign chart is built by identifying which quadrant each interval lies in,
+      which gives the signs of sine and cosine on that interval.
+    </p>
+
+    <p>
+      The sign charts for <m>f(x)</m>, <m>f'(x)</m>, and <m>f''(x)</m> together describe
+      the shape of the graph, including the direction the graph travels near each
+      vertical asymptote.
+    </p>
+
+    <exercise label="T4_Trig_Graph_Shape">
+      <statement>
+        <p>
+          Using analysis of its derivatives, justify a description of the graph of
+          <m>y=\tan(x)</m> over the interval <m>[0,2\pi]</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Write <m>y=\tan(x)=\frac{\sin(x)}{\cos(x)}</m>.
+          Vertical asymptotes occur where <m>\cos(x)=0</m>, which is at
+          <m>x=\frac{\pi}{2}</m> and <m>x=\frac{3\pi}{2}</m>.
+          In the sign diagrams below, <m>0</m> marks a root, VA marks a vertical asymptote,
+          and the signs between those points come from the signs of sine and cosine in each quadrant.
+        </p>
+        <image width="100%">
+          <shortdescription>A number line from 0 to 2 pi with tick marks at multiples of pi over 2. The formula for tan of x as sine over cosine is shown to the right. Above each of the four intervals is the sign calculation: plus over plus equals plus, plus over minus equals minus, minus over minus equals plus, minus over plus equals minus. Roots are marked at 0, pi, and 2 pi and vertical asymptotes at pi over 2 and 3 pi over 2.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+              \draw[thick] (0,0) -- (9.6,0);
+              \draw[thick] (0.0,0.12) -- (0.0,-0.12);
+              \node[below] at (0.0,-0.12) {$0$};
+              \node[above, font=\small] at (0.0,0.12) {0};
+              \draw[thick] (2.4,0.12) -- (2.4,-0.12);
+              \node[below] at (2.4,-0.12) {$\pi/2$};
+              \node[above, font=\small] at (2.4,0.12) {VA};
+              \draw[thick] (4.8,0.12) -- (4.8,-0.12);
+              \node[below] at (4.8,-0.12) {$\pi$};
+              \node[above, font=\small] at (4.8,0.12) {0};
+              \draw[thick] (7.2,0.12) -- (7.2,-0.12);
+              \node[below] at (7.2,-0.12) {$3\pi/2$};
+              \node[above, font=\small] at (7.2,0.12) {VA};
+              \draw[thick] (9.6,0.12) -- (9.6,-0.12);
+              \node[below] at (9.6,-0.12) {$2\pi$};
+              \node[above, font=\small] at (9.6,0.12) {0};
+              \node at (1.2,1.0) {$\frac{(+)}{(+)}=(+)$};
+              \node at (3.6,1.0) {$\frac{(+)}{(-)}=(-)$};
+              \node at (6.0,1.0) {$\frac{(-)}{(-)}=(+)$};
+              \node at (8.4,1.0) {$\frac{(-)}{(+)}=(-)$};
+              \node[right] at (10.1,0.9) {$y=\tan(x)=\frac{\sin(x)}{\cos(x)}$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+        <p>
+          The first derivative is <m>y'=\sec^2(x)=\left(\cos(x)\right)^{-2}</m>.
+          It is never zero and it has the same vertical asymptotes.
+          Since it is a square, it is positive on every interval.
+        </p>
+        <image width="100%">
+          <shortdescription>A number line from 0 to 2 pi with tick marks at multiples of pi over 2. The formula for the first derivative, secant squared of x as one over cosine squared, is shown to the right. Every interval has the calculation one over a squared sign, which equals plus. Vertical asymptotes are marked at pi over 2 and 3 pi over 2, and there are no roots.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+              \draw[thick] (0,0) -- (9.6,0);
+              \draw[thick] (0.0,0.12) -- (0.0,-0.12);
+              \node[below] at (0.0,-0.12) {$0$};
+              \node[above, font=\small] at (0.0,0.12) {};
+              \draw[thick] (2.4,0.12) -- (2.4,-0.12);
+              \node[below] at (2.4,-0.12) {$\pi/2$};
+              \node[above, font=\small] at (2.4,0.12) {VA};
+              \draw[thick] (4.8,0.12) -- (4.8,-0.12);
+              \node[below] at (4.8,-0.12) {$\pi$};
+              \node[above, font=\small] at (4.8,0.12) {};
+              \draw[thick] (7.2,0.12) -- (7.2,-0.12);
+              \node[below] at (7.2,-0.12) {$3\pi/2$};
+              \node[above, font=\small] at (7.2,0.12) {VA};
+              \draw[thick] (9.6,0.12) -- (9.6,-0.12);
+              \node[below] at (9.6,-0.12) {$2\pi$};
+              \node[above, font=\small] at (9.6,0.12) {};
+              \node at (1.2,1.0) {$\frac{1}{(+)^2}=(+)$};
+              \node at (3.6,1.0) {$\frac{1}{(-)^2}=(+)$};
+              \node at (6.0,1.0) {$\frac{1}{(-)^2}=(+)$};
+              \node at (8.4,1.0) {$\frac{1}{(+)^2}=(+)$};
+              \node[right] at (10.1,0.9) {$y'=\sec^2(x)=\frac{1}{\cos^2(x)}$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+        <p>
+          The second derivative uses the power rule with the chain rule:
+        </p>
+        <md>
+          <mrow>y'' \amp = -2\left(\cos(x)\right)^{-3}\left(-\sin(x)\right) = \frac{2\sin(x)}{\cos^3(x)}</mrow>
+        </md>
+        <p>
+          This is zero where <m>\sin(x)=0</m> and has the same vertical asymptotes as <m>y</m>.
+          The factor <m>2</m> is positive, so it does not affect the signs.
+        </p>
+        <image width="100%">
+          <shortdescription>A number line from 0 to 2 pi with tick marks at multiples of pi over 2. The formula for the second derivative, 2 sine of x over cosine cubed of x, is shown to the right. Above each of the four intervals is the sign calculation: 2 plus over plus cubed equals plus, 2 plus over minus cubed equals minus, 2 minus over minus cubed equals plus, 2 minus over plus cubed equals minus. Roots are marked at 0, pi, and 2 pi and vertical asymptotes at pi over 2 and 3 pi over 2.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+              \draw[thick] (0,0) -- (9.6,0);
+              \draw[thick] (0.0,0.12) -- (0.0,-0.12);
+              \node[below] at (0.0,-0.12) {$0$};
+              \node[above, font=\small] at (0.0,0.12) {0};
+              \draw[thick] (2.4,0.12) -- (2.4,-0.12);
+              \node[below] at (2.4,-0.12) {$\pi/2$};
+              \node[above, font=\small] at (2.4,0.12) {VA};
+              \draw[thick] (4.8,0.12) -- (4.8,-0.12);
+              \node[below] at (4.8,-0.12) {$\pi$};
+              \node[above, font=\small] at (4.8,0.12) {0};
+              \draw[thick] (7.2,0.12) -- (7.2,-0.12);
+              \node[below] at (7.2,-0.12) {$3\pi/2$};
+              \node[above, font=\small] at (7.2,0.12) {VA};
+              \draw[thick] (9.6,0.12) -- (9.6,-0.12);
+              \node[below] at (9.6,-0.12) {$2\pi$};
+              \node[above, font=\small] at (9.6,0.12) {0};
+              \node at (1.2,1.0) {$\frac{2(+)}{(+)^3}=(+)$};
+              \node at (3.6,1.0) {$\frac{2(+)}{(-)^3}=(-)$};
+              \node at (6.0,1.0) {$\frac{2(-)}{(-)^3}=(+)$};
+              \node at (8.4,1.0) {$\frac{2(-)}{(+)^3}=(-)$};
+              \node[right] at (10.1,0.9) {$y''=\frac{2\sin(x)}{\cos^3(x)}$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+        <p>
+          Combining the three sign diagrams gives the shape in each quadrant.
+        </p>
+        <tabular halign="center" top="minor" left="minor">
+          <col right="minor"/><col right="minor"/><col right="minor"/><col right="minor"/><col right="minor"/>
+          <row header="yes" bottom="minor"><cell>Quadrant</cell><cell>Interval</cell><cell>Sign of <m>y</m></cell><cell>Direction</cell><cell>Concavity</cell></row>
+          <row bottom="minor"><cell><m>\text{I}</m></cell><cell><m>(0,\pi/2)</m></cell><cell>positive</cell><cell>increasing</cell><cell>concave up</cell></row>
+          <row bottom="minor"><cell><m>\text{II}</m></cell><cell><m>(\pi/2,\pi)</m></cell><cell>negative</cell><cell>increasing</cell><cell>concave down</cell></row>
+          <row bottom="minor"><cell><m>\text{III}</m></cell><cell><m>(\pi,3\pi/2)</m></cell><cell>positive</cell><cell>increasing</cell><cell>concave up</cell></row>
+          <row bottom="minor"><cell><m>\text{IV}</m></cell><cell><m>(3\pi/2,2\pi)</m></cell><cell>negative</cell><cell>increasing</cell><cell>concave down</cell></row>
+        </tabular>
+        <p>
+          The graph passes through <m>(0,0)</m>, <m>(\pi,0)</m>, and <m>(2\pi,0)</m>,
+          and it has an inflection point at <m>x=\pi</m> where the concavity changes.
+          On the left side of each asymptote the graph is positive, increasing, and concave up,
+          so it rises to <m>+\infty</m>.
+          On the right side of each asymptote it is negative, increasing, and concave down,
+          so it comes up from <m>-\infty</m>.
+        </p>
+        <p>
+          A sketch of the graph that is consistent with this information is shown below.
+          The graph has positive slope at each <m>x</m>-intercept, and it follows each asymptote
+          up or down according to the signs found above.
+        </p>
+        <image width="70%">
+          <shortdescription>A sketch of the graph of y equals tan of x over the interval from 0 to 2 pi. The horizontal axis is labeled at 0, pi over 2, pi, 3 pi over 2, and 2 pi, with dashed vertical asymptotes at pi over 2 and 3 pi over 2. The graph crosses the axis at 0, pi, and 2 pi with positive slope. In the first and third quadrants it increases and is concave up, rising toward positive infinity at the asymptote. In the second and fourth quadrants it increases and is concave down, coming up from negative infinity at the asymptote.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+              \draw[->] (-0.5,0) -- (9.4,0);
+              \draw[->] (0,-3.1) -- (0,3.1) node[above] {$y$};
+              \draw[dashed] (2.2,-3) -- (2.2,3);
+              \draw[dashed] (6.6,-3) -- (6.6,3);
+              \draw (0,0.1) -- (0,-0.1) node[below] {$0$};
+              \draw (2.2,0.1) -- (2.2,-0.1) node[below] {$\pi/2$};
+              \draw (4.4,0.1) -- (4.4,-0.1) node[below] {$\pi$};
+              \draw (6.6,0.1) -- (6.6,-0.1) node[below] {$3\pi/2$};
+              \draw (8.8,0.1) -- (8.8,-0.1) node[below] {$2\pi$};
+              \draw[very thick, smooth, tension=0.8] plot[smooth] coordinates {(0,0) (0.8,0.5) (1.5,1.1) (1.9,1.9) (2.1,2.6)};
+              \draw[very thick, smooth, tension=0.8] plot[smooth] coordinates {(2.3000000000000003,-2.6) (2.5000000000000004,-1.9) (2.9000000000000004,-1.1) (3.6000000000000005,-0.5) (4.4,0)};
+              \draw[very thick, smooth, tension=0.8] plot[smooth] coordinates {(4.4,0) (5.2,0.5) (5.9,1.1) (6.3,1.9) (6.5,2.6)};
+              \draw[very thick, smooth, tension=0.8] plot[smooth] coordinates {(6.7,-2.6) (6.9,-1.9) (7.3,-1.1) (8.0,-0.5) (8.8,0)};
+              \fill (0,0) circle (2.5pt);
+              \fill (4.4,0) circle (2.5pt);
+              \fill (8.8,0) circle (2.5pt);
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </solution>
+    </exercise>
+  </subsection>
+
+</section>
