@@ -235,6 +235,42 @@ var ptx_lunr_docs = [
   "body": "  You are standing on one side of a river along a section where the river is exactly 20 feet wide and flows in a perfectly straight path. Your friend is on the opposite bank, but you have to turn 50 degrees to the right to be looking directly at them. Use a triangle model and trigonometry to determine the distance between you.    To create a triangle model, draw two parallel lines to represent the banks of the river. Draw a line straight across the river to represent your position and the position directly across from you on the other bank. Draw a second line from your position, rotated to the right by , to represent the distance to your friend. Label the angle, label the distance across the river as feet, and label the unknown distance between you and your friend with a variable, say . Connecting your friend's position to the point directly across from you completes a right triangle.   Two horizontal parallel lines represent the river banks, with the river shaded between them. You stand at a point on the lower bank. A vertical segment of length 20 feet goes straight up to the point directly across on the upper bank, with a right angle marked there. A second segment of length D goes from you up and to the right to your friend on the upper bank. The angle between the two segments at your position is marked as 50 degrees.    The given angle of has the known length (the width of the river) as its adjacent leg, and the unknown length (the distance to your friend) is the hypotenuse. This tells us to use the cosine ratio of the adjacent length to the hypotenuse length.    "
 },
 {
+  "id": "sec-outcomes-week-12-13",
+  "level": "1",
+  "url": "sec-outcomes-week-12-13.html",
+  "type": "Section",
+  "number": "",
+  "title": "Week 12 and Week 13",
+  "body": " Week 12 and Week 13   These weeks extend trigonometry beyond right triangles. We use the unit circle definitions of sine and cosine together with the sum identities, differentiate functions involving all six trigonometric functions, and use sign analysis of derivatives to justify the shape of their graphs.    T2 Unit Circle and Sum Identities   T2  I can use the unit circle definition of sine and cosine along with their sum identities to determine or where and are given based on either common angles or partial unit circle information.   The unit circle equation is equivalent to the Pythagorean identity . Rotating from the point by the angle reaches the point , so the cosine is the -coordinate and the sine is the -coordinate. Solving the unit circle equation for one coordinate gives two solutions, a positive one and a negative one. The quadrant containing the angle determines the signs of sine and cosine, and therefore which solution to keep.  The sum identities are and .  Recall that a radian measure is (fraction of a full circle) . When an angle is written as a fraction times , the fraction is the portion of a half circle. For example, is one quarter of a half rotation, which is .    Suppose is an angle satisfying with . Use unit circle reasoning and the sum identities to find .    The unit circle equation gives , so . The angle satisfies , so it lies below the -axis and its sine is negative. (Its cosine is also negative, so it is in the third quadrant.) Therefore .  Using the sum identity with and :       T3 Derivatives of Trigonometric Functions   T3  I can use derivative rules, including the chain rule, to compute the derivative of functions involving the six basic trigonometric functions.   The six derivative rules for the basic trigonometric functions are   These form three parallel sets of rules, one for each row. The second function in each row is the complement of the first (sine and cosine, tangent and cotangent, secant and cosecant), and its rule is the first rule with every function replaced by its complement and a negative sign added.  These rules are combined with the product rule , the quotient rule , and the chain rule .    Find .    The first term needs the product rule with the chain rule for . The second term needs the chain rule with the derivative of cosecant.       T4 Shape of Trigonometric Graphs   T4  I can justify the shape of basic trigonometric functions based on sign analysis of their derivatives in terms of the signs of sine and cosine in each of the four quadrants and of the locations of relevant vertical asymptotes.   For each trigonometric function , the derivative can be rewritten as sine and cosine raised to various powers. Vertical asymptotes occur at every location where a denominator equals zero. A sign chart is built by identifying which quadrant each interval lies in, which gives the signs of sine and cosine on that interval.  The sign charts for , , and together describe the shape of the graph, including the direction the graph travels near each vertical asymptote.    Using analysis of its derivatives, justify a description of the graph of over the interval .    Write . Vertical asymptotes occur where , which is at and . In the sign diagrams below, marks a root, VA marks a vertical asymptote, and the signs between those points come from the signs of sine and cosine in each quadrant.   A number line from 0 to 2 pi with tick marks at multiples of pi over 2. The formula for tan of x as sine over cosine is shown to the right. Above each of the four intervals is the sign calculation: plus over plus equals plus, plus over minus equals minus, minus over minus equals plus, minus over plus equals minus. Roots are marked at 0, pi, and 2 pi and vertical asymptotes at pi over 2 and 3 pi over 2.    The first derivative is . It is never zero and it has the same vertical asymptotes. Since it is a square, it is positive on every interval.   A number line from 0 to 2 pi with tick marks at multiples of pi over 2. The formula for the first derivative, secant squared of x as one over cosine squared, is shown to the right. Every interval has the calculation one over a squared sign, which equals plus. Vertical asymptotes are marked at pi over 2 and 3 pi over 2, and there are no roots.    The second derivative uses the power rule with the chain rule:   This is zero where and has the same vertical asymptotes as . The factor is positive, so it does not affect the signs.   A number line from 0 to 2 pi with tick marks at multiples of pi over 2. The formula for the second derivative, 2 sine of x over cosine cubed of x, is shown to the right. Above each of the four intervals is the sign calculation: 2 plus over plus cubed equals plus, 2 plus over minus cubed equals minus, 2 minus over minus cubed equals plus, 2 minus over plus cubed equals minus. Roots are marked at 0, pi, and 2 pi and vertical asymptotes at pi over 2 and 3 pi over 2.    Combining the three sign diagrams gives the shape in each quadrant.    Quadrant Interval Sign of Direction Concavity  positive increasing concave up  negative increasing concave down  positive increasing concave up  negative increasing concave down   The graph passes through , , and , and it has an inflection point at where the concavity changes. On the left side of each asymptote the graph is positive, increasing, and concave up, so it rises to . On the right side of each asymptote it is negative, increasing, and concave down, so it comes up from .  A sketch of the graph that is consistent with this information is shown below. The graph has positive slope at each -intercept, and it follows each asymptote up or down according to the signs found above.   A sketch of the graph of y equals tan of x over the interval from 0 to 2 pi. The horizontal axis is labeled at 0, pi over 2, pi, 3 pi over 2, and 2 pi, with dashed vertical asymptotes at pi over 2 and 3 pi over 2. The graph crosses the axis at 0, pi, and 2 pi with positive slope. In the first and third quadrants it increases and is concave up, rising toward positive infinity at the asymptote. In the second and fourth quadrants it increases and is concave down, coming up from negative infinity at the asymptote.       "
+},
+{
+  "id": "T2_Unit_Circle_Sum_Identities",
+  "level": "2",
+  "url": "sec-outcomes-week-12-13.html#T2_Unit_Circle_Sum_Identities",
+  "type": "Checkpoint",
+  "number": "23",
+  "title": "",
+  "body": "  Suppose is an angle satisfying with . Use unit circle reasoning and the sum identities to find .    The unit circle equation gives , so . The angle satisfies , so it lies below the -axis and its sine is negative. (Its cosine is also negative, so it is in the third quadrant.) Therefore .  Using the sum identity with and :    "
+},
+{
+  "id": "T3_Trig_Derivatives",
+  "level": "2",
+  "url": "sec-outcomes-week-12-13.html#T3_Trig_Derivatives",
+  "type": "Checkpoint",
+  "number": "24",
+  "title": "",
+  "body": "  Find .    The first term needs the product rule with the chain rule for . The second term needs the chain rule with the derivative of cosecant.    "
+},
+{
+  "id": "T4_Trig_Graph_Shape",
+  "level": "2",
+  "url": "sec-outcomes-week-12-13.html#T4_Trig_Graph_Shape",
+  "type": "Checkpoint",
+  "number": "25",
+  "title": "",
+  "body": "  Using analysis of its derivatives, justify a description of the graph of over the interval .    Write . Vertical asymptotes occur where , which is at and . In the sign diagrams below, marks a root, VA marks a vertical asymptote, and the signs between those points come from the signs of sine and cosine in each quadrant.   A number line from 0 to 2 pi with tick marks at multiples of pi over 2. The formula for tan of x as sine over cosine is shown to the right. Above each of the four intervals is the sign calculation: plus over plus equals plus, plus over minus equals minus, minus over minus equals plus, minus over plus equals minus. Roots are marked at 0, pi, and 2 pi and vertical asymptotes at pi over 2 and 3 pi over 2.    The first derivative is . It is never zero and it has the same vertical asymptotes. Since it is a square, it is positive on every interval.   A number line from 0 to 2 pi with tick marks at multiples of pi over 2. The formula for the first derivative, secant squared of x as one over cosine squared, is shown to the right. Every interval has the calculation one over a squared sign, which equals plus. Vertical asymptotes are marked at pi over 2 and 3 pi over 2, and there are no roots.    The second derivative uses the power rule with the chain rule:   This is zero where and has the same vertical asymptotes as . The factor is positive, so it does not affect the signs.   A number line from 0 to 2 pi with tick marks at multiples of pi over 2. The formula for the second derivative, 2 sine of x over cosine cubed of x, is shown to the right. Above each of the four intervals is the sign calculation: 2 plus over plus cubed equals plus, 2 plus over minus cubed equals minus, 2 minus over minus cubed equals plus, 2 minus over plus cubed equals minus. Roots are marked at 0, pi, and 2 pi and vertical asymptotes at pi over 2 and 3 pi over 2.    Combining the three sign diagrams gives the shape in each quadrant.    Quadrant Interval Sign of Direction Concavity  positive increasing concave up  negative increasing concave down  positive increasing concave up  negative increasing concave down   The graph passes through , , and , and it has an inflection point at where the concavity changes. On the left side of each asymptote the graph is positive, increasing, and concave up, so it rises to . On the right side of each asymptote it is negative, increasing, and concave down, so it comes up from .  A sketch of the graph that is consistent with this information is shown below. The graph has positive slope at each -intercept, and it follows each asymptote up or down according to the signs found above.   A sketch of the graph of y equals tan of x over the interval from 0 to 2 pi. The horizontal axis is labeled at 0, pi over 2, pi, 3 pi over 2, and 2 pi, with dashed vertical asymptotes at pi over 2 and 3 pi over 2. The graph crosses the axis at 0, pi, and 2 pi with positive slope. In the first and third quadrants it increases and is concave up, rising toward positive infinity at the asymptote. In the second and fourth quadrants it increases and is concave down, coming up from negative infinity at the asymptote.     "
+},
+{
   "id": "sec-accumulation",
   "level": "1",
   "url": "sec-accumulation.html",
@@ -275,7 +311,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-accumulation.html#fig-prototype-incr-ccu",
   "type": "Figure",
-  "number": "23",
+  "number": "26",
   "title": "",
   "body": " is an increasing and concave up function of . The rate is positive and increasing.     "
 },
@@ -284,7 +320,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-accumulation.html#fig-prototype-incr-ccd",
   "type": "Figure",
-  "number": "24",
+  "number": "27",
   "title": "",
   "body": " is an increasing and concave down function of . The rate is positive but decreasing.     "
 },
@@ -293,7 +329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-accumulation.html#fig-prototype-ccd-incr-decr",
   "type": "Figure",
-  "number": "25",
+  "number": "28",
   "title": "",
   "body": " is a concave down function of that is increasing for and decreasing for .     "
 },
@@ -302,7 +338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-accumulation.html#rate-functions-3-11",
   "type": "Example",
-  "number": "26",
+  "number": "29",
   "title": "",
   "body": "  Suppose measures the volume of water (liters) in a container and that is a function of time (minutes) such that the rate of change (liters per minute) is also a function of time defined by Describe the behavior of and sketch a representative graph.    The rate of change of the volume in the container, determines the behavior of the volume. Because has a negative slope , the rate is decreasing. This tells us that the volume is a concave down function. Solving the inequalities and will allow us to see when the rate is positive or negative, which will imply when the volume is increasing or decreasing, respectively.  The inequalities are solved by solving the equation and then testing the inequalities in the resulting intervals. Testing the sign of when , we find, for example , that the rate is positive. Consequently, is increasing when . On the other hand, testing the sign of when , such as , we find that the rate is negative so that the volume is decreasing when .  The graph of , shown below, is consistent with these analyses. The graph is decreasing (corresponding to the negative slope), above the axis for and below the axis for .   A graph of the rate of change of volume of water as a function of time.      The graph of the volume therefore needs to be concave down, increasing for and decreasing for . We do not know the starting volume (it wasn't given), so the vertical positions of the graph do not presently have specific meaning. The initial value of 0 was chosen to represent whatever the starting volume happened to be. The graph of this functions is shown below.   A graph of the volume of water as a function of time relative to the starting height.       "
 },
@@ -311,7 +347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-accumulation.html#ex_derivs_to_shape",
   "type": "Example",
-  "number": "29",
+  "number": "32",
   "title": "",
   "body": "  Describe the behavior of .    We use to understand where is increasing or decreasing, and to understand where is concave up or concave down. We start by calculating the derivatives so that we can do sign analysis. To do sign analysis, we need to find the zeros of the functions. If the functions factor, that is the easiest way to accomplish that.   To do sign analysis of , we find zeros as solutions of (no solutions), at , and at , approximated by and . Putting these on a number line, we can find the intervals we need to test: , , , and . Evaluating at a point in each interval, we get the following sign analysis summary.   Sign analysis summary for .   sign analysis summary     From the first derivative, we know that is decreasing on the intervals and and is increasing on the intervals and .  The second derivative provides information about concavity. The zeros are at and . A sign analysis summary of is given below.   Sign analysis summary for .   sign analysis summary     The second derivative test for concavity allows us to conclude that is concave up on the intervals and and is concave down on the interval .  A graph of illustrates these behaviors. It has a local minimum at , a local maximum at , and another local minimum at . also has points of inflection at . In the graph, the extremes are marked with circular points, while the inflection points are marked as squares.   Graph of .   sign analysis summary      "
 },
@@ -410,7 +446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#def-integral-accumulated-change",
   "type": "Definition",
-  "number": "33",
+  "number": "36",
   "title": "Notation: Accumulated Change.",
   "body": " Notation: Accumulated Change   What you just discovered works for any rate of change, not only velocity. If a quantity has value at time and changes at rate , then its value at a later time is the starting value plus the accumulated change over the interval. Mathematicians write that accumulated change using the definite integral symbol: Read as \"the accumulated change in the quantity from to .\" When is a positive constant on an interval of length , this is just , the same as the rectangle areas you computed above.   "
 },
@@ -419,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#def-integral-area",
   "type": "Definition",
-  "number": "34",
+  "number": "37",
   "title": "Notation: Area Under a Graph.",
   "body": " Notation: Area Under a Graph   The very same symbol describes area. For a function , the area of the region between the graph of and the -axis, from to , is written This is not a coincidence: it's the same idea from Exercise 3, written in general notation.   "
 },
@@ -437,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-accumulated-change-and-area.html#rem-signed-area-and-beyond",
   "type": "Remark",
-  "number": "35",
+  "number": "38",
   "title": "Signed Area, and Rates That Aren’t Constant.",
   "body": " Signed Area, and Rates That Aren't Constant  What you just worked out is called signed area : regions above the -axis count as positive area, and regions below it count as negative area. This is exactly why the definite integral, and not just \"area,\" is the right tool for accumulated change. It automatically keeps track of when a quantity is increasing versus decreasing.  Everything above used constant rates, so every region was a rectangle. But the notation , and its meaning as signed area, works exactly the same way even when is not constant. Later in the course you'll learn algebraic techniques (the Fundamental Theorem of Calculus and antiderivative formulas) for evaluating such integrals exactly. However, you have everything you need to evaluate a definite integral whenever the region between the graph and the axis is built from shapes you can already measure: rectangles, triangles, and trapezoids.  "
 },
@@ -518,7 +554,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-properties-of-the-integral.html#rem-provable-vs-adopted",
   "type": "Remark",
-  "number": "36",
+  "number": "39",
   "title": "Two Kinds of \"Always True\".",
   "body": " Two Kinds of \"Always True\"  Look back at everything in this activity. The splitting property for , the sum rule, and the constant multiple rule are all things you proved . In each case, you could point to an arithmetic reason (the linearity of the area formulas) that makes each one true. The zero-width fact is even more immediate: it's just what \"width\" means.  The reverse-order property is different in kind. There is no region you can shade for \"the area from to when is bigger than \". We can not directly visualize with a picture what it means to shade a region in reverse . Instead, we adopt an interpretation, because it's the only choice that lets the splitting rule keep working for any three numbers and not only when they are in increasing order. This is a mathematical mode of reasoning that we will encounter multiple times.  "
 },
@@ -563,7 +599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-riemann-sum-approximation.html#rem-riemann-sum-name",
   "type": "Remark",
-  "number": "37",
+  "number": "40",
   "title": "Naming What You Just Built.",
   "body": " Naming What You Just Built  Each of your two staircases is an example of a Riemann sum : an approximation to the area under a curve built by partitioning an interval into subintervals, choosing one height on each piece, and adding up the resulting rectangle areas. What you built are called the left Riemann sum (using left-edge heights) and the right Riemann sum (using right-edge heights), each with subintervals.  "
 },
@@ -608,7 +644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-riemann-sum-notation.html#def-summation-notation",
   "type": "Definition",
-  "number": "38",
+  "number": "41",
   "title": "Summation Notation.",
   "body": " Summation Notation   The symbol (capital Greek sigma) is a compact way to write \"add up a list of terms that follow a pattern.\" The notation means: start at (the number written below ), evaluate the expression , then repeat for , , and so on, up through (the number written above ), adding every result together. Written out in full, it means the same thing as Nothing here says how to find the value of that total — it's just notation for which terms to add.   "
 },
@@ -626,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-riemann-sum-notation.html#rem-four-step-recipe",
   "type": "Remark",
-  "number": "39",
+  "number": "42",
   "title": "The General Recipe.",
   "body": " The General Recipe  Whatever the function, interval, or , setting up the right Riemann sum for always follows the same four steps:  Find the width of each subinterval: .  Write the th right endpoint: .  Substitute into to get .  Assemble the sum: .  The next three exercises are all the same four steps, applied to new functions.  "
 },
@@ -689,7 +725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-summation-formulas.html#def-summation-formulas",
   "type": "Definition",
-  "number": "40",
+  "number": "43",
   "title": "Four Summation Formulas.",
   "body": " Four Summation Formulas   The following four formulas are given as facts. (Each can each be proved, but proving them is not a course goal.) In each, is a number that does not depend on , and is the number of terms being added.         "
 },
@@ -698,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-summation-formulas.html#def-sum-rules",
   "type": "Definition",
-  "number": "41",
+  "number": "44",
   "title": "Sum Rule and Constant Multiple Rule.",
   "body": " Sum Rule and Constant Multiple Rule   Summations also split over addition and let a constant factor be pulled out, the same way you already expect from other kinds of sums:      Together with the four formulas above, these two rules let you evaluate any summation whose th term is a polynomial in , exactly the kind of summation a Riemann sum for a polynomial produces.   "
 },
@@ -734,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-summation-formulas.html#rem-looking-ahead-definite-integral",
   "type": "Remark",
-  "number": "42",
+  "number": "45",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have a single formula that gives the right Riemann sum for for any number of subintervals , without adding up individual terms. In a future class, we'll ask what happens to that formula as grows larger and larger without bound.  "
 },
@@ -770,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-definite-integral-as-limit.html#def-definite-integral",
   "type": "Definition",
-  "number": "43",
+  "number": "46",
   "title": "The Definite Integral.",
   "body": " The Definite Integral   For a function defined on an interval , partition into equal subintervals of width , and let denote the right endpoint of the th subinterval. The definite integral of from to is defined as provided this limit exists.  Officially, the value must be able to be replaced by using any  between and . A Riemann sum is only ever an approximation, and the limit is the exact value.   "
 },
@@ -797,7 +833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-definite-integral-as-limit.html#def-accumulation-function",
   "type": "Definition",
-  "number": "44",
+  "number": "47",
   "title": "Accumulation Functions.",
   "body": " Accumulation Functions   Every definite integral you have evaluated so far has had two fixed numbers as its limits of integration. Suppose instead the lower limit is fixed at , but the upper limit is left as a symbol . We can still work through the steps and get the value of the limit that depends on . The result, is a function of , called an accumulation function : its value at any particular is the accumulated change, or signed area, from up to that point.   "
 },
@@ -815,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-definite-integral-as-limit.html#rem-looking-ahead-accumulation",
   "type": "Remark",
-  "number": "45",
+  "number": "48",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have accumulation functions for three different power functions, and a conjecture for a fourth, all found the same way: by evaluating a Riemann sum and taking a limit. In an upcoming class we will see that this pattern is not a coincidence, and connect it to antiderivatives.  "
 },
@@ -842,7 +878,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-polynomial-accumulation-functions.html#rem-basic-accumulation-recall",
   "type": "Remark",
-  "number": "46",
+  "number": "49",
   "title": "Recall: Four Basic Accumulation Formulas.",
   "body": " Recall: Four Basic Accumulation Formulas  From last activity:        "
 },
@@ -851,7 +887,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-polynomial-accumulation-functions.html#rem-sum-cm-rule-reminder",
   "type": "Remark",
-  "number": "47",
+  "number": "50",
   "title": "Reminder: Sum Rule and Constant Multiple Rule.",
   "body": " Reminder: Sum Rule and Constant Multiple Rule  Recall that the definite integral satisfies a sum rule and a constant multiple rule: These rules apply just as well when the upper limit is the symbol , which means they apply directly to accumulation functions. Combined with the four basic formulas above, they let you build the accumulation function for any polynomial of degree at most , one term at a time. For example, for :   "
 },
@@ -869,7 +905,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-polynomial-accumulation-functions.html#rem-splitting-reminder",
   "type": "Remark",
-  "number": "48",
+  "number": "51",
   "title": "Reminder: The Splitting Property.",
   "body": " Reminder: The Splitting Property  Recall the splitting property from the same earlier activity: , for any numbers and . Since and , solving for the middle term gives a way to evaluate any definite integral once you know its accumulation function: .  "
 },
@@ -887,7 +923,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-polynomial-accumulation-functions.html#rem-looking-ahead-power-rule",
   "type": "Remark",
-  "number": "49",
+  "number": "52",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have a way to build the accumulation function for any polynomial of degree at most , and to use it to evaluate any definite integral of such a polynomial without taking a limit. In an upcoming class we will connect this pattern to antiderivatives.  "
 },
@@ -932,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-fundamental-theorem-calculus.html#rem-chain-rule-for-ftc",
   "type": "Remark",
-  "number": "50",
+  "number": "53",
   "title": "Differentiating Through the Chain Rule.",
   "body": " Differentiating Through the Chain Rule  Rewriting an integral as is progress, but and are not simply evaluated at . They are composed with the functions and , so differentiating either one requires the chain rule . Since , the chain rule gives and Putting the two pieces together,   "
 },
@@ -959,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-10",
   "type": "Theorem",
-  "number": "51",
+  "number": "54",
   "title": "The Fundamental Theorem of Calculus.",
   "body": " The Fundamental Theorem of Calculus   If is continuous and has an accumulation function then .  In other words, an accumulation function is an antiderivative of .   "
 },
@@ -977,7 +1013,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-fundamental-theorem-calculus.html#handout-fundamental-theorem-calculus-12",
   "type": "Remark",
-  "number": "52",
+  "number": "55",
   "title": "",
   "body": " Note that we don't need to know the formula for in order to know the derivative's formula .  "
 },
@@ -1004,7 +1040,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#def-antiderivative",
   "type": "Definition",
-  "number": "53",
+  "number": "56",
   "title": "Antiderivative.",
   "body": " Antiderivative   Given a function , another function is called an antiderivative of if .   "
 },
@@ -1013,7 +1049,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#rem-known-antiderivatives-recall",
   "type": "Remark",
-  "number": "54",
+  "number": "57",
   "title": "Recall: Antiderivatives You Have Already Found.",
   "body": " Recall: Antiderivatives You Have Already Found  Every accumulation function you have built so far is an example: Each of these is a single power of , but we have not stated a single rule that covers every power at once.  "
 },
@@ -1031,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#rem-domain-caveat-negative-powers",
   "type": "Remark",
-  "number": "55",
+  "number": "58",
   "title": "A Domain Caveat.",
   "body": " A Domain Caveat  Our accumulation functions were built as integrals starting at . That definition breaks down for negative powers, such as , because has a discontinuity at : an integral like simply does not exist. The antiderivative formula you just found is still perfectly good as a function in its own right, though. It just needs to be considered on an interval that avoids , rather than being built as an accumulation function starting from .  "
 },
@@ -1049,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#thm-antiderivatives-differ-by-constant",
   "type": "Theorem",
-  "number": "56",
+  "number": "59",
   "title": "Antiderivatives Differ Only By a Constant.",
   "body": " Antiderivatives Differ Only By a Constant   If and are both antiderivatives of the same function on an interval , then is a constant on that interval.   "
 },
@@ -1058,7 +1094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#rem-antiderivative-family",
   "type": "Remark",
-  "number": "57",
+  "number": "60",
   "title": "",
   "body": " Put together with the previous exercise, this theorem says once you know one antiderivative of , you know all of them: every antiderivative of has the form for some constant . There are no other antiderivatives that aren't captured by this family.  "
 },
@@ -1067,7 +1103,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#def-indefinite-integral",
   "type": "Definition",
-  "number": "58",
+  "number": "61",
   "title": "The Indefinite Integral.",
   "body": " The Indefinite Integral   The notation , an integral written with no limits of integration, is called an indefinite integral . It represents the entire family of antiderivatives of , not a single function and not a number. Once one antiderivative is found, every other antiderivative is obtained by adding a constant, so we write where , the constant of integration , is a placeholder for any real number. This is different from the definite integral , whose limits of integration make it a single number.   "
 },
@@ -1094,7 +1130,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#rem-ftc-creates-new-function",
   "type": "Remark",
-  "number": "59",
+  "number": "62",
   "title": "A New Kind of Function.",
   "body": " A New Kind of Function  The Fundamental Theorem of Calculus does not care whether a function is built from powers of . It only asks for continuity. The function is continuous everywhere except at , so on any interval avoiding , it has an accumulation function, and that accumulation function must be an antiderivative of , whether or not we have an algebraic formula for it in terms of powers. This gives us a way to create a genuinely new function, one we have not seen before, as an antiderivative of . We name it the natural logarithm : .  "
 },
@@ -1112,7 +1148,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-antiderivatives-and-natural-log.html#rem-looking-ahead-log-properties",
   "type": "Remark",
-  "number": "60",
+  "number": "63",
   "title": "Looking Ahead.",
   "body": " Looking Ahead  You now have a genuinely new function, , defined directly by an integral rather than by any algebraic formula. In an upcoming activity we will explore its other properties.  "
 },
@@ -1139,7 +1175,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-logarithm-as-integral.html#def-natural-log-integral",
   "type": "Definition",
-  "number": "61",
+  "number": "64",
   "title": "The Natural Logarithm.",
   "body": " The Natural Logarithm   For , the natural logarithm is defined by    "
 },
@@ -1148,7 +1184,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-logarithm-as-integral.html#rem-ln-two-facts",
   "type": "Remark",
-  "number": "62",
+  "number": "65",
   "title": "Two Facts Straight from the Definition.",
   "body": " Two Facts Straight from the Definition  First, , since an integral over an interval of zero width is zero. Second, the integrand is not defined at , and an integral starting at cannot pass through that discontinuity. So the domain of is .  "
 },
@@ -1157,7 +1193,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-logarithm-as-integral.html#thm-ln-algebraic-properties",
   "type": "Theorem",
-  "number": "63",
+  "number": "66",
   "title": "Algebraic Properties of <span class=\"process-math\">\\(\\ln\\)<\/span>.",
   "body": " Algebraic Properties of   For all and :    Product rule:  .  Reciprocal rule:  .  Quotient rule:  .  Power rule:  for every real number .     "
 },
@@ -1175,7 +1211,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-logarithm-as-integral.html#rem-ln-rational-real-powers",
   "type": "Remark",
-  "number": "64",
+  "number": "67",
   "title": "Beyond Integer Powers.",
   "body": " Beyond Integer Powers  We can show algebraically that the power rule also works for rational powers . When is not rational, we first need to decide what means. One way to define it would be to take limits of rational powers as the rational numbers approach . In a later activity, we will see an alternative approach that uses the properties of the logarithm as a continuous function to define for every real number .  "
 },
@@ -1229,7 +1265,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-chain-rule-with-logarithm.html#rem-absolute-value-recall",
   "type": "Remark",
-  "number": "65",
+  "number": "68",
   "title": "Recall: Absolute Value.",
   "body": " Recall: Absolute Value  The absolute value of is the piecewise function so is positive for every . This means makes sense for every , not just for .  "
 },
@@ -1238,7 +1274,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-chain-rule-with-logarithm.html#thm-derivative-ln-absolute-value",
   "type": "Theorem",
-  "number": "66",
+  "number": "69",
   "title": "The Derivative of <span class=\"process-math\">\\(\\ln|x|\\)<\/span>.",
   "body": " The Derivative of   For all ,    "
 },
@@ -1301,7 +1337,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-exponentials-functions.html#rem-ln-range",
   "type": "Remark",
-  "number": "67",
+  "number": "70",
   "title": "The Range of <span class=\"process-math\">\\(\\ln\\)<\/span>.",
   "body": " The Range of  Because , the function is increasing on , so no two numbers are ever placed at the same position. Because can be made as large or as negative as we like, and is continuous, every position is filled. In other words, the range of is , and for every real number there is exactly one  with .  This also proves two limits:   "
 },
@@ -1310,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-exponentials-functions.html#def-e-and-exponentials",
   "type": "Definition",
-  "number": "68",
+  "number": "71",
   "title": "The Number <span class=\"process-math\">\\(e\\)<\/span> and Real Powers.",
   "body": " The Number and Real Powers   The natural base  is that number with .  For every real number , the power is the number with . More generally, if , the power is the number with . That is, we define powers so that the power rule for logarithms is valid.  The natural exponential function is , and the exponential function with base is .   "
 },
@@ -1319,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-exponentials-functions.html#thm-exp-ln-inverse",
   "type": "Theorem",
-  "number": "69",
+  "number": "72",
   "title": "<span class=\"process-math\">\\(e^x\\)<\/span> and <span class=\"process-math\">\\(\\ln(x)\\)<\/span> Are Inverse Functions.",
   "body": " and Are Inverse Functions   For every real number , , and for every , . Since is differentiable and its derivative is never zero, its inverse function is also differentiable. For the same reason, is differentiable for every .   "
 },
@@ -1400,7 +1436,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-exponential-logarithm-equations.html#def-log-base-b",
   "type": "Definition",
-  "number": "70",
+  "number": "73",
   "title": "Logarithm with Base <span class=\"process-math\">\\(b\\)<\/span>.",
   "body": " Logarithm with Base   Let with , and let . The logarithm with base of , written , is the exponent that solves :    "
 },
@@ -1418,7 +1454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-exponential-logarithm-equations.html#thm-change-of-base",
   "type": "Theorem",
-  "number": "71",
+  "number": "74",
   "title": "Change of Base.",
   "body": " Change of Base   For , , and , In particular, .   "
 },
@@ -1472,7 +1508,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-logarithmic-differentiation.html#rem-two-views-log-differentiation",
   "type": "Remark",
-  "number": "72",
+  "number": "75",
   "title": "Two Views of One Method.",
   "body": " Two Views of One Method  For any positive function and any differentiable function , we can write . The rule for then gives Logarithmic differentiation gives the same formula, since and . Rewriting as is logarithmic differentiation in disguise. Use whichever form you find easier to remember and to explain.  "
 },
@@ -1544,7 +1580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-lhopitals-rule.html#rem-lh-limit-equals-ln-b",
   "type": "Remark",
-  "number": "73",
+  "number": "76",
   "title": "A Limit We Could Only Find Indirectly.",
   "body": " A Limit We Could Only Find Indirectly  For every , . We found this value recognizing the limit matches a derivative, not by evaluating the limit itself. A limit whose numerator and denominator both approach is said to have the indeterminate form  . It is called indeterminate because the form alone does not decide the answer: such a limit might equal any number, or might not exist at all. We need to find a different formula for the limit, one that can be evaluated.  "
 },
@@ -1562,7 +1598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-lhopitals-rule.html#thm-lhopitals-rule",
   "type": "Theorem",
-  "number": "74",
+  "number": "77",
   "title": "L’Hôpital’s Rule.",
   "body": " L'Hôpital's Rule   If and as , and , then .   "
 },
@@ -1571,7 +1607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-lhopitals-rule.html#rem-lh-how-to-read-the-rule",
   "type": "Remark",
-  "number": "75",
+  "number": "78",
   "title": "What the Rule Says and How to Use It.",
   "body": " What the Rule Says and How to Use It  Canceling a common factor rewrites a limit of the form as a new limit that we can evaluate. L'Hôpital's rule does the same job for limits where there is no common factor to cancel: it lets us rewrite the limit using a new formula that we hope can be evaluated.  Notice that we are not computing the derivative of the quotient , and we do not use the quotient rule. We are creating a new limit whose formula is the ratio of the two derivatives and .  The rule has two requirements. Requirement 1:  and as . Requirement 2: the limit has a value . We use the rule only after checking these requirements. Once they are satisfied, the rule is the justification for replacing the original limit with the simpler one.  "
 },
@@ -1589,7 +1625,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-lhopitals-rule.html#rem-lh-arrow-notation",
   "type": "Remark",
-  "number": "76",
+  "number": "79",
   "title": "A Shorthand for Requirement 1.",
   "body": " A Shorthand for Requirement 1  Checking Requirement 1 comes up so often that it helps to have a shorthand that does not require naming the functions. We write to mean that and as . The arrow reports what the numerator and denominator are doing. It does not say that the limit equals .  "
 },
@@ -1616,7 +1652,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-lhopitals-rule.html#rem-lh-infinity-over-infinity",
   "type": "Remark",
-  "number": "77",
+  "number": "80",
   "title": "The Form <span class=\"process-math\">\\(\\frac{\\infty}{\\infty}\\)<\/span>.",
   "body": " The Form  L'Hôpital's rule also works when the numerator and denominator both grow without bound. If and as (or as ), and , then . Requirement 1 is simply replaced by checking that the limit has the form in the arrow notation.  "
 },
@@ -1634,7 +1670,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-lhopitals-rule.html#rem-lh-products",
   "type": "Remark",
-  "number": "78",
+  "number": "81",
   "title": "Products: The Form <span class=\"process-math\">\\(0\\cdot\\infty\\)<\/span>.",
   "body": " Products: The Form  A limit of a product where and is also indeterminate. L'Hôpital's rule only applies to ratios, so the first step is to rewrite the product as a ratio. Moving one factor to the denominator as its reciprocal produces a limit of the form or , and then we can check the requirements.  "
 },
@@ -1652,7 +1688,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-lhopitals-rule.html#rem-lh-powers",
   "type": "Remark",
-  "number": "79",
+  "number": "82",
   "title": "Powers: Variable in the Base and the Exponent.",
   "body": " Powers: Variable in the Base and the Exponent  A limit of the form , where the variable appears in both the base and the exponent, cannot be attacked directly. Instead, rewrite the expression using base and logarithms: . Then find the limit of the exponent  . Because is continuous, the limit of interest is raised to the limit you found for the exponent.  "
 },
@@ -1697,7 +1733,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-ftc-part-two.html#thm-ftc-part-two",
   "type": "Theorem",
-  "number": "80",
+  "number": "83",
   "title": "The Fundamental Theorem of Calculus (Part 2).",
   "body": " The Fundamental Theorem of Calculus (Part 2)   If is any antiderivative of and is continuous between and , then    "
 },
@@ -1706,7 +1742,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-ftc-part-two.html#rem-ftc2-evaluation-notation",
   "type": "Remark",
-  "number": "81",
+  "number": "84",
   "title": "Evaluation Notation.",
   "body": " Evaluation Notation  The notation means . With it, the theorem reads .  "
 },
@@ -1724,7 +1760,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-ftc-part-two.html#rem-ftc2-sum-constant-rules",
   "type": "Remark",
-  "number": "82",
+  "number": "85",
   "title": "Sums and Constant Multiples.",
   "body": " Sums and Constant Multiples  We still have the sum and constant multiple rules: This means we can work on the individual terms of a sum , and we can factor out constant multiples.  "
 },
@@ -1787,7 +1823,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-right-triangle-trigonometry.html#thm-rt-pythagorean",
   "type": "Theorem",
-  "number": "83",
+  "number": "86",
   "title": "The Pythagorean Theorem.",
   "body": " The Pythagorean Theorem   In a right triangle with legs and and hypotenuse ,    "
 },
@@ -1814,7 +1850,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-right-triangle-trigonometry.html#def-rt-trigonometric-ratios",
   "type": "Definition",
-  "number": "84",
+  "number": "87",
   "title": "The Trigonometric Ratios.",
   "body": " The Trigonometric Ratios   For an acute angle in a right triangle, the side across from is the opposite side, and the leg that touches is the adjacent side. The sine , cosine , and tangent of are the ratios where the last expression in each line refers to the triangle labeled in .   "
 },
@@ -1895,7 +1931,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-circle-trigonometry.html#def-uc-trig-functions",
   "type": "Definition",
-  "number": "85",
+  "number": "88",
   "title": "Trigonometric Functions of Any Angle.",
   "body": " Trigonometric Functions of Any Angle   To find the point for an angle , start at on the unit circle and move along the circle to cover the angle. If , rotate in the counterclockwise direction. If , rotate in the clockwise direction through . The ray from through the point reached is the terminal ray of the angle. If the point is , then we define  and define the other four trigonometric functions as ratios of these coordinates: whenever the denominator is not zero.   "
 },
@@ -1904,7 +1940,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-circle-trigonometry.html#rem-uc-agrees-with-triangles",
   "type": "Remark",
-  "number": "86",
+  "number": "89",
   "title": "Reversing Our Observation.",
   "body": " Reversing Our Observation  For an acute angle, this definition agrees with the right triangle ratios, because we just saw that the point is when is acute. The difference is the direction of the logic. Before, the triangle defined the coordinates. Now the coordinates define sine and cosine, and they do so for angles of any size or sign. Every point on the unit circle satisfies , so holds for every angle .  "
 },
@@ -1949,7 +1985,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-circle-trigonometry.html#rem-uc-not-a-list",
   "type": "Remark",
-  "number": "87",
+  "number": "90",
   "title": "What “Using the Unit Circle” Means.",
   "body": " What Using the Unit Circle Means  When we say we are using the unit circle, we are not consulting a memorized list of points built from , , and reference triangles. We are using three ideas together: the equation for points on the circle, the definitions and , and the signs of and determined by the quadrant of the terminal ray. The special triangles are the cases where the side lengths happen to be especially simple.  "
 },
@@ -1976,7 +2012,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-circle-trigonometry.html#thm-uc-odd-even",
   "type": "Theorem",
-  "number": "88",
+  "number": "91",
   "title": "Sine Is Odd and Cosine Is Even.",
   "body": " Sine Is Odd and Cosine Is Even   For every angle , That is, is an odd function and is an even function.   "
 },
@@ -2021,7 +2057,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-sine-cosine-sum-rules.html#fig-td-basic-rotations",
   "type": "Figure",
-  "number": "89",
+  "number": "92",
   "title": "",
   "body": " Rotating and by .   The unit circle with a dashed outline. A blue arc carries the point (1,0) counterclockwise through the angle phi to the point (cos phi, sin phi). A red arc carries the point (0,1) through the angle phi to the point (-sin phi, cos phi). The angle phi is marked between each starting axis and the terminal ray.    "
 },
@@ -2030,7 +2066,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-sine-cosine-sum-rules.html#fig-td-rotate-cos-piece",
   "type": "Figure",
-  "number": "90",
+  "number": "93",
   "title": "",
   "body": " Rotating by .   The point (cos theta, sin theta) on the dotted unit circle, reached by a horizontal blue vector of length cos theta along the x-axis and a vertical vector of length sin theta. A dashed blue circle of radius cos theta carries the end of the blue vector through the angle phi to the point (cos theta cos phi, cos theta sin phi).    "
 },
@@ -2039,7 +2075,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-sine-cosine-sum-rules.html#fig-td-rotate-sin-piece",
   "type": "Figure",
-  "number": "91",
+  "number": "94",
   "title": "",
   "body": " Rotating by .   The point (cos theta, sin theta) on the dotted unit circle, reached by a vertical red vector of length sin theta along the y-axis and a horizontal vector of length cos theta. A dashed red circle of radius sin theta carries the end of the red vector through the angle phi to the point (-sin theta sin phi, sin theta cos phi).    "
 },
@@ -2048,7 +2084,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-sine-cosine-sum-rules.html#fig-td-sequential-rotations",
   "type": "Figure",
-  "number": "92",
+  "number": "95",
   "title": "",
   "body": " Rotating by , then by , and adding the pieces.   A bold black vector from the origin to the point (cos theta, sin theta) on the dotted unit circle, with dashed blue and red component vectors forming a rectangle. A black arc rotates this point through the angle phi to a second bold black vector. The two rotated components, also dashed in blue and red, form a parallelogram whose far corner is the final point (cos theta cos phi - sin theta sin phi, sin theta cos phi + cos theta sin phi).    "
 },
@@ -2057,7 +2093,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-sine-cosine-sum-rules.html#thm-td-sum-identities",
   "type": "Theorem",
-  "number": "93",
+  "number": "96",
   "title": "Sum Identities for Sine and Cosine.",
   "body": " Sum Identities for Sine and Cosine   For all angles and ,    "
 },
@@ -2066,7 +2102,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-sine-cosine-sum-rules.html#rem-td-replace-not-substitute",
   "type": "Remark",
-  "number": "94",
+  "number": "97",
   "title": "Replace the Four Quantities.",
   "body": " Replace the Four Quantities  In , the four quantities , , , and are numbers: they are the coordinates of two points on the unit circle. We use the identities by replacing each of these four quantities with its known coordinate value. We never put a coordinate value inside a sine or cosine. For example, to find we do not evaluate . We replace by , replace by , and so on, and then combine the numbers.  "
 },
@@ -2147,7 +2183,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-derivatives-trigonometric-functions.html#thm-dt-squeeze",
   "type": "Theorem",
-  "number": "95",
+  "number": "98",
   "title": "Squeeze Theorem.",
   "body": " Squeeze Theorem   Suppose for all near (except possibly at ), and suppose . Then .   "
 },
@@ -2192,7 +2228,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-derivatives-trigonometric-functions.html#thm-dt-sine-cosine-derivatives",
   "type": "Theorem",
-  "number": "96",
+  "number": "99",
   "title": "Derivatives of Sine and Cosine.",
   "body": " Derivatives of Sine and Cosine   When is measured in radians,    "
 },
@@ -2222,6 +2258,87 @@ var ptx_lunr_docs = [
   "number": "7",
   "title": "Practice with All Six Functions.",
   "body": " Practice with All Six Functions   Use the rules in , along with the chain rule, product rule, and quotient rule as needed, to find each derivative.                     . Simplify your answer as much as you can.    "
+},
+{
+  "id": "activity-graphs-trigonometric-functions",
+  "level": "1",
+  "url": "activity-graphs-trigonometric-functions.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Graphs of Trigonometric Functions",
+  "body": " Graphs of Trigonometric Functions    Use the signs of sine and cosine in each quadrant of the unit circle to determine the sign of a function built from them on each interval of .  Find the roots and the vertical asymptotes of a trigonometric function and of its first and second derivatives by finding where a numerator or a denominator is zero.  Build sign charts for , , and , and use them to decide where the graph is positive or negative, increasing or decreasing, and concave up or concave down.  Combine the sign charts to justify and sketch the graphs of , , and on , including the behavior near any vertical asymptote.  Explain why the shape on repeats, and use this to describe the graph on any interval.     We now have derivative formulas for all six trigonometric functions (see ). In earlier work we used the signs of and to describe the shape of a graph, and we located vertical asymptotes at places where we divide by zero. Today we apply both ideas to trigonometric functions.  Every trigonometric function is defined by a rotation on the unit circle. Rotating through an additional returns to the same point, so each of the elementary trigonometric functions repeats every . It is enough to describe the shape of the graph on . The rest of the graph is a copy of that shape.    Strategy for Describing a Graph    Write the function as sine and cosine raised to powers. The roots are where the numerator is zero, and the vertical asymptotes are where the denominator is zero.  Use the quadrants of the unit circle to find the sign of the function on each interval between those points.  Repeat for and then for .  Interpret: means increasing, means decreasing, means concave up, and means concave down.  Sketch a graph that matches all three charts.      Signs on the Unit Circle   Rotating from the point through the angle reaches the point . The interval is one full turn, and it splits into four quadrants, each a quarter turn of width .     Complete the table by recording whether the -coordinate (cosine) and the -coordinate (sine) of the point on the unit circle are positive or negative for angles in each quadrant.    Quadrant Interval Sign of Sign of           Let . At which angles in is the -coordinate of the point on the unit circle equal to ? These are the roots of . Is there any division in the formula for ? What does that tell you about vertical asymptotes of ?      Sign Chart for Sine    Complete the sign chart. Write above a tick mark where the function is zero, above a tick mark where there is a vertical asymptote, and the sign or in each interval. Use the table above to decide the sign of on each interval.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of f of x.        Where Is Sine Increasing or Decreasing?    Write the derivative of .      Find the roots and the vertical asymptotes of on . Which points on the unit circle have -coordinate ? Is there any division in ?      Complete the sign chart. Write above a tick mark where the function is zero, above a tick mark where there is a vertical asymptote, and the sign or in each interval. Use the table to decide the sign of on each interval.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of f prime of x.        On which intervals is increasing, and on which is it decreasing? At each root of , does the sign of change? What does the change tell you about the graph of at that point, and what is the value of there?      Where Is Sine Concave Up or Concave Down?    Differentiate to find .      Complete the sign chart. Write above a tick mark where the function is zero, above a tick mark where there is a vertical asymptote, and the sign or in each interval. Be careful with the sign in front of the function. Then compare this chart with your chart for . What do you notice?   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of f double prime of x.        On which intervals is concave up, and on which is it concave down? Where are the inflection points of on , and what is the value of at each?      Sketching Sine    Combine your three charts by completing the table for .    Quadrant Interval Sign of Direction Concavity           Plot the roots, the maximum, and the minimum on the axes below, and then draw a graph of on that matches every row of your table.   Blank axes for sketching sine on the interval from 0 to 2 pi. Vertical dotted guide lines mark multiples of pi over 2, and the vertical axis is marked at 1 and negative 1.        Use the fact that sine repeats every to describe the graph of for in and for in .      The Shape of Cosine   Repeat the same steps for on .     Find the roots and vertical asymptotes of and complete the sign chart.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of g of x.        Compute , find its roots and vertical asymptotes, and complete the sign chart.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of g prime of x.        Compute , find its roots and vertical asymptotes, and complete the sign chart.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of g double prime of x.        Complete the table for .    Quadrant Interval Sign of Direction Concavity           Sketch the graph of on . Label the roots, the maximum and minimum values, and the inflection points.   Blank axes for sketching cosine on the interval from 0 to 2 pi. Vertical dotted guide lines mark multiples of pi over 2, and the vertical axis is marked at 1 and negative 1.        The Shape of Secant   Now let on . Write and its derivatives in terms of sine and cosine, and be careful to look for division by zero.     Find the roots and vertical asymptotes of and complete the sign chart.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of h of x.        Compute , rewrite it using sine and cosine, find its roots and vertical asymptotes, and complete the sign chart.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of h prime of x.        Compute . Simplify until the numerator and denominator are each something whose sign you can read from the unit circle. Then find the roots and vertical asymptotes of and complete the sign chart.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of h double prime of x.        Complete the table for .    Quadrant Interval Sign of Direction Concavity           Sketch the graph of on . Draw each vertical asymptote as a dashed line, and for each side of each asymptote use your table to decide whether the graph rises to or falls to . Label the local extreme values.   Blank axes for sketching secant on the interval from 0 to 2 pi. Vertical dotted guide lines mark multiples of pi over 2, and the vertical axis is marked at 1 and negative 1.       "
+},
+{
+  "id": "obj-graphs-trigonometric-functions",
+  "level": "2",
+  "url": "activity-graphs-trigonometric-functions.html#obj-graphs-trigonometric-functions",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  Use the signs of sine and cosine in each quadrant of the unit circle to determine the sign of a function built from them on each interval of .  Find the roots and the vertical asymptotes of a trigonometric function and of its first and second derivatives by finding where a numerator or a denominator is zero.  Build sign charts for , , and , and use them to decide where the graph is positive or negative, increasing or decreasing, and concave up or concave down.  Combine the sign charts to justify and sketch the graphs of , , and on , including the behavior near any vertical asymptote.  Explain why the shape on repeats, and use this to describe the graph on any interval.   "
+},
+{
+  "id": "ex-gt-quadrant-signs",
+  "level": "2",
+  "url": "activity-graphs-trigonometric-functions.html#ex-gt-quadrant-signs",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Signs on the Unit Circle.",
+  "body": " Signs on the Unit Circle   Rotating from the point through the angle reaches the point . The interval is one full turn, and it splits into four quadrants, each a quarter turn of width .     Complete the table by recording whether the -coordinate (cosine) and the -coordinate (sine) of the point on the unit circle are positive or negative for angles in each quadrant.    Quadrant Interval Sign of Sign of           Let . At which angles in is the -coordinate of the point on the unit circle equal to ? These are the roots of . Is there any division in the formula for ? What does that tell you about vertical asymptotes of ?    "
+},
+{
+  "id": "ex-gt-sine-sign",
+  "level": "2",
+  "url": "activity-graphs-trigonometric-functions.html#ex-gt-sine-sign",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Sign Chart for Sine.",
+  "body": " Sign Chart for Sine    Complete the sign chart. Write above a tick mark where the function is zero, above a tick mark where there is a vertical asymptote, and the sign or in each interval. Use the table above to decide the sign of on each interval.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of f of x.      "
+},
+{
+  "id": "ex-gt-sine-first",
+  "level": "2",
+  "url": "activity-graphs-trigonometric-functions.html#ex-gt-sine-first",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Where Is Sine Increasing or Decreasing?",
+  "body": " Where Is Sine Increasing or Decreasing?    Write the derivative of .      Find the roots and the vertical asymptotes of on . Which points on the unit circle have -coordinate ? Is there any division in ?      Complete the sign chart. Write above a tick mark where the function is zero, above a tick mark where there is a vertical asymptote, and the sign or in each interval. Use the table to decide the sign of on each interval.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of f prime of x.        On which intervals is increasing, and on which is it decreasing? At each root of , does the sign of change? What does the change tell you about the graph of at that point, and what is the value of there?    "
+},
+{
+  "id": "ex-gt-sine-second",
+  "level": "2",
+  "url": "activity-graphs-trigonometric-functions.html#ex-gt-sine-second",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Where Is Sine Concave Up or Concave Down?",
+  "body": " Where Is Sine Concave Up or Concave Down?    Differentiate to find .      Complete the sign chart. Write above a tick mark where the function is zero, above a tick mark where there is a vertical asymptote, and the sign or in each interval. Be careful with the sign in front of the function. Then compare this chart with your chart for . What do you notice?   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of f double prime of x.        On which intervals is concave up, and on which is it concave down? Where are the inflection points of on , and what is the value of at each?    "
+},
+{
+  "id": "ex-gt-sine-sketch",
+  "level": "2",
+  "url": "activity-graphs-trigonometric-functions.html#ex-gt-sine-sketch",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Sketching Sine.",
+  "body": " Sketching Sine    Combine your three charts by completing the table for .    Quadrant Interval Sign of Direction Concavity           Plot the roots, the maximum, and the minimum on the axes below, and then draw a graph of on that matches every row of your table.   Blank axes for sketching sine on the interval from 0 to 2 pi. Vertical dotted guide lines mark multiples of pi over 2, and the vertical axis is marked at 1 and negative 1.        Use the fact that sine repeats every to describe the graph of for in and for in .    "
+},
+{
+  "id": "ex-gt-cosine",
+  "level": "2",
+  "url": "activity-graphs-trigonometric-functions.html#ex-gt-cosine",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "The Shape of Cosine.",
+  "body": " The Shape of Cosine   Repeat the same steps for on .     Find the roots and vertical asymptotes of and complete the sign chart.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of g of x.        Compute , find its roots and vertical asymptotes, and complete the sign chart.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of g prime of x.        Compute , find its roots and vertical asymptotes, and complete the sign chart.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of g double prime of x.        Complete the table for .    Quadrant Interval Sign of Direction Concavity           Sketch the graph of on . Label the roots, the maximum and minimum values, and the inflection points.   Blank axes for sketching cosine on the interval from 0 to 2 pi. Vertical dotted guide lines mark multiples of pi over 2, and the vertical axis is marked at 1 and negative 1.      "
+},
+{
+  "id": "ex-gt-secant",
+  "level": "2",
+  "url": "activity-graphs-trigonometric-functions.html#ex-gt-secant",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "The Shape of Secant.",
+  "body": " The Shape of Secant   Now let on . Write and its derivatives in terms of sine and cosine, and be careful to look for division by zero.     Find the roots and vertical asymptotes of and complete the sign chart.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of h of x.        Compute , rewrite it using sine and cosine, find its roots and vertical asymptotes, and complete the sign chart.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of h prime of x.        Compute . Simplify until the numerator and denominator are each something whose sign you can read from the unit circle. Then find the roots and vertical asymptotes of and complete the sign chart.   A number line from 0 to 2 pi with tick marks at 0, pi over 2, pi, 3 pi over 2, and 2 pi, and dotted lines above each tick mark. The space above the number line is blank for a sign chart of h double prime of x.        Complete the table for .    Quadrant Interval Sign of Direction Concavity           Sketch the graph of on . Draw each vertical asymptote as a dashed line, and for each side of each asymptote use your table to decide whether the graph rises to or falls to . Label the local extreme values.   Blank axes for sketching secant on the interval from 0 to 2 pi. Vertical dotted guide lines mark multiples of pi over 2, and the vertical axis is marked at 1 and negative 1.      "
 },
 {
   "id": "homework",
